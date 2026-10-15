@@ -51,7 +51,9 @@ test('校验失败：链接丢失', () => {
 test('校验失败：空译文与拒答', () => {
   assert.deepEqual(validateTranslation('hello', ''), ['译文为空'])
   assert.ok(
-    validateTranslation('hello world this is a test', '抱歉，我无法翻译').some((i) => i.includes('拒答')),
+    validateTranslation('hello world this is a test', '抱歉，我无法翻译').some((i) =>
+      i.includes('拒答'),
+    ),
   )
 })
 
@@ -68,12 +70,16 @@ test('校验失败：原文含服务名时译文必须保留', () => {
       i.includes('服务名缺失'),
     ),
   )
-  assert.deepEqual(validateTranslation(en, 'Revolt 是一个开源、以用户为先的聊天平台。', { name: 'Revolt' }), [])
+  assert.deepEqual(
+    validateTranslation(en, 'Revolt 是一个开源、以用户为先的聊天平台。', { name: 'Revolt' }),
+    [],
+  )
 })
 
 test('parseModelJson：围栏与杂讯容错', () => {
   assert.equal(
-    parseModelJson('```json\n{"translations":[{"id":"0","zh":"你好"}]}\n```')?.translations?.[0]?.zh,
+    parseModelJson('```json\n{"translations":[{"id":"0","zh":"你好"}]}\n```')?.translations?.[0]
+      ?.zh,
     '你好',
   )
   assert.deepEqual(parseModelJson('好的：{"translations":[]} 完毕')?.translations, [])

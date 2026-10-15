@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/emerald.css";
+@import "fumadocs-ui/css/preset.css";
+
+@theme inline {
+  --font-sans:
+    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-mono:
+    var(--font-geist-mono), ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-fd-primary) 30%, transparent);
+}

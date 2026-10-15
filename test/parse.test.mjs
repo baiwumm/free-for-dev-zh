@@ -14,7 +14,10 @@ const findNote = (text) => parsed.entries.find((e) => e.kind === 'note' && e.des
 test('slug：与 GitHub 标题锚点规则一致', () => {
   assert.equal(slugify('APIs, Data and ML'), 'apis-data-and-ml')
   assert.equal(slugify('Beta & Gamma'), 'beta-gamma')
-  assert.equal(slugify("Major Cloud Providers' Always-Free Limits"), 'major-cloud-providers-always-free-limits')
+  assert.equal(
+    slugify("Major Cloud Providers' Always-Free Limits"),
+    'major-cloud-providers-always-free-limits',
+  )
 })
 
 test('解析分类：仅取 ## 标题，slug 作为 ID', () => {

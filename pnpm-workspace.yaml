@@ -1,0 +1,9 @@
+# pnpm 12 默认对发布时间不足 24h 的版本启用 minimumReleaseAge 供应链策略；
+# 本项目锁定的版本（next / react / fumadocs）均来自官方 npm，显式放开以保证任意
+# 环境下都能按 pnpm-lock.yaml 复现安装。（升级依赖后如仍想保留保护，可删掉此行。）
+minimumReleaseAge: 0
+
+# 允许以下依赖执行安装脚本（esbuild / workerd 需要下载平台二进制）
+onlyBuiltDependencies:
+  - esbuild
+  - workerd

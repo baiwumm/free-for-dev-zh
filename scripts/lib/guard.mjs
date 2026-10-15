@@ -1,5 +1,3 @@
-import { normalizeText } from './diff.mjs'
-
 /**
  * DS-4 解析守卫：三道断言，任一触发即返回问题列表（调用方中止、不写任何数据）。
  * 1. 总量：active 条目数与上一版相比跌幅 > 10%；
@@ -50,5 +48,3 @@ export function runGuard(previous, next) {
 
   return issues
 }
-
-export { normalizeText }

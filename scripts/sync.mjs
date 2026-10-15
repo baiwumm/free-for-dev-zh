@@ -35,7 +35,9 @@ async function main() {
   const parsed = parseReadme(upstream.text)
   const entryCount = parsed.entries.filter((e) => e.kind === 'entry').length
   const noteCount = parsed.entries.filter((e) => e.kind === 'note').length
-  console.log(`  解析出分类 ${parsed.categories.length} 个 / 条目 ${entryCount} 条 / 备注 ${noteCount} 条`)
+  console.log(
+    `  解析出分类 ${parsed.categories.length} 个 / 条目 ${entryCount} 条 / 备注 ${noteCount} 条`,
+  )
 
   const duplicateIds = findDuplicateIds(parsed.entries)
   if (duplicateIds.length > 0) {
@@ -65,7 +67,9 @@ async function main() {
       )
     }
     if (stale.length > 0) {
-      console.warn(`  警告：categories.json 中 ${stale.length} 个分类已不在上游（${stale.join('、')}），已忽略`)
+      console.warn(
+        `  警告：categories.json 中 ${stale.length} 个分类已不在上游（${stale.join('、')}），已忽略`,
+      )
     }
   } else if (!args.dryRun) {
     throw new Error('data/categories.json 不存在，请先创建 57 个分类的中英对照（见 docs/02 DS-7）')
@@ -88,7 +92,9 @@ async function main() {
     if (!merged.some((e) => e.id === id && e.status === 'active')) unknownOverrideIds.push(id)
   }
   if (unknownOverrideIds.length > 0) {
-    console.warn(`  警告：overrides.json 中 ${unknownOverrideIds.length} 个条目 ID 已不存在：${unknownOverrideIds.join('、')}`)
+    console.warn(
+      `  警告：overrides.json 中 ${unknownOverrideIds.length} 个条目 ID 已不存在：${unknownOverrideIds.join('、')}`,
+    )
   }
 
   const guardIssues = runGuard(previous ? { entries: previous.entries } : null, { entries: merged })
@@ -137,7 +143,10 @@ async function main() {
         commit_sha: upstream.sha,
         commit_date: upstream.commitDate,
       },
-      counts: { ...summarize(merged, parsed), translated: merged.filter((e) => e.status === 'active' && e.desc_zh).length },
+      counts: {
+        ...summarize(merged, parsed),
+        translated: merged.filter((e) => e.status === 'active' && e.desc_zh).length,
+      },
     },
     categories: parsed.categories.map((c) => ({ id: c.id, name_en: c.nameEn })),
     entries: merged,
@@ -170,7 +179,9 @@ function printSummary({ upstream, counts, diff, translateStats, pending }) {
   console.log(
     `  条目 active ${counts.active}（条目 ${counts.entries} + 备注 ${counts.notes}）· removed ${counts.removed} · 分类 ${counts.categories}`,
   )
-  console.log(`  差异 新增 ${diff.added.length} · 变更 ${diff.changed.length} · 删除 ${diff.removed.length}`)
+  console.log(
+    `  差异 新增 ${diff.added.length} · 变更 ${diff.changed.length} · 删除 ${diff.removed.length}`,
+  )
   if (translateStats && !translateStats.skipped) {
     console.log(
       `  翻译 成功 ${translateStats.translated} · 失败 ${translateStats.failed} · 待翻译 ${Math.max(0, pending.length - translateStats.translated)}`,
@@ -188,7 +199,13 @@ async function loadJson(file) {
 }
 
 function parseArgs(argv) {
-  const out = { dryRun: false, verbose: false, noTranslate: false, limit: Number.POSITIVE_INFINITY, readme: null }
+  const out = {
+    dryRun: false,
+    verbose: false,
+    noTranslate: false,
+    limit: Number.POSITIVE_INFINITY,
+    readme: null,
+  }
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]
     if (a === '--dry-run') out.dryRun = true

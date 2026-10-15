@@ -74,12 +74,25 @@ test('guard：译文覆盖率骤降触发', () => {
 test('diff：新增/变更/删除三分类', () => {
   const prev = { entries: [entry('keep', 'cat'), entry('edit', 'cat'), entry('gone', 'cat')] }
   const next = {
-    entries: [entry('keep', 'cat'), entry('edit', 'cat', { desc_en: 'new desc' }), entry('fresh', 'cat')],
+    entries: [
+      entry('keep', 'cat'),
+      entry('edit', 'cat', { desc_en: 'new desc' }),
+      entry('fresh', 'cat'),
+    ],
   }
   const d = diffEntries(prev, next)
-  assert.deepEqual(d.added.map((e) => e.id), ['fresh'])
-  assert.deepEqual(d.changed.map((x) => x.rec.id), ['edit'])
-  assert.deepEqual(d.removed.map((e) => e.id), ['gone'])
+  assert.deepEqual(
+    d.added.map((e) => e.id),
+    ['fresh'],
+  )
+  assert.deepEqual(
+    d.changed.map((x) => x.rec.id),
+    ['edit'],
+  )
+  assert.deepEqual(
+    d.removed.map((e) => e.id),
+    ['gone'],
+  )
 })
 
 test('diff：仅空白差异视为未变更', () => {
@@ -95,7 +108,10 @@ test('diff：曾 removed 的条目重现按新增处理', () => {
   const prev = { entries: [entry('back', 'cat', { status: 'removed' })] }
   const next = { entries: [entry('back', 'cat')] }
   const d = diffEntries(prev, next)
-  assert.deepEqual(d.added.map((e) => e.id), ['back'])
+  assert.deepEqual(
+    d.added.map((e) => e.id),
+    ['back'],
+  )
 })
 
 test('merge：沿用 first_seen 与未变译文，变更则置空并标记 removed', () => {
@@ -107,7 +123,11 @@ test('merge：沿用 first_seen 与未变译文，变更则置空并标记 remov
     ],
   }
   const next = {
-    entries: [entry('keep', 'cat'), entry('edit', 'cat', { desc_en: 'changed' }), entry('new', 'cat')],
+    entries: [
+      entry('keep', 'cat'),
+      entry('edit', 'cat', { desc_en: 'changed' }),
+      entry('new', 'cat'),
+    ],
   }
   const merged = mergeEntries(next, prev, '2026-10-15')
   const byId = Object.fromEntries(merged.map((e) => [e.id, e]))

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFile, writeFile, rename } from 'node:fs/promises'
+import { readFile, rename, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { validateTranslation } from './lib/validate.mjs'
@@ -52,7 +52,7 @@ export async function translateRecords(entries, opts = {}) {
   const stats = { skipped: false, attempted: 0, translated: 0, failed: 0 }
   for (let i = 0; i < unique.length; i += batchSize) {
     const batch = unique.slice(i, i + batchSize)
-    const { result, failed } = await translateBatch(batch, {
+    const { result } = await translateBatch(batch, {
       baseUrl,
       model,
       apiKey,
@@ -69,10 +69,11 @@ export async function translateRecords(entries, opts = {}) {
       }
       for (const rec of byDesc.get(desc)) rec.desc_zh = zh
     }
-    if (i + batchSize < unique.length) process.stdout.write(`  进度 ${Math.min(i + batchSize, unique.length)}/${unique.length}\r`)
+    if (i + batchSize < unique.length)
+      process.stdout.write(`  进度 ${Math.min(i + batchSize, unique.length)}/${unique.length}\r`)
     if (i + batchSize < unique.length) await sleep(300)
   }
-  process.stdout.write(' '.repeat(24) + '\r')
+  process.stdout.write(`${' '.repeat(24)}\r`)
   return stats
 }
 
@@ -198,7 +199,9 @@ if (isMain) {
     if (stats.skipped) return
 
     try {
-      const overrides = JSON.parse(await readFile(path.join(root, 'data', 'overrides.json'), 'utf8'))
+      const overrides = JSON.parse(
+        await readFile(path.join(root, 'data', 'overrides.json'), 'utf8'),
+      )
       for (const e of doc.entries) {
         const o = overrides[e.id]
         if (o?.desc_zh) e.desc_zh = o.desc_zh
@@ -207,7 +210,9 @@ if (isMain) {
       // overrides.json 缺失时跳过
     }
 
-    doc.meta.counts.translated = doc.entries.filter((e) => e.status === 'active' && e.desc_zh).length
+    doc.meta.counts.translated = doc.entries.filter(
+      (e) => e.status === 'active' && e.desc_zh,
+    ).length
     doc.meta.translated_at = new Date().toISOString()
     const tmp = `${entriesFile}.tmp`
     await writeFile(tmp, `${JSON.stringify(doc, null, 2)}\n`, 'utf8')

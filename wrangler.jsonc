@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "free-for-dev-zh",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    {
+      "pattern": "ffd.baiwumm.com",
+      "custom_domain": true
+    }
+  ]
+}
