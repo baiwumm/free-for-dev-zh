@@ -1,0 +1,67 @@
+name: Daily Sync
+
+# 每日自动同步上游清单：拉取 → 解析 → 守卫 → 增量翻译 → 提交 → 直接调用部署。
+# GITHUB_TOKEN 的提交不会触发其它 workflow（GitHub 平台限制），因此部署通过
+# workflow_call 显式调用 deploy.yml。
+
+on:
+  schedule:
+    # UTC 21:23 = 北京时间次日 05:23（避开整点高峰）
+    - cron: '23 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 单元测试
+        run: node --test
+
+      - name: 同步上游 + 增量翻译
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: https://open.bigmodel.cn/api/paas/v4
+          LLM_MODEL: glm-4.7-flash
+        run: node scripts/sync.mjs
+
+      - name: 提交数据变更
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "上游无变化，跳过提交与部署"
+          else
+            git add data/entries.json data/categories.json data/overrides.json
+            git commit -m "chore(data): 每日自动同步 $(date -u +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit

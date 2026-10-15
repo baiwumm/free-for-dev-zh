@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint / 格式检查（Biome）
+        run: pnpm exec biome check .
+
+      - name: 单元测试（解析边界 / 守卫 / 翻译校验）
+        run: node --test
+
+      - name: 构建站点（静态导出）
+        run: pnpm build
+
+      - name: 产物断言（页面数与搜索索引）
+        run: |
+          node -e "
+            const fs = require('fs');
+            const idx = JSON.parse(fs.readFileSync('out/search-index.json', 'utf8'));
+            if (!fs.existsSync('out/index.html')) throw new Error('缺少 out/index.html');
+            if (!fs.existsSync('out/404.html')) throw new Error('缺少 out/404.html');
+            if (idx.length < 1200) throw new Error('搜索索引条目过少: ' + idx.length);
+            console.log('out/ 校验通过：搜索索引', idx.length, '条');
+          "

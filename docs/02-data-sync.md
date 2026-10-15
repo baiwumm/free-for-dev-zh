@@ -32,22 +32,25 @@
 
 ## DS-3 数据模型
 
-产物 `data/entries.json`，每条：
+产物 `data/entries.json`（顶层 `{ meta, categories, entries }`）：`meta` 记录 `synced_at`、上游 `commit_sha/commit_date`（取自 GitHub Atom feed，避开 api.github.com 匿名限流）与计数；`categories` 为 `[{ id, name_en }]`。`entries` 每条：
 
 ```json
 {
-  "id": "sha1(url + \"|\" + category) 的前 12 位",
+  "id": "sha1(归一化url|\"|\"+category) 前 12 位；备注为 sha1(parentId|\"|\"+category|\"|\"+desc_en) 前 12 位",
+  "kind": "entry | note",
   "name": "Google Cloud Platform",
   "url": "https://cloud.google.com",
   "category": "major-cloud-providers",
   "parent": null,
   "desc_en": "原文描述",
-  "desc_zh": "中文译文",
+  "desc_zh": "中文译文（未翻译为 null）",
   "status": "active | removed",
   "first_seen": "2026-10-15",
   "updated_at": "2026-10-15"
 }
 ```
+
+纯文字备注（`kind: "note"`）无名称与 URL（恒为 `null`），只承载文字。
 
 - **归一化 URL + 分类作为稳定 ID**：同一 URL 可能出现在两个分类（实测 `ipgeolocation.io`、`codemagic.io` 各 2 次），ID 不含分类会碰撞丢条；URL 先归一化（https 化、host 小写、去尾斜杠）再参与 ID 与 diff；流水线启动时执行 ID 唯一性断言，发现重复即失败退出。
 - 分类 ID 取上游英文标题的 slug，保证每条译文都能链回上游原文锚点。
@@ -55,7 +58,7 @@
 
 ## DS-4 解析守卫（格式漂移检测）
 
-解析出的条目数与上一版 `entries.json` 的 **active 条目数**（不含 removed）比对，跌幅超过 10% 判定为上游格式漂移：**立即失败并告警，不写入任何数据**。这是防止上游某天改版把数据清空的安全闸。另加两道辅助断言：单分类跌幅超过 30% 同样告警；active 条目译文覆盖率较上一版骤降（超过 10 个百分点）时告警。
+解析出的条目数与上一版 `entries.json` 的 **active 条目数**（不含 removed）比对，跌幅超过 10% 判定为上游格式漂移：**立即失败并告警，不写入任何数据**。这是防止上游某天改版把数据清空的安全闸。另加两道辅助断言：单分类跌幅超过 30% 同样告警；active 条目译文覆盖率较上一版骤降（超过 10 个百分点）时告警。守卫在 merge 与 overrides 合并**之后**执行（覆盖率按结转后的译文计算，避免误报）；首次运行无基线时直接通过。
 
 ## DS-5 差异比对
 
@@ -69,41 +72,54 @@
 - **模型（备选，按量付费）**：DeepSeek `deepseek-flash`。DeepSeek 无免费层，但价格极低：首翻约 19.5 万字符，按现价估算约 ¥0.5–1.5，每日增量可忽略；对翻译质量不满意时切换。
 - **备选三（免费，待核实）**：Gemini API 免费层的 flash 系列，跑在 GitHub Actions 无网络障碍，限额以官网为准。
 - 上述接口均为 OpenAI 兼容，切换只需改 base_url 与 key。
-- 批量：每请求 20–50 条，要求返回 JSON 数组；免费层有并发限制，流水线内低并发串行 + 失败重试。
+- 批量：每请求默认 20 条（`LLM_BATCH` 可调至 50），要求返回 JSON 数组；低并发串行 + 失败重试——同批最多重试 1 轮（只重试校验未过的条目），HTTP 层额外重试 2 次。
 - Prompt 硬约束：**数字、单位、配额、百分比保真**，只翻译叙述文字；服务名不翻译。
 - 翻后校验（四项全过才通过）：
   1. **数字集合**：两边先归一化（去千分位、全角转半角、`5 million` ↔ `500 万`、`1k` ↔ `1,000` 视为等值）再比对；
   2. **链接集合**：译文中 markdown 链接目标与原文逐一一致；
   3. **长度比**：译文长度落在原文的 0.3–1.5 倍区间，防截断、防复读；
   4. **坏输出**：空译、拒答语句、服务名未原样出现，任一命中即判失败。
-  校验失败先重试，重试仍失败则跳过该条（保留 `desc_en`，站点降级展示原文）并记入日志。
+  校验失败先重试，重试仍失败则跳过该条（保留 `desc_zh: null`，站点降级展示英文原文并打"未翻译"标）并记入日志。
+- 去重与人工优先：相同 `desc_en` 去重后只翻一次、回填所有同描述条目；已有人工覆盖译文的条目（见 DS-7）直接跳过翻译。
+- 环境变量：
+
+| 变量 | 默认值 | 说明 |
+|---|---|---|
+| `LLM_API_KEY` | — | 唯一必填；未设置则整段跳过翻译 |
+| `LLM_BASE_URL` | `https://open.bigmodel.cn/api/paas/v4` | OpenAI 兼容接口 |
+| `LLM_MODEL` | `glm-4.7-flash` | 模型名 |
+| `LLM_BATCH` | `20` | 每请求条数 |
+| `LLM_THINKING` | — | 设为 `disabled` 显式关闭思考模式（部分模型支持） |
+
+- 独立运维入口：`node scripts/translate.mjs --limit N` 可在不跑同步的情况下小步补齐缺失译文。
 
 ## DS-7 人工层
 
 | 文件 | 用途 |
 |---|---|
-| `data/categories.json` | 57 个分类的中英对照，一次性人工翻译，可 review |
-| `data/overrides.json` | 人工修正层：对不满意的机翻按条目 ID 覆盖，社区可 PR 修正 |
+| `data/categories.json` | 57 个分类中英对照，一次性人工翻译，可 review；格式 `{ "categories": [{ "id", "name_en", "name_zh" }] }`。上游出现新分类而表中缺失时，同步中止并提示补充 |
+| `data/overrides.json` | 人工修正层：`{ "<条目id>": { "desc_zh": "人工译文" } }`，在翻译**之前**应用——有覆盖译文的条目直接跳过机翻 |
 
 翻译产出永远可以被人工层覆盖，机翻只做第一稿。
 
 ## DS-8 流水线与调度
 
-固定六步，任一步失败即中止、保持上一个完好状态（幂等）：
+固定八步，任一步失败即中止、保持上一个完好状态（幂等）：
 
 ```
-fetch → parse → guard → diff → translate → 原子写回 + build + commit + 部署
+fetch → parse → ID 唯一性/分类校验 → diff → merge → overrides → guard → translate → 原子写回 → commit → 部署
 ```
 
-- 调度：GitHub Actions cron，UTC 每日 10:00（北京时间 18:00）。
+- 调度：GitHub Actions cron，UTC 21:23（北京时间次日 05:23）；`daily-sync.yml` 在写回后提交 `data/`，并通过 `workflow_call` 直调 `deploy.yml`（默认 GITHUB_TOKEN 的提交不触发 push 事件，见 04 触发链说明）。上游无变化时自动跳过提交与部署。
+- 调试参数：`node scripts/sync.mjs` 支持 `--dry-run`（不写盘）、`--verbose`（逐分类计数）、`--no-translate`、`--limit N`、`--readme <本地文件>`（离线跑）。
 - 原子写回：翻译结果先写临时文件，全部校验通过后才替换 `data/entries.json`，中途失败不留半成品。
 - 失败通知：Actions 失败邮件；可选接企业微信机器人 webhook 推送每日摘要（新增 X 条 / 更新 Y 条 / 失败告警）。
-- 上游拉取失败时原样重试一次，仍失败则本次同步跳过（站点保持昨日数据，不报错发布）。
+- 上游拉取失败时原样重试，仍失败则本次同步跳过（站点保持昨日数据，不报错发布）。
 
 ## 验收标准
 
-- [ ] 首次运行产出约 1,340 条链接条目（另含 33 条纯文字备注）的 `entries.json`，分类 57 个，guard 通过。
-- [ ] 手工篡改一份假上游数据（增/删/改各 2 条），diff 结果精确匹配。
-- [ ] 数字校验对 5 组含配额的条目 100% 通过（含 `5 million`/`500 万` 等值换算用例）。
-- [ ] 解析器单测覆盖真实边界样本：TOC 段跳过、缩进 0/4/5/7、`—` 分隔与无分隔描述、纯文字备注、描述内嵌链接，全部通过。
-- [ ] 模拟上游条目数骤降，guard 阻止写回并告警。
+- [x] 首次运行产出 1,339 条链接条目（另含 33 条纯文字备注）的 `entries.json`，分类 57 个，guard 通过——2026-10-15 实测（上游 commit 3764884）。
+- [x] 增/删/改差异比对精确匹配（`test/guard-diff.test.mjs`，含"仅空白差异不算变更""removed 重现按新增"用例）。
+- [x] 数字校验用例 100% 通过（含 `5 million`/`500 万`、`1,000`、全角、`0.5GB`、`100ms` 等值换算与反例，`test/validate.test.mjs`）。
+- [x] 解析器单测覆盖真实边界样本：TOC 段跳过、缩进 0/4/5/7、`—` 分隔与无分隔描述、纯文字备注、描述内嵌链接，全部通过（29 条单测全绿）。
+- [x] 上游条目数骤降时 guard 阻止写回并告警（总量 10% / 单分类 30% / 覆盖率 10pp 三组用例）。
