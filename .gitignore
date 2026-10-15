@@ -1,0 +1,23 @@
+# deps
+node_modules/
+
+# next
+.next/
+out/
+next-env.d.ts
+
+# tooling caches
+.turbo/
+.wrangler/
+*.tsbuildinfo
+data/*.tmp
+
+# env
+.env
+.env.local
+.env*.local
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
