@@ -134,7 +134,22 @@ async function main() {
     return
   }
 
-  // 6. 原子写回
+  // 6. 短路：分类与条目与上一版完全一致时跳过写入。
+  //    不更新 synced_at，避免上游无变化也产生每日空提交与部署（workflow 以 data/ 是否有 diff 判断）。
+  const nextComparable = JSON.stringify({
+    categories: parsed.categories.map((c) => ({ id: c.id, name_en: c.nameEn })),
+    entries: merged,
+  })
+  const prevComparable = previous
+    ? JSON.stringify({ categories: previous.categories, entries: previous.entries })
+    : null
+  if (prevComparable !== null && prevComparable === nextComparable) {
+    console.log('· 与上一版数据完全一致，跳过写入（不产生提交与部署）')
+    printSummary({ upstream, counts, diff, translateStats, pending })
+    return
+  }
+
+  // 7. 原子写回
   const doc = {
     meta: {
       synced_at: startedAt.toISOString(),
