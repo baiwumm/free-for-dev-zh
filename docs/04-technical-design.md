@@ -46,7 +46,7 @@ free-for-dev-zh/
 │   └── deploy.yml         # push main / workflow_call：build → wrangler deploy
 ├── wrangler.jsonc
 ├── biome.json             # 仅检查 src/scripts/test 代码（includes 白名单，不碰 500KB+ 数据 JSON）
-├── pnpm-workspace.yaml    # pnpm 12：minimumReleaseAge 放开 + onlyBuiltDependencies（esbuild/workerd）
+├── pnpm-workspace.yaml    # pnpm 12：minimumReleaseAge 放开 + allowBuilds 放行 esbuild/workerd 构建脚本
 ├── NOTICE.md              # 上游署名、翻译免责声明（合规落点，见 05）
 └── package.json
 ```

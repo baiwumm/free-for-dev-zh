@@ -3,7 +3,9 @@
 # 环境下都能按 pnpm-lock.yaml 复现安装。（升级依赖后如仍想保留保护，可删掉此行。）
 minimumReleaseAge: 0
 
-# 允许以下依赖执行安装脚本（esbuild / workerd 需要下载平台二进制）
-onlyBuiltDependencies:
-  - esbuild
-  - workerd
+# 允许以下依赖执行安装脚本（esbuild / workerd 需要下载平台二进制）。
+# pnpm 11 起旧设置 onlyBuiltDependencies 已被忽略，统一改为 allowBuilds 映射；
+# 只列本项目实际需要的包，其余包安装脚本依旧默认禁止。
+allowBuilds:
+  esbuild: true
+  workerd: true
