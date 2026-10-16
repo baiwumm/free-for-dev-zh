@@ -1,6 +1,6 @@
 {
   "meta": {
-    "synced_at": "2026-10-16T03:18:18.511Z",
+    "synced_at": "2026-10-16T04:23:39.564Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
       "commit_sha": "aa64edb149db968c8d9cdb43ff73dea86b86d666",
@@ -12,7 +12,7 @@
       "removed": 0,
       "entries": 1340,
       "notes": 33,
-      "translated": 1183
+      "translated": 1317
     }
   },
   "categories": [
@@ -592,7 +592,7 @@
       "category": "major-cloud-providers",
       "parent": "e025566df4b5",
       "desc_en": "3.000 messages/month (6mo)",
-      "desc_zh": null,
+      "desc_zh": "3.000 条消息/月（6 个月）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -917,7 +917,7 @@
       "category": "major-cloud-providers",
       "parent": "e39435462537",
       "desc_en": "Compute",
-      "desc_zh": null,
+      "desc_zh": "计算",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1450,7 +1450,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Password Management is accessible for Individuals.",
-      "desc_zh": null,
+      "desc_zh": "密码管理功能可供个人用户使用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1580,7 +1580,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Paperless Signatures",
-      "desc_zh": null,
+      "desc_zh": "无纸化签名",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1632,7 +1632,7 @@
       "category": "cloud-management-solutions",
       "parent": null,
       "desc_en": "Free for personal projects (includes one deployment server, one static site), Cloud 66 gives you everything you need to build, deploy, and grow your applications on any cloud without the headache of the “server stuff.”.",
-      "desc_zh": null,
+      "desc_zh": "个人项目免费（包含一台部署服务器和一个静态站点），Cloud 66 为你提供在任何云上构建、部署和发展应用所需的一切，无需再为“服务器琐事”头疼。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1671,7 +1671,7 @@
       "category": "cloud-management-solutions",
       "parent": null,
       "desc_en": "Parsivex scans your AWS account for idle EC2, unattached EBS, oversized RDS, stale snapshots, NAT gateway overuse etc. Free tier provides a monthly scan for one AWS account and returns total monthly waste plus a category breakdown. Paid plans give access to itemized findings and scheduled re-scans.",
-      "desc_zh": null,
+      "desc_zh": "Parsivex 扫描您的 AWS 账户以查找空闲的 EC2、未附加的 EBS、过大的 RDS、过期的快照、NAT 网关过度使用等。免费层级每月对一个 AWS 账户进行一次扫描，并返回总月度浪费和分类明细。付费计划提供项目化发现结果和计划重新扫描的访问权限。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1684,7 +1684,7 @@
       "category": "cloud-management-solutions",
       "parent": null,
       "desc_en": "Modern infrastructure as a code platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.",
-      "desc_zh": null,
+      "desc_zh": "现代化的基础设施即代码平台，让你可以使用熟悉的编程语言和工具来构建、部署和管理云基础设施。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1814,7 +1814,7 @@
       "category": "source-code-repos",
       "parent": null,
       "desc_en": "One free private project (Git and Subversion) with 50 MB of space",
-      "desc_zh": null,
+      "desc_zh": "一个免费私有项目（Git 和 Subversion），50 MB 空间",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1840,7 +1840,7 @@
       "category": "source-code-repos",
       "parent": null,
       "desc_en": "Serves as a collaborative software development management system for free Software projects (for GNU Projects)",
-      "desc_zh": null,
+      "desc_zh": "作为面向自由软件项目的协作式软件开发管理系统（针对 GNU 项目）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1853,7 +1853,7 @@
       "category": "source-code-repos",
       "parent": null,
       "desc_en": "Serves as a collaborative software development management system for free Software projects (for non-GNU projects)",
-      "desc_zh": null,
+      "desc_zh": "作为面向自由软件项目的协作式软件开发管理系统（针对非 GNU 项目）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -2113,7 +2113,7 @@
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "API and Microservice to provides a wide range of information including countries, regions, provinces, cities, postal codes, and much more. The free tier includes up to 100 requests per day.",
-      "desc_zh": null,
+      "desc_zh": "提供广泛信息的 API 和微服务，包括国家、地区、省份、城市、邮政编码等。免费层每天最多 100 次请求。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -3634,7 +3634,7 @@
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "Built-in knowledge-based algorithms in the cloud.",
-      "desc_zh": null,
+      "desc_zh": "云端内置的基于知识的算法。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -3881,7 +3881,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Online developer tools offering free access to all basic tools, with the ability to auto save one entry per tool, standard processing speed, and community support.",
-      "desc_zh": null,
+      "desc_zh": "在线开发者工具，免费访问所有基本工具，每个工具可以自动保存一个条目，标准处理速度，以及社区支持。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -3920,7 +3920,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Free Step-by-Step Guide creator. Take screenshots, document processes and collaborate with your team. Also supports async screen recording.",
-      "desc_zh": null,
+      "desc_zh": "免费的分步指南创建工具。可截取屏幕截图、记录流程并与你的团队协作。还支持异步屏幕录制。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -3959,7 +3959,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Tool for organizing information. Share your notes and work together with others",
-      "desc_zh": null,
+      "desc_zh": "组织信息的工具。分享您的笔记并与他人协作",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4024,7 +4024,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "A faster way for your team to communicate. Free Unlimited Messages, Channels, Users, Apps & Integrations",
-      "desc_zh": null,
+      "desc_zh": "让你的团队更快地进行沟通。免费享受无限的消息、频道、用户、应用和集成",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4063,7 +4063,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Daily reports of your team's Commit and Pull Request activity on GitHub. Includes Push visualizer, peer recognition system, and custom alert builder. The free tier has unlimited users, three repos, and 3 alert configs.",
-      "desc_zh": null,
+      "desc_zh": "关于团队在 GitHub 上的提交和拉取请求活动的每日报告。包括推送可视化器、同行认可系统和自定义警报构建器。免费层级支持无限用户，三个仓库，和 3 个警报配置。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4193,7 +4193,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "One-click video conversations, and screen sharing, for free",
-      "desc_zh": null,
+      "desc_zh": "一键式视频对话和屏幕共享，免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4245,7 +4245,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Free code interview platform with embedded video chat, drawing board, and online code editor where you can compile and run your code on the browser. You can create a remote interview room with just one click.",
-      "desc_zh": null,
+      "desc_zh": "免费的代码面试平台，内置视频聊天、画板和在线代码编辑器，可在浏览器中编译并运行你的代码。只需一键即可创建远程面试房间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4505,7 +4505,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "A status page of status pages. Could you track the status pages of your upstream providers?",
-      "desc_zh": null,
+      "desc_zh": "状态页的状态页。你能追踪上游服务提供商的状态页吗？",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4557,7 +4557,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "All-in-one project management application for software development companies.",
-      "desc_zh": null,
+      "desc_zh": "面向软件开发公司的全方位项目管理应用程序。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4570,7 +4570,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Free Project, Task, and Issue-tracking software. Supports Kanban with Swimlanes and full Scrum implementation. Has integrated time tracking. Free for five users and three project portfolios.",
-      "desc_zh": null,
+      "desc_zh": "免费的项目、任务和问题跟踪软件。支持带泳道的看板和完整的 Scrum 实施。具有集成的时间跟踪功能。免费支持五个用户和三个项目组合。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4700,7 +4700,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Interconnected online personas, user stories and context mapping.  Helps keep design and dev in sync free for up to 3 personas and two collaborators.",
-      "desc_zh": null,
+      "desc_zh": "相互关联的在线角色、用户故事和上下文映射。帮助保持设计和开发同步，免费支持最多 3 个角色和两个协作者。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4843,7 +4843,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Easily collect feedback from your customers, turn customer feedback into your product roadmap. Collect, prioritize, and ship features that actually matter to your users.",
-      "desc_zh": null,
+      "desc_zh": "轻松收集客户反馈，将客户反馈转化为你的产品路线图。收集、排定优先级并交付真正对用户重要的功能。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5051,7 +5051,7 @@
       "category": "code-generation",
       "parent": null,
       "desc_en": "A C#-specific tool that generates boilerplate code on the fly during compilation to keep source code clean. It is free for open-source projects; its commercial-friendly free tier includes up to three aspects.",
-      "desc_zh": null,
+      "desc_zh": "一个 C# 特定工具，在编译过程中即时生成样板代码以保持源代码清洁。它对开源项目免费；其商业友好的免费层级包括最多三个方面。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5168,7 +5168,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "Automate performance tracking in your CI pipelines. Catch performance regressions before deployment, thanks to precise and consistent metrics. Free forever for Open Source projects.",
-      "desc_zh": null,
+      "desc_zh": "在 CI 管道中自动执行性能追踪。凭借精准且一致的指标，在部署前发现性能回退。对 Open Source 项目永久免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5220,7 +5220,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "Instantly find the differences between two blocks of code. Completely free to use.",
-      "desc_zh": null,
+      "desc_zh": "即时找出两段代码之间的差异。完全免费使用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5233,7 +5233,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "EverSQL - The #1 platform for database optimization. Gain critical insights into your database and SQL queries automatically.",
-      "desc_zh": null,
+      "desc_zh": "EverSQL - 数据库优化领域的 #1 平台。自动获取关于您的数据库和 SQL 查询的关键洞察。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5272,7 +5272,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "Reports and thorough recommendations to optimize websites",
-      "desc_zh": null,
+      "desc_zh": "提供报告和详尽建议，帮助优化网站",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5298,7 +5298,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "The #1 static code analyzer for Postgresql optimization. Performance, security, and architect database issues automatic detection service",
-      "desc_zh": null,
+      "desc_zh": "PostgreSQL 优化的 #1 静态代码分析器。性能、安全和架构问题的自动检测服务。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5363,7 +5363,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "Continuous inspection platform, free for Open Source",
-      "desc_zh": null,
+      "desc_zh": "持续检查平台，对 Open Source 免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5389,7 +5389,7 @@
       "category": "code-quality",
       "parent": null,
       "desc_en": "Quality metadata badges for open source projects",
-      "desc_zh": null,
+      "desc_zh": "面向开源项目的质量元数据徽章",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5441,7 +5441,7 @@
       "category": "code-search-and-browsing",
       "parent": null,
       "desc_en": "Search and dependency update notifications for 32 different package managers, free for open source",
-      "desc_zh": null,
+      "desc_zh": "为 32 种不同的包管理器提供搜索和依赖更新通知，对开源免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5675,7 +5675,7 @@
       "category": "ci-and-cd",
       "parent": null,
       "desc_en": "Run your GitHub actions 2x faster, 3.000 build minutes free each month.",
-      "desc_zh": null,
+      "desc_zh": "让你的 GitHub Actions 运行速度提升 2 倍，每月 3,000 分钟免费构建时长。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6117,7 +6117,7 @@
       "category": "testing",
       "parent": null,
       "desc_en": "Test results reporting and test case management. Integrates with popular test frameworks. Open Source software developers, individuals, educators, and small teams getting started can request discounted and free offerings beyond basic free projects.",
-      "desc_zh": null,
+      "desc_zh": "测试结果报告与测试用例管理。可与流行的测试框架集成。Open Source 软件开发者、个人、教育工作者以及刚起步的小团队，可在基础免费项目之外申请折扣和免费方案。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6286,7 +6286,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Cloud-first, developer-friendly security platform prevents data breaches in .NET and Java applications",
-      "desc_zh": null,
+      "desc_zh": "云优先、对开发者友好的安全平台，防范 .NET 和 Java 应用程序中的数据泄露",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6299,7 +6299,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "A simple, intuitive web app for analyzing and decoding/encoding data without dealing with complex tools or programming languages. Like a Swiss army knife of cryptography & encryption. All features are free to use, with no limit. Open source if you wish to self-host.",
-      "desc_zh": null,
+      "desc_zh": "一款简单直观的 Web 应用，用于分析和解码/编码数据，无需使用复杂的工具或编程语言。就像加密与密码学领域的瑞士军刀。所有功能免费使用，无任何限制。如需自行托管，该项目开源。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6351,7 +6351,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Universal Secrets Manager for application secrets and config, with support for syncing to various cloud providers. Free for five users with basic access controls.",
-      "desc_zh": null,
+      "desc_zh": "面向应用密钥和配置的通用 Secrets 管理器，支持同步到多种云服务提供商。五个用户免费，提供基本访问控制。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6429,7 +6429,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Online vulnerability scanner for web applications, servers, and networks. Ten free scans per month.",
-      "desc_zh": null,
+      "desc_zh": "面向 Web 应用程序、服务器和网络的在线漏洞扫描器。每月十次免费扫描。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6507,7 +6507,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Monitor Java, Javascript, .NET, Scala, Ruby, and NodeJS projects for security vulnerabilities in dependencies. Free for one private project, unlimited projects for open source.",
-      "desc_zh": null,
+      "desc_zh": "监控 Java、Javascript、.NET、Scala、Ruby 和 NodeJS 项目的依赖安全漏洞。一个私有项目免费，开源项目不限数量。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6572,7 +6572,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Monitor Python dependencies for security vulnerabilities and update them automatically. Free for one private project, unlimited projects for open source.",
-      "desc_zh": null,
+      "desc_zh": "监控 Python 依赖的安全漏洞并自动更新。一个私有项目免费，开源项目不限数量。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6819,7 +6819,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "A complete authorization management system for authoring, testing, and deploying access policies. Fine-grained authorization and access control, free up to 100 monthly active principals.",
-      "desc_zh": null,
+      "desc_zh": "一套完整的授权管理系统，用于编写、测试和部署访问策略。细粒度授权与访问控制，每月活跃主体最多 100 个免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6871,7 +6871,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Two-factor authentication (2FA) for website or app. Free for ten users, all authentication methods, unlimited, integrations, hardware tokens.",
-      "desc_zh": null,
+      "desc_zh": "面向网站或应用的双因素认证（2FA）。十位用户免费，包含所有认证方式、不限用量、集成以及硬件令牌。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6897,7 +6897,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Two-factor authentication (2FA) by push notifications, free for ten users, VPN, Websites, and SSH",
-      "desc_zh": null,
+      "desc_zh": "通过推送通知实现的双因素认证（2FA），十位用户免费，支持 VPN、网站和 SSH",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7092,7 +7092,7 @@
       "category": "mobile-app-distribution-and-feedback",
       "parent": null,
       "desc_en": "Mobile app hosting platform. The free plan includes five apps, 50 monthly downloads, and a maximum file size of 100 MB.",
-      "desc_zh": null,
+      "desc_zh": "移动应用托管平台。免费套餐包含五个应用、每月 50 次下载，以及最大 100 MB 的文件大小。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7105,7 +7105,7 @@
       "category": "mobile-app-distribution-and-feedback",
       "parent": null,
       "desc_en": "Deploy iOS & Android apps directly to devices. Free plan: app uploads, password-protected links, 1-day expiration, ten installations.",
-      "desc_zh": null,
+      "desc_zh": "将 iOS 和 Android 应用直接部署到设备。免费套餐：应用上传、密码保护链接、1 天有效期、十次安装。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7118,7 +7118,7 @@
       "category": "mobile-app-distribution-and-feedback",
       "parent": null,
       "desc_en": "Distribute mobile apps for testing. The free plan includes one app project, three app versions, 500 MB storage, and 100 app installations per month.",
-      "desc_zh": null,
+      "desc_zh": "分发移动应用以供测试。免费套餐包含一个应用项目、三个应用版本、500 MB 存储空间，以及每月 100 次应用安装。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7183,7 +7183,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "MDM and MAM for Android Devices with DevOps. One hundred devices free with one user license and 25 MB Application Storage.",
-      "desc_zh": null,
+      "desc_zh": "面向 Android 设备、支持 DevOps 的 MDM 和 MAM。一个用户许可证可免费管理一百台设备，并提供 25 MB 应用存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7196,7 +7196,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Device management for iPads, iPhones, and Macs, three devices free",
-      "desc_zh": null,
+      "desc_zh": "面向 iPad、iPhone 和 Mac 的设备管理，三台设备免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7209,7 +7209,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Device Management service. Stay up-to-date with your device fleet and secure unlimited devices for free. The free plan offers basic features.",
-      "desc_zh": null,
+      "desc_zh": "设备管理服务。随时掌握你的设备群最新状况，并可免费保护不限数量的设备。免费套餐提供基本功能。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7222,7 +7222,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Server management tool to easily manage and deploy your servers & sites. Free for one server.",
-      "desc_zh": null,
+      "desc_zh": "服务器管理工具，轻松管理和部署你的服务器与网站。一台服务器免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7248,7 +7248,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Manage and monitor PHP-based web servers with automated configurations. Free for one server.",
-      "desc_zh": null,
+      "desc_zh": "通过自动化配置管理和监控基于 PHP 的 Web 服务器。一台服务器免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7261,7 +7261,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Server management and deployment platform with a user-friendly interface. Free tier available for one server.",
-      "desc_zh": null,
+      "desc_zh": "界面友好的服务器管理和部署平台。一台服务器可使用免费层级。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7573,7 +7573,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "ClickHouse-based SQL-compatible log management. Free up to 1 GB per month, three days retention.",
-      "desc_zh": null,
+      "desc_zh": "基于 ClickHouse 的兼容 SQL 的日志管理。每月最多 1 GB 免费，保留三天。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7651,7 +7651,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Unlimited projects, unlimited strings, and collaborators for Open Source",
-      "desc_zh": null,
+      "desc_zh": "为 Open Source 提供不限数量的项目、字符串和协作者",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7664,7 +7664,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free for everybody",
-      "desc_zh": null,
+      "desc_zh": "对所有人免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7755,7 +7755,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free up to 2000 translations, Unlimited translators, ten languages/project, 1000 translatable assets/project",
-      "desc_zh": null,
+      "desc_zh": "最多 2000 条翻译免费，翻译者数量不限，每个项目十种语言，每个项目 1000 个可翻译资产",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7794,7 +7794,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free for a single user",
-      "desc_zh": null,
+      "desc_zh": "单个用户免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7885,7 +7885,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Uptime monitoring, incident management, on-call scheduling/alerting, and status pages in a single product. The free plan includes ten monitors with 3-minute check frequency and status pages.",
-      "desc_zh": null,
+      "desc_zh": "一款产品集在线状态监控、事件管理、值班排班/告警和状态页于一体。免费套餐包含十个监控项，检查频率为 3 分钟，并附带状态页。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7911,7 +7911,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Open source E2E / Synthetic monitoring and deep API monitoring for developers. Free plan with one user and 10k API & network / 1.5k browser check runs.",
-      "desc_zh": null,
+      "desc_zh": "面向开发者的开源 E2E / 拨测监控和深度 API 监控。免费套餐包含一个用户，以及 10,000 次 API 与网络 / 1,500 次浏览器检查运行。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7950,7 +7950,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Performance insights and uptime monitoring for cron jobs, websites, APIs and more. A free tier with five monitors.",
-      "desc_zh": null,
+      "desc_zh": "为 cron 作业、网站、API 等提供性能洞察和在线状态监控。免费层级包含五个监控项。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8080,7 +8080,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Grafana Cloud is a composable observability platform that integrates metrics and logs with Grafana. Free: 3 users, ten dashboards, 100 alerts, metrics storage in Prometheus and Graphite (10,000 series, 14 days retention), logs storage in Loki (50 GB of logs, 14 days retention)",
-      "desc_zh": null,
+      "desc_zh": "Grafana Cloud 是一个可组合的可观测性平台，通过 Grafana 整合指标和日志。免费：3 个用户、十个仪表板、100 个告警，Prometheus 和 Graphite 指标存储（10,000 条序列，保留 14 天），Loki 日志存储（50 GB 日志，保留 14 天）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8145,7 +8145,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free public JSON API returning real-time status for 500+ popular services (GitHub, Stripe, AWS, etc.). No auth required, CORS enabled.",
-      "desc_zh": null,
+      "desc_zh": "免费的公开 JSON API，返回 500 多个热门服务（GitHub、Stripe、AWS 等）的实时状态。无需身份验证，已启用 CORS。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8158,7 +8158,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Dead man's switch for AI agents, cron jobs and CI. Free for individuals with unlimited monitors and destinations. Let AI agents build monitoring for everything including themselves.",
-      "desc_zh": null,
+      "desc_zh": "面向 AI agents、cron 作业和 CI 的死人开关（Dead man's switch）。个人用户免费，监控器和通知目的地数量不限。让 AI agents 为包括它们自身在内的一切构建监控。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8171,7 +8171,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Online broken link checker, free for small websites up to 100 pages, completely free for open-source projects.",
-      "desc_zh": null,
+      "desc_zh": "在线失效链接检查工具，最多 100 个页面的小型网站可免费使用，开源项目则完全免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8184,7 +8184,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free load testing tools with limitations",
-      "desc_zh": null,
+      "desc_zh": "有限制的免费负载测试工具",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8197,7 +8197,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Server monitoring, public status pages, and service uptime monitoring.",
-      "desc_zh": null,
+      "desc_zh": "服务器监控、公开状态页面以及服务正常运行时间监控。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8210,7 +8210,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Middleware observability platform provides complete visibility into your apps & stack, so you can monitor & diagnose issues at scale. They have a free forever plan for Dev community use that allows Log monitoring for up to 1M log events, Infrastructure monitoring & APM for up to 2 hosts.",
-      "desc_zh": null,
+      "desc_zh": "Middleware 可观测性平台可让你对自己的应用与技术栈获得完整的可见性，从而能够大规模地监控和诊断问题。他们为 Dev 社区使用提供永久免费计划，支持最多 100 万条日志事件的日志监控，以及最多 2 台主机的基础设施监控与 APM。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8223,7 +8223,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Minimalist uptime monitoring with beautiful status pages. The Forever Free plan offers HTTPS, Keyword, SSL and Response-time monitorming for 10 websites or api-endpoints, and provides 2 dashboards/status pages.",
-      "desc_zh": null,
+      "desc_zh": "极简的在线状态监控，配有精美的状态页。Forever Free 计划为 10 个网站或 API 端点提供 HTTPS、关键字、SSL 和响应时间监控，并提供 2 个仪表盘/状态页。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8236,7 +8236,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Netdata is an open-source tool to collect real-time metrics. It's a growing product and can also be found on GitHub!",
-      "desc_zh": null,
+      "desc_zh": "Netdata 是一款用于收集实时指标的开源工具。它是一款持续成长的产品，在 GitHub 上也可以找到它！",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8249,7 +8249,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "New Relic observability platform built to help engineers create more perfect software. From monoliths to serverless, you can instrument everything and then analyze, troubleshoot, and optimize your entire software stack. The free tier offers 100GB/month of free data ingest, one free full-access user, and unlimited free primary users.",
-      "desc_zh": null,
+      "desc_zh": "New Relic 可观测性平台旨在帮助工程师创建更完美的软件。从单体架构到无服务器架构，您可以检测一切，然后分析、排查和优化整个软件堆栈。免费层每月提供 100GB 的免费数据摄取、一个免费的全访问用户和无限免费的主要用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8262,7 +8262,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "OnlineOrNot provides uptime monitoring for websites and APIs, monitoring for cron jobs and scheduled tasks. Also provides status pages. The first five checks with a 3-minute interval are free. The free tier sends alerts via Slack, Discord, and Email.",
-      "desc_zh": null,
+      "desc_zh": "OnlineOrNot 为网站和 API 提供可用性监控，以及对 cron 任务和定时任务的监控，同时还提供状态页。前五个以 3 分钟为间隔的检查项免费。免费套餐可通过 Slack、Discord 和电子邮件发送警报。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8483,7 +8483,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Website monitoring, unlimited tests free with limitations",
-      "desc_zh": null,
+      "desc_zh": "网站监控，无限次测试免费（含一定限制）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -9042,7 +9042,7 @@
       "category": "education-and-career-development",
       "parent": null,
       "desc_en": "Open-source platform offering free courses and certifications in Data Analysis, Information Security, Web Development, and more.",
-      "desc_zh": null,
+      "desc_zh": "开源平台，提供数据分析、信息安全、Web 开发等领域的免费课程和认证。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -10082,7 +10082,7 @@
       "category": "email",
       "parent": null,
       "desc_en": "Temporary / Disposable Mail Gen Utilizing a range variety of domain. Email Address refreshes every time the page is reloaded. It is entirely free and does not include any pricing for their services.",
-      "desc_zh": null,
+      "desc_zh": "临时/一次性邮箱生成器，使用多种不同的域名。每次重新加载页面时邮箱地址都会刷新。完全免费，其服务不收取任何费用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -10108,7 +10108,7 @@
       "category": "email",
       "parent": null,
       "desc_en": "Free disposable email addresses with forwarding and automatic address expiration",
-      "desc_zh": null,
+      "desc_zh": "免费的一次性邮箱地址，支持转发和地址自动过期",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -10394,7 +10394,7 @@
       "category": "font",
       "parent": null,
       "desc_en": "Has a variety of fonts available to download and sorted neatly with tags.",
-      "desc_zh": null,
+      "desc_zh": "提供多种字体可供下载，并按标签整齐分类。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11590,7 +11590,7 @@
       "category": "paas",
       "parent": null,
       "desc_en": "Backend framework using static analysis to provide automatic infrastructure, boilerplate-free code, and more. Includes free cloud hosting for hobby projects.",
-      "desc_zh": null,
+      "desc_zh": "使用静态分析的后端框架，提供自动基础设施、无样板代码等特性。为业余爱好项目提供免费云托管。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12084,7 +12084,7 @@
       "category": "low-code-platform",
       "parent": null,
       "desc_en": "A low-code platform designed for building business process applications with customizable mobile and web apps. Offers a drag-and-drop interface, features like Offline Support, real-time location tracking and integration with various third-party services",
-      "desc_zh": null,
+      "desc_zh": "一个专为构建业务流程应用而设计的低代码平台，支持可自定义的移动端和 Web 应用。提供拖放式界面，以及离线支持、实时位置追踪和与各类第三方服务的集成等功能。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12448,7 +12448,7 @@
       "category": "web-hosting",
       "parent": null,
       "desc_en": "Find, Create, and Publish Open Source software for free",
-      "desc_zh": null,
+      "desc_zh": "免费查找、创建和发布开源软件",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13163,7 +13163,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "A way back for your Supabase app. ReviveDB keeps recovery points of your database and Auth, Storage files, Edge Functions and supported project configuration, and only calls a backup ready once your database has been restored from it and compared. The free plan covers one project with weekly backups and three recovery points.",
-      "desc_zh": null,
+      "desc_zh": "为你的 Supabase 应用提供一条退路。ReviveDB 为你的数据库以及 Auth、Storage 文件、Edge Functions 和受支持的项目配置保存恢复点，只有当你的数据库从某个备份中恢复并完成比对后，该备份才会被视为就绪。免费计划覆盖一个项目，提供每周备份和三个恢复点。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13176,7 +13176,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "Flexible, Spreadsheet-like Database built by the Seafile team. unlimited tables, 2,000 lines, 1-month versioning, up to 25 team members.",
-      "desc_zh": null,
+      "desc_zh": "由 Seafile 团队打造的灵活的类电子表格数据库。不限表数、2,000 行、1 个月版本历史、最多 25 名团队成员。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13189,7 +13189,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "Cloud Data Platform offers a free tier and all plans are completely free while in beta",
-      "desc_zh": null,
+      "desc_zh": "Cloud Data Platform 提供免费层，且在 beta 阶段所有计划完全免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13202,7 +13202,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "One tool that combines spreadsheets' flexibility, databases' power, and built-in integrations with your favorite business apps. The free plan includes unlimited users, ten stacks, and a 2GB attachment per stack.",
-      "desc_zh": null,
+      "desc_zh": "一款结合电子表格灵活性、数据库强大功能和与您喜爱的业务应用程序内置集成的工具。免费计划包括无限用户、十个堆栈和每个堆栈 2GB 的附件。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13215,7 +13215,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "A serverless managed ClickHouse with connection-less data ingest over HTTP and lets you publish SQL queries as managed HTTP APIs. There is no time limit on free-tier, 10GB storage + 1000 API requests per day.",
-      "desc_zh": null,
+      "desc_zh": "一个无服务器的托管 ClickHouse，支持通过 HTTP 进行无连接数据摄取，并可让你将 SQL 查询发布为托管 HTTP API。免费层没有时间限制，提供 10GB 存储和每天 1000 次 API 请求。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13228,7 +13228,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "Turso is SQLite Developer Experience in an Edge Database. Turso provides a Free Forever starter plan, 9 GB of total storage, Up to 500 databases, Up to 3 locations, 1 billion row reads per month, and Local development support with SQLite.",
-      "desc_zh": null,
+      "desc_zh": "Turso 是边缘数据库中的 SQLite 开发者体验。Turso 提供 Free Forever 入门计划：总存储 9 GB、最多 500 个数据库、最多 3 个位置、每月 10 亿次行读取，并支持使用 SQLite 进行本地开发。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13241,7 +13241,7 @@
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "Serverless Redis with free tier up to 500K monthly commands, 256MB max database size, and 20 concurrent connections",
-      "desc_zh": null,
+      "desc_zh": "无服务器 Redis，免费层提供每月最多 50 万条命令、最大数据库容量 256MB 和 20 个并发连接。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13254,7 +13254,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Free and secure dynamic reverse proxy service.",
-      "desc_zh": null,
+      "desc_zh": "免费且安全的动态反向代理服务。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13267,7 +13267,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Visual Studio extension to expose IIS Express to the local network or over a tunnel to a public URL.",
-      "desc_zh": null,
+      "desc_zh": "Visual Studio 扩展，可将 IIS Express 暴露到本地网络，或通过隧道暴露到公共 URL。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13293,7 +13293,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "LogMeIn Hamachi is a hosted VPN service that lets you securely extend LAN-like networks to distributed teams with a free plan that allows unlimited networks with up to 5 people",
-      "desc_zh": null,
+      "desc_zh": "LogMeIn Hamachi 是一项托管 VPN 服务，可让你安全地将类似局域网的网络扩展到分布式团队；其免费套餐允许创建数量不限的网络，每个网络最多支持 5 人。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13306,7 +13306,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Develop, test, and monitor your webhooks from anywhere. 100K requests and 100K attempts per month with three days retention.",
-      "desc_zh": null,
+      "desc_zh": "随时随地开发、测试和监控你的 webhook。每月 10 万次请求和 10 万次尝试，数据保留三天。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13319,7 +13319,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Expose locally running servers over a tunnel to a public URL.",
-      "desc_zh": null,
+      "desc_zh": "通过隧道将本地运行的服务器暴露到公共 URL。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13345,7 +13345,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Expose locally running servers over a tunnel to a public URL. Free hosted version, and [open source](https://github.com/localtunnel/localtunnel).",
-      "desc_zh": null,
+      "desc_zh": "通过隧道将本地运行的服务器暴露到公网 URL。提供免费托管版本，且 [open source](https://github.com/localtunnel/localtunnel)。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13358,7 +13358,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Reverse proxy that enables you to expose your localhost servers to the internet. The free plan has 15 minutes tunnel lifetime.",
-      "desc_zh": null,
+      "desc_zh": "反向代理，可将你的 localhost 服务器暴露到互联网上。免费版的隧道存续时间为 15 分钟。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13371,7 +13371,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Expose locally running servers over a tunnel to a public URL.",
-      "desc_zh": null,
+      "desc_zh": "通过隧道将本地运行的服务器暴露到公共 URL。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13384,7 +13384,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Public URLs for localhost with a single command, no downloads required. HTTPS / TCP / TLS tunnels. The free plan has 60 minutes tunnel lifetime.",
-      "desc_zh": null,
+      "desc_zh": "只需一条命令即可为 localhost 获取公网 URL，无需下载。支持 HTTPS / TCP / TLS 隧道。免费版的隧道存续时间为 60 分钟。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13397,7 +13397,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Connect multiple computers together via a VPN-enabling LAN-like network. Unlimited peers. (Hamachi alternative)",
-      "desc_zh": null,
+      "desc_zh": "通过支持 VPN 的类局域网网络将多台计算机连接在一起。对等节点数量不限。（Hamachi 的替代方案）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13410,7 +13410,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Expose local servers to the internet. No installation, no signup. Free subdomain, no limits.",
-      "desc_zh": null,
+      "desc_zh": "将本地服务器暴露到互联网。无需安装，无需注册。免费子域名，无任何限制。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13423,7 +13423,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Twilio STUN",
-      "desc_zh": null,
+      "desc_zh": "Twilio STUN",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13436,7 +13436,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Google STUN",
-      "desc_zh": null,
+      "desc_zh": "Google STUN",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13449,7 +13449,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Zero config VPN, using the open-source WireGuard protocol. Installs on MacOS, iOS, Windows, Linux, and Android devices. Free plan for personal use with 100 devices and three users.",
-      "desc_zh": null,
+      "desc_zh": "零配置 VPN，采用开源 WireGuard 协议。可安装在 MacOS、iOS、Windows、Linux 和 Android 设备上。个人使用免费计划，支持 100 台设备和三个用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13462,7 +13462,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Manage, debug, fan-out, and proxy all your webhooks to public or internal (i.e. localhost) destinations. Also, expose servers running in a private network over a tunnel by getting a public HTTP endpoint (`https://yoursubdomain.webrelay.io <----> http://localhost:8080`).",
-      "desc_zh": null,
+      "desc_zh": "管理、调试、扇出并将你的所有 webhook 代理到公共或内部（即 localhost）目的地。此外，还可以通过获取一个公共 HTTP 端点（`https://yoursubdomain.webrelay.io <----> http://localhost:8080`），把运行在私有网络中的服务器经隧道暴露出来。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13475,7 +13475,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Unlimited STUN usage + 500 MB monthly TURN bandwidth, capped bandwidth, single geographic region.",
-      "desc_zh": null,
+      "desc_zh": "不限量的 STUN 使用量 + 每月 500 MB TURN 带宽，带宽设有上限，仅限单一地理区域。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13488,7 +13488,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "FOSS managed virtual Ethernet as a service. Unlimited end-to-end encrypted networks of 25 clients on the free plan. Clients for desktop/mobile/NA; web interface for configuration of custom routing rules and approval of new client nodes on private networks",
-      "desc_zh": null,
+      "desc_zh": "以服务形式提供的 FOSS 托管虚拟以太网。免费计划支持不限数量的端到端加密网络，每个网络可容纳 25 个客户端。提供桌面/移动/NA 客户端；并提供 Web 界面，用于配置自定义路由规则以及批准私有网络上的新客户端节点。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13501,7 +13501,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Free project management and SCRUM software for up to 5 team members",
-      "desc_zh": null,
+      "desc_zh": "面向最多 5 名团队成员的免费项目管理和 SCRUM 软件",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13514,7 +13514,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "All-in-one project management tool. Free plan includes kanban board, backlog, epics, estimation poker, MCP server, REST API and webhooks for 2 users.",
-      "desc_zh": null,
+      "desc_zh": "一体化项目管理工具。免费计划面向 2 名用户，包含看板、待办列表（backlog）、史诗（epics）、估算扑克（estimation poker）、MCP server、REST API 和 webhook。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13527,7 +13527,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Free for private project with collaborators",
-      "desc_zh": null,
+      "desc_zh": "私有项目（含协作者）免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13540,7 +13540,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Everything your team needs to release great projects in one platform. The free plan offers 1 Project with ten users & 100MB of storage.",
-      "desc_zh": null,
+      "desc_zh": "您的团队在一个平台上发布出色项目所需的一切。免费计划提供 1 个项目、十名用户和 100MB 存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13553,7 +13553,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "To-do lists, milestone management, forum-like messaging, file sharing, and time tracking. Up to 3 projects, 20 users, and 1GB of storage space.",
-      "desc_zh": null,
+      "desc_zh": "待办事项列表、里程碑管理、类似论坛的消息功能、文件共享和时间跟踪。最多支持 3 个项目、20 名用户和 1GB 存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13566,7 +13566,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Intranet and project management tool. The free plan has 5GB for unlimited users.",
-      "desc_zh": null,
+      "desc_zh": "内网和项目管理工具。免费计划为不限数量的用户提供 5GB 存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13579,7 +13579,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Online real-time diagrams: flowchart, UML, network. Free max. 15 users/diagram, 25 sheets",
-      "desc_zh": null,
+      "desc_zh": "在线实时图表：流程图、UML、网络图。免费版每张图表最多 15 名用户、25 个工作表",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13592,7 +13592,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Project management. Free, premium version with cloud storage. Mobile applications and Git integrations are available.",
-      "desc_zh": null,
+      "desc_zh": "项目管理。免费，高级版本附带云存储。提供移动应用和 Git 集成。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13605,7 +13605,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Time tracker and timesheet app that lets you track work hours across projects. Unlimited users, free forever.",
-      "desc_zh": null,
+      "desc_zh": "时间跟踪和工时表应用，让您可以跨项目跟踪工作时间。用户数量不限，永久免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13618,7 +13618,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Design a professional architecture diagram in minutes with the Cloudcraft visual designer, optimized for AWS with intelligent components that show live data too. Free plan has unlimited private diagrams for single user.",
-      "desc_zh": null,
+      "desc_zh": "使用 Cloudcraft 可视化设计器，几分钟内即可设计出专业的架构图，针对 AWS 优化，智能组件还能显示实时数据。免费计划为单个用户提供不限数量的私有图表。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13631,7 +13631,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Atlassian's content collaboration tool is used to help teams collaborate and share knowledge efficiently. Free plan for up to 10 users.",
-      "desc_zh": null,
+      "desc_zh": "Atlassian 的内容协作工具，用于帮助团队高效协作和共享知识。免费计划最多支持 10 名用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13644,7 +13644,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Versatile project management platform. Free for up to 3 projects, unlimited users, 1 GB storage.",
-      "desc_zh": null,
+      "desc_zh": "多功能项目管理平台。免费版支持最多 3 个项目、不限用户数、1 GB 存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13657,7 +13657,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Online diagrams stored locally in Google Drive, OneDrive, or Dropbox. Free for all features and storage levels",
-      "desc_zh": null,
+      "desc_zh": "在线图表，本地存储于 Google Drive、OneDrive 或 Dropbox。所有功能和存储级别均免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13670,7 +13670,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Simple and intuitive sprint retrospective tool. The free plan has three public boards and one survey per board per month.",
-      "desc_zh": null,
+      "desc_zh": "简单直观的冲刺回顾工具。免费计划包含三个公开看板，每个看板每月一次调查。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13683,7 +13683,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "tasks, discussions, milestones, time tracking, calendar, files and password manager. Free plan with unlimited projects, users, and file storage.",
-      "desc_zh": null,
+      "desc_zh": "任务、讨论、里程碑、时间跟踪、日历、文件和密码管理器。免费计划支持不限数量的项目、用户和文件存储。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13748,7 +13748,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Real-time sprint retrospective platform with voting, timers, surveys, guest collaboration, and ice-breaker games. The forever-free plan includes one board per month, anonymous surveys, and guest link sharing.",
-      "desc_zh": null,
+      "desc_zh": "实时冲刺回顾平台，具备投票、计时器、调查、访客协作和破冰游戏功能。永久免费计划包含每月一个看板、匿名调查和访客链接分享。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13904,7 +13904,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "An online diagram tool with collaboration features. Free plan with three editable documents, 100 professional templates, and basic collaboration features.",
-      "desc_zh": null,
+      "desc_zh": "一款具有协作功能的在线图表工具。免费计划包含三个可编辑文档、100 个专业模板以及基础协作功能。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14515,7 +14515,7 @@
       "category": "storage-and-media-processing",
       "parent": null,
       "desc_en": "Unlimited image chart generation with a watermark",
-      "desc_zh": null,
+      "desc_zh": "不限量生成带水印的图表图片",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -15217,7 +15217,7 @@
       "category": "design-and-ui",
       "parent": null,
       "desc_en": "Preview your theme changes across different components and layouts.",
-      "desc_zh": null,
+      "desc_zh": "在不同组件和布局中预览你的主题更改。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16101,7 +16101,7 @@
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "A cloud coding environment for various program languages.",
-      "desc_zh": null,
+      "desc_zh": "支持多种编程语言的云端编码环境。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16127,7 +16127,7 @@
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "A cloud programming playground well-suited for running code snippets. Supports various programming languages. No registration is required for running code, but it is necessary when saving code on their platform. Also offers free courses for beginners and intermediate-level coders.",
-      "desc_zh": null,
+      "desc_zh": "一个非常适合运行代码片段的云端编程演练场。支持多种编程语言。运行代码无需注册，但在其平台上保存代码时则需要注册。还为初学者和中级程序员提供免费课程。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16660,7 +16660,7 @@
       "category": "analytics-events-and-statistics",
       "parent": null,
       "desc_en": "Automatically detect digital analytics, marketing data and pixels issues, maintain up-to-date tracking plans, and foster seamless collaboration. Deploy it to your production environment with real traffic or add analytics coverage to your regression tests without writing code.",
-      "desc_zh": null,
+      "desc_zh": "自动检测数字分析、营销数据和像素（pixels）问题，维护最新的跟踪计划，并促进无缝协作。可将其部署到有真实流量的生产环境，或无需编写代码即可为回归测试添加分析覆盖。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16764,7 +16764,7 @@
       "category": "visitor-session-recording",
       "parent": null,
       "desc_en": "Session recording completely free with \"no traffic limits\", no project limits, and no sampling",
-      "desc_zh": null,
+      "desc_zh": "会话录制完全免费，\"无流量限制\"、无项目数量限制、无抽样",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16894,7 +16894,7 @@
       "category": "payment-and-billing-integration",
       "parent": null,
       "desc_en": "Cancel flows (open-sourced), churn metrics, and revenue analytics for subscription businesses. Free forever.",
-      "desc_zh": null,
+      "desc_zh": "面向订阅制业务的取消流程（开源）、流失指标和收入分析。永久免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17115,7 +17115,7 @@
       "category": "docker-related",
       "parent": null,
       "desc_en": "Build and store container images with unlimited free public repositories",
-      "desc_zh": null,
+      "desc_zh": "构建并存储容器镜像，免费公共仓库数量不限",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17193,7 +17193,7 @@
       "category": "dev-blogging-sites",
       "parent": null,
       "desc_en": "Get more thoughtful about what matters to you.",
-      "desc_zh": null,
+      "desc_zh": "对自己在意的事情进行更用心的思考。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17245,7 +17245,7 @@
       "category": "commenting-platforms",
       "parent": null,
       "desc_en": "Open source hosted comments platform, pay what you can for \"One moderator on a few domains with complete control over behavior & appearance\"",
-      "desc_zh": null,
+      "desc_zh": "开源的托管评论平台，按你的能力付费，即可获得\"在几个域名上拥有一个版主，并可完全控制行为与外观\"的服务。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17596,7 +17596,7 @@
       "category": "miscellaneous",
       "parent": null,
       "desc_en": "Scalable, end-to-end management for third-party code, license compliance and vulnerabilities.",
-      "desc_zh": null,
+      "desc_zh": "为第三方代码、许可证合规和漏洞提供可扩展的端到端管理。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17960,7 +17960,7 @@
       "category": "other-free-resources",
       "parent": null,
       "desc_en": "Collection of free services for students. Registration required.",
-      "desc_zh": null,
+      "desc_zh": "面向学生的免费服务合集。需要注册。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -18038,7 +18038,7 @@
       "category": "other-free-resources",
       "parent": null,
       "desc_en": "Send and receive test SMS messages for free.",
-      "desc_zh": null,
+      "desc_zh": "免费发送和接收测试短信。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
