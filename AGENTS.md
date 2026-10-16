@@ -13,7 +13,7 @@
 | 任务 | 命令 |
 |---|---|
 | 开发 | `pnpm dev` |
-| 单测（node:test，29 条） | `pnpm test` |
+| 单测（node:test，31 条） | `pnpm test` |
 | 检查 / 格式化（Biome） | `pnpm lint` / `pnpm format` |
 | 静态构建（`output: export` → `out/`，1,400+ 页） | `pnpm build` |
 | 本地预览 Workers 行为（404 / 尾斜杠） | `pnpm preview` |

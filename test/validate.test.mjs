@@ -13,6 +13,21 @@ test('数字归一化：千分位与全角数字', () => {
   assert.deepEqual(extractNumbers('１０００ requests'), ['1000'])
 })
 
+test('数字归一化：欧式千分位 3.000 与 3,000 等值', () => {
+  assert.deepEqual(extractNumbers('3.000 build minutes'), ['3000'])
+  assert.deepEqual(extractNumbers('3,000 build minutes'), ['3000'])
+  assert.deepEqual(extractNumbers('1.000.000 events'), ['1000000'])
+  assert.deepEqual(
+    validateTranslation('Run 3.000 build minutes free', '免费运行 3,000 构建分钟'),
+    [],
+  )
+})
+
+test('校验通过：极短描述豁免长度比', () => {
+  assert.deepEqual(validateTranslation('Compute', '计算'), [])
+  assert.deepEqual(validateTranslation('Online Surveys', '在线调查'), [])
+})
+
 test('数字归一化：单位字母后接字母不放大（ms/MB/GB）', () => {
   assert.deepEqual(extractNumbers('0.5GB'), ['0.5'])
   assert.deepEqual(extractNumbers('0.5 GB'), ['0.5'])

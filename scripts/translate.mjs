@@ -17,6 +17,8 @@ const SYSTEM_PROMPT = `你是资深技术译者，负责把英文的产品/服�
  * - 目标：active 且 desc_en 非空且 desc_zh 为空（变更条目在 merge 阶段已被置空）；
  * - 相同描述去重只翻一次；每批默认 20–50 段，串行 + 限流感知重试；
  * - 每条译文过四项校验（数字 / 链接 / 长度比 / 坏输出），未过即重试一轮（第二轮可切备用模型）；
+ * - 请求失败（4xx 不盲重试，如内容过滤 1301）自动二分拆分重试：问题条目隔离到单条，同批其余条目不受影响；
+ * - 失败原因（校验项或请求错误）随「保留英文」日志输出，便于排查；
  * - 批间自适应节流（整批失败加倍、成功回落），连续整批失败达阈值提前结束本轮，进度保留待下次续翻；
  * - 最终失败的条目保持 desc_zh = null（站点降级展示英文并标注"未翻译"）。
  */
@@ -57,7 +59,7 @@ export async function translateRecords(entries, opts = {}) {
   let pacing = 2000
   for (let i = 0; i < unique.length; i += batchSize) {
     const batch = unique.slice(i, i + batchSize)
-    const { result } = await translateBatch(batch, {
+    const { result, failures } = await translateBatch(batch, {
       baseUrl,
       model,
       fallbackModel,
@@ -71,7 +73,8 @@ export async function translateRecords(entries, opts = {}) {
         stats.translated += 1
       } else {
         stats.failed += 1
-        console.warn(`  保留英文（失败/校验未过）：${desc.slice(0, 64)}…`)
+        const reason = failures.get(desc)?.join('；') ?? '未知'
+        console.warn(`  保留英文（${reason}）：${desc.slice(0, 64)}…`)
       }
       for (const rec of byDesc.get(desc)) rec.desc_zh = zh
     }
@@ -100,32 +103,55 @@ export async function translateRecords(entries, opts = {}) {
 
 async function translateBatch(descs, ctx) {
   const result = new Map()
+  const failures = new Map()
   let pending = descs
-  // 两轮：第一轮整体；第二轮只重试未过的部分，可切备用模型（主力限流时的逃生通道）
+  // 两轮：第一轮整体（失败自动拆分重试）；第二轮只重试未过的部分，可切备用模型（主力限流时的逃生通道）
   for (let round = 0; round < 2 && pending.length > 0; round++) {
     const model = round === 1 && ctx.fallbackModel ? ctx.fallbackModel : ctx.model
-    let returned
-    try {
-      returned = await requestTranslations(pending, { ...ctx, model })
-    } catch (err) {
-      console.error(`  批量请求失败：${err.message}`)
-      returned = new Map()
-    }
+    const returned = await requestChunked(pending, ctx, model)
     const still = []
     for (const desc of pending) {
       const zh = returned.get(desc)
       if (!zh) {
         still.push(desc)
+        failures.set(desc, [`请求失败或未返回（${model}）`])
         continue
       }
       const issues = validateTranslation(desc, zh, { name: ctx.nameByDesc.get(desc) })
-      if (issues.length === 0) result.set(desc, zh.trim())
-      else still.push(desc)
+      if (issues.length === 0) {
+        result.set(desc, zh.trim())
+        failures.delete(desc)
+      } else {
+        still.push(desc)
+        failures.set(desc, issues)
+      }
     }
     pending = still
     if (pending.length > 0 && round === 0) await sleep(500)
   }
-  return { result, failed: pending }
+  return { result, failures }
+}
+
+/**
+ * 请求一批译文；整批失败（内容过滤 400 / 超时 / 5xx 重试耗尽）时二分拆分递归重试，
+ * 把问题条目隔离到单条，同批其余条目仍能正常返回。
+ */
+async function requestChunked(descs, ctx, model) {
+  if (descs.length === 0) return new Map()
+  try {
+    return await requestTranslations(descs, { ...ctx, model })
+  } catch (err) {
+    if (descs.length === 1) {
+      console.error(`  单条请求失败（${model}）：${err.message.slice(0, 160)}`)
+      return new Map()
+    }
+    const mid = Math.ceil(descs.length / 2)
+    console.warn(`  批量请求失败（拆分重试 ${descs.length} 段）：${err.message.slice(0, 120)}`)
+    const left = await requestChunked(descs.slice(0, mid), ctx, model)
+    const right = await requestChunked(descs.slice(mid), ctx, model)
+    for (const [k, v] of right) left.set(k, v)
+    return left
+  }
 }
 
 async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 3 }) {
@@ -169,6 +195,9 @@ async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 3 
       return map
     } catch (err) {
       lastErr = err
+      // 4xx（内容过滤 1301、参数错误等）重试无意义：立即抛出，交给 requestChunked 拆分隔离
+      const retryable = err.status === undefined || err.status === 429 || err.status >= 500
+      if (!retryable) throw err
       if (attempt < retries) {
         // 429（免费层速率限制 / 模型拥堵）等待显著更久，其余错误短退避
         await sleep((err.status === 429 ? 10000 : 1500) * (attempt + 1))

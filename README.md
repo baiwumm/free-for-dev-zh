@@ -25,7 +25,7 @@ scripts/            同步流水线（纯 Node.js）
   sync.mjs          拉取 → 解析 → 守卫 → 差异 → 合并 → 翻译 → 原子写入
   translate.mjs     批量翻译（OpenAI 兼容接口），可独立运行
   lib/              fetch / parse / guard / diff / merge / validate / ids / slug
-test/               解析边界、守卫、差异合并、翻译校验的单元测试（29 条）
+test/               解析边界、守卫、差异合并、翻译校验的单元测试（31 条）
 src/                站点（首页索引 / docs 概览 / 分类页 / 条目详情 / 关于 / ⌘K 搜索）
 public/fonts/       Maple Mono CN 自托管子集（SIL OFL 1.1）
 .agents/skills/     项目级 AI 技能（frontend-design / vercel-react-best-practices，版本锁定于 skills-lock.json）

@@ -11,11 +11,12 @@ const UNIT = {
 /**
  * 数字提取与归一化（DS-6 校验 1）：
  * - 去千分位、全角数字转半角；
+ * - 欧式千分位（3.000 / 12.500 / 1.000.000）按整数解析，原文与译文同样归一，不受书写习惯影响；
  * - 单位等值：5 million <-> 5000000、500 万 <-> 5000000、1k <-> 1000；
  * - 单位字母后不允许紧跟其他字母（避免把 "100ms"、"500MB" 误判为单位）。
  */
 export function extractNumbers(input) {
-  const s = fullWidthToHalf(input)
+  const s = normalizeEuroThousands(fullWidthToHalf(input))
   const out = []
   const re = /(\d[\d,]*(?:\.\d+)?)(?:\s*(million|billion|k|m|b|万|亿)(?![a-zA-Z]))?/gi
   let match
@@ -69,9 +70,14 @@ export function validateTranslation(en, zh, options = {}) {
     issues.push(`链接不一致 [${enLinks.join(',')}] vs [${zhLinks.join(',')}]`)
   }
 
-  const ratio = translation.length / Math.max(1, en.trim().length)
-  if (ratio < 0.3 || ratio > 1.5) {
-    issues.push(`长度比异常 ${ratio.toFixed(2)}`)
+  // 极短描述（<20 字符）的译文天然紧凑（如 "Compute" → "计算"），长度比不适用；
+  // 下界放宽到 0.25，避免误伤「更用心地关注对你重要的事。」这类简练译文。
+  const enText = en.trim()
+  if (enText.length >= 20) {
+    const ratio = translation.length / enText.length
+    if (ratio < 0.25 || ratio > 1.5) {
+      issues.push(`长度比异常 ${ratio.toFixed(2)}`)
+    }
   }
 
   const name = options.name
@@ -88,6 +94,11 @@ export function validateTranslation(en, zh, options = {}) {
 
 function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+/** 欧式千分位（1.000 / 12.500 / 1.000.000）按整数解析；两侧（原文/译文）同样归一，保证等值比较一致。 */
+function normalizeEuroThousands(s) {
+  return s.replace(/\b\d{1,3}(?:\.\d{3})+\b/g, (m) => m.replace(/\./g, ''))
 }
 
 function fullWidthToHalf(s) {

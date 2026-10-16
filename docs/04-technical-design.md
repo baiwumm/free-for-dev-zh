@@ -34,7 +34,7 @@ free-for-dev-zh/
 │   ├── sync.mjs           # 编排：fetch→parse→ID/分类校验→diff→merge→overrides→guard→translate→原子写
 │   ├── translate.mjs      # LLM 批量翻译 + 校验（独立 CLI：--limit 试跑）
 │   └── lib/               # fetch / parse / guard / diff / merge / validate / ids / slug
-├── test/                  # node:test 单测（解析边界 / 守卫 / diff-merge / 翻译校验，29 条）
+├── test/                  # node:test 单测（解析边界 / 守卫 / diff-merge / 翻译校验，31 条）
 ├── src/
 │   ├── app/               # 路由：/ · /docs（概览）· /docs/[category] · /entry/[id] · /about · 404 · search-index.json · sitemap · robots
 │   ├── components/        # Search（⌘K）· CategoryIndex（索引排版）· CategoryExplorer · RichText · ServiceIcon · LetterAvatar · PlainHeader · SiteFooter
@@ -130,7 +130,7 @@ Secrets：`LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_MODEL_FALLBAC
 ```bash
 pnpm install                # pnpm 12；供应链策略与构建脚本白名单见 pnpm-workspace.yaml 注释
 pnpm dev                    # Next.js 开发服务器
-pnpm test                   # node:test 单测（29 条）
+pnpm test                   # node:test 单测（31 条）
 pnpm lint                   # Biome 检查（pnpm format 自动格式化）
 node scripts/sync.mjs       # 手动同步（--dry-run / --verbose / --readme <path> 便于离线调试）
 pnpm translate              # 单独补翻译（需 LLM_API_KEY，--limit N 可小步试跑）
