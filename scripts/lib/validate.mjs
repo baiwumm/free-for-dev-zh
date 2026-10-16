@@ -187,11 +187,11 @@ function normalizeThousands(s) {
 }
 
 /**
- * 名称是否具备品牌特征（数字/点/连字符/驼峰/连续大写，如 MediaWorkbench.ai、BudiBase、LLMOps）；
- * 通用词名称（Surveys、Storage、Financial Data）不强制保留英文，避免把「在线调查」这类正确译文误判。
+ * 名称是否具备品牌特征（数字/点/连字符/驼峰/连续 3+ 大写，如 MediaWorkbench.ai、BudiBase、LLMOps）；
+ * 通用词名称（Surveys、Storage、Financial Data）与两字母缩写（IP、DB、UI）不强制保留英文，避免误判。
  */
 function isBrandLike(name) {
-  return /[0-9._+-]/.test(name) || /[a-z][A-Z]/.test(name) || /[A-Z]{2,}/.test(name)
+  return /[0-9._+-]/.test(name) || /[a-z][A-Z]/.test(name) || /[A-Z]{3,}/.test(name)
 }
 
 function fullWidthToHalf(s) {

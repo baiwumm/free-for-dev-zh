@@ -114,6 +114,14 @@ test('服务名校验：品牌特征名必须保留（大小写不敏感），�
     [],
   )
   assert.deepEqual(validateTranslation('Online Surveys', '在线调查', { name: 'Surveys' }), [])
+  assert.deepEqual(
+    validateTranslation(
+      'IP Geolocation API from Abstract - Allows 1,000 free requests.',
+      'Abstract 的 IP 地理定位 API，允许 1,000 次免费请求。',
+      { name: 'IP Geolocation API' },
+    ),
+    [],
+  )
 })
 
 test('parseModelJson：围栏与杂讯容错', () => {
