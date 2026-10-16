@@ -1,6 +1,6 @@
 {
   "meta": {
-    "synced_at": "2026-10-16T04:55:37.197Z",
+    "synced_at": "2026-10-16T05:06:34.714Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
       "commit_sha": "aa64edb149db968c8d9cdb43ff73dea86b86d666",
@@ -12,7 +12,7 @@
       "removed": 0,
       "entries": 1340,
       "notes": 33,
-      "translated": 1364
+      "translated": 1365
     }
   },
   "categories": [
@@ -2633,7 +2633,7 @@
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "IP Geolocation API from Abstract - Allows 1,000 free requests.",
-      "desc_zh": null,
+      "desc_zh": "来自 Abstract 的 IP Geolocation API - 允许 1,000 次免费请求。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
