@@ -17,7 +17,7 @@
 
 选型理由（只留结论）：Fumadocs 是 Next.js 生态默认颜值最高的文档框架且允许深度定制；内容为结构化数据，**不生成 MDX**——分类页就是普通路由，构建期直接读 `entries.json`，侧边栏由分类表手工构建 `PageTree`（2026-10-15 实现定案，原"生成 MDX + gen-content"方案废弃：对纯数据展示是多余环节）。
 
-实现锁定版本（以 pnpm-lock.yaml 为准，2026-10-15 核验 npm 后保守选取）：next 16.4.1 · react 19.3.1 · fumadocs-core/fumadocs-ui 16.17.3 · tailwindcss/@tailwindcss/postcss 4.3.3 · typescript 5.9.3 · @biomejs/biome 2.5.15 · wrangler 4.151.0 · cmdk 1.1.1 · fuse.js 7.5.0 · lucide-react 1.57.0 · next-themes 0.4.6。npm 上更新的版本（如 TypeScript 7.x、@types/node 26.x）未采用，保守锁旧线。
+依赖版本以 `package.json` / `pnpm-lock.yaml` 为准（2026-10-15 选型后保守锁旧线，npm 上更新的版本如 TypeScript 7.x、@types/node 26.x 未采用）；升级依赖前先读对应 changelog。
 
 ## 仓库结构（src/ 布局）
 
@@ -34,10 +34,10 @@ free-for-dev-zh/
 │   ├── sync.mjs           # 编排：fetch→parse→ID/分类校验→diff→merge→overrides→guard→translate→原子写
 │   ├── translate.mjs      # LLM 批量翻译 + 校验（独立 CLI：--limit 试跑）
 │   └── lib/               # fetch / parse / guard / diff / merge / validate / ids / slug
-├── test/                  # node:test 单测（解析边界 / 守卫 / diff-merge / 翻译校验，33 条）
+├── test/                  # node:test 单测（解析边界 / 守卫 / diff-merge / 翻译校验）
 ├── src/
 │   ├── app/               # 路由：/ · /docs（概览）· /docs/[category] · /entry/[id] · /about · 404 · search-index.json · sitemap · robots
-│   ├── components/        # Search（⌘K）· CategoryIndex（索引排版）· CategoryExplorer · RichText · ServiceIcon · LetterAvatar · PlainHeader · SiteFooter
+│   ├── components/        # Search（⌘K）· CategoryIndex（索引排版）· CategoryExplorer · RichText · ServiceIcon · LetterAvatar · Brand · Icons · PlainHeader · SiteFooter
 │   └── lib/               # entries.ts（数据加载与索引）· page-tree.ts（侧边栏）· avatar.ts · cn.ts
 ├── public/
 │   ├── favicon.svg
@@ -55,7 +55,7 @@ free-for-dev-zh/
 └── package.json
 ```
 
-内容接入方式（2026-10-15 实现定案）：分类页 `/docs/[category]` 与详情页 `/entry/[id]` 均为服务端组件 + `generateStaticParams`，构建期直接读 `entries.json`；侧边栏 `PageTree`（概览 + 分类）由分类表构建（`src/lib/page-tree.ts`），全站无 MDX、无 codegen 步骤。首页与 `/docs` 概览共用 `CategoryIndex` 索引排版组件（2026-10-16 改版新增）。搜索为 cmdk + Fuse.js 自建索引：`/search-index.json` 在构建期输出 1,339 条裁剪记录（287KB），客户端首次打开搜索面板时懒加载一次。
+内容接入方式（2026-10-15 实现定案）：分类页 `/docs/[category]` 与详情页 `/entry/[id]` 均为服务端组件 + `generateStaticParams`，构建期直接读 `entries.json`；侧边栏 `PageTree`（概览 + 分类）由分类表构建（`src/lib/page-tree.ts`），全站无 MDX、无 codegen 步骤。首页与 `/docs` 概览共用 `CategoryIndex` 索引排版组件（2026-10-16 改版新增）。搜索为 cmdk + Fuse.js 自建索引：`/search-index.json` 在构建期输出全量条目的裁剪记录（首次实测约 287KB，随条目数缓增），客户端首次打开搜索面板时懒加载一次。
 
 ## 视觉系统与字体（2026-10-16 改版定案）
 
@@ -107,7 +107,7 @@ export default nextConfig
 
 导出模式的约束与对策（本站点全部可满足）：
 
-- 全部页面必须构建期静态生成：首页、`/docs` 概览、57 个分类页与 1,339 个详情页由 `generateStaticParams` 产出（全站 1,404 页）；无 ISR、无 middleware、无服务端动态——本站点本来就不需要这些。
+- 全部页面必须构建期静态生成：首页、`/docs` 概览、全部分类页与条目详情页由 `generateStaticParams` 产出（约 1,400 页）；无 ISR、无 middleware、无服务端动态——本站点本来就不需要这些。
 - 图片优化不可用 → `images.unoptimized`，条目图标走 `<img>` + letter avatar 兜底（与 03 章降级策略一致）。
 - 需要 `app/not-found.tsx` 提供 404 页（对应 `not_found_handling`）。
 - `out/` 实测约 7,100 个文件 / 86MB，低于 Workers Static Assets 单版本 20,000 文件上限（2026-10-15 `wrangler dev` 实测通过，含尾斜杠 307 与自定义 404 行为）。
@@ -132,18 +132,18 @@ Secrets：`LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_MODEL_FALLBAC
 ```bash
 pnpm install                # pnpm 12；供应链策略与构建脚本白名单见 pnpm-workspace.yaml 注释
 pnpm dev                    # Next.js 开发服务器
-pnpm test                   # node:test 单测（33 条）
+pnpm test                   # node:test 单测（全部）
 pnpm lint                   # Biome 检查（pnpm format 自动格式化）
 node scripts/sync.mjs       # 手动同步（--dry-run / --verbose / --readme <path> 便于离线调试）
 pnpm translate              # 单独补翻译（需 LLM_API_KEY，--limit N 可小步试跑）
-pnpm build                  # next build（output: export → out/，1,404 个静态页）
+pnpm build                  # next build（output: export → out/，约 1,400 个静态页）
 pnpm preview                # wrangler dev 本地预览 Workers 托管行为
 pnpm deploy                 # wrangler deploy（需 CLOUDFLARE_API_TOKEN，或已 wrangler login）
 ```
 
 ## 验收标准
 
-- [x] `pnpm build` 产出 `out/`（1,404 页，含 `/docs` 概览），`wrangler dev` 本地预览通过（含尾斜杠 307 与自定义 404 行为）——2026-10-15 / 16 实测。
+- [x] `pnpm build` 产出 `out/`（约 1,400 页，含 `/docs` 概览），`wrangler dev` 本地预览通过（含尾斜杠 307 与自定义 404 行为）——2026-10-15 / 16 实测。
 - [x] push main 后自动发布，`ffd.baiwumm.com` 线上可访问（首页 / 分类页 / 详情页 200、未知路径 404、尾斜杠 307）——2026-10-16 实测。
 - [x] 手动触发 `Daily Sync`，全链路（同步 → 翻译 → 提交 → `workflow_call` 部署）自动走通——2026-10-16。
 

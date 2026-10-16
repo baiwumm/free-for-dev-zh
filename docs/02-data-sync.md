@@ -1,6 +1,6 @@
 # 02 数据同步需求
 
-数据同步是本项目的引擎：站点是它的输出。本章定义流水线的行为，对应 `scripts/` 下的零依赖 Node ESM 脚本（Node ≥ 20，本地用 pnpm scripts 驱动）。
+数据同步是本项目的引擎：站点是它的输出。本章定义流水线的行为，对应 `scripts/` 下的零依赖 Node ESM 脚本（Node ≥ 20.9，本地用 pnpm scripts 驱动）。
 
 ## DS-1 数据源
 
@@ -91,7 +91,7 @@
 | `LLM_API_KEY` | — | 唯一必填；未设置则整段跳过翻译 |
 | `LLM_BASE_URL` | `https://open.bigmodel.cn/api/paas/v4` | OpenAI 兼容接口 |
 | `LLM_MODEL` | `glm-4.7-flash` | 模型名 |
-| `LLM_MODEL_FALLBACK` | — | 备用模型；同批第二轮重试时使用（限流逃生通道） |
+| `LLM_MODEL_FALLBACK` | — | 备用模型；同批第二轮重试时使用（限流逃生通道；CI 工作流注入 `glm-4.5-flash`，未设置则不启用） |
 | `LLM_BATCH` | `20` | 每请求条数 |
 | `LLM_THINKING` | — | 设为 `disabled` 显式关闭思考模式（部分模型支持） |
 
@@ -128,4 +128,4 @@ commit → workflow_call 部署                                                 
 - [x] 数字校验用例 100% 通过（含 `5 million`/`500 万`、`1,000`、`3.000` 欧式千分位、全角、`0.5GB`、`100ms` 等值换算与反例，`test/validate.test.mjs`）。
 - [x] 解析器单测覆盖真实边界样本：TOC 段跳过、缩进 0/4/5/7、`—` 分隔与无分隔描述、纯文字备注、描述内嵌链接，全部通过（33 条单测全绿）。
 - [x] 上游条目数骤降时 guard 阻止写回并告警（总量 10% / 单分类 30% / 覆盖率 10pp 三组用例）。
-- [x] 首次全量翻译已手动触发 `Daily Sync`（2026-10-16，约 1,340 条，执行中），翻译 → 提交 → `workflow_call` 部署链路与 04 章一致。
+- [x] 首次全量翻译（手动触发 `Daily Sync`）已完成（2026-10-16）；翻译 → 提交 → `workflow_call` 部署链路与 04 章一致，完成度与残余条目见 05 章。

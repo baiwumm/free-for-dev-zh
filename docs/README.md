@@ -16,12 +16,6 @@
 
 ## 当前状态
 
-**2026-10-16：已上线 <https://ffd.baiwumm.com>，全自动闭环运转中。**
-
-- 部署：push `main` 自动触发 `Deploy`（build → wrangler deploy），自定义域名挂载成功；CI（Biome + 单测 + 构建）全绿。
-- 数据：基线 57 分类 / 1,339 条目 + 33 备注（guard 通过，上游 commit `3764884`）；首次全量翻译已完成：1,365/1,373 ≈ 99.4%（余 2 条受内容过滤保持英文降级）。
-- 站点改版（2026-10-16）：全局字体换成 Maple Mono CN 自托管子集；视觉改为「开放索引」设计语言（纸墨单色 + 钴蓝强调色）；新增 `/docs` 概览页，文档侧边栏收敛为「概览 + 分类」。
-- AI 协作：仓库新增 `AGENTS.md` 与 `.agents/skills/`（frontend-design、vercel-react-best-practices），版本由 `skills-lock.json` 锁定。
-- 实现与本文档的偏差点已回写（04 章「生成 MDX」方案废弃等；首翻结果与线上版本以站点为准）。
+**2026-10-16：已上线 <https://ffd.baiwumm.com>，全自动闭环运转中；进度、数据与翻译统计、风险登记统一记录在 [05-milestones-and-risks.md](./05-milestones-and-risks.md)。**
 
 技术栈落地版本：Next.js 16.4.1（App Router）+ Tailwind CSS v4 + Fumadocs 16.17.3，纯静态导出（`output: export`）部署到 Cloudflare Workers Static Assets，应用代码统一放在 `src/` 目录下。
