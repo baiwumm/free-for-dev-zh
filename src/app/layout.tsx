@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     'ripienaar/free-for-dev 中文版：57 个分类、1,300+ 个面向开发者的免费服务（云厂商免费额度、CI/CD、监控、数据库、邮件、DNS 等），每日自动同步上游清单并增量翻译。',
   keywords: ['free for dev', '免费开发资源', '开发者免费服务', '免费云服务', '免费 API'],
   icons: { icon: '/favicon.svg' },
+  openGraph: {
+    type: 'website',
+    locale: 'zh_CN',
+    siteName: '开发者的免费资源清单',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 }
 
 const ldJson = {
@@ -29,6 +37,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RootProvider theme={{ defaultTheme: 'system' }} search={{ enabled: false }}>
           {children}
         </RootProvider>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="免费开发资源（RSS）"
+          href="/feed.xml"
+        />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD 结构化数据，内容为构建期常量且无用户输入

@@ -97,6 +97,29 @@ export const stats = {
   total: entries.length,
 }
 
+export interface RecentUpdate {
+  /** 窗口内发生变化的条目总数 */
+  total: number
+  added: number
+  updated: number
+  /** 按更新时间降序、用于展示的条目（最多 limit 条） */
+  items: SiteEntry[]
+}
+
+/** 近 N 天新增 / 更新速览（以站点同步日期为基准，构建期确定，跨构建稳定）。 */
+export function getRecentUpdates(days = 7, limit = 3): RecentUpdate {
+  const anchor = siteMeta.synced_at.slice(0, 10)
+  const since = new Date(Date.parse(`${anchor}T00:00:00Z`) - days * 86_400_000)
+    .toISOString()
+    .slice(0, 10)
+  const changed = entries.filter(
+    (e) => e.kind === 'entry' && e.name !== null && e.updatedAt >= since,
+  )
+  const added = changed.filter((e) => e.firstSeen >= since).length
+  const items = [...changed].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).slice(0, limit)
+  return { total: changed.length, added, updated: changed.length - added, items }
+}
+
 export function domainOf(url: string | null): string | null {
   if (!url) return null
   try {

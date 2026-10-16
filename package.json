@@ -21,7 +21,8 @@
     "translate": "node scripts/translate.mjs",
     "test": "node --test",
     "lint": "biome check .",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+    "fonts": "node scripts/subset-font.mjs"
   },
   "dependencies": {
     "clsx": "2.1.1",

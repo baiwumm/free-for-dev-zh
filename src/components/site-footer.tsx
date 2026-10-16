@@ -32,6 +32,12 @@ export function SiteFooter() {
           >
             GitHub
           </a>
+          <a
+            href="/feed.xml"
+            className="underline decoration-fd-border underline-offset-4 transition-colors hover:text-fd-foreground hover:decoration-accent"
+          >
+            RSS 订阅
+          </a>
           <span className="ml-auto text-xs tabular-nums text-fd-muted-foreground/70">
             上游 {siteMeta.upstream.commit_sha ? siteMeta.upstream.commit_sha.slice(0, 7) : '—'} ·
             同步于 {siteMeta.synced_at.slice(0, 10)}

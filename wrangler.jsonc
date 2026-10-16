@@ -2,6 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "free-for-dev-zh",
   "compatibility_date": "2026-06-01",
+  // 只保留自定义域名：避免 workers.dev 子域暴露重复内容
+  "workers_dev": false,
   "assets": {
     "directory": "./out",
     "html_handling": "auto-trailing-slash",

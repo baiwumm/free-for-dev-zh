@@ -1,13 +1,15 @@
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
 import { BookOpen } from 'lucide-react'
+import Link from 'next/link'
 import { Brand } from '@/components/brand'
 import { CategoryIndex } from '@/components/category-index'
 import { GithubIcon } from '@/components/icons'
 import { SearchButton } from '@/components/search'
 import { SiteFooter } from '@/components/site-footer'
-import { categories, siteMeta, stats } from '@/lib/entries'
+import { categories, getRecentUpdates, siteMeta, stats } from '@/lib/entries'
 
 const syncDate = siteMeta.synced_at.slice(0, 10)
+const recent = getRecentUpdates()
 
 export default function HomePage() {
   return (
@@ -62,6 +64,26 @@ export default function HomePage() {
           <span>全部分类</span>
           <span className="tabular-nums">同步于 {syncDate}</span>
         </div>
+        {recent.total > 0 && (
+          <p className="mt-2 text-xs leading-6 text-fd-muted-foreground">
+            近 7 天：新增 {recent.added.toLocaleString('zh-CN')} · 更新{' '}
+            {recent.updated.toLocaleString('zh-CN')} ——{' '}
+            {recent.items.map((e, i) => (
+              <span key={e.id}>
+                {i > 0 && '、'}
+                <Link
+                  href={`/entry/${e.id}`}
+                  className="underline decoration-fd-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+                >
+                  {e.name}
+                </Link>
+              </span>
+            ))}
+            {recent.total > recent.items.length && (
+              <span className="tabular-nums">（共 {recent.total.toLocaleString('zh-CN')} 条）</span>
+            )}
+          </p>
+        )}
         <div className="mt-1">
           <CategoryIndex categories={categories} />
         </div>

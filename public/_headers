@@ -1,0 +1,13 @@
+# Workers Static Assets 缓存与安全头
+# 构建时随 public/ 复制到 out/，该文件本身不会作为资源对外提供。
+# 字体 URL 通过 globals.css 中的 ?v=YYYYMMDD 版本化（pnpm fonts 自动维护）。
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

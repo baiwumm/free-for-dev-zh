@@ -1,1 +1,8 @@
-{}
+{
+  "4c7800ac01a6": {
+    "desc_zh": "检测网站在中国大陆是否被防火墙屏蔽：对比中国大陆与美国服务器返回的 DNS 结果与 ASN 信息，识别 DNS 污染。"
+  },
+  "07ebf4b4c63b": {
+    "desc_zh": "多协议隧道服务：支持 HTTP、TLS、TCP、UDP、文件服务器（默认 / SFTP / WebDAV）与代理隧道（HTTP、SOCKS5、Shadowsocks、VLESS）。免费层级：1 条隧道、每月 1GB 流量、30 分钟超时（HTTP 隧道除外）。"
+  }
+}
