@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-16T05:06:34.714Z",
+    "synced_at": "2026-10-16T23:41:31.470Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "aa64edb149db968c8d9cdb43ff73dea86b86d666",
-      "commit_date": "2026-10-15T12:27:37Z"
+      "commit_sha": "658594c5af2aef234cbf762aedacefffbc194313",
+      "commit_date": "2026-10-16T11:17:28Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1373,
+      "active": 1374,
       "removed": 0,
-      "entries": 1340,
+      "entries": 1341,
       "notes": 33,
-      "translated": 1365
+      "translated": 1368
     }
   },
   "categories": [
@@ -1935,6 +1935,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "155a1af48b17",
+      "kind": "entry",
+      "name": "App AI Gateway",
+      "url": "https://appaigateway.com/",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Gateway/proxy for calling AI providers from iOS applications without shipping provider keys or building your own backend. Only allows requests from your real app via App Attest, with rate limits and budgets per user and per app. The free plan includes 1,000 requests per month, no card required.",
+      "desc_zh": "用于从 iOS 应用程序调用 AI 提供商的网关/代理，无需发送提供商密钥或自行构建后端。仅通过 App Attest 允许来自您真实应用的请求，并对每个用户和每个应用设置速率限制和预算。免费计划每月包含 1,000 次请求，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-16",
+      "updated_at": "2026-10-16"
     },
     {
       "id": "652727b42f27",
@@ -8275,7 +8288,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Check if a website is blocked in China by the Great Firewall. It identifies DNS pollution by comparing DNS results and ASN information detected by servers in China versus servers in the United States.",
-      "desc_zh": null,
+      "desc_zh": "检测网站在中国大陆是否被防火墙屏蔽：对比中国大陆与美国服务器返回的 DNS 结果与 ASN 信息，识别 DNS 污染。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13332,7 +13345,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Multi-protocol tunneling for HTTP, TLS, TCP, UDP, File Server (Default, SFTP, WebDAV), and Proxy Tunnel (HTTP, SOCKS5, Shadowsocks, VLESS). Free plan: 1 tunnel, 1GB/month bandwidth, 30 min timeout (excl. HTTP Tunnels).",
-      "desc_zh": null,
+      "desc_zh": "多协议隧道服务：支持 HTTP、TLS、TCP、UDP、文件服务器（默认 / SFTP / WebDAV）与代理隧道（HTTP、SOCKS5、Shadowsocks、VLESS）。免费层级：1 条隧道、每月 1GB 流量、30 分钟超时（HTTP 隧道除外）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -15308,7 +15321,7 @@
       "category": "design-and-ui",
       "parent": null,
       "desc_en": "Open-source alternative to Webflow. The free plan offers unlimited websites on their domain. Five websites with custom domains. Ten thousand page views/month. 2 GB asset storage.",
-      "desc_zh": "Webflow 的开源替代品。免费计划提供在其域名上的无限网站。五个自定义域名网站。每月十万次页面浏览。2GB 资产存储。",
+      "desc_zh": "Webflow 的开源替代品。免费计划提供在其域名上的无限网站。五个自定义域名网站。每月 10,000 次页面浏览。2GB 资产存储。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
