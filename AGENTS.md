@@ -19,6 +19,7 @@
 | 本地预览 Workers 行为（404 / 尾斜杠；需先 `pnpm build`） | `pnpm preview` |
 | 手动同步数据（`--dry-run` / `--verbose` / `--readme <file>` / `--no-translate` / `--limit N`） | `pnpm sync` |
 | 补翻译（`--limit N`，需 `LLM_API_KEY`） | `pnpm translate` |
+| 数据质量抽检（全量体检；`--sample 5` 随机抽检，见 `docs/02` DS-9） | `pnpm audit:data` |
 | 重新生成字体子集（改了用字后；需本机 Python fonttools） | `pnpm fonts` |
 
 ## 硬性约束

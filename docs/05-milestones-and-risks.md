@@ -20,8 +20,9 @@ M1/M2 上浮来自实测解析边界处理与首翻调优；M4 视觉最易超�
 - M3–M5 ✅ 完成：站点静态构建（约 1,400 页）通过并部署到 Cloudflare Workers（Worker `free-for-dev-zh`），自定义域名 <https://ffd.baiwumm.com> 线上验证通过（含 404 与尾斜杠行为）。
 - M4 视觉 v2（2026-10-16）：Maple Mono CN 字体 + 「开放索引」设计语言 + `/docs` 概览页，03 章视觉要求已回写。
 - M6 ✅ 完成：三个 workflow（ci / daily-sync / deploy）就绪并实测全绿，全自动闭环（同步 → 翻译 → 提交 → 部署）走通。
+- 质量抽检（2026-10-16）：`scripts/audit.mjs` 落地（全量体检 + 随机抽检，见 02 DS-9）；首跑发现 1 条机翻数字错误（Webstudio 万位失真）并经 overrides 修正，体检硬问题归零；DS-6 数字校验补强汉字数字解析。
 - AI 协作：仓库引入 `AGENTS.md` 与项目级技能（`.agents/skills/`：frontend-design、vercel-react-best-practices），版本由 `skills-lock.json` 锁定。
-- 待办：上线稳定一周后给上游维护者发沟通邮件（见合规说明），首翻完成后抽检翻译质量。
+- 待办：上线稳定一周后给上游维护者发沟通邮件（见合规说明）；翻译抽检已工具化（`scripts/audit.mjs`，入口 `pnpm audit:data`，见 02 DS-9）。
 
 M6 之后进入维护态：日常只有翻译质量抽检和偶发修复。
 
@@ -52,5 +53,5 @@ M6 之后进入维护态：日常只有翻译质量抽检和偶发修复。
 ## 验收标准（项目级）
 
 - [ ] 连续 7 天自动同步无人工干预，站点数据与上游差异 ≤ 1 天。
-- [ ] 翻译抽检不合格率 < 5%（每次同步后抽 5 条人工过目）。
+- [ ] 翻译抽检不合格率 < 5%（每次同步后抽 5 条人工过目；抽样入口 `pnpm audit:data -- --sample 5`，见 02 DS-9）。
 - [ ] 站点可用性：Workers 侧无 5xx，月成本为零。

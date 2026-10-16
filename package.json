@@ -19,6 +19,7 @@
     "preview": "wrangler dev",
     "sync": "node scripts/sync.mjs",
     "translate": "node scripts/translate.mjs",
+    "audit:data": "node scripts/audit.mjs",
     "test": "node --test",
     "lint": "biome check .",
     "format": "biome format --write .",

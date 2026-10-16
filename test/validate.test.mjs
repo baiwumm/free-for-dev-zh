@@ -64,6 +64,26 @@ test('数字归一化：4K 与 4000 等值', () => {
   assert.deepEqual(extractNumbers('4K 视频'), ['4000'])
 })
 
+test('数字归一化：汉字数字（DS-6 校验 1）', () => {
+  assert.deepEqual(extractNumbers('两千五百次查询'), ['2500'])
+  assert.deepEqual(extractNumbers('五万次免费查询'), ['50000'])
+  assert.deepEqual(extractNumbers('十万次页面浏览'), ['100000'])
+  assert.deepEqual(extractNumbers('管理一百台设备'), ['100'])
+  assert.deepEqual(extractNumbers('一千零五次请求'), ['1005'])
+  assert.deepEqual(
+    validateTranslation('Two thousand free API calls', '每月提供两千次免费 API 调用'),
+    [],
+  )
+})
+
+test('数字归一化：近似表达与相邻单位残留不误报', () => {
+  assert.deepEqual(extractNumbers('数千个扩展'), [])
+  assert.deepEqual(extractNumbers('数百万用户'), [])
+  assert.deepEqual(extractNumbers('约十万次查询'), [])
+  assert.deepEqual(extractNumbers('每月 200 万次调用'), ['2000000'])
+  assert.deepEqual(extractNumbers('5 亿个数据点'), ['500000000'])
+})
+
 test('链接集合提取', () => {
   assert.deepEqual(extractLinks('见 [文档](https://a.dev/x) 和 [FAQ](https://b.dev/)'), [
     'https://a.dev/x',

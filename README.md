@@ -43,6 +43,7 @@ data/               数据层（提交到仓库）
 scripts/            同步流水线（纯 Node.js）
   sync.mjs          拉取 → 解析 → 守卫 → 差异 → 合并 → 翻译 → 原子写入
   translate.mjs     批量翻译（OpenAI 兼容接口），可独立运行
+  audit.mjs         质量抽检：全量体检 / 随机抽样（pnpm audit:data，见 docs/02 DS-9）
   subset-font.mjs   按站点实际用字重新生成字体子集（pnpm fonts）
   lib/              fetch / parse / guard / diff / merge / validate / ids / slug
 test/               解析边界、守卫、差异合并、翻译校验的单元测试
@@ -67,6 +68,7 @@ pnpm lint           # Biome 检查（pnpm format 自动格式化）
 pnpm fonts          # 按站点实际用字重新生成字体子集（需本机 Python fonttools）
 pnpm sync           # 手动同步上游（无 key 时只解析不翻译）
 pnpm translate      # 单独补齐缺失的中文翻译（需要 LLM_API_KEY）
+pnpm audit:data     # 数据质量抽检（--sample 5 随机抽检，见 docs/02 DS-9）
 pnpm build          # 静态导出到 out/（1,400+ 页）
 pnpm preview        # wrangler dev 本地预览 out/ 产物（需先 pnpm build）
 pnpm deploy         # 部署到 Cloudflare Workers（需 CLOUDFLARE_API_TOKEN，或已 wrangler login）

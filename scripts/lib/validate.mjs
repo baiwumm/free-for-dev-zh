@@ -41,6 +41,25 @@ const WORD_TENS = {
 }
 const WORD_BIG = { thousand: 1e3, million: 1e6, billion: 1e9 }
 
+// 汉字数字（DS-6 校验 1）：与英文数词对称归一，如 两千五百 → 2500、五万 → 50000
+const CJK_DIGITS = {
+  〇: 0,
+  零: 0,
+  一: 1,
+  二: 2,
+  两: 2,
+  三: 3,
+  四: 4,
+  五: 5,
+  六: 6,
+  七: 7,
+  八: 8,
+  九: 9,
+}
+const CJK_UNITS = { 十: 10, 百: 100, 千: 1000, 万: 1e4, 亿: 1e8 }
+/** 近似表达前缀（数千 / 数百万 / 约十万）不解析为精确数字 */
+const CJK_APPROX_PREFIX = '数几约'
+
 /**
  * 数字提取与归一化（DS-6 校验 1）：
  * - 去千分位、全角数字转半角；
@@ -65,6 +84,7 @@ export function extractNumbers(input) {
     if (Number.isFinite(value)) out.push(formatNumber(value))
   }
   for (const value of extractWordNumbers(s)) out.push(formatNumber(value))
+  for (const value of extractCjkNumbers(s)) out.push(formatNumber(value))
   return out.sort()
 }
 
@@ -103,6 +123,51 @@ function extractWordNumbers(s) {
   }
   flush()
   return out
+}
+
+/** 提取汉字数字：跳过近似表达（数 / 几 / 约 前缀）与提示性单字单位。 */
+function extractCjkNumbers(s) {
+  const out = []
+  const re = /[零〇一二三四五六七八九十百千万亿两]+/g
+  let match
+  while ((match = re.exec(s)) !== null) {
+    const prev = s[match.index - 1] ?? ''
+    if (prev && CJK_APPROX_PREFIX.includes(prev)) continue
+    const value = parseCjkRun(match[0])
+    if (value !== null) out.push(value)
+  }
+  return out
+}
+
+/**
+ * 解析单个汉字数字串：
+ * - 两千五百 → 2500、五万 → 50000、十万 → 100000；
+ * - 单字单位（「200 万」的残留「万」、「数千」的「千」）与无单位多字枚举（「一二」）不解析；
+ * - 含两个量级单位（「万亿」）不解析，避免层级歧义。
+ */
+function parseCjkRun(run) {
+  if (/[万亿].*[万亿]/.test(run)) return null
+  if (!/[十百千万亿]/.test(run)) return run.length === 1 ? CJK_DIGITS[run] : null
+  if (run.length === 1) return null
+  let total = 0
+  let section = 0
+  let digit = null
+  for (const ch of run) {
+    if (CJK_DIGITS[ch] !== undefined) {
+      digit = CJK_DIGITS[ch]
+      continue
+    }
+    const unit = CJK_UNITS[ch]
+    if (unit < 1e4) {
+      section += (digit ?? 1) * unit
+    } else {
+      section = (section + (digit ?? (section > 0 ? 0 : 1))) * unit
+      total += section
+      section = 0
+    }
+    digit = null
+  }
+  return total + section + (digit ?? 0)
 }
 
 function formatNumber(n) {
