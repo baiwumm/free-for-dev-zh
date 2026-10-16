@@ -4,5 +4,8 @@
   },
   "07ebf4b4c63b": {
     "desc_zh": "多协议隧道服务：支持 HTTP、TLS、TCP、UDP、文件服务器（默认 / SFTP / WebDAV）与代理隧道（HTTP、SOCKS5、Shadowsocks、VLESS）。免费层级：1 条隧道、每月 1GB 流量、30 分钟超时（HTTP 隧道除外）。"
+  },
+  "c242dca1e291": {
+    "desc_zh": "Webflow 的开源替代品。免费计划提供在其域名上的无限网站。五个自定义域名网站。每月 10,000 次页面浏览。2GB 资产存储。"
   }
 }
