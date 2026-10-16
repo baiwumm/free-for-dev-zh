@@ -28,6 +28,7 @@
 - 🛡️ **解析守卫**：总量 / 分类级跌幅 / 译文覆盖率三道断言，上游格式漂移时中止同步并保留上一版数据。
 - 🤖 **增量翻译**：只翻译新增与变更条目，批内去重；数字、链接、长度、坏输出四项自动校验，失败条目降级展示英文原文并标注「未翻译」。
 - 📖 **索引式阅读体验**：纸墨单色 + 钴蓝强调色的「开放索引」设计；Maple Mono CN 自托管子集字体；⌘K 全站搜索（cmdk + Fuse.js 自建索引）、分类页页内筛选、深色模式。
+- 📡 **更新可见与订阅**：首页展示近 7 天新增 / 更新速览；提供 RSS 订阅（`/feed.xml`）与分享卡片（OG 元数据 + 站点级静态图）。
 - ⚡ **静态站点**：Next.js 16（`output: export`）+ Fumadocs 16 + Tailwind CSS 4，全站 1,400+ 页构建期生成（条目页 + 分类页 + 固定页）。
 - 🪶 **零依赖流水线**：`scripts/` 全部为纯 Node.js（无第三方依赖），单测使用内置 `node:test`。
 
@@ -42,10 +43,13 @@ data/               数据层（提交到仓库）
 scripts/            同步流水线（纯 Node.js）
   sync.mjs          拉取 → 解析 → 守卫 → 差异 → 合并 → 翻译 → 原子写入
   translate.mjs     批量翻译（OpenAI 兼容接口），可独立运行
+  subset-font.mjs   按站点实际用字重新生成字体子集（pnpm fonts）
   lib/              fetch / parse / guard / diff / merge / validate / ids / slug
 test/               解析边界、守卫、差异合并、翻译校验的单元测试
-src/                站点（首页索引 / docs 概览 / 分类页 / 条目详情 / 关于 / ⌘K 搜索）
-public/fonts/       Maple Mono CN 自托管子集（SIL OFL 1.1）
+src/                站点（首页索引 / docs 概览 / 分类页 / 条目详情 / 关于 / ⌘K 搜索 / RSS）
+assets/fonts/       Maple Mono CN GB2312 源字（仅用于再子集化，SIL OFL 1.1）
+public/fonts/       站点字体子集（由 pnpm fonts 生成后提交）
+public/_headers     Workers Static Assets 缓存与安全头
 .agents/skills/     项目级 AI 技能（frontend-design / vercel-react-best-practices，版本锁定于 skills-lock.json）
 .github/workflows/  ci.yml · daily-sync.yml · deploy.yml
 AGENTS.md           AI 与开发协作约定（包管理 / 命令 / 硬性约束）
@@ -60,6 +64,7 @@ pnpm install
 pnpm dev            # 本地开发（http://localhost:3000）
 pnpm test           # 单元测试
 pnpm lint           # Biome 检查（pnpm format 自动格式化）
+pnpm fonts          # 按站点实际用字重新生成字体子集（需本机 Python fonttools）
 pnpm sync           # 手动同步上游（无 key 时只解析不翻译）
 pnpm translate      # 单独补齐缺失的中文翻译（需要 LLM_API_KEY）
 pnpm build          # 静态导出到 out/（1,400+ 页）

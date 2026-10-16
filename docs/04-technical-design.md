@@ -61,7 +61,7 @@ free-for-dev-zh/
 
 - 设计语言「开放索引」：纸墨单色（paper & ink）+ 唯一钴蓝强调色，层级靠字号 / 留白 / 细线；不使用渐变光斑、彩色底块与卡片堆叠。要求见 03 章。
 - 设计令牌集中在 `src/app/globals.css`：引入 fumadocs `neutral` preset（替代首版 emerald），并以同名变量同步覆盖 fumadocs `--color-fd-*`，文档区与首页视觉一致；深浅色以 `.dark` class（next-themes）切换，`dark:` 变体绑定 class 而非系统媒体查询。
-- 字体：Maple Mono CN 自托管子集（SIL OFL 1.1，`public/fonts/maple-mono-cn-regular.woff2`，≈1.7MB，GB2312 + ASCII + 常用标点，`unicode-range` 外回退系统栈）；`--font-sans` / `--font-mono` 首位均为该字体，不再使用 `next/font` 拉取 Geist。
+- 字体：Maple Mono CN 自托管（SIL OFL 1.1），两级文件——源字 `assets/fonts/maple-mono-cn-gb2312.woff2`（GB2312 + ASCII + 常用标点，≈1.7MB，仅用于再子集化，不进 `out/`）；站点子集 `public/fonts/maple-mono-cn-regular.woff2`（≈280KB，按站点实际用字生成，2026-10-16 从 1.7MB 收缩约 84%）。用字集合 = `data/*.json` 与 `src/` 全部文本 + 固定标点范围，`pnpm fonts` 重新生成（需本机 Python fonttools），并自动刷新 `globals.css` 中字体 URL 的 `?v=YYYYMMDD` 版本号；新用字未重新生成时按 `unicode-range` 规则回退系统栈。`--font-sans` / `--font-mono` 首位均为该字体，不再使用 `next/font` 拉取 Geist。
 - 组件细则：详情页主按钮为「墨色实底」，钴蓝仅用于交互状态与引用标记；分类索引使用序号 + 引导点线的目录式排版（`CategoryIndex`）；letter avatar 色板为纸墨低饱和墨色。
 - 设计过程使用项目技能 `.agents/skills/frontend-design`（来源 `anthropics/skills`），后续视觉迭代同样先读该技能。
 
@@ -91,6 +91,8 @@ export default nextConfig
   // 首次部署需 CF 授权（wrangler login 或 CLOUDFLARE_API_TOKEN）
   "name": "free-for-dev-zh",
   "compatibility_date": "2026-06-01",
+  // workers.dev 子域显式关闭：只保留自定义域名，避免重复内容与游离入口
+  "workers_dev": false,
   "assets": {
     "directory": "./out",
     "html_handling": "auto-trailing-slash",
@@ -111,6 +113,8 @@ export default nextConfig
 - 图片优化不可用 → `images.unoptimized`，条目图标走 `<img>` + letter avatar 兜底（与 03 章降级策略一致）。
 - 需要 `app/not-found.tsx` 提供 404 页（对应 `not_found_handling`）。
 - `out/` 实测约 7,100 个文件 / 86MB，低于 Workers Static Assets 单版本 20,000 文件上限（2026-10-15 `wrangler dev` 实测通过，含尾斜杠 307 与自定义 404 行为）。
+- 静态资源缓存与安全头：`public/_headers`（Workers Static Assets 原生识别，文件本身不对外提供）——`/_next/static/*` 与 `/fonts/*` 强缓存 `max-age=31536000, immutable`，全站补 `X-Content-Type-Options: nosniff` / `Referrer-Policy: strict-origin-when-cross-origin`；字体 URL 以 `?v=YYYYMMDD` 版本化（`pnpm fonts` 自动维护），避免 immutable 场景下改字体不生效。
+- RSS 与 OG 卡片：`/feed.xml` 为 `force-static` route handler（与 `/search-index.json` 同模式），OG 卡片走 `app/opengraph-image.png` 静态文件约定，均构建期产出、不引入动态服务；`workers_dev` 显式关闭，只有 `ffd.baiwumm.com` 对外（避免重复内容）。
 - 域名 `ffd.baiwumm.com` 在 routes 中声明为自定义域名，DNS 在 Cloudflare 侧自动处理。
 
 ## CI/CD
@@ -134,6 +138,7 @@ pnpm install                # pnpm 12；供应链策略与构建脚本白名单�
 pnpm dev                    # Next.js 开发服务器
 pnpm test                   # node:test 单测（全部）
 pnpm lint                   # Biome 检查（pnpm format 自动格式化）
+pnpm fonts                  # 按站点实际用字重新生成字体子集（需本机 Python fonttools）
 node scripts/sync.mjs       # 手动同步（--dry-run / --verbose / --readme <path> 便于离线调试）
 pnpm translate              # 单独补翻译（需 LLM_API_KEY，--limit N 可小步试跑）
 pnpm build                  # next build（output: export → out/，约 1,400 个静态页）
