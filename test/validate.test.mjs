@@ -28,6 +28,30 @@ test('校验通过：极短描述豁免长度比', () => {
   assert.deepEqual(validateTranslation('Online Surveys', '在线调查'), [])
 })
 
+test('数字归一化：英文数词与空格千分位', () => {
+  assert.deepEqual(extractNumbers('nine backend hours'), ['9'])
+  assert.deepEqual(extractNumbers('five hundred monthly builds'), ['500'])
+  assert.deepEqual(extractNumbers('seven billion images'), ['7000000000'])
+  assert.deepEqual(extractNumbers('10, 000 rows'), ['10000'])
+  assert.deepEqual(extractNumbers('twenty-four hours'), ['24'])
+  assert.deepEqual(extractNumbers('3rd-party services'), [])
+})
+
+test('数字校验：小数（≤12）允许中文数量表达，大数严格一致', () => {
+  assert.deepEqual(
+    validateTranslation(
+      'Gigalixir provides one free instance with 2 connections and 10, 000 rows',
+      'Gigalixir 提供一台免费实例、2 个连接和 10,000 行数据',
+    ),
+    [],
+  )
+  assert.ok(
+    validateTranslation('Free 100 GB storage', '免费存储额度充足').some((i) =>
+      i.includes('数字不一致'),
+    ),
+  )
+})
+
 test('数字归一化：单位字母后接字母不放大（ms/MB/GB）', () => {
   assert.deepEqual(extractNumbers('0.5GB'), ['0.5'])
   assert.deepEqual(extractNumbers('0.5 GB'), ['0.5'])
@@ -78,17 +102,18 @@ test('校验失败：长度比异常', () => {
   assert.ok(issues.some((i) => i.includes('长度比异常')))
 })
 
-test('校验失败：原文含服务名时译文必须保留', () => {
-  const en = 'Revolt is an open source user-first chat platform.'
+test('服务名校验：品牌特征名必须保留（大小写不敏感），通用词名不强制', () => {
+  const en = 'Revolt.io is an open source user-first chat platform.'
   assert.ok(
-    validateTranslation(en, '一个开源、以用户为先的聊天平台。', { name: 'Revolt' }).some((i) =>
+    validateTranslation(en, '一个开源、以用户为先的聊天平台。', { name: 'Revolt.io' }).some((i) =>
       i.includes('服务名缺失'),
     ),
   )
   assert.deepEqual(
-    validateTranslation(en, 'Revolt 是一个开源、以用户为先的聊天平台。', { name: 'Revolt' }),
+    validateTranslation(en, 'REVOLT.IO 是一个开源、以用户为先的聊天平台。', { name: 'Revolt.io' }),
     [],
   )
+  assert.deepEqual(validateTranslation('Online Surveys', '在线调查', { name: 'Surveys' }), [])
 })
 
 test('parseModelJson：围栏与杂讯容错', () => {

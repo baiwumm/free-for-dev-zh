@@ -8,17 +8,53 @@ const UNIT = {
   亿: 1e8,
 }
 
+const WORD_ONES = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+  thirteen: 13,
+  fourteen: 14,
+  fifteen: 15,
+  sixteen: 16,
+  seventeen: 17,
+  eighteen: 18,
+  nineteen: 19,
+}
+const WORD_TENS = {
+  twenty: 20,
+  thirty: 30,
+  forty: 40,
+  fifty: 50,
+  sixty: 60,
+  seventy: 70,
+  eighty: 80,
+  ninety: 90,
+}
+const WORD_BIG = { thousand: 1e3, million: 1e6, billion: 1e9 }
+
 /**
  * 数字提取与归一化（DS-6 校验 1）：
  * - 去千分位、全角数字转半角；
- * - 欧式千分位（3.000 / 12.500 / 1.000.000）按整数解析，原文与译文同样归一，不受书写习惯影响；
+ * - 欧式千分位（3.000）与空格千分位（10, 000）按整数解析，原文与译文同样归一、不受书写习惯影响；
  * - 单位等值：5 million <-> 5000000、500 万 <-> 5000000、1k <-> 1000；
+ * - 英文数词换算（nine -> 9、five hundred -> 500、seven billion -> 7000000000、twenty-four -> 24）；
+ * - 序数词（3rd-party 的 3rd）不提取，避免与「第三方」这类中文惯用表达误报；
  * - 单位字母后不允许紧跟其他字母（避免把 "100ms"、"500MB" 误判为单位）。
  */
 export function extractNumbers(input) {
-  const s = normalizeEuroThousands(fullWidthToHalf(input))
+  const s = normalizeThousands(fullWidthToHalf(input))
   const out = []
-  const re = /(\d[\d,]*(?:\.\d+)?)(?:\s*(million|billion|k|m|b|万|亿)(?![a-zA-Z]))?/gi
+  const re =
+    /(\d[\d,]*(?:\.\d+)?)(?:\s*(million|billion|k|m|b|万|亿)(?![a-zA-Z]))?(?!(?:st|nd|rd|th)\b)/gi
   let match
   while ((match = re.exec(s)) !== null) {
     let value = Number.parseFloat(match[1].replace(/,/g, ''))
@@ -28,12 +64,55 @@ export function extractNumbers(input) {
     }
     if (Number.isFinite(value)) out.push(formatNumber(value))
   }
+  for (const value of extractWordNumbers(s)) out.push(formatNumber(value))
   return out.sort()
+}
+
+/** 英文数词换算；词不连续（被其他单词打断）时分段结算，避免跨句累加。 */
+function extractWordNumbers(s) {
+  const out = []
+  let current = 0
+  let total = 0
+  let matched = 0
+  const flush = () => {
+    if (matched > 0 && total + current > 0) out.push(total + current)
+    current = 0
+    total = 0
+    matched = 0
+  }
+  for (const token of s.toLowerCase().split(/[^a-z]+/)) {
+    if (!token) continue
+    if (WORD_ONES[token] !== undefined) {
+      current += WORD_ONES[token]
+      matched += 1
+    } else if (WORD_TENS[token] !== undefined) {
+      current += WORD_TENS[token]
+      matched += 1
+    } else if (token === 'hundred') {
+      current = (current || 1) * 100
+      matched += 1
+    } else if (WORD_BIG[token] !== undefined) {
+      // 裸的 million/billion/thousand（前面没有数词，如 "5 million" 中的 million）不重复计数
+      if (current === 0 && total === 0) continue
+      total += current * WORD_BIG[token]
+      current = 0
+      matched += 1
+    } else {
+      flush()
+    }
+  }
+  flush()
+  return out
 }
 
 function formatNumber(n) {
   if (Number.isInteger(n)) return String(n)
   return String(Number.parseFloat(n.toPrecision(12)))
+}
+
+/** 多重集合相等（数组已排序）。 */
+function sameMultiset(a, b) {
+  return a.length === b.length && a.every((v, i) => v === b[i])
 }
 
 /** markdown 链接目标提取（DS-6 校验 2）。 */
@@ -57,11 +136,15 @@ export function validateTranslation(en, zh, options = {}) {
     issues.push('疑似拒答')
   }
 
-  const sameMultiset = (a, b) => a.length === b.length && a.every((v, i) => v === b[i])
-  const enNums = extractNumbers(en)
-  const zhNums = extractNumbers(translation)
-  if (!sameMultiset(enNums, zhNums)) {
-    issues.push(`数字不一致 [${enNums.join(',')}] vs [${zhNums.join(',')}]`)
+  // 大数（>12）做严格集合比对：原文里的配额/数字必须在译文出现、译文中也不允许凭空多出大数；
+  // 小数（≤12）常以中文数字 / 量词形式表达（one -> 一台、nine -> 九个），不做强制一致要求。
+  const enNums = new Set(extractNumbers(en))
+  const zhNums = new Set(extractNumbers(translation))
+  const big = (n) => Number(n) > 12
+  const missing = [...enNums].filter((n) => big(n) && !zhNums.has(n))
+  const extra = [...zhNums].filter((n) => big(n) && !enNums.has(n))
+  if (missing.length > 0 || extra.length > 0) {
+    issues.push(`数字不一致 缺[${missing.join(',')}] 多[${extra.join(',')}]`)
   }
 
   const enLinks = extractLinks(en)
@@ -70,12 +153,11 @@ export function validateTranslation(en, zh, options = {}) {
     issues.push(`链接不一致 [${enLinks.join(',')}] vs [${zhLinks.join(',')}]`)
   }
 
-  // 极短描述（<20 字符）的译文天然紧凑（如 "Compute" → "计算"），长度比不适用；
-  // 下界放宽到 0.25，避免误伤「更用心地关注对你重要的事。」这类简练译文。
+  // 长度比：仅对 ≥30 字符的原文生效（更短的标签类描述译文天然紧凑），下界 0.2。
   const enText = en.trim()
-  if (enText.length >= 20) {
+  if (enText.length >= 30) {
     const ratio = translation.length / enText.length
-    if (ratio < 0.25 || ratio > 1.5) {
+    if (ratio < 0.2 || ratio > 1.5) {
       issues.push(`长度比异常 ${ratio.toFixed(2)}`)
     }
   }
@@ -83,8 +165,9 @@ export function validateTranslation(en, zh, options = {}) {
   const name = options.name
   if (
     name &&
+    isBrandLike(name) &&
     new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRegExp(name)}([^\\p{L}\\p{N}]|$)`, 'iu').test(en) &&
-    !translation.includes(name)
+    !translation.toLowerCase().includes(name.toLowerCase())
   ) {
     issues.push('服务名缺失')
   }
@@ -96,9 +179,19 @@ function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
-/** 欧式千分位（1.000 / 12.500 / 1.000.000）按整数解析；两侧（原文/译文）同样归一，保证等值比较一致。 */
-function normalizeEuroThousands(s) {
-  return s.replace(/\b\d{1,3}(?:\.\d{3})+\b/g, (m) => m.replace(/\./g, ''))
+/** 欧式千分位（1.000 / 1.000.000）与空格千分位（10, 000）按整数解析；两侧（原文/译文）同样归一，保证等值比较一致。 */
+function normalizeThousands(s) {
+  return s
+    .replace(/\b\d{1,3}(?:\.\d{3})+\b/g, (m) => m.replace(/\./g, ''))
+    .replace(/\b\d{1,3}(?:,\s\d{3})+\b/g, (m) => m.replace(/,\s/g, ''))
+}
+
+/**
+ * 名称是否具备品牌特征（数字/点/连字符/驼峰/连续大写，如 MediaWorkbench.ai、BudiBase、LLMOps）；
+ * 通用词名称（Surveys、Storage、Financial Data）不强制保留英文，避免把「在线调查」这类正确译文误判。
+ */
+function isBrandLike(name) {
+  return /[0-9._+-]/.test(name) || /[a-z][A-Z]/.test(name) || /[A-Z]{2,}/.test(name)
 }
 
 function fullWidthToHalf(s) {
