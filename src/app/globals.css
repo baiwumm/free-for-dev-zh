@@ -1,19 +1,145 @@
 @import "tailwindcss";
-@import "fumadocs-ui/css/emerald.css";
+@import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Maple Mono CN —— 自托管子集字体（与 better-admin 各端同源同命名）
+ *
+ * 来源：Maple Mono（开源，OFL-1.1，https://github.com/subframe7536/maple-font）
+ * 子集：GB2312 常用汉字 + ASCII + 常见中文标点（woff2 ≈ 1.7MB）；
+ * unicode-range 之外的生僻字符自然回退系统字体，不产生额外加载。
+ */
+@font-face {
+  font-family: "Maple Mono CN";
+  src: url("/fonts/maple-mono-cn-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range:
+    U+0020-007E, U+00B1, U+00B7, U+00D7, U+00F7, U+2014, U+2018-2019, U+201C-201D, U+2026,
+    U+3000-303F, U+4E00-9FFF, U+FF00-FFEF;
+}
+
+/*
+ * 设计语言「开放索引 / Open Index」：
+ * 纸墨单色为底（paper & ink），唯一的钴蓝（stamp blue）只用于交互与引用标记；
+ * 层级靠字号、留白与细线表达——不用渐变光斑、阴影堆叠和大色块。
+ * fumadocs 的 --color-fd-* 同步覆盖为同一套值，文档区与首页保持同一视觉。
+ */
 @theme inline {
-  --font-sans:
-    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --font-mono:
-    var(--font-geist-mono), ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+  --font-sans: var(--font-sans-stack);
+  --font-mono: var(--font-mono-stack);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  /* 全局字体：Maple Mono CN（自托管子集），回退系统字体栈 */
+  --font-sans-stack:
+    "Maple Mono CN", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono-stack:
+    "Maple Mono CN", ui-monospace, "Cascadia Code", "JetBrains Mono", Consolas, "Courier New",
+    monospace;
+
+  /* 纸墨（浅色）：接近纯白的纸面 + 带蓝灰底的墨色，细线作为唯一分隔手段 */
+  --background: oklch(0.992 0.0015 250);
+  --foreground: oklch(0.21 0.012 260);
+  --card: oklch(0.999 0.0005 250);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+  --muted: oklch(0.965 0.0025 250);
+  --muted-foreground: oklch(0.5 0.013 258);
+  --border: oklch(0.898 0.0045 258);
+  --input: var(--border);
+  --primary: oklch(0.21 0.012 260);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.965 0.0025 250);
+  --secondary-foreground: var(--foreground);
+  /* 唯一强调色：钴蓝（索引里的参照标记色） */
+  --accent: oklch(0.435 0.152 262);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.55 0.19 27);
+  --ring: oklch(0.6 0.09 262);
+
+  /* 对齐 fumadocs 基底：文档区与首页共用同一套纸墨变量 */
+  --color-fd-background: var(--background);
+  --color-fd-foreground: var(--foreground);
+  --color-fd-card: var(--card);
+  --color-fd-card-foreground: var(--card-foreground);
+  --color-fd-popover: var(--popover);
+  --color-fd-popover-foreground: var(--popover-foreground);
+  --color-fd-muted: var(--muted);
+  --color-fd-muted-foreground: var(--muted-foreground);
+  --color-fd-secondary: var(--secondary);
+  --color-fd-secondary-foreground: var(--secondary-foreground);
+  --color-fd-accent: var(--muted);
+  --color-fd-accent-foreground: var(--foreground);
+  --color-fd-primary: var(--foreground);
+  --color-fd-primary-foreground: var(--background);
+  --color-fd-border: var(--border);
+  --color-fd-ring: var(--ring);
+}
+
+.dark {
+  /* 墨纸（深色）：深墨底而不是纯黑，保证长时间阅读的层次感 */
+  --background: oklch(0.17 0.009 260);
+  --foreground: oklch(0.92 0.004 250);
+  --card: oklch(0.2 0.009 260);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.2 0.009 260);
+  --popover-foreground: var(--foreground);
+  --muted: oklch(0.23 0.009 258);
+  --muted-foreground: oklch(0.675 0.012 255);
+  --border: oklch(0.29 0.009 258);
+  --input: var(--border);
+  --primary: oklch(0.92 0.004 250);
+  --primary-foreground: oklch(0.17 0.009 260);
+  --secondary: oklch(0.23 0.009 258);
+  --secondary-foreground: var(--foreground);
+  --accent: oklch(0.755 0.092 262);
+  --accent-foreground: oklch(0.16 0.01 260);
+  --destructive: oklch(0.66 0.17 25);
+  --ring: oklch(0.62 0.09 262);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 ::selection {
-  background: color-mix(in srgb, var(--color-fd-primary) 30%, transparent);
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+@layer base {
+  :where(a, button, input, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
 }

@@ -22,7 +22,7 @@ export function RichText({ text, linkClassName }: { text: string; linkClassName?
           rel="noreferrer noopener"
           className={
             linkClassName ??
-            'text-emerald-700 underline decoration-emerald-600/30 underline-offset-2 hover:decoration-emerald-600 dark:text-emerald-400'
+            'text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent'
           }
         >
           {match[1]}
@@ -30,10 +30,7 @@ export function RichText({ text, linkClassName }: { text: string; linkClassName?
       )
     } else if (match[3] != null) {
       nodes.push(
-        <code
-          key={key++}
-          className="rounded bg-zinc-100 px-1 py-0.5 font-mono text-[0.85em] dark:bg-zinc-800"
-        >
+        <code key={key++} className="rounded-sm bg-fd-muted px-1 py-0.5 font-mono text-[0.85em]">
           {match[3]}
         </code>,
       )

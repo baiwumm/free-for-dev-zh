@@ -1,10 +1,6 @@
 import { RootProvider } from 'fumadocs-ui/provider/next'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-
-const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
-const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ffd.baiwumm.com'),
@@ -28,11 +24,7 @@ const ldJson = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="zh-CN"
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
+    <html lang="zh-CN" suppressHydrationWarning>
       <body className="flex min-h-screen flex-col bg-fd-background font-sans text-fd-foreground antialiased">
         <RootProvider theme={{ defaultTheme: 'system' }} search={{ enabled: false }}>
           {children}

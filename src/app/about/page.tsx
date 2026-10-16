@@ -17,14 +17,14 @@ export default function AboutPage() {
     <>
       <PlainHeader />
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
-        <h1 className="text-3xl font-bold tracking-tight">关于本站</h1>
-        <p className="mt-3 leading-relaxed text-fd-muted-foreground">
+        <h1 className="text-3xl tracking-tight">关于本站</h1>
+        <p className="mt-4 max-w-2xl text-sm leading-7 text-fd-muted-foreground">
           本站是{' '}
           <a
             href="https://github.com/ripienaar/free-for-dev"
             target="_blank"
             rel="noreferrer noopener"
-            className="text-emerald-700 underline decoration-emerald-600/30 underline-offset-2 hover:decoration-emerald-600 dark:text-emerald-400"
+            className="text-accent underline decoration-accent/30 underline-offset-2 hover:decoration-accent"
           >
             ripienaar/free-for-dev
           </a>{' '}
@@ -34,11 +34,11 @@ export default function AboutPage() {
         <Section title="数据来源与同步">
           <ul className="list-disc space-y-1.5 pl-5">
             <li>
-              上游仓库：ripienaar/free-for-dev（MIT 之外的条款以上游为准，本站仅做整理与翻译）。
+              上游仓库：ripienaar/free-for-dev（仓库自身的许可条款以上游为准，本站仅做整理与翻译）。
             </li>
             <li>
               每日由 GitHub Actions 自动拉取上游 README 并解析（当前上游版本{' '}
-              <code className="rounded bg-fd-muted px-1.5 py-0.5 font-mono text-xs">
+              <code className="rounded-sm bg-fd-muted px-1.5 py-0.5 font-mono text-xs">
                 {sha ? sha.slice(0, 7) : '（本地）'}
               </code>
               ，同步时间 {syncedAt.slice(0, 10)}）。
@@ -47,7 +47,7 @@ export default function AboutPage() {
               解析结果先经过「解析守卫」校验（总量、分类级跌幅、译文覆盖率），异常时中止同步并保留上一版数据。
             </li>
             <li>
-              当前收录：{stats.services.toLocaleString('zh-CN')} 个服务 · {stats.categories}{' '}
+              当前收录：{stats.services.toLocaleString('zh-CN')} 项资源，共 {stats.categories}{' '}
               个分类。
             </li>
           </ul>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-flex items-center rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-500"
+            className="inline-flex items-center rounded-md bg-fd-foreground px-4 py-2.5 text-sm text-fd-background transition-opacity hover:opacity-90"
           >
             返回首页
           </Link>
@@ -93,7 +93,7 @@ export default function AboutPage() {
             href="https://github.com/baiwumm/free-for-dev-zh"
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex items-center rounded-xl border border-fd-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-fd-accent"
+            className="inline-flex items-center rounded-md border border-fd-border px-4 py-2.5 text-sm text-fd-muted-foreground transition-colors hover:border-fd-foreground/30 hover:text-fd-foreground"
           >
             GitHub 仓库
           </a>
@@ -106,8 +106,8 @@ export default function AboutPage() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mt-8">
-      <h2 className="text-lg font-semibold">{title}</h2>
+    <section className="mt-10 border-t border-fd-border pt-6">
+      <h2 className="text-base">{title}</h2>
       <div className="mt-3 text-sm leading-relaxed text-fd-muted-foreground">{children}</div>
     </section>
   )

@@ -32,7 +32,7 @@ export function ServiceIcon({
       loading="lazy"
       decoding="async"
       referrerPolicy="no-referrer"
-      className="shrink-0 rounded-lg border border-zinc-200/60 bg-white object-contain p-1 dark:border-zinc-700/60 dark:bg-zinc-900"
+      className="shrink-0 rounded-md border border-fd-border/70 bg-fd-background object-contain p-1"
       style={{ width: size, height: size }}
       onError={() => setFailed(true)}
     />

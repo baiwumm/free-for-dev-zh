@@ -44,7 +44,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
       <PlainHeader />
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8">
         <nav
-          className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-fd-muted-foreground"
+          className="mb-6 flex flex-wrap items-center gap-1.5 text-[13px] text-fd-muted-foreground"
           aria-label="面包屑"
         >
           <Link href="/" className="transition-colors hover:text-fd-foreground">
@@ -71,18 +71,18 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
         </nav>
 
         <div className="flex items-start gap-4">
-          <ServiceIcon name={name} domain={domain} size={56} />
+          <ServiceIcon name={name} domain={domain} size={48} />
           <div className="min-w-0">
-            <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{name}</h1>
+            <h1 className="text-2xl tracking-tight sm:text-3xl">{name}</h1>
             {domain && <p className="mt-1 truncate text-sm text-fd-muted-foreground">{domain}</p>}
           </div>
         </div>
 
-        <section className="mt-6 rounded-2xl border border-fd-border bg-fd-card p-5">
-          <h2 className="text-xs font-medium uppercase tracking-wider text-fd-muted-foreground">
+        <section className="mt-6 border-y border-fd-border py-5">
+          <h2 className="text-xs text-fd-muted-foreground">
             {entry.descZh ? '中文说明' : '说明（暂未翻译，以下为英文原文）'}
           </h2>
-          <p className="mt-2.5 leading-relaxed text-fd-card-foreground">
+          <p className="mt-2.5 leading-7 text-fd-foreground">
             <RichText text={desc !== '' ? desc : '（该条目在上游没有文字说明）'} />
           </p>
           {entry.descZh && entry.descEn !== '' && (
@@ -103,7 +103,7 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
               href={entry.url}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-500"
+              className="inline-flex items-center gap-1.5 rounded-md bg-fd-foreground px-4 py-2.5 text-sm text-fd-background transition-opacity hover:opacity-90"
             >
               访问官网
               <ExternalLink className="size-4" />
@@ -113,14 +113,14 @@ export default async function EntryPage({ params }: { params: Promise<{ id: stri
             href={`https://github.com/ripienaar/free-for-dev#${category.id}`}
             target="_blank"
             rel="noreferrer noopener"
-            className="inline-flex items-center gap-1.5 rounded-xl border border-fd-border px-4 py-2.5 text-sm font-medium transition-colors hover:bg-fd-accent"
+            className="inline-flex items-center gap-1.5 rounded-md border border-fd-border px-4 py-2.5 text-sm text-fd-muted-foreground transition-colors hover:border-fd-foreground/30 hover:text-fd-foreground"
           >
             上游原始条目
             <ExternalLink className="size-4" />
           </a>
         </div>
 
-        <p className="mt-5 text-xs text-fd-muted-foreground">
+        <p className="mt-5 text-xs tabular-nums text-fd-muted-foreground/80">
           收录于 {entry.firstSeen} · 最近更新 {entry.updatedAt} · 条目 ID{' '}
           <code className="font-mono">{entry.id}</code>
         </p>

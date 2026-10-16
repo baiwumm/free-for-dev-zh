@@ -32,10 +32,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 pb-6 pt-4 sm:pt-8">
-      <header className="mb-5">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{cat.nameZh}</h1>
-        <p className="mt-1 text-sm text-fd-muted-foreground">
-          {cat.nameEn} · 共 {cat.count} 个服务
+      <header className="mb-4">
+        <h1 className="text-2xl tracking-tight sm:text-3xl">{cat.nameZh}</h1>
+        <p className="mt-1.5 text-sm text-fd-muted-foreground">
+          {cat.nameEn}，共 {cat.count} 项资源
         </p>
       </header>
       <CategoryExplorer items={items} />

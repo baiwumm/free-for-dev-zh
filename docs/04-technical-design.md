@@ -10,12 +10,12 @@
 | 搜索 | cmdk + Fuse.js（自建索引，由 entries.json 生成） | 全站单套搜索体系；Fumadocs 内置静态搜索不启用——静态导出下需客户端下载全量索引，本场景体积不可控（官方对静态搜索的警告） |
 | 主题 | next-themes | 深色模式 |
 | 包管理 | pnpm | 本地 pnpm 12，Node 由 Volta 管理（package.json 里固定 volta 字段） |
-| 部署 | Cloudflare Workers Static Assets | `output: 'export'` 纯静态导出 + wrangler.jsonc，无适配器（与 theme-switch-animation 一致） |
+| 部署 | Cloudflare Workers Static Assets | `output: 'export'` 纯静态导出 + wrangler.jsonc，无适配器（与作者既有项目同构） |
 | 同步流水线 | Node ESM 零依赖脚本 | `scripts/`，GitHub Actions 调度 |
 | LLM | 智谱 GLM 免费模型（GLM-4.7-Flash / GLM-4.5-Flash）；备选 DeepSeek `deepseek-flash` 按量付费 | OpenAI 兼容接口，切换仅换 base_url 与 key |
-| Lint/Format | Biome | 与 theme-switch-animation 等既有项目一致 |
+| Lint/Format | Biome | 与作者既有项目一致 |
 
-选型理由（详见讨论记录，此处留结论）：Fumadocs 是 Next.js 生态默认颜值最高的文档框架且允许深度定制；内容为结构化数据，**不生成 MDX**——分类页就是普通路由，构建期直接读 `entries.json`，侧边栏由分类表手工构建 `PageTree`（2026-10-15 实现定案，原"生成 MDX + gen-content"方案废弃：对纯数据展示是多余环节）。
+选型理由（只留结论）：Fumadocs 是 Next.js 生态默认颜值最高的文档框架且允许深度定制；内容为结构化数据，**不生成 MDX**——分类页就是普通路由，构建期直接读 `entries.json`，侧边栏由分类表手工构建 `PageTree`（2026-10-15 实现定案，原"生成 MDX + gen-content"方案废弃：对纯数据展示是多余环节）。
 
 实现锁定版本（以 pnpm-lock.yaml 为准，2026-10-15 核验 npm 后保守选取）：next 16.4.1 · react 19.3.1 · fumadocs-core/fumadocs-ui 16.17.3 · tailwindcss/@tailwindcss/postcss 4.3.3 · typescript 5.9.3 · @biomejs/biome 2.5.15 · wrangler 4.151.0 · cmdk 1.1.1 · fuse.js 7.5.0 · lucide-react 1.57.0 · next-themes 0.4.6。npm 上更新的版本（如 TypeScript 7.x、@types/node 26.x）未采用，保守锁旧线。
 
@@ -36,10 +36,14 @@ free-for-dev-zh/
 │   └── lib/               # fetch / parse / guard / diff / merge / validate / ids / slug
 ├── test/                  # node:test 单测（解析边界 / 守卫 / diff-merge / 翻译校验，29 条）
 ├── src/
-│   ├── app/               # 路由：/ · /docs/[category] · /entry/[id] · /about · 404 · search-index.json · sitemap · robots
-│   ├── components/        # Search（⌘K）· CategoryExplorer · RichText · ServiceIcon · LetterAvatar · 页头页脚
+│   ├── app/               # 路由：/ · /docs（概览）· /docs/[category] · /entry/[id] · /about · 404 · search-index.json · sitemap · robots
+│   ├── components/        # Search（⌘K）· CategoryIndex（索引排版）· CategoryExplorer · RichText · ServiceIcon · LetterAvatar · PlainHeader · SiteFooter
 │   └── lib/               # entries.ts（数据加载与索引）· page-tree.ts（侧边栏）· avatar.ts · cn.ts
-├── public/favicon.svg
+├── public/
+│   ├── favicon.svg
+│   └── fonts/maple-mono-cn-regular.woff2   # Maple Mono CN 自托管子集（SIL OFL 1.1）
+├── .agents/skills/        # 项目级 AI 技能：frontend-design · vercel-react-best-practices（skills-lock.json 锁定版本）
+├── AGENTS.md              # AI 与开发协作约定（包管理 / 命令 / 硬性约束）
 ├── .github/workflows/
 │   ├── ci.yml             # Biome + 单测 + build + out/ 产物断言
 │   ├── daily-sync.yml     # 每日同步（cron UTC 21:23）→ commit data/ → workflow_call 部署
@@ -51,11 +55,19 @@ free-for-dev-zh/
 └── package.json
 ```
 
-内容接入方式（2026-10-15 实现定案）：分类页 `/docs/[category]` 与详情页 `/entry/[id]` 均为服务端组件 + `generateStaticParams`，构建期直接读 `entries.json`；侧边栏 `PageTree` 由分类表构建（`src/lib/page-tree.ts`），全站无 MDX、无 codegen 步骤。搜索为 cmdk + Fuse.js 自建索引：`/search-index.json` 在构建期输出 1,339 条裁剪记录（287KB），客户端首次打开搜索面板时懒加载一次。
+内容接入方式（2026-10-15 实现定案）：分类页 `/docs/[category]` 与详情页 `/entry/[id]` 均为服务端组件 + `generateStaticParams`，构建期直接读 `entries.json`；侧边栏 `PageTree`（概览 + 分类）由分类表构建（`src/lib/page-tree.ts`），全站无 MDX、无 codegen 步骤。首页与 `/docs` 概览共用 `CategoryIndex` 索引排版组件（2026-10-16 改版新增）。搜索为 cmdk + Fuse.js 自建索引：`/search-index.json` 在构建期输出 1,339 条裁剪记录（287KB），客户端首次打开搜索面板时懒加载一次。
+
+## 视觉系统与字体（2026-10-16 改版定案）
+
+- 设计语言「开放索引」：纸墨单色（paper & ink）+ 唯一钴蓝强调色，层级靠字号 / 留白 / 细线；不使用渐变光斑、彩色底块与卡片堆叠。要求见 03 章。
+- 设计令牌集中在 `src/app/globals.css`：引入 fumadocs `neutral` preset（替代首版 emerald），并以同名变量同步覆盖 fumadocs `--color-fd-*`，文档区与首页视觉一致；深浅色以 `.dark` class（next-themes）切换，`dark:` 变体绑定 class 而非系统媒体查询。
+- 字体：Maple Mono CN 自托管子集（SIL OFL 1.1，`public/fonts/maple-mono-cn-regular.woff2`，≈1.7MB，GB2312 + ASCII + 常用标点，`unicode-range` 外回退系统栈）；`--font-sans` / `--font-mono` 首位均为该字体，不再使用 `next/font` 拉取 Geist。
+- 组件细则：详情页主按钮为「墨色实底」，钴蓝仅用于交互状态与引用标记；分类索引使用序号 + 引导点线的目录式排版（`CategoryIndex`）；letter avatar 色板为纸墨低饱和墨色。
+- 设计过程使用项目技能 `.agents/skills/frontend-design`（来源 `anthropics/skills`），后续视觉迭代同样先读该技能。
 
 ## Cloudflare Workers 部署（Static Assets，无适配器）
 
-采用与 `theme-switch-animation` 项目一致的模式：Next.js 纯静态导出，Workers Static Assets 直接托管，不引入任何适配器。
+采用与作者既有项目一致的模式：Next.js 纯静态导出，Workers Static Assets 直接托管，不引入任何适配器。
 
 **next.config.ts**（导出模式 + 关闭图片优化）：
 
@@ -95,7 +107,7 @@ export default nextConfig
 
 导出模式的约束与对策（本站点全部可满足）：
 
-- 全部页面必须构建期静态生成：57 个分类页 + 1,339 个详情页由 `generateStaticParams` 产出（全站 1,403 页）；无 ISR、无 middleware、无服务端动态——本站点本来就不需要这些。
+- 全部页面必须构建期静态生成：首页、`/docs` 概览、57 个分类页与 1,339 个详情页由 `generateStaticParams` 产出（全站 1,404 页）；无 ISR、无 middleware、无服务端动态——本站点本来就不需要这些。
 - 图片优化不可用 → `images.unoptimized`，条目图标走 `<img>` + letter avatar 兜底（与 03 章降级策略一致）。
 - 需要 `app/not-found.tsx` 提供 404 页（对应 `not_found_handling`）。
 - `out/` 实测约 7,100 个文件 / 86MB，低于 Workers Static Assets 单版本 20,000 文件上限（2026-10-15 `wrangler dev` 实测通过，含尾斜杠 307 与自定义 404 行为）。
@@ -111,7 +123,7 @@ export default nextConfig
 
 **触发链注意**：使用默认 `GITHUB_TOKEN` 的提交不会触发其他 GitHub Actions workflow（GitHub 防递归机制），daily-sync 不能靠 push 事件唤起部署，必须通过 `workflow_call` 直调 `deploy.yml`；daily-sync 需声明 `permissions: contents: write` 才能 push commit。人工 push main 与每日同步共用同一份 `deploy.yml`。若改用 Cloudflare Workers Builds 监听仓库（外部 webhook 不受此限制），可省略 `deploy.yml`。
 
-Secrets：`LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_BATCH` 在 workflow env 中可调，默认智谱 GLM-4.7-Flash）与 `CLOUDFLARE_API_TOKEN`（部署），存于仓库 Actions secrets（多账户时再加 `CLOUDFLARE_ACCOUNT_ID`）。上游数据无凭据依赖。未配置 `LLM_API_KEY` 时同步照常运行，仅跳过翻译（`desc_zh` 留空，站点降级展示英文原文）。
+Secrets：`LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_MODEL_FALLBACK`/`LLM_BATCH`/`LLM_THINKING` 在 workflow env 中可调，默认智谱 GLM-4.7-Flash 主模型 + GLM-4.5-Flash 免费备份、关闭思考模式；首翻补量可经 workflow_dispatch 传 `model` 临时覆盖为付费 GLM-5.3-Flash）与 `CLOUDFLARE_API_TOKEN`（部署，用「编辑 Cloudflare Workers」模板即可：Workers Scripts: Edit + Workers Routes: Edit + Account Settings: Read），存于仓库 Actions secrets（多账户时再加 `CLOUDFLARE_ACCOUNT_ID`）。上游数据无凭据依赖。未配置 `LLM_API_KEY` 时同步照常运行，仅跳过翻译（`desc_zh` 置 `null`，站点降级展示英文原文并标注「未翻译」）。
 
 ## 本地开发
 
@@ -122,13 +134,15 @@ pnpm test                   # node:test 单测（29 条）
 pnpm lint                   # Biome 检查（pnpm format 自动格式化）
 node scripts/sync.mjs       # 手动同步（--dry-run / --verbose / --readme <path> 便于离线调试）
 pnpm translate              # 单独补翻译（需 LLM_API_KEY，--limit N 可小步试跑）
-pnpm build                  # next build（output: export → out/，1,403 个静态页）
+pnpm build                  # next build（output: export → out/，1,404 个静态页）
 pnpm preview                # wrangler dev 本地预览 Workers 托管行为
 pnpm deploy                 # wrangler deploy（需 CLOUDFLARE_API_TOKEN，或已 wrangler login）
 ```
 
 ## 验收标准
 
-- [x] `pnpm build` 产出 `out/`（1,403 页），`wrangler dev` 本地预览通过（含尾斜杠 307 与自定义 404 行为）——2026-10-15 实测。
-- [ ] push main 后自动发布，`ffd.baiwumm.com` 可访问，404 页正常（待配置 `CLOUDFLARE_API_TOKEN`）。
-- [ ] 手动触发 daily-sync，模拟上游变更后全自动走到部署（待配置 secrets 后验证）。
+- [x] `pnpm build` 产出 `out/`（1,404 页，含 `/docs` 概览），`wrangler dev` 本地预览通过（含尾斜杠 307 与自定义 404 行为）——2026-10-15 / 16 实测。
+- [x] push main 后自动发布，`ffd.baiwumm.com` 线上可访问（首页 / 分类页 / 详情页 200、未知路径 404、尾斜杠 307）——2026-10-16 实测。
+- [x] 手动触发 `Daily Sync`，全链路（同步 → 翻译 → 提交 → `workflow_call` 部署）自动走通——2026-10-16。
+
+> 部署记录（2026-10-16）：首次 CI 失败于 pnpm 12 的安装脚本审批——pnpm 自 v11 起忽略 `onlyBuiltDependencies`，需改用 `allowBuilds` 映射（见 `pnpm-workspace.yaml` 注释）；修复后 CI / Deploy 全绿，自定义域名由 wrangler routes 自动挂载。
