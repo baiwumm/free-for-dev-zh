@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-15T10:19:44.316Z",
+    "synced_at": "2026-10-16T01:19:01.229Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "37648842c3b2f7253a335ca01981c2eeb029d894",
-      "commit_date": "2026-10-14T21:04:07Z"
+      "commit_sha": "aa64edb149db968c8d9cdb43ff73dea86b86d666",
+      "commit_date": "2026-10-15T12:27:37Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1372,
+      "active": 1373,
       "removed": 0,
-      "entries": 1339,
+      "entries": 1340,
       "notes": 33,
-      "translated": 0
+      "translated": 147
     }
   },
   "categories": [
@@ -280,7 +280,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Firestore - 1GB storage, 50,000 reads, 20,000 writes, 20,000 deletes per day",
-      "desc_zh": null,
+      "desc_zh": "Cloud Firestore - 1GB 存储，每天 50,000 次读取，20,000 次写入，20,000 次删除",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -293,7 +293,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Compute Engine - 1 non-preemptible e2-micro, 30GB HDD, 5GB snapshot storage (restricted to certain regions), 1 GB network egress from North America to all region destinations (excluding China and Australia) per month",
-      "desc_zh": null,
+      "desc_zh": "Compute Engine - 1 个非抢占式 e2-micro，30GB HDD，5GB 快照存储（限制于特定区域），每月 1 GB 从北美到所有区域目的地（不包括中国和澳大利亚）的网络流出量",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -306,7 +306,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Storage - 5GB, 1GB network egress",
-      "desc_zh": null,
+      "desc_zh": "Cloud Storage - 5GB，1GB 网络流出量",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -319,7 +319,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Shell - Web-based Linux shell/primary IDE with 5GB of persistent storage. 60-hour limit per week",
-      "desc_zh": null,
+      "desc_zh": "Cloud Shell - 基于 Web 的 Linux shell/主要 IDE，附带 5GB 持久化存储。每周 60 小时限制",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -332,7 +332,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Pub/Sub - 10GB of messages per month",
-      "desc_zh": null,
+      "desc_zh": "Cloud Pub/Sub - 每月 10GB 消息",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -345,7 +345,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Functions - 2 million invocations per month (includes both background and HTTP invocations)",
-      "desc_zh": null,
+      "desc_zh": "Cloud Functions - 每月 200 万次调用（包括后台调用和 HTTP 调用）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -358,7 +358,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Run - 2 million requests per month, 360,000 GB-seconds memory, 180,000 vCPU-seconds of compute time, 1 GB network egress from North America per month",
-      "desc_zh": null,
+      "desc_zh": "Cloud Run - 每月 200 万次请求，360,000 GB-seconds 内存，180,000 vCPU-seconds 计算时间，每月 1 GB 从北美流出的网络流量",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -371,7 +371,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Google Kubernetes Engine - No cluster management fee for one zonal cluster. Each user node is charged at standard Compute Engine pricing",
-      "desc_zh": null,
+      "desc_zh": "Google Kubernetes Engine - 一个区域集群无集群管理费用。每个用户节点按标准 Compute Engine 定价收费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -384,7 +384,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "BigQuery - 1 TB of querying per month, 10 GB of storage each month",
-      "desc_zh": null,
+      "desc_zh": "BigQuery - 每月 1 TB 查询量，每月 10 GB 存储",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -397,7 +397,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Cloud Build - 120 build-minutes per day",
-      "desc_zh": null,
+      "desc_zh": "Cloud Build - 每天 120 构建分钟",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -410,7 +410,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Free Jupyter Notebooks development environment.",
-      "desc_zh": null,
+      "desc_zh": "免费的 Jupyter Notebooks 开发环境。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -436,7 +436,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Free remote desktop app with practically no limit on the number of devices, owned by Google, so needs a Google account.",
-      "desc_zh": null,
+      "desc_zh": "免费的远程桌面应用，几乎无设备数量限制，由 Google 拥有，因此需要一个 Google 账号。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -449,7 +449,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Get free access to Gemini 3.5 Flash, Gemini 3 Flash and Gemma 4 models. The free tier for Flash offers 5 requests per minute, 20 requests per day, and 250k input tokens per minute. Meanwhile the free tier for Gemma 4 offers 30 requests per minute, 14.4k requests per day, but (only) 16k input tokens per minute.",
-      "desc_zh": null,
+      "desc_zh": "免费访问 Gemini 3.5 Flash、Gemini 3 Flash 和 Gemma 4 模型。Flash 免费层提供每分钟 5 次请求，每天 20 次请求，以及每分钟 250k 输入 token。同时，Gemma 4 免费层提供每分钟 30 次请求，每天 14.4k 次请求，但（仅）每分钟 16k 输入 token。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -462,7 +462,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Full, detailed list - https://cloud.google.com/free",
-      "desc_zh": null,
+      "desc_zh": "完整详细列表 - https://cloud.google.com/free",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -488,7 +488,7 @@
       "category": "major-cloud-providers",
       "parent": "e025566df4b5",
       "desc_en": "1TB egress/month, 10M HTTP requests, and 2M Function invocations/month",
-      "desc_zh": null,
+      "desc_zh": "每月 1TB 流出量，1000 万次 HTTP 请求，以及每月 200 万次 Function 调用",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -501,7 +501,7 @@
       "category": "major-cloud-providers",
       "parent": "e025566df4b5",
       "desc_en": "10 custom metrics and alarms, 1M API requests, 5GB of log data ingestion and 5GB of log data archive",
-      "desc_zh": null,
+      "desc_zh": "10 个自定义指标和警报，100 万次 API 请求，5GB 日志数据摄入和 5GB 日志数据归档",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -514,7 +514,7 @@
       "category": "major-cloud-providers",
       "parent": "e025566df4b5",
       "desc_en": "100min of build time/month",
-      "desc_zh": null,
+      "desc_zh": "每月 100 分钟构建时间",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -527,7 +527,7 @@
       "category": "major-cloud-providers",
       "parent": "e025566df4b5",
       "desc_en": "5 active users, 5k repositories/account, 50GB storage/month and 10K requests/month",
-      "desc_zh": null,
+      "desc_zh": "5 个活跃用户，每个账号 5k 个代码库，每月 50GB 存储和每月 10K 请求",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4290,6 +4290,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "6ecf552ddf2f",
+      "kind": "entry",
+      "name": "Pin Feed",
+      "url": "https://pinfeed.io/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Pin Feed is a website feedback tool to comment on live client website. Free for up to 3 projects with 500 MB storage. Clients can leave feedback without an account.",
+      "desc_zh": null,
+      "status": "active",
+      "first_seen": "2026-10-16",
+      "updated_at": "2026-10-16"
+    },
+    {
       "id": "60a68db8e7cd",
       "kind": "entry",
       "name": "Proton Pass",
@@ -6299,7 +6312,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Open Source CLI tool to prevent Kubernetes misconfigurations by ensuring that manifests and Helm charts follow best practices as well as your organization’s policies",
-      "desc_zh": null,
+      "desc_zh": "一个开源的 CLI 工具，通过确保清单和 Helm 图表遵循最佳实践以及您组织的策略，来防止 Kubernetes 配置错误",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6312,7 +6325,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Automated dependency updates for Ruby, JavaScript, Python, PHP, Elixir,",
-      "desc_zh": null,
+      "desc_zh": "Ruby、JavaScript、Python、PHP、Elixir 的自动化依赖更新",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6325,7 +6338,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Scan your Django site for security flaws with this free, automated checkup tool. Forked from the Pony Checkup site.",
-      "desc_zh": null,
+      "desc_zh": "使用这个免费、自动化的检查工具扫描您的 Django 站点是否存在安全漏洞。源自 Pony Checkup 网站。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6351,7 +6364,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Sync your .env files, quickly & securely. Stop sharing your .env files over insecure channels like Slack and email, and never lose an important .env file again. Free for up to 3 teammates.",
-      "desc_zh": null,
+      "desc_zh": "快速且安全地同步您的 .env 文件。停止通过 Slack 和邮件等不安全渠道共享 .env 文件，并永远不要再丢失重要的 .env 文件。最多 3 名队友免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6364,7 +6377,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Keep secrets out of your source code with automated secrets detection and remediation. Scan your git repos for 350+ types of secrets and sensitive files - Free for individuals and teams of 25 developers or less.",
-      "desc_zh": null,
+      "desc_zh": "通过自动化密钥检测和修复，防止密钥出现在您的源代码中。扫描您的 git 仓库以查找 350+ 种类型的密钥和敏感文件——个人和 25 名或更少开发者的团队免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6377,7 +6390,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Search across 20 million exposed secrets in public GitHub repositories, gists, issues,and comments for Free",
-      "desc_zh": null,
+      "desc_zh": "免费搜索公开 GitHub 仓库、代码片段、问题和评论中的 2000 万个泄露密钥",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6390,7 +6403,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "REST API for fetching the information on the breaches.",
-      "desc_zh": null,
+      "desc_zh": "用于获取泄露信息的 REST API。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6403,7 +6416,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "A shell script DRM compiler that converts shell scripts into obfuscated binaries using an embedded shell interpreter and anti-debugging (alternative to shc). Free unlimited web edition.",
-      "desc_zh": null,
+      "desc_zh": "一个 Shell 脚本 DRM 编译器，使用嵌入式 Shell 解释器和反调试功能将 Shell 脚本转换为混淆二进制文件（shc 的替代品）。免费无限网络版。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6442,7 +6455,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Public record of automated open-source repository audits: security posture, maintainability, dependency health, and malicious-package checks, with a versioned methodology and grade badges. Free tier: full access to all published reports, automatic coverage of repositories above the public-interest threshold (≥500 stars, ≥50 forks, or org-owned with ≥250 stars), embeddable badges, and 100 starting credits (5 inspections) for below-threshold repositories.",
-      "desc_zh": null,
+      "desc_zh": "自动化开源仓库审计的公开记录：涵盖安全态势、可维护性、依赖健康状况和恶意包检查，包含版本化方法和等级徽章。免费层级：可完全访问所有已发布报告，对超过公共利益阈值（≥500 星，≥50 分叉，或拥有 ≥250 星的组织）的仓库进行自动覆盖，提供可嵌入徽章，以及低于阈值的仓库的 100 初始积分（5 次检查）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6455,7 +6468,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Test for modern Internet Standards like IPv6, DNSSEC, HTTPS, DMARC, STARTTLS and DANE",
-      "desc_zh": null,
+      "desc_zh": "测试现代互联网标准，如 IPv6、DNSSEC、HTTPS、DMARC、STARTTLS 和 DANE",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6468,7 +6481,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "DNS and email security analyzer that checks SPF, DKIM, DMARC, DNSSEC, BIMI, MTA-STS, and 40+ blacklists with AI-powered explanations and fix suggestions. 100% free, no signup required.",
-      "desc_zh": null,
+      "desc_zh": "DNS 和电子邮件安全分析器，检查 SPF、DKIM、DMARC、DNSSEC、BIMI、MTA-STS 和 40+ 黑名单，并提供 AI 驱动的解释和修复建议。100% 免费，无需注册。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6481,7 +6494,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Free SSL Certificate Authority with certs trusted by all major browsers",
-      "desc_zh": null,
+      "desc_zh": "免费 SSL 证书颁发机构，其证书被所有主流浏览器信任",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6507,7 +6520,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Find and fix security vulnerabilities in your site.",
-      "desc_zh": null,
+      "desc_zh": "在您的站点中查找并修复安全漏洞。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6520,7 +6533,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Daily SSL/TLS certificate monitoring: expiry alerts (30/7/1 day), chain and OCSP revocation checks, and certificate transparency issuance history. Free forever for 5 domains, no credit card.",
-      "desc_zh": null,
+      "desc_zh": "每日 SSL/TLS 证书监控：过期警报（30/7/1 天），链和 OCSP 撤销检查，以及证书透明度签发历史。5 个域名永久免费，无需信用卡。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6533,7 +6546,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Free website security check, site antivirus, and server firewall (WAF) for PHP. Email notifications for registered users in the free tier.",
-      "desc_zh": null,
+      "desc_zh": "针对 PHP 的免费网站安全检查、站点杀毒和服务器防火墙 (WAF)。免费层级的注册用户可接收电子邮件通知。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6546,7 +6559,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "High confidence Indicator of Compromise(IOC) targeting public cloud infrastructure, A portion is available on github (https://github.com/unknownhad/AWSAttacks). Full list is available via API",
-      "desc_zh": null,
+      "desc_zh": "针对公共云基础设施的高置信度入侵指标 (IOC)，一部分在 github 上可用 (https://github.com/unknownhad/AWSAttacks)。完整列表可通过 API 获取",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6572,7 +6585,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Find web app vulnerabilities, audit for OWASP Risks",
-      "desc_zh": null,
+      "desc_zh": "查找 Web 应用漏洞，审计 OWASP 风险。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6585,7 +6598,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Machine authenticated secrets manager, includes 2 projects, 2 bootstrapped machines, 20 secrets and 7 days audit log retention for free.",
-      "desc_zh": null,
+      "desc_zh": "机器认证的密钥管理器，包含 2 个项目、2 台引导机器、20 个密钥和 7 天审计日志保留，免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6598,7 +6611,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Secure Enterprise-grade platform for managing environment variables and secrets. Free tier includes up to 3 applications and 150 secrets per project.",
-      "desc_zh": null,
+      "desc_zh": "安全的企业级平台，用于管理环境变量和密钥。免费层包含最多 3 个应用程序和每个项目 150 个密钥。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6611,7 +6624,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Free supply chain security for individual developers, small teams, and open source projects. Includes a free app and firewall CLI tool to protect your code from vulnerable and malicious dependencies. Detects 70+ indicators of supply chain risk.",
-      "desc_zh": null,
+      "desc_zh": "为个人开发者、小型团队和开源项目提供免费的供应链安全。包含一个免费应用程序和防火墙 CLI 工具，以保护代码免受易受攻击和恶意依赖项的影响。检测 70 多个供应链风险指标。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6624,7 +6637,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Intense analysis of the configuration of any SSL web server",
-      "desc_zh": null,
+      "desc_zh": "对任何 SSL Web 服务器的配置进行深入分析。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6637,7 +6650,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Attack surface monitoring and CI/CD takeover guard. Free standalone DNS scanner, GitHub Action with SARIF export, and continuous asset monitoring tier.",
-      "desc_zh": null,
+      "desc_zh": "攻击面监控和 CI/CD 接管防护。免费的独立 DNS 扫描器、带有 SARIF 导出的 GitHub Action 以及持续资产监控层。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6650,7 +6663,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Free website security check and malware scanner",
-      "desc_zh": null,
+      "desc_zh": "免费的网站安全检查和恶意软件扫描器。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6663,7 +6676,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Test an SSL/TLS service for secure server configuration, certificates, chains, etc. Not limited to HTTPS.",
-      "desc_zh": null,
+      "desc_zh": "测试 SSL/TLS 服务器的安全服务器配置、证书、链等。不限于 HTTPS。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6676,7 +6689,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Tools and services for implementing end-to-end encryption, database protection, IoT security, and more in your digital solution. Free for applications with up to 250 users.",
-      "desc_zh": null,
+      "desc_zh": "在您的数字解决方案中实现端到端加密、数据库保护、IoT 安全等的工具和服务。最多 250 个用户的应用程序免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6689,7 +6702,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Scan code for security issues and vulnerable dependencies with SAST and SCA. Free tier includes up to 10 contributors and 10 private repos (unlimited public repos).",
-      "desc_zh": null,
+      "desc_zh": "使用 SAST 和 SCA 扫描代码中的安全问题和不安全依赖项。免费层包含最多 10 个贡献者和 10 个私有仓库（无限公共仓库）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6702,7 +6715,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Secure environment variable manager for dev teams. AES-256-GCM encryption at rest, CLI, Kubernetes operator, and audit log. Free plan includes 3 projects, 3 members, and 3 environments per project, forever.",
-      "desc_zh": null,
+      "desc_zh": "为开发团队提供的安全环境变量管理器。静态 AES-256-GCM 加密，CLI，Kubernetes 操作符和审计日志。免费计划包含 3 个项目、3 个成员和每个项目 3 个环境，永久。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6715,7 +6728,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "A free tool to search a username across 90+ social platforms to find matching profiles.",
-      "desc_zh": null,
+      "desc_zh": "一个免费的工具，可在 90 多个社交平台上搜索用户名以查找匹配的个人资料。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6728,7 +6741,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Fine-grained authorization as a service for applications and APIs. Free up to 1000 MAUs and 100 authorizer instances.",
-      "desc_zh": null,
+      "desc_zh": "为应用程序和 API 提供的细粒度授权即服务。免费最多 1000 MAU 和 100 个授权器实例。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6741,7 +6754,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Seamless Integration of SSO, MFA, passwordless auth and more. Includes SDKs for frontend and backend apps. Free up to 1000 MAUs and five identity providers.",
-      "desc_zh": null,
+      "desc_zh": "SSO、MFA、无密码认证等的无缝集成。包含前端和后端应用程序的 SDK。免费最多 1000 MAU 和五个身份提供商。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6754,7 +6767,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Hosted SSO. The free plan includes 25,000 MAUs, unlimited Social Connections, a custom domain, and more.",
-      "desc_zh": null,
+      "desc_zh": "托管 SSO。免费计划包含 25,000 MAU、无限社交连接、自定义域名等。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6767,7 +6780,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Bring Passwordless, OTPs, 2FA, SSO to your apps in minutes. All Front-end included. Free up to 5000 MAUs.",
-      "desc_zh": null,
+      "desc_zh": "在几分钟内将无密码、OTP、2FA、SSO 带到您的应用程序。包含所有前端。免费最多 5000 MAU。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6780,7 +6793,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Authentication login and access control, unlimited identity providers for any project. Facebook, Google, Twitter and more. The first 1000 API calls are free.",
-      "desc_zh": null,
+      "desc_zh": "身份验证登录和访问控制，任何项目无限身份提供商。Facebook、Google、Twitter 等。前 1000 次 API 调用免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6793,7 +6806,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Two-factor authentication (2FA) on multiple devices, with backups. Drop-in replacement for Google Authenticator. Free for up to 100 successful authentications.",
-      "desc_zh": null,
+      "desc_zh": "多设备上的双因素认证 (2FA)，带有备份。Google Authenticator 的即插即用替代品。最多 100 次成功认证免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6819,7 +6832,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "User management, authentication, 2FA/MFA, prebuilt UI components for sign-in, sign-up, user profiles, and more. Free plan includes unlimited applications, 50,000 MRU limit per app, 3 dashboard seats, and more.",
-      "desc_zh": null,
+      "desc_zh": "用户管理、身份验证、2FA/MFA、用于登录、注册、用户资料等的预构建 UI 组件。免费计划包括无限应用、每个应用 50,000 MRU 限制、3 个仪表板席位等。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6832,7 +6845,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Keycloak Identity and Access Management as a Service. Free up to 100 users and one realm.",
-      "desc_zh": null,
+      "desc_zh": "Keycloak 身份与访问管理即服务。免费使用最多 100 个用户和一个领域。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6845,7 +6858,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Highly customizable AuthN flows, has both a no-code and API/SDK approach, Free 7,500 active users/month, 50 tenants (up to 5 SAML/SSO tenants).",
-      "desc_zh": null,
+      "desc_zh": "高度可定制的 AuthN 流程，具有无代码和 API/SDK 方法，免费 7,500 活跃用户/月，50 个租户（最多 5 个 SAML/SSO 租户）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6871,7 +6884,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Simple, robust authentication you can integrate with your product in minutes.  Everything you need to get started with 7,500 free MAU.",
-      "desc_zh": null,
+      "desc_zh": "简单、稳健的身份验证，您可以在几分钟内集成到您的产品中。开始使用 7,500 免费月活跃用户所需的一切。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6897,7 +6910,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Develop, secure, and manage user identities of your product - for both authentication and authorization. Free for up to 5,000 MAUs with open-source self-hosted option available.",
-      "desc_zh": null,
+      "desc_zh": "开发、保护和管理您产品的用户身份——用于身份验证和授权。免费最多 5,000 MAU，并提供开源自托管选项。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6910,7 +6923,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "MojoAuth makes it easy to implement Passwordless authentication on your web, mobile, or any application in minutes.",
-      "desc_zh": null,
+      "desc_zh": "MojoAuth 让您可以在几分钟内轻松在您的网站、移动设备或任何应用上实现无密码身份验证。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6923,7 +6936,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "User management, authentication and authorization. Free for up to 100 monthly active users.",
-      "desc_zh": null,
+      "desc_zh": "用户管理、身份验证和授权。免费最多 100 月活跃用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6936,7 +6949,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "AuthN/AuthZ/OAuth2.0/Zero Trust managed security platform. Forever free developer accounts with all security features, unlimited team members, 200 daily active users, and 25k/mo permission checks.",
-      "desc_zh": null,
+      "desc_zh": "AuthN/AuthZ/OAuth2.0/零信任托管安全平台。永久免费开发者账户，包含所有安全功能、无限团队成员、200 每日活跃用户和 25k/月权限检查。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6949,7 +6962,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Auhtorization-as-a-service provider platform enabling RBAC, ABAC, and ReBAC for scalable microservices with real-time updates and a no-code policy UI. A 1000 Monthly Active User free tier.",
-      "desc_zh": null,
+      "desc_zh": "授权即服务提供商平台，为可扩展微服务启用 RBAC、ABAC 和 ReBAC，具有实时更新和无代码策略 UI。1000 月活跃用户免费层级。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6962,7 +6975,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Keycloak Open Source Identity and Access Management. Free realm up to 1000 users, up to 10 SSO connections, leveraging Phase Two's Keycloak enhanced container which includes the [Organization](https://phasetwo.io/product/organizations/) extension.",
-      "desc_zh": null,
+      "desc_zh": "Keycloak 开源身份与访问管理。免费领域最多 1000 个用户，最多 10 个 SSO 连接，利用 Phase Two 的 Keycloak 增强容器，其中包括 [Organization](https://phasetwo.io/product/organizations/) 扩展。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6975,7 +6988,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "A Sell to companies of any size immediately with a few lines of code, free up to 200 users and 10k Transactional Emails (with a watermark branding: \"Powered by PropelAuth\").",
-      "desc_zh": null,
+      "desc_zh": "用几行代码立即向任何规模的公司销售，免费最多 200 个用户和 10k 交易邮件（带有水印品牌：“Powered by PropelAuth”）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6988,7 +7001,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Enterprise SSO (SAML, OIDC), SCIM provisioning, and social logins for B2B SaaS. Free tier includes 1 million MAU, 100 organizations, 1 SSO connection, and 1 SCIM connection.",
-      "desc_zh": null,
+      "desc_zh": "B2B SaaS 的企业 SSO (SAML, OIDC)、SCIM 配置和社交登录。免费层级包括 1 million MAU、100 个组织、1 个 SSO 连接和 1 个 SCIM 连接。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7001,7 +7014,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Open-source authentication that doesn't suck. The most developer-friendly solution, getting you started in just five minutes. Self-hostable for free, or offers a managed SaaS version with 10k free Monthly Active Users.",
-      "desc_zh": null,
+      "desc_zh": "不烂的开源身份验证。最开发者友好的解决方案，只需五分钟即可开始。可免费自托管，或提供托管 SaaS 版本，包含 10k 免费月活跃用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7014,7 +7027,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "An all-in-one platform that provides APIs and SDKs for authentication and fraud prevention. The free plan includes 10,000 monthly active users, unlimited organizations, 5 SSO or SCIM connections, and 1,000 M2M tokens.",
-      "desc_zh": null,
+      "desc_zh": "一个提供身份验证和反欺诈 API 和 SDK 的综合平台。免费计划包括 10,000 月活跃用户、无限组织、5 个 SSO 或 SCIM 连接以及 1,000 M2M 令牌。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7027,7 +7040,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Open source user authentication that natively integrates into your app - enabling you to get started quickly while controlling the user and developer experience. Free for up to 5000 MAUs.",
-      "desc_zh": null,
+      "desc_zh": "原生集成到您应用中的开源用户认证——让您能够快速上手，同时掌控用户体验和开发者体验。免费提供高达 5000 MAU。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7040,7 +7053,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Open-source API key management and rate-limiting platform. Free for up to 100,000 requests per month and 100 active API keys, with full access to key creation, revocation, and rate-limiting capabilities.",
-      "desc_zh": null,
+      "desc_zh": "开源 API 密钥管理和速率限制平台。免费最多 100,000 每月请求数和 100 个活跃 API 密钥，完全访问密钥创建、撤销和速率限制功能。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7053,7 +7066,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Free user management and authentication for up to 1 Million MAUs. Support email + password, social auth, Magic Auth, MFA, and more.",
-      "desc_zh": null,
+      "desc_zh": "最多 1 Million MAU 的免费用户管理和身份验证。支持电子邮件 + 密码、社交身份验证、Magic Auth、MFA 等。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7066,7 +7079,7 @@
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "A turnkey user and access management that works for you and supports multi-tenant (B2B) use cases. Free for up to 25,000 authenticated requests, with all security features (no paywall for OTP, Passwordless, Policies, and so on).",
-      "desc_zh": null,
+      "desc_zh": "一键式用户和访问管理，为您工作并支持多租户 (B2B) 用例。免费最多 25,000 个已验证请求，包含所有安全功能（OTP、无密码、策略等无付费墙）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7118,7 +7131,7 @@
       "category": "mobile-app-distribution-and-feedback",
       "parent": null,
       "desc_en": "Distribute iOS & Android apps over the air. Free plan: unlimited uploads, private links, 2-day expiration for guests, 60 days for registered users.",
-      "desc_zh": null,
+      "desc_zh": "通过空中分发 iOS & Android 应用。免费计划：无限上传、私密链接、访客 2 天过期、注册用户 60 天过期。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7131,7 +7144,7 @@
       "category": "mobile-app-distribution-and-feedback",
       "parent": null,
       "desc_en": "iOS & Android beta apps distribution service offers completely free services with unlimited downloads, high-speed downloads, and unlimited uploads.",
-      "desc_zh": null,
+      "desc_zh": "iOS & Android 测试应用分发服务提供完全免费的服务，包括无限下载、高速下载和无限上传。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7144,7 +7157,7 @@
       "category": "mobile-app-distribution-and-feedback",
       "parent": null,
       "desc_en": "Manage and distribute Android, iOS and Desktop apps. Useful for tester or self distribution. Try it for free with 2 apps, 1 org, 100 MB storage with unlimited downloads, or self-hosted your self.",
-      "desc_zh": null,
+      "desc_zh": "管理和分发 Android、iOS 和桌面应用。适用于测试人员或自行分发。免费试用 2 个应用、1 个组织、100 MB 存储空间且无限下载，或自行托管。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7157,7 +7170,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Deploy prepared apps on IaaS. Management of 1 AWS micro instance free",
-      "desc_zh": null,
+      "desc_zh": "在 IaaS 上部署准备好的应用。免费管理 1 个 AWS micro 实例。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7222,7 +7235,7 @@
       "category": "management-system",
       "parent": null,
       "desc_en": "Server management focusing mainly on PHP projects. Free for up to 1 server.",
-      "desc_zh": null,
+      "desc_zh": "服务器管理，主要专注于 PHP 项目。免费使用最多 1 台服务器。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7261,7 +7274,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Realtime messaging service with presence, persistence and guaranteed delivery. The free plan includes 3m messages per month, 100 peak connections, and 100 peak channels.",
-      "desc_zh": null,
+      "desc_zh": "具有在线状态、持久化和保证投递功能的实时消息服务。免费计划包含每月 300 万条消息、100 个峰值连接和 100 个峰值频道。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7274,7 +7287,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "RabbitMQ as a Service. Little Lemur plan: max 1 million messages/month, max 20 concurrent connections, max 100 queues, max 10,000 queued messages, multiple nodes in different AZ's",
-      "desc_zh": null,
+      "desc_zh": "RabbitMQ 即服务。Little Lemur 计划：每月最多 100 万条消息、最多 20 个并发连接、最多 100 个队列、最多 10,000 条排队消息、不同 AZ 中的多个节点。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7287,7 +7300,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Single API for push, in-app, email, chat, SMS, and other messaging channels with template management and other features. The free plan includes 10,000 messages/mo.",
-      "desc_zh": null,
+      "desc_zh": "用于推送、应用内、电子邮件、聊天、短信和其他消息渠道的单个 API，具有模板管理和其他功能。免费计划包含每月 10,000 条消息。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7300,7 +7313,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Scalable and secure serverless MQTT broker you can get in seconds. 1M session minutes/month free forever (no credit card required).",
-      "desc_zh": null,
+      "desc_zh": "可在几秒钟内获得的可扩展且安全的无服务器 MQTT 代理。永久免费每月 100 万会话分钟数（无需信用卡）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7313,7 +7326,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "All-in-one Customer Engagement and Automation Tool (email, push, SMS, product tours, banners and more) for SaaS. Free for up to 1,000 active users per month.",
-      "desc_zh": null,
+      "desc_zh": "适用于 SaaS 的全功能客户参与和自动化工具（电子邮件、推送、短信、产品导览、横幅等）。免费使用每月最多 1,000 个活跃用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7326,7 +7339,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Connect your MQTT devices to the Cloud Native IoT Messaging Broker.  Free to connect up to 100 devices (no credit card required) forever.",
-      "desc_zh": null,
+      "desc_zh": "将您的 MQTT 设备连接到 Cloud Native IoT 消息代理。永久免费连接最多 100 台设备（无需信用卡）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7339,7 +7352,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Send and receive text messages using your Android phone as an SMS Gateway. Free to send and receive up to 200 messages per month.",
-      "desc_zh": null,
+      "desc_zh": "使用您的 Android 手机作为 SMS Gateway 发送和接收短信。每月免费发送和接收最多 200 条消息。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7352,7 +7365,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Notifications infrastructure for developers. Send to multiple channels like in-app, email, SMS, Slack, and push with a single API call. The free plan includes 10,000 messages/mo.",
-      "desc_zh": null,
+      "desc_zh": "开发者的通知基础设施。通过单个 API 调用即可发送到应用内、电子邮件、短信、Slack 和推送等多个渠道。免费计划包括每月 10,000 条消息。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7365,7 +7378,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "The open-source notification infrastructure for developers. Simple components and APIs for managing all communication channels in one place: Email, SMS, Direct, In-App and Push. The free plan includes 30,000 notifications/month with 90 days of retention.",
-      "desc_zh": null,
+      "desc_zh": "开发者的开源通知基础设施。简单的组件和 API 可在一个地方管理所有通信渠道：电子邮件、短信、Direct、应用内和推送。免费计划包括每月 30,000 条通知，保留期为 90 天。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7378,7 +7391,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Serverless Apache Kafka streaming service. The free plan includes 200 KiB/s in, 400 KiB/s out, 1-day retention and up to 10 topics. No card required and no time limit.",
-      "desc_zh": null,
+      "desc_zh": "无服务器 Apache Kafka 流式服务。免费计划包括 200 KiB/s 输入，400 KiB/s 输出，1 天保留期和最多 10 个主题。无需信用卡且无时间限制。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7391,7 +7404,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Communication infrastructure in 5 minutes. Free tier includes: 100 SMS and calls, 3000 Emails, Push, Slack, MS Teams, WhatsApp, and more.",
-      "desc_zh": null,
+      "desc_zh": "5 分钟内搭建通信基础设施。免费套餐包括：100 条短信和通话，3000 封电子邮件，推送，Slack，MS Teams，WhatsApp 等。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7404,7 +7417,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Send push notifications to your iOS and Android devices. Effortlessly integrate via API or Webhooks and maintain full control over your alerts. Free plan: 50 messages per day to 1 device and 1 application.",
-      "desc_zh": null,
+      "desc_zh": "向您的 iOS 和 Android 设备发送推送通知。通过 API 或 Webhooks 轻松集成并完全控制您的警报。免费计划：每天 50 条消息发送到 1 个设备和 1 个应用程序。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7417,7 +7430,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Swift, Kotlin, and React messaging at 1 million transactions each month. Transactions may contain multiple messages.",
-      "desc_zh": null,
+      "desc_zh": "每月 100 万笔交易的 Swift、Kotlin 和 React 消息传递。交易可能包含多条消息。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7430,7 +7443,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Realtime messaging service. Free for up to 100 simultaneous connections and 200,000 messages/day",
-      "desc_zh": null,
+      "desc_zh": "实时消息服务。免费用于最多 100 个同时连接和每天 200,000 条消息。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7443,7 +7456,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Realtime messaging service. Free for up to 20 simultaneous connections and 100,000 events/day",
-      "desc_zh": null,
+      "desc_zh": "实时消息服务。免费用于最多 20 个同时连接和每天 100,000 个事件。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7456,7 +7469,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "SMS Gateway for Android™ enables sending and receiving SMS messages through your devices using cloud routing. Completely free cloud service (with recommended notification for usage above 10,000 messages/day to maintain quality for all users).",
-      "desc_zh": null,
+      "desc_zh": "Android™ 短信网关通过使用云路由通过您的设备发送和接收短信。完全免费的云服务（对于每天使用超过 10,000 条消息的情况，建议通知以保持所有用户的质量）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7469,7 +7482,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "SuprSend is a notification infrastructure that streamlines your product notifications with an API-first approach. Create and deliver transactional, crons, and engagement notifications on multiple channels with a single notification API. In free plan you get 10,000 notifications per month, including different workflow nodes such as digests, batches, multi-channels, preferences, tenants, broadcasts and more.",
-      "desc_zh": null,
+      "desc_zh": "SuprSend 是一种通知基础设施，通过 API 优先的方法简化您的产品通知。使用单个通知 API 即可在多个渠道创建和传递事务性、定时和参与通知。在免费计划中，您每月获得 10,000 条通知，包括不同的工作流节点，如摘要、批处理、多渠道、偏好设置、租户、广播等。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7482,7 +7495,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "[NATS.io](https://nats.io) as a service. Global, AWS, GCP, and Azure. Free forever with 4k msg size, 50 active connections, and 5GB of data per month.",
-      "desc_zh": null,
+      "desc_zh": "[NATS.io](https://nats.io) 作为服务。全球，AWS，GCP 和 Azure。永久免费，包括 4k 消息大小，50 个活跃连接和每月 5GB 数据。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7495,7 +7508,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Web Push Notifications - Free for upto 10k subscribers, unlimited push notifications, in-browser messaging",
-      "desc_zh": null,
+      "desc_zh": "Web 推送通知 - 免费用于最多 10k 订阅者，无限推送通知，浏览器内消息传递。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7508,7 +7521,7 @@
       "category": "messaging-and-streaming",
       "parent": null,
       "desc_en": "Realtime messaging service, Pusher-compatible. Dev tier is limited to local development only and free with 100 concurrent connections, 1,000,000 broadcasts/month, unlimited client events, 32kb message size.",
-      "desc_zh": null,
+      "desc_zh": "实时消息服务，兼容 Pusher。开发版仅限于本地开发且免费，包括 100 个并发连接，每月 1,000,000 次广播，无限客户端事件，32kb 消息大小。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7521,7 +7534,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "Free up to 100k log lines/day with 24 hours retention",
-      "desc_zh": null,
+      "desc_zh": "免费用于每天最多 100k 日志行，保留期为 24 小时。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7534,7 +7547,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "LogDog is a remote debugging/logging SDK (iOS and Android) with a web ui. Captures all logs, requests and events in real-time and allows to intercept them. Free for up to 100MB of logs every month",
-      "desc_zh": null,
+      "desc_zh": "LogDog 是一个带有 Web UI 的远程调试/日志 SDK（iOS 和 Android）。实时捕获所有日志、请求和事件并允许拦截它们。每月免费用于最多 100MB 的日志。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7547,7 +7560,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "Free for up to 12,960,000 entries per app per month, 3 days retention",
-      "desc_zh": null,
+      "desc_zh": "免费用于每个应用每月最多 12,960,000 条条目，保留期为 3 天。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7573,7 +7586,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "Audit trail management system. Free 1,000 user activity logs per month, 1-month retention, for up to 5 projects.",
-      "desc_zh": null,
+      "desc_zh": "审计跟踪管理系统。每月免费 1,000 条用户活动日志，1 个月保留期，最多 5 个项目。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7586,7 +7599,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "Log Management service powered by Manage Engine. Free Plan offers 50 GB storage with 15 days Storage Retention and 7 days search.",
-      "desc_zh": null,
+      "desc_zh": "由 Manage Engine 提供支持的日志管理服务。免费计划提供 50 GB 存储，15 天存储保留期和 7 天搜索。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7599,7 +7612,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "200 GB Ingestion/month free, 15 Days Retention",
-      "desc_zh": null,
+      "desc_zh": "每月免费 200 GB 数据摄入，15 天保留期",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7612,7 +7625,7 @@
       "category": "log-management",
       "parent": null,
       "desc_en": "Centralized log management platform with end-to-end encryption, real-time alerts, and multi-platform SDKs. Free tier includes up to 3.000 logs per day.",
-      "desc_zh": null,
+      "desc_zh": "具有端到端加密、实时警报和多平台 SDK 的集中式日志管理平台。免费层级包含每天最多 3.000 条日志。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7625,7 +7638,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Instantly localize without managing translation files. Free for up to 10,000 characters/month, unlimited languages.",
-      "desc_zh": null,
+      "desc_zh": "无需管理翻译文件即可即时本地化。每月免费 10,000 字符，无限语言。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7664,7 +7677,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Open-source AI-powered CLI for web & mobile localization. Bring your own LLM, or use 10,000 free words every month via Lingo.dev-managed localization engine.",
-      "desc_zh": null,
+      "desc_zh": "用于 Web 和移动端本地化的开源 AI 驱动 CLI。自带 LLM，或通过 Lingo.dev 托管的本地化引擎每月使用 10,000 个免费单词。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7677,7 +7690,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free up to 3 users, always free for Open Source",
-      "desc_zh": null,
+      "desc_zh": "免费最多 3 个用户，开源项目永久免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7690,7 +7703,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Automatic on-brand translations on every pull request, with glossary and translation memory. Free for 1 project, 250 translation credits/month (~4,000 words).",
-      "desc_zh": null,
+      "desc_zh": "每次拉取请求时自动进行品牌化翻译，附带词汇表和翻译记忆库。免费 1 个项目，每月 250 个翻译积分（约 4,000 字）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7703,7 +7716,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free for 1000 source language strings, unlimited languages, unlimited contributors, startup and open source deals",
-      "desc_zh": null,
+      "desc_zh": "免费 1000 个源语言字符串，无限语言，无限贡献者，初创公司和开源优惠",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7716,7 +7729,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Fast, developer-friendly localization platform with seamless and free GitHub/GitLab integration, AI-assisted and manual translations, and a generous free plan (includes 2 users, 500 keys, and unlimited projects).",
-      "desc_zh": null,
+      "desc_zh": "快速、开发者友好的本地化平台，具有无缝且免费的 GitHub/GitLab 集成、AI 辅助和手动翻译，以及慷慨的免费计划（包含 2 个用户、500 个密钥和无限项目）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7729,7 +7742,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free for Open Source",
-      "desc_zh": null,
+      "desc_zh": "开源项目免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7755,7 +7768,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free up to 1000 strings",
-      "desc_zh": null,
+      "desc_zh": "免费最多 1000 个字符串",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7768,7 +7781,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free up to 100 translation keys, unlimited strings, unlimited languages, startup deals",
-      "desc_zh": null,
+      "desc_zh": "免费最多 100 个翻译密钥，无限字符串，无限语言，初创公司优惠",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7794,7 +7807,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free SaaS offering with limited translations, forever-free self-hosted version",
-      "desc_zh": null,
+      "desc_zh": "免费翻译数量有限的 SaaS 提供商，以及永久免费的自行托管版本",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7807,7 +7820,7 @@
       "category": "translation-management",
       "parent": null,
       "desc_en": "Free for Open Source",
-      "desc_zh": null,
+      "desc_zh": "开源项目免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7820,7 +7833,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free tier offers 1 uptime/API monitor with 15-minute check intervals and instant email alerts.",
-      "desc_zh": null,
+      "desc_zh": "免费层级提供 1 个正常运行时间/API 监控器，15 分钟检查间隔和即时邮件警报。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7833,7 +7846,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Accesserty Pulse monitors interaction signals and detectable accessibility risks on live websites. Free plans for everyone and 14-day Pro trial.",
-      "desc_zh": null,
+      "desc_zh": "Accesserty Pulse 监控实时网站上的交互信号和可检测的无障碍风险。人人免费计划，以及 14 天专业版试用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7846,7 +7859,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "server security (eBPF agent for Linux), uptime monitoring, on-call alerting/status pages in one product. Free tier includes 10 uptime monitors and heartbeats, 5-minute check intervals, 7-day retention.",
-      "desc_zh": null,
+      "desc_zh": "服务器安全（Linux eBPF 代理）、正常运行时间监控、值班警报/状态页集成在一个产品中。免费层级包含 10 个正常运行时间监控器和心跳，5 分钟检查间隔，7 天保留期。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7859,7 +7872,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Automated API testing and monitoring. Free plans for teams and individuals.",
-      "desc_zh": null,
+      "desc_zh": "自动化 API 测试和监控。团队和个人免费计划。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7885,7 +7898,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free for 3 servers, 5 uptime monitors, unlimited users, unlimited dashboards, unlimited alerting rules.",
-      "desc_zh": null,
+      "desc_zh": "免费使用 3 台服务器、5 个正常运行时间监控、无限用户、无限仪表板和无限告警规则。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7924,7 +7937,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Heartbeat monitoring for cron jobs, plus HTTP uptime and TLS expiry checks, and a Laravel package that creates checks from your scheduler. Free tier with 10 checks, HTTP interval from 5 min, 30 days of history, 50k pings/mo.",
-      "desc_zh": null,
+      "desc_zh": "定时任务的心跳监控，以及 HTTP 正常运行时间检查和 TLS 过期检查，还有一个从调度器创建检查的 Laravel 包。免费层级包含 10 个检查，HTTP 间隔从 5 分钟开始，30 天历史记录，50k pings/月。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7950,7 +7963,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Cron job monitoring with heartbeat pings and alerts. Free tier with up to 5 monitors and email notifications.",
-      "desc_zh": null,
+      "desc_zh": "带有心跳 ping 和告警的定时任务监控。免费层级最多包含 5 个监控器和邮件通知。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7963,7 +7976,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free for up to 5 nodes",
-      "desc_zh": null,
+      "desc_zh": "免费使用最多 5 个节点",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7976,7 +7989,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Rails APM with request-based pricing: live traces, slow SQL, N+1 detection, and error tracking. Free forever for 50k requests/month, 7-day retention, 1 app, 1 uptime check, and email alerts. No credit card required.",
-      "desc_zh": null,
+      "desc_zh": "Rails APM，基于请求的定价：实时追踪、慢速 SQL、N+1 检测和错误追踪。永久免费使用 50k 请求/月、7 天保留期、1 个应用、1 个正常运行时间检查和邮件告警。无需信用卡。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7989,7 +8002,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Monitoring for cron jobs. One free snitch (monitor), more if you refer others to sign up",
-      "desc_zh": null,
+      "desc_zh": "定时任务监控。一个免费告警器（监控器），如果推荐他人注册，可以获得更多。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8002,7 +8015,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "60 uptime monitors, 5-minute interval. Email, Slack alerts.",
-      "desc_zh": null,
+      "desc_zh": "60 个正常运行时间监控，5 分钟间隔。邮件、Slack 告警。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8015,7 +8028,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Cron, heartbeat, and uptime monitoring with incident management and status pages. Free for up to 50 monitors with 1-min interval and unlimited team seats.",
-      "desc_zh": null,
+      "desc_zh": "带有事件管理和状态页的定时任务、心跳和正常运行时间监控。免费使用最多 50 个监控器，1 分钟间隔和无限团队席位。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8028,7 +8041,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Economize helps demystify cloud infrastructure costs by organizing cloud resources to optimize and report the same. Free for up to $5,000 spent on Google Cloud Platform every month.",
-      "desc_zh": null,
+      "desc_zh": "Economize 通过整理云资源来优化和报告成本，帮助阐明云基础设施成本。免费使用每月在 Google Cloud Platform 上花费的最多 $5,000。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8041,7 +8054,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Linux server monitoring with real‑time dashboards and alerting - free forever for up to 5 monitored servers at 60-seconds interval. No credit card required.",
-      "desc_zh": null,
+      "desc_zh": "带有实时仪表板和告警的 Linux 服务器监控——免费永久使用最多 5 台监控服务器，间隔为 60 秒。无需信用卡。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8054,7 +8067,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Uptime, content, dependency, and SSL monitoring with multi-region verification and status pages. Free plan includes 15 monitors, 5-minute checks, and 90 days of history.",
-      "desc_zh": null,
+      "desc_zh": "带有多区域验证和状态页的正常运行时间、内容、依赖和 SSL 监控。免费计划包含 15 个监控器、5 分钟检查和 90 天历史记录。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8080,7 +8093,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Monitor your cron jobs and background tasks. Free for up to 20 checks.",
-      "desc_zh": null,
+      "desc_zh": "监控您的定时任务和后台任务。免费使用最多 20 次检查。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8093,7 +8106,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Cloud and SaaS status page aggregator - 20 monitors and 2 notification channels (Slack and Discord) are free forever.",
-      "desc_zh": null,
+      "desc_zh": "云和 SaaS 状态页聚合器——20 个监控器和 2 个通知渠道（Slack 和 Discord）永久免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8106,7 +8119,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "A complete Real-Time monitoring dashboard in less than one minute with a free forever tier.",
-      "desc_zh": null,
+      "desc_zh": "在不到一分钟内创建完整的实时监控仪表板，带有永久免费的层级。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8119,7 +8132,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Get a beautiful status page in 10 seconds. Free forever with unlimited subs and unlimited teams.",
-      "desc_zh": null,
+      "desc_zh": "在 10 秒内获得一个漂亮的状态页。永久免费，无限订阅和无限团队。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8392,7 +8405,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Powerful Kubernetes monitoring based on Prometheus. Bring your own Prometheus or install the all-in-one bundle. The free tier includes up to 20 Kubernetes nodes. Alerts via Slack, Microsoft Teams, Discord, and more. Integrations with PagerDuty, OpsGenie, VictorOps, DataDog, and many other tools.",
-      "desc_zh": null,
+      "desc_zh": "基于Prometheus的强大Kubernetes监控。自带Prometheus或安装一体化套件。免费层级包含最多20个Kubernetes节点。通过Slack、Microsoft Teams、Discord等发送警报。与PagerDuty、OpsGenie、VictorOps、DataDog及许多其他工具集成。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8405,7 +8418,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "On-call alerting, incident management, and public/private status pages. The free plan includes up to 5 users, 1 team, 1 on-call schedule, basic status pages, incident lifecycle, and Slack-native incident response.",
-      "desc_zh": null,
+      "desc_zh": "值班警报、事件管理和公共/私有状态页。免费计划包含最多5个用户、1个团队、1个值班排程、基础状态页、事件生命周期和Slack原生事件响应。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8444,7 +8457,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Website and cron monitoring - 2 monitors free",
-      "desc_zh": null,
+      "desc_zh": "网站和Cron监控 - 2个监控器免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8457,7 +8470,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free for first 100,000 requests (Rails only)",
-      "desc_zh": null,
+      "desc_zh": "前100,000次请求免费（仅限Rails）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8483,7 +8496,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Status page monitoring, 3 monitors free",
-      "desc_zh": null,
+      "desc_zh": "状态页监控，3个监控器免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8496,7 +8509,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Synthetic monitoring from 20+ global regions. The free tier includes 1,000 browser checks/mo with AI-driven self-healing and automated test generation.",
-      "desc_zh": null,
+      "desc_zh": "来自20+全球区域的合成监控。免费层级包含每月1,000次浏览器检查，具有AI驱动的自愈和自动化测试生成。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8509,7 +8522,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Open-source OpenTelemetry observability (traces, logs, and metrics) with AI-agent incident investigation. The free tier includes 1M spans, 5M logs, and 10M metric points per month with 30-day retention, no credit card required. Fully open-source and self-hostable.",
-      "desc_zh": null,
+      "desc_zh": "开源OpenTelemetry可观测性（追踪、日志和指标），具有AI代理事件调查。免费层级包含每月100万追踪、500万日志和1000万指标点，保留30天，无需信用卡。完全开源且可自托管。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8522,7 +8535,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Server monitoring, uptime monitoring, DNS & domain monitoring. Monitor 10 server, 10 uptime, and 10 domain for free.",
-      "desc_zh": null,
+      "desc_zh": "服务器监控、正常运行时间监控、DNS和域名监控。免费监控10个服务器、10个正常运行时间和10个域名。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8548,7 +8561,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Get 20 uptime monitors with 5-minute intervals and a customizable status page-even for commercial use. Enjoy unlimited, real-time notifications via email and Telegram. No credit card needed to get started.",
-      "desc_zh": null,
+      "desc_zh": "获取20个正常运行时间监控器，间隔5分钟，以及可自定义的状态页——即使是商业用途。享受通过电子邮件和Telegram的无限实时通知。无需信用卡即可开始。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8574,7 +8587,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "monitor five pages, checks every 24 hours.",
-      "desc_zh": null,
+      "desc_zh": "监控五个页面，每24小时检查一次。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8587,7 +8600,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Cron job and heartbeat monitoring and status pages for scheduled tasks, backups and background jobs, MCP server available. Free tier: 10 checks, 200 ping log entries, email/chat/webhook alerts, no credit card. Open Source support program for qualifying OS projects.",
-      "desc_zh": null,
+      "desc_zh": "定时任务、备份和后台作业的Cron作业和心跳监控及状态页，提供MCP服务器。免费层级：10次检查，200个ping日志条目，电子邮件/聊天/网络钩子警报，无需信用卡。符合资格的开源项目的开源支持计划。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8600,7 +8613,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Uptime monitoring: 20 free, Linux and Windows Server monitoring: 5 free, Status page: 1 free - Mobile app, multiple notification channel, and much more!",
-      "desc_zh": null,
+      "desc_zh": "正常运行时间监控：20个免费，Linux和Windows服务器监控：5个免费，状态页：1个免费 - 移动应用、多种通知渠道和更多！",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8613,7 +8626,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Free uptime monitoring for hobby projects. Includes 50 monitors with 5-minute check intervals, supports HTTP, ping, port, and keyword monitoring.",
-      "desc_zh": null,
+      "desc_zh": "爱好项目免费正常运行时间监控。包含50个监控器，5分钟检查间隔，支持HTTP、ping、端口和关键词监控。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8626,7 +8639,7 @@
       "category": "crash-and-exception-handling",
       "parent": null,
       "desc_en": "Store up to 0.5 TB of logs with 30-day retention. Includes integrations with platforms like Vercel and advanced data querying with email/Discord notifiers.",
-      "desc_zh": null,
+      "desc_zh": "存储0.5 TB的日志，保留30天。包含与Vercel等平台的集成，以及使用电子邮件/Discord通知器的高级数据查询。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -8639,7 +8652,7 @@
       "category": "crash-and-exception-handling",
       "parent": null,
       "desc_en": "Error-tracking with Sentry-SDK compatibility. Free for up to 5,000 errors/month, or unlimited use when self-hosted.",
-      "desc_zh": null,
+      "desc_zh": "具有Sentry-SDK兼容性的错误追踪。每月最多5,000个错误免费，或自托管时无限使用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
