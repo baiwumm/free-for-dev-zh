@@ -17,6 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 显式检出分支最新提交：workflow_call 场景下 github.sha 是 daily-sync 触发时的旧提交，
+          # 默认 checkout 会漏掉刚推送的数据提交（2026-10-16 实测修复）
+          ref: ${{ github.ref_name }}
 
       - uses: pnpm/action-setup@v4
 
