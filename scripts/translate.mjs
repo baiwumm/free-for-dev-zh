@@ -15,8 +15,9 @@ const SYSTEM_PROMPT = `你是资深技术译者，负责把英文的产品/服�
 /**
  * 批量翻译（DS-6）：
  * - 目标：active 且 desc_en 非空且 desc_zh 为空（变更条目在 merge 阶段已被置空）；
- * - 相同描述去重只翻一次；每批默认 20–50 段，串行 + 失败重试；
- * - 每条译文过四项校验（数字 / 链接 / 长度比 / 坏输出），未过即重试一轮；
+ * - 相同描述去重只翻一次；每批默认 20–50 段，串行 + 限流感知重试；
+ * - 每条译文过四项校验（数字 / 链接 / 长度比 / 坏输出），未过即重试一轮（第二轮可切备用模型）；
+ * - 批间自适应节流（整批失败加倍、成功回落），连续整批失败达阈值提前结束本轮，进度保留待下次续翻；
  * - 最终失败的条目保持 desc_zh = null（站点降级展示英文并标注"未翻译"）。
  */
 export async function translateRecords(entries, opts = {}) {
@@ -27,6 +28,7 @@ export async function translateRecords(entries, opts = {}) {
     opts.baseUrl ?? process.env.LLM_BASE_URL ?? 'https://open.bigmodel.cn/api/paas/v4',
   )
   const model = opts.model ?? process.env.LLM_MODEL ?? 'glm-4.7-flash'
+  const fallbackModel = opts.fallbackModel ?? process.env.LLM_MODEL_FALLBACK ?? ''
   const batchSize = Math.max(1, Number(opts.batchSize ?? process.env.LLM_BATCH ?? 20))
   const limit = Number.isFinite(opts.limit) ? opts.limit : Number.POSITIVE_INFINITY
 
@@ -49,12 +51,16 @@ export async function translateRecords(entries, opts = {}) {
     `· 翻译 ${targets.length} 条（去重后 ${unique.length} 段）｜模型 ${model}｜每批 ${batchSize} 段`,
   )
 
-  const stats = { skipped: false, attempted: 0, translated: 0, failed: 0 }
+  const stats = { skipped: false, attempted: 0, translated: 0, failed: 0, aborted: false }
+  let consecutiveFailed = 0
+  // 批间隔：整批失败加倍（上限 30s，遇限流自动降速），成功逐步回落（下限 2s）
+  let pacing = 2000
   for (let i = 0; i < unique.length; i += batchSize) {
     const batch = unique.slice(i, i + batchSize)
     const { result } = await translateBatch(batch, {
       baseUrl,
       model,
+      fallbackModel,
       apiKey,
       nameByDesc,
     })
@@ -69,9 +75,24 @@ export async function translateRecords(entries, opts = {}) {
       }
       for (const rec of byDesc.get(desc)) rec.desc_zh = zh
     }
-    if (i + batchSize < unique.length)
+    if (result.size === 0) {
+      consecutiveFailed += 1
+      pacing = Math.min(pacing * 2, 30000)
+      if (consecutiveFailed >= 5) {
+        stats.aborted = true
+        console.warn(
+          `  连续 ${consecutiveFailed} 批未成功（疑似限流），提前结束本轮翻译；进度已保留，下次同步自动续翻`,
+        )
+        break
+      }
+    } else {
+      consecutiveFailed = 0
+      pacing = Math.max(2000, Math.round(pacing * 0.75))
+    }
+    if (i + batchSize < unique.length) {
       process.stdout.write(`  进度 ${Math.min(i + batchSize, unique.length)}/${unique.length}\r`)
-    if (i + batchSize < unique.length) await sleep(300)
+      await sleep(pacing)
+    }
   }
   process.stdout.write(`${' '.repeat(24)}\r`)
   return stats
@@ -80,11 +101,12 @@ export async function translateRecords(entries, opts = {}) {
 async function translateBatch(descs, ctx) {
   const result = new Map()
   let pending = descs
-  // 两轮：第一轮整体，第二轮只重试校验未过的部分
+  // 两轮：第一轮整体；第二轮只重试未过的部分，可切备用模型（主力限流时的逃生通道）
   for (let round = 0; round < 2 && pending.length > 0; round++) {
+    const model = round === 1 && ctx.fallbackModel ? ctx.fallbackModel : ctx.model
     let returned
     try {
-      returned = await requestTranslations(pending, ctx)
+      returned = await requestTranslations(pending, { ...ctx, model })
     } catch (err) {
       console.error(`  批量请求失败：${err.message}`)
       returned = new Map()
@@ -106,7 +128,7 @@ async function translateBatch(descs, ctx) {
   return { result, failed: pending }
 }
 
-async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 2 }) {
+async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 3 }) {
   const items = descs.map((text, idx) => ({ id: String(idx), text }))
   const body = {
     model,
@@ -116,7 +138,10 @@ async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 2 
     ],
     temperature: 0.2,
   }
-  if (process.env.LLM_THINKING === 'disabled') body.thinking = { type: 'disabled' }
+  if (process.env.LLM_THINKING === 'disabled' && !model.startsWith('glm-5.3-flash')) {
+    // glm-5.3-flash 系列只支持思考开启（发 disabled 会报错），对其跳过该参数
+    body.thinking = { type: 'disabled' }
+  }
 
   let lastErr
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -127,7 +152,11 @@ async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 2 
         body: JSON.stringify(body),
         signal: AbortSignal.timeout(180000),
       })
-      if (!res.ok) throw new Error(`HTTP ${res.status}：${(await res.text()).slice(0, 200)}`)
+      if (!res.ok) {
+        const err = new Error(`HTTP ${res.status}：${(await res.text()).slice(0, 200)}`)
+        err.status = res.status
+        throw err
+      }
       const data = await res.json()
       const content = data.choices?.[0]?.message?.content ?? ''
       const doc = parseModelJson(content)
@@ -140,7 +169,10 @@ async function requestTranslations(descs, { baseUrl, model, apiKey, retries = 2 
       return map
     } catch (err) {
       lastErr = err
-      if (attempt < retries) await sleep(1500 * (attempt + 1))
+      if (attempt < retries) {
+        // 429（免费层速率限制 / 模型拥堵）等待显著更久，其余错误短退避
+        await sleep((err.status === 429 ? 10000 : 1500) * (attempt + 1))
+      }
     }
   }
   throw lastErr ?? new Error('未知错误')

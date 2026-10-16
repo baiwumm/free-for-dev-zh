@@ -9,6 +9,10 @@ on:
     # UTC 21:23 = 北京时间次日 05:23（避开整点高峰）
     - cron: '23 21 * * *'
   workflow_dispatch:
+    inputs:
+      model:
+        description: '覆盖 LLM_MODEL（留空用默认免费模型；首翻补量可传 glm-5.3-flash 付费加速）'
+        required: false
 
 permissions:
   contents: write
@@ -42,7 +46,13 @@ jobs:
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: https://open.bigmodel.cn/api/paas/v4
-          LLM_MODEL: glm-4.7-flash
+          # 默认免费模型；首翻补量可 dispatch 传 model=glm-5.3-flash（付费、极低价）一次性加速
+          LLM_MODEL: ${{ github.event.inputs.model || 'glm-4.7-flash' }}
+          # 免费备选：主力（或首翻模型）被限流时同批第二轮自动切换
+          LLM_MODEL_FALLBACK: glm-4.5-flash
+          LLM_THINKING: disabled
+          # 免费层按请求数限流（实测 429）；加大批量摊薄请求数，靠自适应节流控速
+          LLM_BATCH: '40'
         run: node scripts/sync.mjs
 
       - name: 提交数据变更

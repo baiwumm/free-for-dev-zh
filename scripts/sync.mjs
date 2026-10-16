@@ -198,8 +198,9 @@ function printSummary({ upstream, counts, diff, translateStats, pending }) {
     `  差异 新增 ${diff.added.length} · 变更 ${diff.changed.length} · 删除 ${diff.removed.length}`,
   )
   if (translateStats && !translateStats.skipped) {
+    const aborted = translateStats.aborted ? '（遇限流提前结束，下次同步自动续翻）' : ''
     console.log(
-      `  翻译 成功 ${translateStats.translated} · 失败 ${translateStats.failed} · 待翻译 ${Math.max(0, pending.length - translateStats.translated)}`,
+      `  翻译 成功 ${translateStats.translated} · 失败 ${translateStats.failed} · 待翻译 ${Math.max(0, pending.length - translateStats.translated)}${aborted}`,
     )
   }
 }
