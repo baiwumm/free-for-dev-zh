@@ -1,6 +1,6 @@
 {
   "meta": {
-    "synced_at": "2026-10-16T04:23:39.564Z",
+    "synced_at": "2026-10-16T04:55:37.197Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
       "commit_sha": "aa64edb149db968c8d9cdb43ff73dea86b86d666",
@@ -12,7 +12,7 @@
       "removed": 0,
       "entries": 1340,
       "notes": 33,
-      "translated": 1317
+      "translated": 1364
     }
   },
   "categories": [
@@ -267,7 +267,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "App Engine - 28 frontend instance hours per day, nine backend instance hours per day",
-      "desc_zh": null,
+      "desc_zh": "App Engine - 每天 28 个前端实例小时，每天 9 个后端实例小时",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -423,7 +423,7 @@
       "category": "major-cloud-providers",
       "parent": "cb4615dc86c9",
       "desc_en": "Jupyter Notebooks with 4 CPU cores and 30 GB RAM computational environment without any weekly usage limits. With Phone number verification, 1 Nvidia Tesla P100 GPU or 2x Nvidia Tesla T4 GPU can be added with a usage limit of 30 GPU hours/week for free. With Identity verification - 1 TPU v3-8 with 96 CPU cores and 330 GB RAM is available with a usage limit of 20 hours/week for free. Check [Technical Specifications](https://www.kaggle.com/docs/notebooks#technical-specifications) for more details.",
-      "desc_zh": null,
+      "desc_zh": "Jupyter Notebooks 提供 4 个 CPU 核心和 30 GB 内存的计算环境，没有任何每周使用限制。通过手机号验证，可免费添加 1 个 Nvidia Tesla P100 GPU 或 2 个 Nvidia Tesla T4 GPU，使用限额为每周 30 GPU 小时。通过身份验证后，可免费使用 1 个配备 96 个 CPU 核心和 330 GB 内存的 TPU v3-8，使用限额为每周 20 小时。更多详情请查看 [Technical Specifications](https://www.kaggle.com/docs/notebooks#technical-specifications)。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -813,7 +813,7 @@
       "category": "major-cloud-providers",
       "parent": "dc1a76d6d699",
       "desc_en": "100GB LRS transactions (Azure Files), 5GB Blob storage, 10GB LRS Archive Storage, 2x64GB SSD (12mo)",
-      "desc_zh": null,
+      "desc_zh": "100GB LRS 事务（Azure Files）、5GB Blob 存储、10GB LRS 存档存储、2x64GB SSD（12 个月）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1281,7 +1281,7 @@
       "category": "major-cloud-providers",
       "parent": "35a2daf179fb",
       "desc_en": "Develop and deploy your web apps on Cloudflare's fast, secure global network. Five hundred monthly builds, 100 custom domains, Integrated SSL, unlimited accessible seats, unlimited preview deployments, and full-stack capability via Cloudflare Workers integration.",
-      "desc_zh": null,
+      "desc_zh": "在 Cloudflare 快速、安全的全球网络上开发和部署您的 Web 应用。每月 500 次构建、100 个自定义域、集成 SSL、不限数量的可用席位、不限数量的预览部署，以及通过 Cloudflare Workers 集成提供的全栈能力。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1411,7 +1411,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Free for 3 users, 2 projects & 10 MB attachment limit. The same plan applies to [Bugtracker](https://zoho.com/bugtracker).",
-      "desc_zh": null,
+      "desc_zh": "免费供 3 个用户、2 个项目使用，附件限制为 10 MB。相同的计划也适用于 [Bugtracker](https://zoho.com/bugtracker)。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1437,7 +1437,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Meetings with upto 3 meeting participants & 10 Webinar attendees.",
-      "desc_zh": null,
+      "desc_zh": "最多支持 3 名会议参与者与 10 名网络研讨会参会者的会议。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1502,7 +1502,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Recurring Billing management free for 20 customers/subscriptions & 1 user with all the payment hosting done by Zoho. The last 40 subscription metrics are stored",
-      "desc_zh": null,
+      "desc_zh": "为 20 个客户/订阅及 1 个用户提供免费的定期计费管理，所有支付托管均由 Zoho 完成。保存最近 40 条订阅指标",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1593,7 +1593,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Online Surveys",
-      "desc_zh": null,
+      "desc_zh": "在线调查",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1606,7 +1606,7 @@
       "category": "major-cloud-providers",
       "parent": "bda04a112ba9",
       "desc_en": "Appointment Scheduling",
-      "desc_zh": null,
+      "desc_zh": "预约安排",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -1658,7 +1658,7 @@
       "category": "cloud-management-solutions",
       "parent": null,
       "desc_en": "Deployment.io helps developers automate deployments on AWS. On our free tier, a developer (single user) can deploy unlimited static sites, web services, and environments. We provide 10 job executions free per month with previews and auto-deploys included in the free tier.",
-      "desc_zh": null,
+      "desc_zh": "Deployment.io 帮助开发者在 AWS 上自动执行部署。在我们的免费层中，开发者（单用户）可以部署无限数量的静态站点、Web 服务和环境。我们每月免费提供 10 次作业执行，预览和自动部署也包含在免费层中。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -2243,7 +2243,7 @@
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "Cloud-based Database schema design and modeling tool with a free starter plan of 2 Database models and ten tables per model.",
-      "desc_zh": null,
+      "desc_zh": "基于云的数据库 schema 设计与建模工具，免费入门套餐提供 2 个数据库模型，每个模型 10 张表。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -2412,7 +2412,7 @@
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "Stock market and financial data API. Free plan allows 300 requests per day.",
-      "desc_zh": null,
+      "desc_zh": "股票市场和金融数据 API。免费套餐每天允许 300 次请求。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -2984,7 +2984,7 @@
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "MockAPI is a simple tool that lets you quickly mock up APIs, generate custom data, and perform operations using a RESTful interface. MockAPI is meant to be a prototyping/testing/learning tool. One project/2 resources per project for free.",
-      "desc_zh": null,
+      "desc_zh": "MockAPI 是一款简单工具，可让你快速模拟 API、生成自定义数据，并通过 RESTful 接口执行操作。MockAPI 旨在用作原型设计/测试/学习工具。免费提供 1 个项目，每个项目 2 个资源。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4102,7 +4102,7 @@
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Real time collaboration & writing tool for markdown format docs/files. Like Google Docs but for markdown files. Free unlimited number of \"notes\", but the number of collaborators (invitee) for private notes & template [will be limited](https://hackmd.io/pricing).",
-      "desc_zh": null,
+      "desc_zh": "面向 markdown 格式文档/文件的实时协作与写作工具。类似于 Google Docs，但面向 markdown 文件。免费提供数量不限的 \"notes\"，但私有 notes 和模板的协作者（被邀请者）数量[will be limited](https://hackmd.io/pricing)。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6442,7 +6442,7 @@
       "category": "security-and-pki",
       "parent": null,
       "desc_en": "Open source platform that lets you manage developer secrets across your team and infrastructure: everywhere from local development to staging/production 3rd-party services. Free for up to 5 developers.",
-      "desc_zh": null,
+      "desc_zh": "开源平台，让你在团队和基础设施中管理开发者机密信息（secrets）：从本地开发到预发布/生产环境的第三方服务，处处适用。最多 5 名开发者可免费使用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -7924,7 +7924,7 @@
       "category": "monitoring",
       "parent": null,
       "desc_en": "Find Core Web Vitals history for a url or a website.",
-      "desc_zh": null,
+      "desc_zh": "查询某个 URL 或网站的 Core Web Vitals 历史记录。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -10940,7 +10940,7 @@
       "category": "generative-ai",
       "parent": null,
       "desc_en": "AI-powered audio enhancer SaaS that removes noise and echo while preserving natural vocal clarity. totally Free: unlimited one-click enhancements, no login required, supports MP3/WAV/FLAC",
-      "desc_zh": null,
+      "desc_zh": "AI 驱动的音频增强 SaaS，可在保持自然人声清晰度的同时消除噪音与回声。完全免费：无限次一键增强，无需登录，支持 MP3/WAV/FLAC",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11031,7 +11031,7 @@
       "category": "generative-ai",
       "parent": null,
       "desc_en": "Open-source LLM engineering platform that helps teams collaboratively debug, analyze, and iterate on their LLM applications. Free forever plan includes 50k observations per month and all platform features. [#opensource](https://github.com/langfuse/langfuse)",
-      "desc_zh": null,
+      "desc_zh": "开源 LLM 工程平台，帮助团队协作调试、分析并迭代其 LLM 应用。永久免费套餐每月包含 5 万条观测记录及全部平台功能。 [#opensource](https://github.com/langfuse/langfuse)",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11044,7 +11044,7 @@
       "category": "generative-ai",
       "parent": null,
       "desc_en": "A LLMOps platform helping AI teams measure, monitor, and optimize LLM applications for reliability, cost-efficiency, and performance. With a powerful DSPy component, we enable seamless collaboration between engineers and non-technical teams to fine-tune and productionize GenAI products. Free plan includes all platform features, 1k traces/month and 1 workflow DSPy optimizers. [#opensource](https://github.com/langwatch/langwatch)",
-      "desc_zh": null,
+      "desc_zh": "一个 LLMOps 平台，帮助 AI 团队衡量、监控并优化 LLM 应用，实现可靠性、成本效益与性能优化。凭借强大的 DSPy 组件，我们助力工程师与非技术团队无缝协作，对 GenAI 产品进行微调并投入生产。免费计划包含全部平台功能、每月 1,000 条 traces 和 1 个工作流 DSPy 优化器。[#opensource](https://github.com/langwatch/langwatch)",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11057,7 +11057,7 @@
       "category": "generative-ai",
       "parent": null,
       "desc_en": "Open-source (MIT) LLM observability and evaluation platform to trace, monitor, and evaluate AI agents in production. Free Starter plan includes 20K credits/month, 30-day data retention, and unlimited seats. [#opensource](https://github.com/latitude-dev/latitude-llm)",
-      "desc_zh": null,
+      "desc_zh": "开源（MIT）LLM 可观测性与评估平台，用于追踪、监控和评估生产环境中的 AI agents。免费 Starter 计划包含每月 2 万 credits、30 天数据保留期和不限席位。[#opensource](https://github.com/latitude-dev/latitude-llm)",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11096,7 +11096,7 @@
       "category": "generative-ai",
       "parent": null,
       "desc_en": "MediaWorkbench.ai offers 100,000 free words for Azure OpenAI, DeepSeek, and Google Gemini models, enabling users to access powerful tools for code generation, deep research, and image creation.",
-      "desc_zh": null,
+      "desc_zh": "MediaWorkbench.ai 为 Azure OpenAI、DeepSeek 和 Google Gemini 模型提供 10 万个免费字数，使用户能够使用强大的代码生成、深度研究和图像创作工具。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11109,7 +11109,7 @@
       "category": "generative-ai",
       "parent": null,
       "desc_en": "Onomeo gives you one key for dozens of AI models. Plug it right into tools like Cline, SillyTavern, or Open WebUI using standard OpenAI format. 35 models are completely free (60 requests / 5 hrs per user, pooled at 450 / 5 hrs across all users). Daily check-in credits let you use big models like Claude and GPT, up to a daily limit. Extra credits start at $5/month. We’re in open beta, so expect occasional instability. It’s great for casual use, but not ready to be a daily driver. Feedback is always welcome.",
-      "desc_zh": null,
+      "desc_zh": "Onomeo 让你用一把密钥接入数十种 AI 模型。使用标准 OpenAI 格式即可直接插入 Cline、SillyTavern 或 Open WebUI 等工具。35 个模型完全免费（每位用户每 5 小时 60 次请求，全部用户合计每 5 小时共享 450 次）。每日签到获得的积分可用于使用 Claude 和 GPT 等大模型，设有每日上限。额外积分每月 $5 起。我们正处于公开测试阶段，请谅解偶发的不稳定。它很适合轻度使用，但还不适合作为日常主力工具。欢迎随时反馈。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11629,7 +11629,7 @@
       "category": "paas",
       "parent": null,
       "desc_en": "Gigalixir provides one free instance that never sleeps and a free-tier PostgreSQL database limited to 2 connections, 10, 000 rows and no backups for Elixir/Phoenix apps.",
-      "desc_zh": null,
+      "desc_zh": "Gigalixir 为 Elixir/Phoenix 应用提供一个永不休眠的免费实例，以及一个限制为 2 个连接、10,000 行且无备份的免费层 PostgreSQL 数据库。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11759,7 +11759,7 @@
       "category": "paas",
       "parent": null,
       "desc_en": "An open-source platform that allows you to  quickly build, ship and manage modern APIs. Built-in CI/CD, GitHub integration, and automatic HTTPS. Up to 3 projects, 1GB egress, 300 minutes of build time per month on the [free plan](https://wundergraph.com/pricing)",
-      "desc_zh": null,
+      "desc_zh": "一个开源平台，帮助你快速构建、发布和管理现代 API。内置 CI/CD、GitHub 集成和自动 HTTPS。通过 [free plan](https://wundergraph.com/pricing)，每月可获得最多 3 个项目、1GB 出站流量和 300 分钟构建时间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11772,7 +11772,7 @@
       "category": "paas",
       "parent": null,
       "desc_en": "All-in-one platform to connect APIs and services in a serverless environment. It brings all the agility and benefits of NoCode tools but with all the power of using programming languages. The free tier includes [1.000 yeps](https://yepcode.io/pricing/).",
-      "desc_zh": null,
+      "desc_zh": "一体化平台，可在无服务器环境中连接 API 和服务。它兼具 NoCode 工具的全部敏捷性与优势，同时拥有使用编程语言的全部强大能力。免费层包含 [1.000 yeps](https://yepcode.io/pricing/)。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12045,7 +12045,7 @@
       "category": "baas",
       "parent": null,
       "desc_en": "Connect the apps you use to automate tasks. Five zaps every 15 minutes and 100 tasks/month",
-      "desc_zh": null,
+      "desc_zh": "连接你常用的应用来自动化任务。每 15 分钟 5 个 zaps，每月 100 个任务。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12071,7 +12071,7 @@
       "category": "low-code-platform",
       "parent": null,
       "desc_en": "Budibase is an open-source low-code platform for creating internal apps in minutes. Supports PostgreSQL, MySQL, MSSQL, MongoDB, Rest API, Docker, K8s",
-      "desc_zh": null,
+      "desc_zh": "Budibase 是一个开源低代码平台，可在几分钟内创建内部应用。支持 PostgreSQL、MySQL、MSSQL、MongoDB、Rest API、Docker、K8s。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12149,7 +12149,7 @@
       "category": "low-code-platform",
       "parent": null,
       "desc_en": "Low-code platform for building internal applications. Retool is highly hackable. If you can write it with JavaScript and an API, you can make it in Retool. The free tier allows up to five users per month, unlimited apps and API connections.",
-      "desc_zh": null,
+      "desc_zh": "用于构建内部应用的低代码平台。Retool 高度灵活可定制。只要你能用 JavaScript 和 API 写出来，就能在 Retool 中实现。免费层每月最多允许 5 个用户，应用和 API 连接数量不限。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12435,7 +12435,7 @@
       "category": "web-hosting",
       "parent": null,
       "desc_en": "Static hosting your AI agent can drive itself: `npx @shipstatic/ship ./dist` and the site is live, with no install, no signup, no repo, no build. MCP, SDK and API too. Free accounts keep sites permanently with automatic HTTPS, global edge delivery and unmetered bandwidth; custom domains are paid.",
-      "desc_zh": null,
+      "desc_zh": "静态托管服务，你的 AI agent 可自行操作：运行 `npx @shipstatic/ship ./dist`，网站即可上线，无需安装、无需注册、无需仓库、无需构建。同时提供 MCP、SDK 和 API。免费账户可永久保留网站，并享有自动 HTTPS、全球边缘分发和不限流量带宽；自定义域名需付费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12617,7 +12617,7 @@
       "category": "dns",
       "parent": null,
       "desc_en": "Free DDNS service with [API support](https://dynv6.com/docs/apis) and management of a lot of dns record types (like CNAME, MX, SPF, SRV, TXT and others).",
-      "desc_zh": null,
+      "desc_zh": "免费 DDNS 服务，提供 [API support](https://dynv6.com/docs/apis)，支持管理多种 DNS 记录类型（如 CNAME、MX、SPF、SRV、TXT 等）。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -12682,7 +12682,7 @@
       "category": "dns",
       "parent": null,
       "desc_en": "Free `.localcert.net` subdomains compatible with public CAs for use with-in private networks",
-      "desc_zh": null,
+      "desc_zh": "免费 `.localcert.net` 子域名，与公共 CA 兼容，适用于私有网络内部使用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -13280,7 +13280,7 @@
       "category": "tunneling-webrtc-web-socket-servers-and-other-routers",
       "parent": null,
       "desc_en": "Expose local sites via secure tunnels. The free plan includes an EU Server, Random subdomains, and Single users.",
-      "desc_zh": null,
+      "desc_zh": "通过安全隧道公开本地站点。免费套餐包含 EU Server、Random subdomains 和 Single users。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14034,7 +14034,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "sflow.io is a project management tool built for agile software development, marketing, sales, and customer support, especially for outsourcing and cross-organization collaboration projects. Free plan up to 3 projects and five members.",
-      "desc_zh": null,
+      "desc_zh": "sflow.io 是一款为敏捷软件开发、营销、销售和客户支持而打造的项目管理工具，尤其适用于外包和跨组织协作项目。免费版最多支持 3 个项目和 5 名成员。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14138,7 +14138,7 @@
       "category": "issue-tracking-and-project-management",
       "parent": null,
       "desc_en": "Lightweight project management tool for agile teams. The SaaS relies on free contributions; users can always choose to give 0 and there is no features paywall {[more details](https://tenzu.net/pricing/)}",
-      "desc_zh": null,
+      "desc_zh": "面向敏捷团队的轻量级项目管理工具。该 SaaS 依靠自由捐赠运作；用户可以随时选择支付 0，且没有任何功能付费墙 {[more details](https://tenzu.net/pricing/)}",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14658,7 +14658,7 @@
       "category": "storage-and-media-processing",
       "parent": null,
       "desc_en": "Convert files in bulk. Supports many formats, including [AVIF](https://mconverter.eu/convert/to/avif/) and JXL. Extract image frames from videos. Compress PDFs. Free for 15 files per 24h, up to 100 MB each, processed in batches of eight.",
-      "desc_zh": null,
+      "desc_zh": "批量转换文件。支持多种格式，包括 [AVIF](https://mconverter.eu/convert/to/avif/) 和 JXL。可从视频中提取图像帧。可压缩 PDF。每 24 小时免费处理 15 个文件，每个文件最大 100 MB，按每批 8 个文件分批处理。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14840,7 +14840,7 @@
       "category": "storage-and-media-processing",
       "parent": null,
       "desc_en": "reSmush.it is a FREE API that provides image optimization. reSmush.it has been implemented on the most common CMS such as WordPress, Drupal, or Magento. reSmush.it is the most used image optimization API with more than seven billion images already treated, and it is still Free of charge.",
-      "desc_zh": null,
+      "desc_zh": "reSmush.it 是一个提供图片优化的免费 API。reSmush.it 已被应用于最常见的 CMS，如 WordPress、Drupal 或 Magento。reSmush.it 是使用最广泛的图片优化 API，已处理超过 70 亿张图片，且至今仍然免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14996,7 +14996,7 @@
       "category": "design-and-ui",
       "parent": null,
       "desc_en": "Generate an entire year's worth of unique icons in a single click, absolutely FREE",
-      "desc_zh": null,
+      "desc_zh": "一键生成一整年所需的独特图标，完全免费",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -15191,7 +15191,7 @@
       "category": "design-and-ui",
       "parent": null,
       "desc_en": "Create fully interactive UI prototypes without coding. The free tier is available when the free trial ends. The free tier includes one user, one project, five prototypes, 100MB of online storage, and a preview of the proto.io app.",
-      "desc_zh": null,
+      "desc_zh": "无需编码即可创建完全交互式的 UI 原型。免费试用结束后可使用免费层。免费层包含 1 个用户、1 个项目、5 个原型、100MB 在线存储空间，以及 proto.io 应用的预览。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -15724,7 +15724,7 @@
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "Development Environment, Tooling Platform and Application Framework.",
-      "desc_zh": null,
+      "desc_zh": "开发环境、工具平台和应用框架。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16010,7 +16010,7 @@
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "Mockaroo lets you generate realistic test data in CSV, JSON, SQL, and Excel formats. You can also create mocks for back-end API.",
-      "desc_zh": null,
+      "desc_zh": "Mockaroo 让你生成 CSV、JSON、SQL 和 Excel 格式的真实测试数据。你还可以为后端 API 创建 mock。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16075,7 +16075,7 @@
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "Develop Web apps in Browser without needing to set up anything. Free Plan offers one server with 24 24-hour lifetime and 4 hours of running time per day with 2 CPU cores, 2 GB RAM, and 1 GB storage.",
-      "desc_zh": null,
+      "desc_zh": "在浏览器中开发 Web 应用，无需进行任何设置。免费版提供一台服务器，生命周期为 24 小时，每天 4 小时运行时间，配备 2 个 CPU 核心、2 GB 内存和 1 GB 存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16491,7 +16491,7 @@
       "category": "analytics-events-and-statistics",
       "parent": null,
       "desc_en": "Website Analytics and Reports . Free Plan allows 2000 pageviews/day. One hundred snapshots/day (max capacity: 300). Three snapshot heatmaps can be stored for 365 days. Unlimited Team Members. Also in App and standalone surveys, feedback widgets with screenshots. Free tier allows creating 3 surveys & 3 feedback widgets and collecting 20 responses per month.",
-      "desc_zh": null,
+      "desc_zh": "网站分析与报告。免费版每天允许 2000 次页面浏览量。每天 100 个快照（最大容量：300 个）。三个快照热图可存储 365 天。团队成员数量不限。此外还有应用内及独立调查问卷、带截图的反馈小组件。免费层可创建 3 个调查问卷和 3 个反馈小组件，每月收集 20 条回复。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16712,7 +16712,7 @@
       "category": "visitor-session-recording",
       "parent": null,
       "desc_en": "1,000 sessions/month with one month data retention and three user seats. More information [here](https://help.fullstory.com/hc/en-us/articles/360020623354-FullStory-Free-Edition).",
-      "desc_zh": null,
+      "desc_zh": "每月 1,000 个会话，数据保留一个月，共 3 个用户席位。更多信息请见 [here](https://help.fullstory.com/hc/en-us/articles/360020623354-FullStory-Free-Edition)。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16790,7 +16790,7 @@
       "category": "visitor-session-recording",
       "parent": null,
       "desc_en": "Open-source session replay with dev tools for bug reproduction, live session for real-time support, and product analytics suite. One thousand sessions/month with access to all features and 7-day retention.",
-      "desc_zh": null,
+      "desc_zh": "开源会话回放，附带用于复现 bug 的开发工具、用于实时支持的实时会话，以及产品分析套件。每月 1,000 个会话，可使用所有功能，数据保留 7 天。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -16998,7 +16998,7 @@
       "category": "payment-and-billing-integration",
       "parent": null,
       "desc_en": "Provides real-time and historical exchange rates. The free tier requires attribution.",
-      "desc_zh": null,
+      "desc_zh": "提供实时和历史汇率。免费层要求注明来源。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17427,7 +17427,7 @@
       "category": "flutter-related-and-building-ios-apps-without-mac",
       "parent": null,
       "desc_en": "Codemagic is a fully hosted and managed CI/CD for mobile apps. You can build, test, and deploy with a GUI-based CI/CD tool. The free tier offers 500 free minutes/month and a Mac Mini instance with 2.3 GHz and 8 GB of RAM.",
-      "desc_zh": null,
+      "desc_zh": "Codemagic 是面向移动应用的完全托管式 CI/CD。你可以使用基于 GUI 的 CI/CD 工具进行构建、测试和部署。免费层提供每月 500 分钟的免费时长，以及一台 2.3 GHz、8 GB 内存的 Mac Mini 实例。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17791,7 +17791,7 @@
       "category": "miscellaneous",
       "parent": null,
       "desc_en": "Get sunrise and sunset times for a given longitude and latitude.",
-      "desc_zh": null,
+      "desc_zh": "获取指定经纬度的日出和日落时间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
