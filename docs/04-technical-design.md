@@ -121,6 +121,8 @@ export default nextConfig
 | `daily-sync.yml` | cron UTC 21:23（北京 05:23）+ 手动 | `node --test` → `node scripts/sync.mjs`（含增量翻译）→ 有变更才 commit `data/` 并 `workflow_call` 调 `deploy.yml`；无变更自动跳过提交与部署 |
 | `deploy.yml` | push 到 main / workflow_call | `pnpm build` → `cloudflare/wrangler-action` 部署 `out/`（secret：`CLOUDFLARE_API_TOKEN`） |
 
+**Actions 运行时**：各 action 均已使用 Node.js 24 原生运行时版本（`actions/checkout@v6`、`actions/setup-node@v6`、`pnpm/action-setup@v6`、`cloudflare/wrangler-action@v4`，2026-10-16 升级），不再产生 Node20 弃用告警（runner 自 2026-06-16 起默认 Node24，2026-09-23 移除 Node20）。`pnpm/action-setup@v6` 支持 pnpm 12 且版本仍由 `package.json` 的 `packageManager` 字段解析，无需在 workflow 里显式传版本；`actions/setup-node@v6` 的 `cache: pnpm` 显式配置不受其「自动缓存仅限 npm」变更影响。
+
 **触发链注意**：使用默认 `GITHUB_TOKEN` 的提交不会触发其他 GitHub Actions workflow（GitHub 防递归机制），daily-sync 不能靠 push 事件唤起部署，必须通过 `workflow_call` 直调 `deploy.yml`；daily-sync 需声明 `permissions: contents: write` 才能 push commit。人工 push main 与每日同步共用同一份 `deploy.yml`。另注意 `deploy.yml` 的 checkout 需显式 `ref: ${{ github.ref_name }}` 检出分支最新提交——`workflow_call` 场景下 `github.sha` 是 daily-sync 触发时的旧提交，默认 checkout 会漏掉刚推送的数据提交（2026-10-16 实测修复）。若改用 Cloudflare Workers Builds 监听仓库（外部 webhook 不受此限制），可省略 `deploy.yml`。
 
 Secrets：`LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_MODEL_FALLBACK`/`LLM_BATCH`/`LLM_THINKING` 在 workflow env 中可调，默认智谱 GLM-4.7-Flash 主模型 + GLM-4.5-Flash 免费备份、关闭思考模式；首翻补量可经 workflow_dispatch 传 `model` 临时覆盖为付费 GLM-5.3-Flash）与 `CLOUDFLARE_API_TOKEN`（部署，用「编辑 Cloudflare Workers」模板即可：Workers Scripts: Edit + Workers Routes: Edit + Account Settings: Read），存于仓库 Actions secrets（多账户时再加 `CLOUDFLARE_ACCOUNT_ID`）。上游数据无凭据依赖。未配置 `LLM_API_KEY` 时同步照常运行，仅跳过翻译（`desc_zh` 置 `null`，站点降级展示英文原文并标注「未翻译」）。

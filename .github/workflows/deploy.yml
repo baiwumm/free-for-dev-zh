@@ -16,15 +16,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           # 显式检出分支最新提交：workflow_call 场景下 github.sha 是 daily-sync 触发时的旧提交，
           # 默认 checkout 会漏掉刚推送的数据提交（2026-10-16 实测修复）
           ref: ${{ github.ref_name }}
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
@@ -39,7 +39,7 @@ jobs:
         run: pnpm build
 
       - name: 部署到 Cloudflare Workers 静态资源
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: deploy
