@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-16T23:41:31.470Z",
+    "synced_at": "2026-10-17T23:13:04.546Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "658594c5af2aef234cbf762aedacefffbc194313",
-      "commit_date": "2026-10-16T11:17:28Z"
+      "commit_sha": "b850d66f495a45e546c557fd626e28645e80cd62",
+      "commit_date": "2026-10-17T17:15:10Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1374,
+      "active": 1375,
       "removed": 0,
-      "entries": 1341,
+      "entries": 1342,
       "notes": 33,
-      "translated": 1368
+      "translated": 1369
     }
   },
   "categories": [
@@ -11737,6 +11737,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "19bf824792b9",
+      "kind": "entry",
+      "name": "The Vibe Hosting",
+      "url": "https://thevibehosting.com/",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Frictionless vibe hosting for coding agents. One curl gets your agent a root Linux box on an HTTPS subdomain within seconds. Free tier: 2-core, 512 MB server 24/7 with a verified phone, no credit card.",
+      "desc_zh": "为编码代理提供无缝体验的托管服务。只需一条 curl 命令，即可在几秒钟内通过 HTTPS 子域为代理获取一台 root Linux 服务器。免费套餐：2 核、512 MB 服务器 24/7 运行，需验证手机号，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-17",
+      "updated_at": "2026-10-17"
     },
     {
       "id": "00422436c4fb",
