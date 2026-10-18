@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-17T23:13:04.546Z",
+    "synced_at": "2026-10-18T23:22:21.280Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "b850d66f495a45e546c557fd626e28645e80cd62",
-      "commit_date": "2026-10-17T17:15:10Z"
+      "commit_sha": "e2f3fa6030bea82aca8233e705c1545aa8c0fd6d",
+      "commit_date": "2026-10-18T13:25:47Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1375,
+      "active": 1377,
       "removed": 0,
-      "entries": 1342,
+      "entries": 1344,
       "notes": 33,
-      "translated": 1369
+      "translated": 1371
     }
   },
   "categories": [
@@ -6890,6 +6890,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "1bb0922fc310",
+      "kind": "entry",
+      "name": "Frontegg",
+      "url": "https://frontegg.com",
+      "category": "authentication-authorization-and-user-management",
+      "parent": null,
+      "desc_en": "Customer identity for B2B SaaS: authentication, SSO/SCIM, MFA, RBAC and multi-tenant user management. The free plan includes 7,500 MAUs",
+      "desc_zh": "B2B SaaS 的客户身份管理：认证、SSO/SCIM、MFA、RBAC 和多租户用户管理。免费套餐包含 7,500 MAU",
+      "status": "active",
+      "first_seen": "2026-10-18",
+      "updated_at": "2026-10-18"
+    },
+    {
       "id": "9c728921ac70",
       "kind": "entry",
       "name": "Kinde",
@@ -8227,6 +8240,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "217038b2962c",
+      "kind": "entry",
+      "name": "Monitorable",
+      "url": "https://monitorable.io",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Server health monitoring for Linux (bare metal, VMs, LXC): host and Docker metrics, systemd services and SMART disk health, with alerting, OpenTelemetry Collector agent. Free for 3 servers, no card required.",
+      "desc_zh": "Linux（裸金属、虚拟机、LXC）服务器健康监控：主机和 Docker 指标、systemd 服务和 SMART 磁盘健康，支持告警、OpenTelemetry Collector 代理。3 台服务器免费，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-18",
+      "updated_at": "2026-10-18"
     },
     {
       "id": "5896dc14bc84",
