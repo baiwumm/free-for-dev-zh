@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-18T23:22:21.280Z",
+    "synced_at": "2026-10-20T23:58:32.938Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "e2f3fa6030bea82aca8233e705c1545aa8c0fd6d",
-      "commit_date": "2026-10-18T13:25:47Z"
+      "commit_sha": "e149ddd8c57453d54a9d8f80c581e105cd7ed714",
+      "commit_date": "2026-10-20T16:41:12Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1377,
+      "active": 1383,
       "removed": 0,
-      "entries": 1344,
+      "entries": 1350,
       "notes": 33,
-      "translated": 1371
+      "translated": 1377
     }
   },
   "categories": [
@@ -2119,6 +2119,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "a4bf622a80fb",
+      "kind": "entry",
+      "name": "cors.dev",
+      "url": "https://cors.dev/",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "CORS proxy for calling third-party APIs from frontend code: prefix any HTTPS URL with `https://proxy.cors.dev/`. Free without signup or an API key for GET and HEAD requests, 600 requests per minute per IP, responses up to 1 MiB, no monthly quota.",
+      "desc_zh": "用于从前端代码调用第三方 API 的 CORS 代理：在任意 HTTPS URL 前加上 `https://proxy.cors.dev/`。GET 和 HEAD 请求免费，无需注册或 API 密钥，每 IP 每分钟 600 次请求，响应大小最高 1 MiB，无月度配额。",
+      "status": "active",
+      "first_seen": "2026-10-20",
+      "updated_at": "2026-10-20"
+    },
+    {
       "id": "6b365be52170",
       "kind": "entry",
       "name": "Country-State-City Microservice API",
@@ -2364,6 +2377,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "d40706f5bbb9",
+      "kind": "entry",
+      "name": "Dynamic Document API",
+      "url": "https://dynamicdocumentapi.com/",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Turn data into pixel-perfect PDFs and images. The free plan includes 50 renders per month and access to 2 templates from the template gallery or your own.",
+      "desc_zh": "将数据转换为像素完美的 PDF 和图片。免费计划包含每月 50 次渲染，以及访问模板库中的 2 个模板或您自己的模板。",
+      "status": "active",
+      "first_seen": "2026-10-20",
+      "updated_at": "2026-10-20"
     },
     {
       "id": "0f0443d361e8",
@@ -4210,6 +4236,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "c3369d59e53b",
+      "kind": "entry",
+      "name": "MergeMe",
+      "url": "https://mergeme.dev/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "MergeMe brings GitHub/GitLab PRs/MRs directly into Slack as 1 constantly updating card. It adds CI status, mirrored comments, @mentions, reminders & more. Free for teams up to 5 developers & 1 channel mapping.",
+      "desc_zh": "MergeMe 将 GitHub/GitLab PRs/MRs 直接带入 Slack，显示为一张持续更新的卡片。它添加了 CI 状态、镜像评论、@提及、提醒等功能。免费适用于最多 5 名开发者和 1 个频道映射。",
+      "status": "active",
+      "first_seen": "2026-10-20",
+      "updated_at": "2026-10-20"
     },
     {
       "id": "df6bf580956f",
@@ -8320,6 +8359,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "187cf3e66f7e",
+      "kind": "entry",
+      "name": "OpenUptime",
+      "url": "https://openuptime.app",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Hosted uptime monitoring and status pages. Free tier includes 3 active monitors with 5-minute check intervals, 26,000 checks and 100 emails per month, and 30 days of check history.",
+      "desc_zh": "托管正常运行时间监控和状态页。免费层级包含 3 个活跃监控器，检查间隔为 5 分钟，每月 26,000 次检查和 100 封邮件，以及 30 天的检查历史记录。",
+      "status": "active",
+      "first_seen": "2026-10-20",
+      "updated_at": "2026-10-20"
+    },
+    {
       "id": "1221eec38768",
       "kind": "entry",
       "name": "pagecrawl.io",
@@ -9449,6 +9501,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "035e67299694",
+      "kind": "entry",
+      "name": "DMARCmetric",
+      "url": "https://dmarcmetric.com/",
+      "category": "email",
+      "parent": null,
+      "desc_en": "DMARC report monitoring with named sending sources, SPF/DKIM alignment and plain-English summaries. Free for 1 domain: 10,000 messages/month, 30-day history, email alerts, no credit card.",
+      "desc_zh": "带有命名发件源的 DMARC 报告监控，支持 SPF/DKIM 对齐和通俗易懂的摘要。免费适用于 1 个域名：每月 10,000 条消息，30 天历史记录，邮件警报，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-20",
+      "updated_at": "2026-10-20"
     },
     {
       "id": "125bec86f5cb",
@@ -15663,6 +15728,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "dca9adaa7ccf",
+      "kind": "entry",
+      "name": "opengeocoding.com",
+      "url": "https://opengeocoding.com",
+      "category": "data-visualization-on-maps",
+      "parent": null,
+      "desc_en": "Source-available geocoder in Rust: address search, autocomplete and reverse geocoding on open data. Self-host it or use the hosted API. Fifty thousand free queries/month.",
+      "desc_zh": "开源可用的 Rust 地理编码器：基于开放数据进行地址搜索、自动完成和反向地理编码。可自行托管或使用托管 API。每月 50,000 次免费查询。",
+      "status": "active",
+      "first_seen": "2026-10-20",
+      "updated_at": "2026-10-20"
     },
     {
       "id": "05aec1537d76",
