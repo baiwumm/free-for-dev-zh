@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-23T00:01:57.421Z",
+    "synced_at": "2026-10-23T23:53:36.777Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "bebc11f88c741a133ca01d68f567f265798f2c0d",
-      "commit_date": "2026-10-22T19:25:58Z"
+      "commit_sha": "cd16d2260b8bc1775ae41674d443b8b93e264d00",
+      "commit_date": "2026-10-23T17:35:03Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1387,
+      "active": 1388,
       "removed": 0,
-      "entries": 1354,
+      "entries": 1355,
       "notes": 33,
-      "translated": 1381
+      "translated": 1382
     }
   },
   "categories": [
@@ -12504,6 +12504,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "920faee62d1e",
+      "kind": "entry",
+      "name": "Pagehaus",
+      "url": "https://pagehaus.app",
+      "category": "web-hosting",
+      "parent": null,
+      "desc_en": "Hosting for plain HTML sites, uploaded over SFTP or in the browser. Free plan: 1 site, 250 MB storage, 20 GB transfer/month, HTTPS on a pagehaus.site subdomain, contact forms, Server Side Includes and cookie-free analytics. No expiry, no card.",
+      "desc_zh": "适用于纯 HTML 网站的主机服务，可通过 SFTP 或浏览器上传。免费套餐：1 个网站，250 MB 存储空间，每月 20 GB 流量，在 pagehaus.site 子域上启用 HTTPS，联系表单，服务器端包含 (SSI) 和无 Cookie 分析。无过期时间，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-23",
+      "updated_at": "2026-10-23"
     },
     {
       "id": "8935815cc4f4",
