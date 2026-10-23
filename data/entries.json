@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-20T23:58:32.938Z",
+    "synced_at": "2026-10-23T00:01:57.421Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "e149ddd8c57453d54a9d8f80c581e105cd7ed714",
-      "commit_date": "2026-10-20T16:41:12Z"
+      "commit_sha": "bebc11f88c741a133ca01d68f567f265798f2c0d",
+      "commit_date": "2026-10-22T19:25:58Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1383,
+      "active": 1387,
       "removed": 0,
-      "entries": 1350,
+      "entries": 1354,
       "notes": 33,
-      "translated": 1377
+      "translated": 1381
     }
   },
   "categories": [
@@ -3989,6 +3989,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "9334f8f73015",
+      "kind": "entry",
+      "name": "Enchant",
+      "url": "https://www.enchant.com",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Omnichannel customer communication platform. Free tier includes chat widgets, email newsletters, link-in-bio hub & more.",
+      "desc_zh": "全渠道客户沟通平台。免费套餐包含聊天小部件、电子邮件通讯、链接在个人资料页中心 & 更多。",
+      "status": "active",
+      "first_seen": "2026-10-23",
+      "updated_at": "2026-10-23"
     },
     {
       "id": "0c2d6cbc20d1",
@@ -8996,6 +9009,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "c412b9aab00a",
+      "kind": "entry",
+      "name": "BylineCV",
+      "url": "https://bylinecv.com/",
+      "category": "education-and-career-development",
+      "parent": null,
+      "desc_en": "Form-based CV and cover letter builder to pass ATS filters and organize all your versions in one place. Free forever for core CV building, exports, and storage, with daily AI limits.",
+      "desc_zh": "基于表单的简历和求职信构建器，可通过 ATS 过滤器并集中管理所有版本。核心简历构建、导出和存储永久免费，但有每日 AI 限制。",
+      "status": "active",
+      "first_seen": "2026-10-23",
+      "updated_at": "2026-10-23"
+    },
+    {
       "id": "11af3344cdd4",
       "kind": "entry",
       "name": "Cisco Networking Academy, Skills for All",
@@ -10099,6 +10125,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "5d645141b902",
+      "kind": "entry",
+      "name": "SignupVet",
+      "url": "https://www.signupvet.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "An API that checks email, phone and IP of new signups. 250 free checks per month, no credit card.",
+      "desc_zh": "一个用于检查新注册用户邮箱、电话和 IP 的 API。每月 250 次免费检查，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-23",
+      "updated_at": "2026-10-23"
     },
     {
       "id": "40d09cc411a2",
@@ -15793,6 +15832,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "7aa2cdee9405",
+      "kind": "entry",
+      "name": "waymorphic.com",
+      "url": "https://waymorphic.com/",
+      "category": "data-visualization-on-maps",
+      "parent": null,
+      "desc_en": "Vector map tiles (OpenMapTiles schema), MapLibre styles, geocoding and reverse geocoding APIs. No API key, no request limit, fair use policy.",
+      "desc_zh": "矢量地图瓦片（OpenMapTiles schema）、MapLibre 样式、地理编码和逆地理编码 API。无需 API 密钥，无请求限制，公平使用政策。",
+      "status": "active",
+      "first_seen": "2026-10-23",
+      "updated_at": "2026-10-23"
     },
     {
       "id": "a5368636bfa7",
