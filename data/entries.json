@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-23T23:53:36.777Z",
+    "synced_at": "2026-10-24T23:23:17.287Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "cd16d2260b8bc1775ae41674d443b8b93e264d00",
-      "commit_date": "2026-10-23T17:35:03Z"
+      "commit_sha": "42e0806f4563bb279df62855ca545e4ddbc25fd1",
+      "commit_date": "2026-10-24T19:29:26Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1388,
+      "active": 1389,
       "removed": 0,
-      "entries": 1355,
+      "entries": 1356,
       "notes": 33,
-      "translated": 1382
+      "translated": 1383
     }
   },
   "categories": [
@@ -6181,11 +6181,11 @@
       "url": "https://www.tesults.com",
       "category": "testing",
       "parent": null,
-      "desc_en": "Test results reporting and test case management. Integrates with popular test frameworks. Open Source software developers, individuals, educators, and small teams getting started can request discounted and free offerings beyond basic free projects.",
-      "desc_zh": "测试结果报告与测试用例管理。可与流行的测试框架集成。Open Source 软件开发者、个人、教育工作者以及刚起步的小团队，可在基础免费项目之外申请折扣和免费方案。",
+      "desc_en": "Test results reporting, release records and test case management, with an MCP server for AI agents. Free plan with unlimited users, 5 targets, up to 100 test cases per run and 30 days of results history. Free Standard plan for open source projects.",
+      "desc_zh": "测试结果报告、发布记录和测试用例管理，配备用于 AI 代理的 MCP 服务器。免费计划：无用户限制，5 个目标，每次运行最多 100 个测试用例，以及 30 天的结果历史记录。开源项目提供免费标准计划。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-10-24"
     },
     {
       "id": "0ef11a06bf5f",
@@ -10593,6 +10593,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "1de4014c1a25",
+      "kind": "entry",
+      "name": "BootForm",
+      "url": "https://bootform.com/",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Form backend for builders. Free plan: 250 submissions a month with unlimited forms. Email and Discord notifications, honeypot/CAPTCHA, and an MCP server so AI coding agents can create and configure forms and manage submissions.",
+      "desc_zh": "面向构建者的表单后端。免费计划：每月 250 次提交，无表单数量限制。支持邮件和 Discord 通知、蜜罐/CAPTCHA，以及 MCP 服务器，以便 AI 编码代理创建和配置表单并管理提交。",
+      "status": "active",
+      "first_seen": "2026-10-24",
+      "updated_at": "2026-10-24"
     },
     {
       "id": "6dc109d0d538",
