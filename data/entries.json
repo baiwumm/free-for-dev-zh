@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-24T23:23:17.287Z",
+    "synced_at": "2026-10-27T00:35:06.472Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "42e0806f4563bb279df62855ca545e4ddbc25fd1",
-      "commit_date": "2026-10-24T19:29:26Z"
+      "commit_sha": "2f4c40d1f6d1f6cf12794d23c04c1231559eb0df",
+      "commit_date": "2026-10-26T15:57:39Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1389,
+      "active": 1391,
       "removed": 0,
-      "entries": 1356,
+      "entries": 1358,
       "notes": 33,
-      "translated": 1383
+      "translated": 1385
     }
   },
   "categories": [
@@ -7241,6 +7241,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "dfa055d25b88",
+      "kind": "entry",
+      "name": "WishKit",
+      "url": "https://www.wishkit.io",
+      "category": "mobile-app-distribution-and-feedback",
+      "parent": null,
+      "desc_en": "In-app feature request and feedback board for iOS and web apps where users submit and vote on features. Free forever plan with no card: 1 project, iOS and web SDKs, unlimited users, shows the first 5 feature requests.",
+      "desc_zh": "适用于 iOS 和 Web 应用的应用内功能请求和反馈板，用户可在此提交并投票功能。永久免费计划，无需信用卡：1 个项目，iOS 和 Web SDK，无限用户，显示前 5 个功能请求。",
+      "status": "active",
+      "first_seen": "2026-10-27",
+      "updated_at": "2026-10-27"
+    },
+    {
       "id": "14bdcc0da05f",
       "kind": "entry",
       "name": "bitnami.com",
@@ -10918,6 +10931,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "a4611c0801d4",
+      "kind": "entry",
+      "name": "Nisuform",
+      "url": "https://nisuform.com",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Simple, Easy and Secure form backend for any websites with beautiful form template and intuitive form builder. AI ready with MCP. Free plan includes 100 free submissions, spam protection and turnstile.",
+      "desc_zh": "适用于任何网站的简单、易用且安全的表单后端，拥有精美的表单模板和直观的表单构建器。支持 AI，兼容 MCP。免费计划包含 100 次免费提交、垃圾邮件防护和 Turnstile。",
+      "status": "active",
+      "first_seen": "2026-10-27",
+      "updated_at": "2026-10-27"
     },
     {
       "id": "e2aebf55dc44",
@@ -15840,11 +15866,11 @@
       "url": "https://stadiamaps.com/",
       "category": "data-visualization-on-maps",
       "parent": null,
-      "desc_en": "Map tiles, routing, navigation, and other geospatial APIs. Two thousand five hundred free map views and API requests/day for non-commercial usage and testing.",
-      "desc_zh": "地图瓦片、路线、导航和其他地理空间 API。非商业使用和测试每天提供两千五百次免费地图浏览和 API 请求。",
+      "desc_en": "Map tiles, routing, navigation, and other geospatial APIs. 200,000 free credits/month for non-commercial usage and testing.",
+      "desc_zh": "地图切片、路由、导航和其他地理空间 API。非商业用途和测试每月提供 200,000 个免费积分。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-10-27"
     },
     {
       "id": "7d6189b1fb55",
