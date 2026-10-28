@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-27T00:35:06.472Z",
+    "synced_at": "2026-10-28T00:34:11.653Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "2f4c40d1f6d1f6cf12794d23c04c1231559eb0df",
-      "commit_date": "2026-10-26T15:57:39Z"
+      "commit_sha": "a55961268b6aa0a318ac772059133f3114f3ed43",
+      "commit_date": "2026-10-27T16:53:20Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1391,
+      "active": 1397,
       "removed": 0,
-      "entries": 1358,
+      "entries": 1364,
       "notes": 33,
-      "translated": 1385
+      "translated": 1391
     }
   },
   "categories": [
@@ -3222,6 +3222,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "031222be0a34",
+      "kind": "entry",
+      "name": "PolyDoc",
+      "url": "https://polydoc.tech",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "REST API for HTML to PDF and screenshot generation. Including templates, PDF/A and PDF/UA output, privacy-focused, and more features. The free plan includes 150 conversions/month.",
+      "desc_zh": "用于 HTML 转 PDF 和截图生成的 REST API。包含模板、PDF/A 和 PDF/UA 输出、注重隐私等功能。免费计划包含每月 150 次转换。",
+      "status": "active",
+      "first_seen": "2026-10-28",
+      "updated_at": "2026-10-28"
     },
     {
       "id": "64b3f4142dd1",
@@ -9347,6 +9360,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "60e34b0347c1",
+      "kind": "entry",
+      "name": "AliasMail",
+      "url": "https://aliasmail.space/",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Privacy-preserving email forwarding and alias service with HMAC-SHA256 signed webhooks and custom alias handles. Free tier includes permanent email forwarding, custom aliases, and webhook integrations with no credit card required.",
+      "desc_zh": "注重隐私的电子邮件转发和别名服务，支持 HMAC-SHA256 签名的 Webhook 和自定义别名句柄。免费层级包含永久电子邮件转发、自定义别名以及无需信用卡的 Webhook 集成。",
+      "status": "active",
+      "first_seen": "2026-10-28",
+      "updated_at": "2026-10-28"
+    },
+    {
       "id": "acee1c8dfe68",
       "kind": "entry",
       "name": "AnonAddy",
@@ -9581,6 +9607,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "1625092f13b3",
+      "kind": "entry",
+      "name": "eForward",
+      "url": "https://eforward.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Email forwarding for custom domains. Free plan includes 1 domain, 1 mailbox, 10 aliases (catch-all ones count too), catch-all, and reply/send from your aliases (up to 5 new recipients a day). No credit card required.",
+      "desc_zh": "自定义域名的电子邮件转发。免费计划包含 1 个域名、1 个邮箱、10 个别名（包括通配符别名）、通配符功能，以及通过别名回复/发送（每天最多 5 个新收件人）。无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-28",
+      "updated_at": "2026-10-28"
+    },
+    {
       "id": "4df580c77133",
       "kind": "entry",
       "name": "Email Spam Tester",
@@ -9709,6 +9748,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "6f42b7cbcc62",
+      "kind": "entry",
+      "name": "FrostyVerify",
+      "url": "https://frostyverify.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Email verification, usable through a web app, a REST API and an MCP server + 1,000 Free Email verifications a month, no card",
+      "desc_zh": "电子邮件验证，可通过 Web 应用、REST API 和 MCP 服务器使用，每月 1,000 次免费电子邮件验证，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-10-28",
+      "updated_at": "2026-10-28"
     },
     {
       "id": "892ebe1199ca",
@@ -10775,6 +10827,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "71d88e2926a5",
+      "kind": "entry",
+      "name": "Formlane",
+      "url": "https://smallwerk.com/formlane",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Formlane is a form backend for static websites, site builders or AI-built apps. One endpoint gets email notifications with reply-to, spam-filtering without captcha and a CSV export. All submissions are stored in Frankfurt. Free Plan: 250 submissions/mo, no trial.",
+      "desc_zh": "Formlane 是一个静态网站、网站构建器或 AI 构建应用的表单后端。一个端点即可获取带有回复地址、无需验证码的垃圾邮件过滤以及 CSV 导出的电子邮件通知。所有提交均存储在法兰克福。免费计划：每月 250 次提交，无试用。",
+      "status": "active",
+      "first_seen": "2026-10-28",
+      "updated_at": "2026-10-28"
     },
     {
       "id": "5af2e756bdf6",
@@ -15325,6 +15390,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "ad585df275b9",
+      "kind": "entry",
+      "name": "logoapi.sh",
+      "url": "https://logoapi.sh/",
+      "category": "design-and-ui",
+      "parent": null,
+      "desc_en": "Company logo API with no key or signup, the ideal Clearbit logo API alternative with SVG logos for any domain. 1M free requests a month per site.",
+      "desc_zh": "无需密钥或注册的公司 Logo API，是 Clearbit Logo API 的理想替代方案，可提供任何域名的 SVG Logo。每个站点每月 100 万次免费请求。",
+      "status": "active",
+      "first_seen": "2026-10-28",
+      "updated_at": "2026-10-28"
     },
     {
       "id": "266e38bf4238",
