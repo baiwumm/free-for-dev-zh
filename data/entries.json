@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-28T00:34:11.653Z",
+    "synced_at": "2026-10-29T01:03:32.615Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "a55961268b6aa0a318ac772059133f3114f3ed43",
-      "commit_date": "2026-10-27T16:53:20Z"
+      "commit_sha": "05c8478578a7ce304d437640d9aa669351bef342",
+      "commit_date": "2026-10-28T18:37:25Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1397,
+      "active": 1399,
       "removed": 0,
-      "entries": 1364,
+      "entries": 1366,
       "notes": 33,
-      "translated": 1391
+      "translated": 1393
     }
   },
   "categories": [
@@ -4782,6 +4782,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "fc70a3d086ca",
+      "kind": "entry",
+      "name": "UserNote",
+      "url": "https://getusernote.com/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "A user feedback tool to capture most wanted features, free supports up to 50 feature ideas and unlimited votes.",
+      "desc_zh": "一款用户反馈工具，用于收集最受欢迎的功能。免费支持最多 50 个功能创意和无限投票。",
+      "status": "active",
+      "first_seen": "2026-10-29",
+      "updated_at": "2026-10-29"
     },
     {
       "id": "1e369d25e257",
@@ -18172,6 +18185,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "b903b1649376",
+      "kind": "entry",
+      "name": "Keeper.sh",
+      "url": "https://www.keeper.sh",
+      "category": "miscellaneous",
+      "parent": null,
+      "desc_en": "A calendar syncing tool that keeps your work, personal, business or student calendars in sync. Free for up to 2 calendars, 3 connections, and give your agent or scripts access to read and modify your calendars with up to 25 calls per day.",
+      "desc_zh": "一款日历同步工具，可保持您的工作、个人、商业或学生日历同步。免费支持最多 2 个日历、3 个连接，并允许您的代理或脚本每天最多 25 次调用以读取和修改您的日历。",
+      "status": "active",
+      "first_seen": "2026-10-29",
+      "updated_at": "2026-10-29"
     },
     {
       "id": "c18d2e673c70",
