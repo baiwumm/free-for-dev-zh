@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-29T01:03:32.615Z",
+    "synced_at": "2026-10-30T01:08:49.125Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "05c8478578a7ce304d437640d9aa669351bef342",
-      "commit_date": "2026-10-28T18:37:25Z"
+      "commit_sha": "9b6c36a18492394fe392c08b509ca605e48fdbf8",
+      "commit_date": "2026-10-29T08:31:58Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1399,
+      "active": 1400,
       "removed": 0,
-      "entries": 1366,
+      "entries": 1367,
       "notes": 33,
-      "translated": 1393
+      "translated": 1394
     }
   },
   "categories": [
@@ -10346,6 +10346,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "58321f0128b0",
+      "kind": "entry",
+      "name": "VaelMail",
+      "url": "https://vaelmail.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Privacy-first webmail with deterministic 16-digit account keys and zero phone verification. Free tier includes 50 MB receive-only mailbox storage, unlimited subaddressing, and persistent @vael.pw aliases with no credit card required.",
+      "desc_zh": "隐私优先的网页邮件服务，采用确定性 16 位账户密钥，无需手机验证。免费套餐包含 50 MB 仅限接收的邮箱存储空间、无限子地址功能，以及无需信用卡即可使用的持久 @vael.pw 别名。",
+      "status": "active",
+      "first_seen": "2026-10-30",
+      "updated_at": "2026-10-30"
     },
     {
       "id": "850a07578edf",
