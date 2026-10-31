@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-30T01:08:49.125Z",
+    "synced_at": "2026-10-31T00:52:52.973Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "9b6c36a18492394fe392c08b509ca605e48fdbf8",
-      "commit_date": "2026-10-29T08:31:58Z"
+      "commit_sha": "265b5af660f1c80e914b239d43e4719c7187f93c",
+      "commit_date": "2026-10-30T10:20:20Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1400,
-      "removed": 0,
-      "entries": 1367,
+      "active": 1402,
+      "removed": 1,
+      "entries": 1369,
       "notes": 33,
-      "translated": 1394
+      "translated": 1396
     }
   },
   "categories": [
@@ -936,17 +936,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "6ee209bad989",
+      "id": "06a50fba0e0e",
       "kind": "note",
       "name": null,
       "url": null,
       "category": "major-cloud-providers",
       "parent": "e39435462537",
-      "desc_en": "2 Arm-based Ampere A1 cores and 12 GB of memory usable as one VM or up to 2 VMs",
-      "desc_zh": "2 个基于 Arm 的 Ampere A1 核心和 12 GB 内存，可作为单个 VM 使用或最多分为 2 个 VM",
+      "desc_en": "4 Arm-based Ampere A1 cores and 24 GB of memory usable as one VM or up to 4 VMs",
+      "desc_zh": "4 个基于 Arm 的 Ampere A1 核心，24 GB 内存可用作一个 VM 或最多 4 个 VM",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-10-31",
+      "updated_at": "2026-10-31"
     },
     {
       "id": "56a74b56e025",
@@ -6630,6 +6630,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "46072577cefa",
+      "kind": "entry",
+      "name": "pkgscan.dev",
+      "url": "https://pkgscan.dev",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Multi-engine supply chain scanner for npm, PyPI, VS Code extensions, Cargo, Maven, NuGet, RubyGems, Go and AI agent skills. Checks for malware and known vulnerabilities, including hash lookups that need no upload. Free tier: 5 scans per month with full findings.",
+      "desc_zh": "针对 npm、PyPI、VS Code 扩展、Cargo、Maven、NuGet、RubyGems、Go 和 AI 代理技能的多引擎供应链扫描器。检查恶意软件和已知漏洞，包括无需上传的哈希查找。免费层级：每月 5 次扫描，包含完整发现结果。",
+      "status": "active",
+      "first_seen": "2026-10-31",
+      "updated_at": "2026-10-31"
+    },
+    {
       "id": "548dbc77b7f5",
       "kind": "entry",
       "name": "Protectumus",
@@ -10450,6 +10463,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "05e4caf9ae3e",
+      "kind": "entry",
+      "name": "Featureflip",
+      "url": "https://featureflip.io/",
+      "category": "feature-toggles-management-platforms",
+      "parent": null,
+      "desc_en": "Featureflip is a full featured feature flag platform that removes its own dead flags by submitting its own pull requests. Free plan includes 10 flags, 2 environments, 1 project, 3 users, and no usage caps.",
+      "desc_zh": "Featureflip 是一个功能齐全的功能标志平台，通过提交自己的 Pull Request 来移除自身的死标志。免费计划包含 10 个标志、2 个环境、1 个项目、3 个用户，且无使用上限。",
+      "status": "active",
+      "first_seen": "2026-10-31",
+      "updated_at": "2026-10-31"
     },
     {
       "id": "a9cd418cdec6",
@@ -18445,6 +18471,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "6ee209bad989",
+      "kind": "note",
+      "name": null,
+      "url": null,
+      "category": "major-cloud-providers",
+      "parent": "e39435462537",
+      "desc_en": "2 Arm-based Ampere A1 cores and 12 GB of memory usable as one VM or up to 2 VMs",
+      "desc_zh": "2 个基于 Arm 的 Ampere A1 核心和 12 GB 内存，可作为单个 VM 使用或最多分为 2 个 VM",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-10-31"
     }
   ]
 }
