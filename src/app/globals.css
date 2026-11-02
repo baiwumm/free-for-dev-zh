@@ -9,7 +9,7 @@
  *
  * 来源：Maple Mono（开源，OFL-1.1，https://github.com/subframe7536/maple-font）
  * 子集：按站点实际用字生成（≈280KB）；GB2312 源字在 assets/fonts/，
- * 用 `pnpm fonts` 重新生成（自动刷新下方 ?v= 版本号，配合 _headers 强缓存）。
+ * 用 `pnpm fonts` 重新生成（自动刷新下方 ?v= 版本号，配合 EdgeOne 的 /fonts/* 强缓存）。
  * unicode-range 之外的生僻字符自然回退系统字体，不产生额外加载。
  */
 @font-face {

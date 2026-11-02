@@ -108,14 +108,14 @@
 
 ## DS-8 流水线与调度
 
-固定顺序，任一步失败即中止、保持上一个完好状态（幂等）。`sync.mjs` 止于原子写回，`commit` 与部署由 `daily-sync.yml` 完成：
+固定顺序，任一步失败即中止、保持上一个完好状态（幂等）。`sync.mjs` 止于原子写回，`commit` 由 `daily-sync.yml` 完成，上线交给 EdgeOne Pages 的 Git 构建：
 
 ```
 fetch → parse → ID 唯一性/分类校验 → diff → merge → overrides → guard → translate → 原子写回   # sync.mjs
-commit → workflow_call 部署                                                                    # daily-sync.yml
+commit → push → EdgeOne Pages 重新构建上线                                                     # daily-sync.yml + Pages Git 集成
 ```
 
-- 调度：GitHub Actions cron，UTC 21:23（北京时间次日 05:23）；`daily-sync.yml` 在写回后提交 `data/`，并通过 `workflow_call` 直调 `deploy.yml`（默认 GITHUB_TOKEN 的提交不触发 push 事件，见 04 触发链说明）。上游无变化时自动跳过提交与部署。
+- 调度：GitHub Actions cron，UTC 21:23（北京时间次日 05:23）；`daily-sync.yml` 在写回后提交 `data/` 并 push，push 到 main 由 EdgeOne Pages 触发构建（bot 提交同样会触发，见 04 触发链说明）。上游无变化时自动跳过提交，也就不会产生新构建。
 - 调试参数：`node scripts/sync.mjs` 支持 `--dry-run`（不写盘）、`--verbose`（逐分类计数）、`--no-translate`、`--limit N`、`--readme <本地文件>`（离线跑）。
 - 原子写回：翻译结果先写临时文件，全部校验通过后才替换 `data/entries.json`，中途失败不留半成品。
 - 失败通知：Actions 失败邮件（默认启用）；企业微信机器人每日摘要（新增 X 条 / 更新 Y 条 / 失败告警）为规划项，尚未接线。
@@ -137,5 +137,5 @@ commit → workflow_call 部署                                                 
 - [x] 数字校验用例 100% 通过（含 `5 million`/`500 万`、`1,000`、`3.000` 欧式千分位、全角、`0.5GB`、`100ms` 等值换算与反例，`test/validate.test.mjs`）。
 - [x] 解析器单测覆盖真实边界样本：TOC 段跳过、缩进 0/4/5/7、`—` 分隔与无分隔描述、纯文字备注、描述内嵌链接，全部通过（33 条单测全绿）。
 - [x] 上游条目数骤降时 guard 阻止写回并告警（总量 10% / 单分类 30% / 覆盖率 10pp 三组用例）。
-- [x] 首次全量翻译（手动触发 `Daily Sync`）已完成（2026-10-16）；翻译 → 提交 → `workflow_call` 部署链路与 04 章一致，完成度与残余条目见 05 章。
+- [x] 首次全量翻译（手动触发 `Daily Sync`）已完成（2026-10-16）；翻译 → 提交 → 托管自动构建上线链路与 04 章一致（2026-11-02 起托管为 EdgeOne Pages），完成度与残余条目见 05 章。
 - [x] 质量抽检工具落地（`scripts/audit.mjs`，体检 + 抽样双模式，2026-10-16 首跑）：发现并修正 1 条真实机翻数字错误（Webstudio「Ten thousand」→「十万」，overrides 回填）；修正后数字 / 链接 / 拒答硬问题 0 命中，余 4 条「译文与原文相同」为品牌 / 规格名预期形态；DS-6 校验同步补强汉字数字解析（`两千五百` / `五万` / `十万`，近似表达不解析）。

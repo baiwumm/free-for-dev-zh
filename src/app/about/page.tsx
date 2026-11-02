@@ -77,8 +77,8 @@ export default function AboutPage() {
 
         <Section title="技术栈">
           <p>
-            Next.js 16（静态导出）+ Fumadocs 16 + Tailwind CSS 4，托管于 Cloudflare Workers
-            静态资源；同步与翻译流水线为纯 Node.js 脚本，无额外依赖。
+            Next.js 16（静态导出）+ Fumadocs 16 + Tailwind CSS 4，托管于腾讯云 EdgeOne Pages；
+            同步与翻译流水线为纯 Node.js 脚本，无额外依赖。
           </p>
         </Section>
 

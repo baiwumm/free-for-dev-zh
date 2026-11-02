@@ -45,6 +45,6 @@
 | 项 | 值 |
 |---|---|
 | 仓库 | `github.com/baiwumm/free-for-dev-zh`（已建，MIT，见 05 合规说明） |
-| 站点域名 | `ffd.baiwumm.com`（baiwumm.com DNS 在 Cloudflare，加一条自定义域名即可） |
-| Cloudflare Worker 名 | `free-for-dev-zh` |
-| 上线日期 | 2026-10-16（Cloudflare Workers 静态资源 + 自定义域名） |
+| 站点域名 | `ffd.baiwumm.com`（baiwumm.com DNS 托管腾讯云，记录由 EdgeOne Pages 分配） |
+| 托管 | 腾讯云 EdgeOne Pages（绑定 GitHub 仓库，push main 自动构建 `out/`） |
+| 上线日期 | 2026-10-16（Cloudflare Workers 静态资源首上线）；2026-11-02 迁移至 EdgeOne Pages |

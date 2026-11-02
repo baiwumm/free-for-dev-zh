@@ -8,7 +8,6 @@ next-env.d.ts
 
 # tooling caches
 .turbo/
-.wrangler/
 *.tsbuildinfo
 data/*.tmp
 

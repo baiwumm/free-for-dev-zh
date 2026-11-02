@@ -1,11 +1,11 @@
 # AGENTS.md — free-for-dev-zh 开发指南
 
-上游免费资源清单的中文镜像站：`scripts/` 零依赖 Node 流水线（每日同步 + LLM 增量翻译），`src/` Next.js 16 静态导出站点（已上线 <https://ffd.baiwumm.com>）。
+上游免费资源清单的中文镜像站：`scripts/` 零依赖 Node 流水线（每日同步 + LLM 增量翻译），`src/` Next.js 16 静态导出站点（腾讯云 EdgeOne Pages 托管，已上线 <https://ffd.baiwumm.com>）。
 
 ## 包管理器
 
 - 使用 **pnpm 12**（`pnpm install`）；Node ≥ 20.9（Node 与 pnpm 版本分别由 `volta`、`packageManager` 字段固定）。
-- 保留 `pnpm-workspace.yaml` 的 `allowBuilds`（放行 esbuild / workerd 安装脚本）与 `minimumReleaseAge: 0`——删掉会导致本地与 CI 安装失败；pnpm 11+ 已忽略旧的 `onlyBuiltDependencies` 写法。
+- 保留 `pnpm-workspace.yaml` 的 `minimumReleaseAge: 0`——删掉会导致本地与 CI 安装失败。依赖一律不执行安装脚本：2026-11-02 迁移到 EdgeOne Pages 时移除了 wrangler / workerd，原 `allowBuilds` 放行随之删除，后续确有需要再单条放行。
 
 ## 常用命令
 
@@ -16,7 +16,7 @@
 | 全部单测 | `pnpm test` |
 | 检查 / 格式化（Biome） | `pnpm lint` / `pnpm format`；单文件：`pnpm exec biome check <path>` |
 | 静态构建（`output: export` → `out/`） | `pnpm build` |
-| 本地预览 Workers 行为（404 / 尾斜杠；需先 `pnpm build`） | `pnpm preview` |
+| 本地预览 `out/` 静态产物（404 页 / 无尾斜杠 URL；需先 `pnpm build`） | `pnpm preview` |
 | 手动同步数据（`--dry-run` / `--verbose` / `--readme <file>` / `--no-translate` / `--limit N`） | `pnpm sync` |
 | 补翻译（`--limit N`，需 `LLM_API_KEY`） | `pnpm translate` |
 | 数据质量抽检（全量体检；`--sample 5` 随机抽检，见 `docs/02` DS-9） | `pnpm audit:data` |
@@ -26,6 +26,7 @@
 
 - 需求或行为变更先改文档再改代码：流水线 → `docs/02-data-sync.md`；页面与视觉 → `docs/03-site-requirements.md`；依赖 / 部署 / CI → `docs/04-technical-design.md`。
 - 站点为纯静态导出（`output: 'export'` + `images.unoptimized`）：所有页面构建期生成；外链图标用 `<img>` + letter avatar 兜底；新功能必须兼容静态导出。
+- 发布由腾讯云 EdgeOne Pages 的 Git 集成完成（绑定仓库，push `main` 自动构建 `out/`）：仓库内不放部署配置与托管凭据；静态资源缓存与安全头规则在 Pages 控制台配置，`public/_headers` 这类 Workers 专属机制不再支持。
 - `data/entries.json` 由同步脚本生成（勿手改）；人工修正写 `data/overrides.json`（按条目 ID 覆盖译文），分类名写 `data/categories.json`。
 - `desc_zh` 可能为 `null`（未翻译）：所有 UI 必须降级展示英文原文并标注「未翻译」。
 - 改 React / Next.js 组件、数据获取或性能相关代码前，先读 `.agents/skills/vercel-react-best-practices/SKILL.md`。

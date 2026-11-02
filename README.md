@@ -15,11 +15,11 @@
   <img src="https://img.shields.io/badge/Next.js-16-111?style=flat-square&logo=nextdotjs&logoColor=fff&labelColor=111" alt="Next.js 16" />
   <img src="https://img.shields.io/badge/React-19-111?style=flat-square&logo=react&logoColor=61DAFB&labelColor=111" alt="React 19" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-4-111?style=flat-square&logo=tailwindcss&logoColor=38BDF8&labelColor=111" alt="Tailwind CSS 4" />
-  <img src="https://img.shields.io/badge/Cloudflare-Workers-111?style=flat-square&logo=cloudflare&logoColor=F38020&labelColor=111" alt="Cloudflare Workers" />
+  <img src="https://img.shields.io/badge/EdgeOne%20Pages-Tencent%20Cloud-111?style=flat-square&labelColor=111" alt="腾讯云 EdgeOne Pages" />
   <img src="https://img.shields.io/badge/Node.js-%E2%89%A5%2020.9-111?style=flat-square&logo=nodedotjs&logoColor=5FA04E&labelColor=111" alt="Node.js ≥ 20.9" />
 </p>
 
-- 🌐 站点：<https://ffd.baiwumm.com>（Cloudflare Workers 静态资源，成本约零）
+- 🌐 站点：<https://ffd.baiwumm.com>（腾讯云 EdgeOne Pages 静态托管，成本约零）
 - 🔄 数据每日自动同步（GitHub Actions）；中文描述由大模型增量翻译（GLM 免费模型），以英文原文与官网为准。
 
 ## ✨ 特性
@@ -45,14 +45,14 @@ scripts/            同步流水线（纯 Node.js）
   translate.mjs     批量翻译（OpenAI 兼容接口），可独立运行
   audit.mjs         质量抽检：全量体检 / 随机抽样（pnpm audit:data，见 docs/02 DS-9）
   subset-font.mjs   按站点实际用字重新生成字体子集（pnpm fonts）
+  preview.mjs       本地预览 out/ 静态产物（pnpm preview）
   lib/              fetch / parse / guard / diff / merge / validate / ids / slug
 test/               解析边界、守卫、差异合并、翻译校验的单元测试
 src/                站点（首页索引 / docs 概览 / 分类页 / 条目详情 / 关于 / ⌘K 搜索 / RSS）
 assets/fonts/       Maple Mono CN GB2312 源字（仅用于再子集化，SIL OFL 1.1）
 public/fonts/       站点字体子集（由 pnpm fonts 生成后提交）
-public/_headers     Workers Static Assets 缓存与安全头
 .agents/skills/     项目级 AI 技能（frontend-design / vercel-react-best-practices，版本锁定于 skills-lock.json）
-.github/workflows/  ci.yml · daily-sync.yml · deploy.yml
+.github/workflows/  ci.yml · daily-sync.yml（发布由 EdgeOne Pages 的 Git 集成完成）
 AGENTS.md           AI 与开发协作约定（包管理 / 命令 / 硬性约束）
 ```
 
@@ -70,8 +70,7 @@ pnpm sync           # 手动同步上游（无 key 时只解析不翻译）
 pnpm translate      # 单独补齐缺失的中文翻译（需要 LLM_API_KEY）
 pnpm audit:data     # 数据质量抽检（--sample 5 随机抽检，见 docs/02 DS-9）
 pnpm build          # 静态导出到 out/（1,400+ 页）
-pnpm preview        # wrangler dev 本地预览 out/ 产物（需先 pnpm build）
-pnpm deploy         # 部署到 Cloudflare Workers（需 CLOUDFLARE_API_TOKEN，或已 wrangler login）
+pnpm preview        # 本地预览 out/ 静态产物（需先 pnpm build）
 ```
 
 ### 🔑 环境变量（翻译）
@@ -89,12 +88,11 @@ pnpm deploy         # 部署到 Cloudflare Workers（需 CLOUDFLARE_API_TOKEN，
 
 ## ☁️ 部署（一次性配置）
 
-1. 在 GitHub 仓库 Settings → Secrets and variables → Actions 添加：
-   - `CLOUDFLARE_API_TOKEN`：部署用，Cloudflare API Token（授「编辑 Cloudflare Workers」模板即可，详见 `docs/04-technical-design.md`）；
-   - `LLM_API_KEY`：翻译用，智谱开放平台（或任意 OpenAI 兼容服务）的 API Key（缺省时同步照常运行、仅跳过翻译）。
-2. 部署：push 到 `main` 自动触发 `Deploy`（build → wrangler deploy），自定义域名 `ffd.baiwumm.com` 随首次部署自动挂载；`Daily Sync` 提交数据后亦通过 `workflow_call` 直调部署；本地可用 `pnpm deploy`。
-3. 每日 UTC 21:23（北京时间次日 05:23）`Daily Sync` 自动运行；首次全量翻译可在 Actions 页手动触发该 workflow（workflow_dispatch）。
-4. 如 Cloudflare 账号下有多个账户，再补一个 `CLOUDFLARE_ACCOUNT_ID` secret。
+1. 托管：腾讯云 EdgeOne Pages 关联本仓库，Production Branch `main`、构建命令 `pnpm build`、输出目录 `out`；域名 `ffd.baiwumm.com` 由 Pages 分配 CNAME（`baiwumm.com` 的 DNS 已托管腾讯云）。
+2. 发布：push 到 `main` 自动触发 Pages 构建上线，`Daily Sync` 的 bot 提交同样会触发（构建队列有延迟，2026-11-02 实测约 1–2 小时）；仓库内不再有部署脚本与部署 job。
+3. GitHub 仓库 Settings → Secrets and variables → Actions 只需保留 `LLM_API_KEY`（翻译用，智谱开放平台或任意 OpenAI 兼容服务的 API Key，缺省时同步照常运行、仅跳过翻译）。原 `CLOUDFLARE_API_TOKEN` 已无用途，建议在仓库删除并在 Cloudflare 侧吊销。
+4. 每日 UTC 21:23（北京时间次日 05:23）`Daily Sync` 自动运行；首次全量翻译可在 Actions 页手动触发该 workflow（workflow_dispatch）。
+5. 缓存与安全头在 EdgeOne 控制台配置（`/_next/static/*`、`/fonts/*` 强缓存 `max-age=31536000, immutable`，全站 `X-Content-Type-Options: nosniff` / `Referrer-Policy: strict-origin-when-cross-origin`）：原 `public/_headers` 是 Workers Static Assets 专属机制，Pages 不识别，已随迁移删除。
 
 ## ⚖️ 数据与许可
 

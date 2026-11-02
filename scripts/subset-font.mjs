@@ -10,7 +10,7 @@
  * 找不到时回退 `python -m fontTools.subset`。
  *
  * 产物字节变化时自动把 src/app/globals.css 中字体 URL 的 ?v=YYYYMMDD 更新为
- * 当天日期——_headers 对 /fonts/* 设了 immutable 强缓存，靠该版本号让旧访客换新。
+ * 当天日期——/fonts/* 走强缓存 immutable（EdgeOne Pages 控制台配置），靠该版本号让旧访客换新。
  */
 import { spawnSync } from 'node:child_process'
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'

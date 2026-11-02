@@ -1,8 +1,8 @@
 name: Daily Sync
 
-# 每日自动同步上游清单：拉取 → 解析 → 守卫 → 增量翻译 → 提交 → 直接调用部署。
-# GITHUB_TOKEN 的提交不会触发其它 workflow（GitHub 平台限制），因此部署通过
-# workflow_call 显式调用 deploy.yml。
+# 每日自动同步上游清单：拉取 → 解析 → 守卫 → 增量翻译 → 提交 data/。
+# 上线交给腾讯云 EdgeOne Pages 的 Git 集成：push 到 main（含本 workflow 的 bot 提交）
+# 会自动触发重新构建部署，因此这里不再需要部署 job。
 
 on:
   schedule:
@@ -24,8 +24,6 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    outputs:
-      changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v6
 
@@ -56,22 +54,13 @@ jobs:
         run: node scripts/sync.mjs
 
       - name: 提交数据变更
-        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet -- data/; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "上游无变化，跳过提交与部署"
+            echo "上游无变化，跳过提交（EdgeOne Pages 也不会重新构建）"
           else
             git add data/entries.json data/categories.json data/overrides.json
             git commit -m "chore(data): 每日自动同步 $(date -u +%Y-%m-%d)"
             git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-
-  deploy:
-    needs: sync
-    if: needs.sync.outputs.changed == 'true'
-    uses: ./.github/workflows/deploy.yml
-    secrets: inherit
