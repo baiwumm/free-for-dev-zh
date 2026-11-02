@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-10-31T00:52:52.973Z",
+    "synced_at": "2026-11-02T00:53:16.781Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "265b5af660f1c80e914b239d43e4719c7187f93c",
-      "commit_date": "2026-10-30T10:20:20Z"
+      "commit_sha": "0dab5a726dd83f26aa23fff5fa4c95d1aebdf711",
+      "commit_date": "2026-11-01T19:27:54Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1402,
+      "active": 1406,
       "removed": 1,
-      "entries": 1369,
+      "entries": 1373,
       "notes": 33,
-      "translated": 1396
+      "translated": 1400
     }
   },
   "categories": [
@@ -2338,6 +2338,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "979ad525ad05",
+      "kind": "entry",
+      "name": "DocSpring",
+      "url": "https://docspring.com",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Fill out PDF forms, generate PDFs and Word documents, and collect e-signatures. Free developer plan includes unlimited test PDFs and 10 filled PDFs per month. Up to 10 templates, 2 users, and 2 integrations. No credit card required and no time limits.",
+      "desc_zh": "填写 PDF 表单，生成 PDF 和 Word 文档，并收集电子签名。免费开发者计划包含无限测试 PDF 和每月 10 个已填写的 PDF。最多 10 个模板、2 个用户和 2 个集成。无需信用卡，无时间限制。",
+      "status": "active",
+      "first_seen": "2026-11-02",
+      "updated_at": "2026-11-02"
     },
     {
       "id": "2d9021a215b4",
@@ -6318,6 +6331,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "aa887c9a7521",
+      "kind": "entry",
+      "name": "CertAvert",
+      "url": "https://certavert.com/monitoring",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Monitor SSL/TLS certificates on any port, checks expiry, chain problems, revocation, host mismatch. Monitor 15 domains free, get expiry notifications, email, Slack or Discord. No credit card required for signup.",
+      "desc_zh": "在任何端口上监控 SSL/TLS 证书，检查过期、链路问题、吊销和主机不匹配。免费监控 15 个域名，获取过期通知、电子邮件、Slack 或 Discord。注册无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-02",
+      "updated_at": "2026-11-02"
+    },
+    {
       "id": "981785a89616",
       "kind": "entry",
       "name": "CertKit",
@@ -8515,6 +8541,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "59600fa2f0a3",
+      "kind": "entry",
+      "name": "PingWise",
+      "url": "https://pingwise.com/",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Quorum-based uptime monitoring, using 15 probes in 6 different continents. Pricing is credit based, offering 650,000 free checks per month (translates to 75 free monitors at 5-minute checks). No credit card, unlimited users.",
+      "desc_zh": "基于共识的正常运行时间监控，使用 6 个不同大洲的 15 个探针。基于信用点数的定价，每月提供 650,000 次免费检查（相当于每 5 分钟检查一次 75 个免费监控）。无需信用卡，无限用户。",
+      "status": "active",
+      "first_seen": "2026-11-02",
+      "updated_at": "2026-11-02"
+    },
+    {
       "id": "8d343d993560",
       "kind": "entry",
       "name": "Prismix",
@@ -10034,6 +10073,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "30458e2fa93b",
+      "kind": "entry",
+      "name": "mxRaven",
+      "url": "https://mxraven.com/",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Programmable inbound email infrastructure with webhook, forward, and auto-reply routing, plus a durable pull-based event stream for consuming mail without a public endpoint. Free tier includes 1,000 outbound and 1,000 inbound tasks per month, 1 workspace, and 1 domain.",
+      "desc_zh": "可编程的入站电子邮件基础设施，提供 webhook、转发和自动回复路由，以及持久的基于拉取的事件流，用于在不使用公共端点的情况下消费邮件。免费套餐包含每月 1,000 次出站和 1,000 次入站任务、1 个工作区和 1 个域名。",
+      "status": "active",
+      "first_seen": "2026-11-02",
+      "updated_at": "2026-11-02"
     },
     {
       "id": "bab08f8fd52f",
