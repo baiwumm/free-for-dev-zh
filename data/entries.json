@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-02T00:53:16.781Z",
+    "synced_at": "2026-11-03T02:57:42.542Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "0dab5a726dd83f26aa23fff5fa4c95d1aebdf711",
-      "commit_date": "2026-11-01T19:27:54Z"
+      "commit_sha": "ff4c52d54e56d3fb8a12b4c76bc95c2c78a28e87",
+      "commit_date": "2026-11-02T11:33:51Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1406,
+      "active": 1410,
       "removed": 1,
-      "entries": 1373,
+      "entries": 1377,
       "notes": 33,
-      "translated": 1400
+      "translated": 1404
     }
   },
   "categories": [
@@ -8580,6 +8580,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "b38af2b09be4",
+      "kind": "entry",
+      "name": "RealUptime",
+      "url": "https://realuptime.io",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Uptime checks from 4 regions every 3 minutes, a public status page with 100 subscribers, and API, CLI, Terraform and MCP access. Free for 10 monitors, commercial use allowed, no card required.",
+      "desc_zh": "每 3 分钟从 4 个区域进行正常运行时间检查，带有 100 个订阅者的公开状态页面，以及 API、CLI、Terraform 和 MCP 访问权限。免费提供 10 个监控器，允许商业用途，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-03",
+      "updated_at": "2026-11-03"
+    },
+    {
       "id": "76709acf6a01",
       "kind": "entry",
       "name": "Relvato",
@@ -8981,6 +8994,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "7c9953c0f48e",
+      "kind": "entry",
+      "name": "RealUptime Errors",
+      "url": "https://realuptime.io/errors",
+      "category": "crash-and-exception-handling",
+      "parent": null,
+      "desc_en": "Error tracking that works with Sentry SDKs. Free for 10,000 events a month with 14-day retention; past the cap, events are refused and counted, never billed.",
+      "desc_zh": "与 Sentry SDK 配合使用的错误追踪。每月免费提供 10,000 个事件，保留期为 14 天；超出配额后，事件将被拒绝并计入，但不会产生费用。",
+      "status": "active",
+      "first_seen": "2026-11-03",
+      "updated_at": "2026-11-03"
     },
     {
       "id": "3a4d6dfb9960",
@@ -16757,6 +16783,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "8d4fd25ca590",
+      "kind": "entry",
+      "name": "Datasense",
+      "url": "https://usedatasense.com/",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Web analytics with JavaScript error tracking, goals, and revenue attribution. Free plan: 1 site, 5,000 events per month.",
+      "desc_zh": "带有 JavaScript 错误追踪、目标和收入归因的 Web 分析。免费计划：1 个网站，每月 5,000 个事件。",
+      "status": "active",
+      "first_seen": "2026-11-03",
+      "updated_at": "2026-11-03"
+    },
+    {
       "id": "1924f960852c",
       "kind": "entry",
       "name": "DevDome",
@@ -17834,6 +17873,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "ad864ae59592",
+      "kind": "entry",
+      "name": "Shotlane",
+      "url": "https://shotlane.dev",
+      "category": "screenshot-apis",
+      "parent": null,
+      "desc_en": "Screenshots, clean Markdown and PDFs of any web page, rendered in current Chrome. Hide cookie banners, ads and other popups and many more options. A free account gives you 100 credits per month, no card required.",
+      "desc_zh": "任何网页的截图、干净的 Markdown 和 PDF，在当前 Chrome 中渲染。隐藏 Cookie 横幅、广告和其他弹出窗口以及许多其他选项。免费账户每月提供 100 个积分，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-03",
+      "updated_at": "2026-11-03"
     },
     {
       "id": "9837d2f48a39",
