@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-03T02:57:42.542Z",
+    "synced_at": "2026-11-04T01:29:00.967Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "ff4c52d54e56d3fb8a12b4c76bc95c2c78a28e87",
-      "commit_date": "2026-11-02T11:33:51Z"
+      "commit_sha": "99b80718ab51510466a8365dcc056fbc501d00e2",
+      "commit_date": "2026-11-03T21:30:32Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1410,
+      "active": 1418,
       "removed": 1,
-      "entries": 1377,
+      "entries": 1385,
       "notes": 33,
-      "translated": 1404
+      "translated": 1412
     }
   },
   "categories": [
@@ -936,16 +936,16 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "06a50fba0e0e",
+      "id": "6ee209bad989",
       "kind": "note",
       "name": null,
       "url": null,
       "category": "major-cloud-providers",
       "parent": "e39435462537",
-      "desc_en": "4 Arm-based Ampere A1 cores and 24 GB of memory usable as one VM or up to 4 VMs",
-      "desc_zh": "4 个基于 Arm 的 Ampere A1 核心，24 GB 内存可用作一个 VM 或最多 4 个 VM",
+      "desc_en": "2 Arm-based Ampere A1 cores and 12 GB of memory usable as one VM or up to 2 VMs",
+      "desc_zh": "2 个基于 Arm 的 Ampere A1 核心和 12 GB 内存，可作为单个 VM 使用或最多分为 2 个 VM",
       "status": "active",
-      "first_seen": "2026-10-31",
+      "first_seen": "2026-10-15",
       "updated_at": "2026-10-31"
     },
     {
@@ -3482,6 +3482,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "2aaa86e4e662",
+      "kind": "entry",
+      "name": "TimeLogic API",
+      "url": "https://timelogicapi.com",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "World time and timezone API with cryptographically signed JSON responses, so you can verify the time wasn't tampered with. Get the current time by timezone, IP address or coordinates, convert between zones, check DST changes, and do business-day date math. WorldTimeAPI-compatible endpoints for apps that used worldtimeapi.org. Free plan includes 10,000 requests/month on all endpoints.",
+      "desc_zh": "带有加密签名 JSON 响应的世界时间和时区 API，因此您可以验证时间未被篡改。通过时区、IP 地址或坐标获取当前时间，在时区之间转换，检查夏令时变更，并进行工作日日期计算。适用于使用 worldtimeapi.org 的 WorldTimeAPI 兼容端点。免费计划包含所有端点每月 10,000 次请求。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
     },
     {
       "id": "59a3eda34acc",
@@ -8229,6 +8242,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "925165f21a43",
+      "kind": "entry",
+      "name": "Gairė",
+      "url": "https://gaire.lt/en",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Web Change monitoring for research, price changes, out-of/in stock monitoring. Free plan up to 10 pages checked every hour, alerts by sms, email, Webhook, Slack/Discord/Telegram integrations. No card needed.",
+      "desc_zh": "用于研究、价格变更、缺货/有货监控的网页变更监控。免费计划每小时最多检查 10 个页面，通过短信、电子邮件、Webhook、Slack/Discord/Telegram 集成发送警报。无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
+    },
+    {
       "id": "8a5017766b22",
       "kind": "entry",
       "name": "Grafana Cloud",
@@ -11271,6 +11297,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "f1884bafbcc0",
+      "kind": "entry",
+      "name": "whatayarn",
+      "url": "https://whatayarn.com/",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Online form builder. Unlimited forms and responses on Free, subject to fair use.",
+      "desc_zh": "在线表单构建器。免费版包含无限表单和响应，但受公平使用限制。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
+    },
+    {
       "id": "59f244d999d4",
       "kind": "entry",
       "name": "Wufoo",
@@ -11971,6 +12010,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "7baffe2a2ef5",
+      "kind": "entry",
+      "name": "EthioDeploy",
+      "url": "https://ethiodeploy.com/",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Hosting and agentic coding platform containing Built-in Analytics, Database, GitHub CI/CD, free sub-domain, CLI, AI coding agent. Free tier allows one project 256 MB RAM / 0.5 CPU, sleeps after 30 min idle, 512 MB database and 100,000 tokens on the default model one time.",
+      "desc_zh": "托管和代理编码平台，包含内置分析、数据库、GitHub CI/CD、免费子域名、CLI、AI 编码代理。免费层允许一个项目 256 MB 内存 / 0.5 CPU，闲置 30 分钟后休眠，512 MB 数据库，以及默认模型一次性 100,000 个 token。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
     },
     {
       "id": "64a8bb8a03bb",
@@ -13923,6 +13975,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "93395399eb46",
+      "kind": "entry",
+      "name": "Archboard",
+      "url": "https://getarchboard.app/",
+      "category": "issue-tracking-and-project-management",
+      "parent": null,
+      "desc_en": "Architecture diagrams your team and AI agents edit live. Free plan: 1 seat, 3 diagrams, all built-in node packs and live editing with your AI agents (MCP).",
+      "desc_zh": "您的团队和 AI 代理实时编辑的架构图。免费计划：1 个席位，3 张图表，所有内置节点包以及与您的 AI 代理（MCP）的实时编辑。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
+    },
+    {
       "id": "9776b9eb01ab",
       "kind": "entry",
       "name": "asana.com",
@@ -14610,6 +14675,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "8cc2760ca110",
+      "kind": "entry",
+      "name": "UserJot",
+      "url": "https://userjot.com",
+      "category": "issue-tracking-and-project-management",
+      "parent": null,
+      "desc_en": "Live chat, feedback boards, a roadmap, and a changelog, so everything your customers say reaches the people and agents building your product. Free plan: Unlimited Posts, Unlimited Users, 3 Admin Roles, 2 Feedback Boards, Roadmap, Changelog.",
+      "desc_zh": "Live chat、反馈板、路线图和更新日志，让客户说的每一句话都能传达给构建产品的人员和代理。免费计划：无限帖子、无限用户、3 个管理员角色、2 个反馈板、路线图、更新日志。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
     },
     {
       "id": "0f7afd45f2f5",
@@ -15528,11 +15606,11 @@
       "url": "https://logoapi.sh/",
       "category": "design-and-ui",
       "parent": null,
-      "desc_en": "Company logo API with no key or signup, the ideal Clearbit logo API alternative with SVG logos for any domain. 1M free requests a month per site.",
-      "desc_zh": "无需密钥或注册的公司 Logo API，是 Clearbit Logo API 的理想替代方案，可提供任何域名的 SVG Logo。每个站点每月 100 万次免费请求。",
+      "desc_en": "Company logo API with no key or signup, the ideal Clearbit logo API alternative with SVG logos for any domain. 2M free requests a month per site.",
+      "desc_zh": "无需密钥或注册的公司标志 API，是任何域名 SVG 标志的理想 Clearbit 标志 API 替代方案。每个网站每月 200 万次免费请求。",
       "status": "active",
       "first_seen": "2026-10-28",
-      "updated_at": "2026-10-28"
+      "updated_at": "2026-11-04"
     },
     {
       "id": "266e38bf4238",
@@ -17004,6 +17082,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "cc279e0f70c6",
+      "kind": "entry",
+      "name": "Pug",
+      "url": "https://pug.sh",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Open-source product analytics with autocapture, trends, funnels, retention, user flows and unified user profiles. Free plan includes 100,000 events per month and 1 year of data retention.",
+      "desc_zh": "带有自动捕获、趋势、漏斗、留存、用户流程和统一用户档案的开源产品分析。免费计划包括每月 100,000 次事件和 1 年的数据留存。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
+    },
+    {
       "id": "835187f782cd",
       "kind": "entry",
       "name": "Repohistory",
@@ -17509,6 +17600,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "40c6b8276e92",
+      "kind": "entry",
+      "name": "UsageRail",
+      "url": "https://usagerail.com/",
+      "category": "payment-and-billing-integration",
+      "parent": null,
+      "desc_en": "API keys, rate limits, quotas and usage-based billing for paid APIs, checked inside your own server with no gateway. Free up to $1,000/month billed and 1M requests/month.",
+      "desc_zh": "付费 API 的 API 密钥、速率限制、配额和基于使用量的计费，在您自己的服务器内部检查，无需网关。免费额度最高每月 1,000 美元计费和每月 100 万次请求。",
+      "status": "active",
+      "first_seen": "2026-11-04",
+      "updated_at": "2026-11-04"
     },
     {
       "id": "d01c97100fcc",
@@ -18577,17 +18681,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "6ee209bad989",
+      "id": "06a50fba0e0e",
       "kind": "note",
       "name": null,
       "url": null,
       "category": "major-cloud-providers",
       "parent": "e39435462537",
-      "desc_en": "2 Arm-based Ampere A1 cores and 12 GB of memory usable as one VM or up to 2 VMs",
-      "desc_zh": "2 个基于 Arm 的 Ampere A1 核心和 12 GB 内存，可作为单个 VM 使用或最多分为 2 个 VM",
+      "desc_en": "4 Arm-based Ampere A1 cores and 24 GB of memory usable as one VM or up to 4 VMs",
+      "desc_zh": "4 个基于 Arm 的 Ampere A1 核心，24 GB 内存可用作一个 VM 或最多 4 个 VM",
       "status": "removed",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-31"
+      "first_seen": "2026-10-31",
+      "updated_at": "2026-11-04"
     }
   ]
 }
