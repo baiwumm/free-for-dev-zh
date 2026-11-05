@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-04T01:29:00.967Z",
+    "synced_at": "2026-11-05T01:30:26.593Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "99b80718ab51510466a8365dcc056fbc501d00e2",
-      "commit_date": "2026-11-03T21:30:32Z"
+      "commit_sha": "215e323e5f0c074d2fe8245d48012dcc60f0ab7c",
+      "commit_date": "2026-11-04T14:41:28Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1418,
-      "removed": 1,
-      "entries": 1385,
+      "active": 1406,
+      "removed": 16,
+      "entries": 1373,
       "notes": 33,
-      "translated": 1412
+      "translated": 1400
     }
   },
   "categories": [
@@ -3302,19 +3302,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "0b2c24932b22",
-      "kind": "entry",
-      "name": "ProxySentry",
-      "url": "https://proxysentry.io/",
-      "category": "apis-data-and-ml",
-      "parent": null,
-      "desc_en": "IP API that detects residential proxies and VPNs. ProxySentry.io offers a free tier with 10k requests per month on rapidapi.com.",
-      "desc_zh": "检测住宅代理和 VPN 的 IP API。ProxySentry.io 在 rapidapi.com 上提供每月 10k 次请求的免费层。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "667e612e58f2",
       "kind": "entry",
       "name": "Publora",
@@ -4199,19 +4186,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "358a7a94c2ca",
-      "kind": "entry",
-      "name": "HeySpace",
-      "url": "https://hey.space",
-      "category": "tools-for-teams-and-collaboration",
-      "parent": null,
-      "desc_en": "Task management tool with chat, calendar, timeline and video calls. Free for up to 5 users.",
-      "desc_zh": "带聊天、日历、时间线和视频通话的任务管理工具。最多 5 名用户免费。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "0f3b168de9cf",
       "kind": "entry",
       "name": "Huly",
@@ -4966,19 +4940,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "4b106e0fce61",
-      "kind": "entry",
-      "name": "Zeitio",
-      "url": "https://zeitio.com/",
-      "category": "tools-for-teams-and-collaboration",
-      "parent": null,
-      "desc_en": "Time tracking and invoicing for freelancers and small teams. Free plan includes 1 user, 3 active projects and 3 invoices per month.",
-      "desc_zh": "面向自由职业者和小团队的时间跟踪与开票工具。免费计划包含 1 名用户、3 个活跃项目和每月 3 张发票。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "41f5fb2c19fe",
       "kind": "entry",
       "name": "Contentful",
@@ -5624,19 +5585,6 @@
       "parent": null,
       "desc_en": "A CI/CD for mobile apps, native or hybrid. With 200 free builds/month 10 min build time and two team members. OSS projects get 45 min build time, +1 concurrency and unlimited team size.",
       "desc_zh": "移动应用的 CI/CD，原生或混合。每月 200 次免费构建，10 分钟构建时间和两个团队成员。开源项目获得 45 分钟构建时间，+1 并发和无限制团队规模",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "edbd89b09118",
-      "kind": "entry",
-      "name": "buddy.works",
-      "url": "https://buddy.works/",
-      "category": "ci-and-cd",
-      "parent": null,
-      "desc_en": "A CI/CD with five free projects and one concurrent run (120 executions/month)",
-      "desc_zh": "CI/CD 服务，包含五个免费项目和一次并发运行（每月 120 次执行）",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -6435,17 +6383,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "099923f129e2",
+      "id": "c926be46bbed",
       "kind": "entry",
-      "name": "Datree",
-      "url": "https://www.datree.io/",
+      "name": "CyberShield Studio",
+      "url": "https://cybershieldstudio.com/",
       "category": "security-and-pki",
       "parent": null,
-      "desc_en": "Open Source CLI tool to prevent Kubernetes misconfigurations by ensuring that manifests and Helm charts follow best practices as well as your organization’s policies",
-      "desc_zh": "一个开源的 CLI 工具，通过确保清单和 Helm 图表遵循最佳实践以及您组织的策略，来防止 Kubernetes 配置错误",
+      "desc_en": "Security monitoring for e-commerce store operators and developers. Weekly scans for JavaScript changes or injection, tracking before consent, security header settings, and vulnerable client-side libraries and WordPress plugins. Free plan monitors 1 store (home page + checkout path) with 30 days of history. No credit card required.",
+      "desc_zh": "为电商店主和开发者提供安全监控。每周扫描 JavaScript 变更或注入，跟踪用户同意前的行为、安全头设置，以及易受攻击的客户端库和 WordPress 插件。免费计划可监控 1 个商店（主页 + 结账路径），提供 30 天的历史记录。无需信用卡。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-05",
+      "updated_at": "2026-11-05"
     },
     {
       "id": "d22a9df09521",
@@ -8281,6 +8229,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "44b3ff522068",
+      "kind": "entry",
+      "name": "hypermonitors.com",
+      "url": "https://hypermonitors.com",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Monitors your infrastructure from three different locations (ZH - NYC - SG) with every outage checked from a 2nd location before alerts go out. Free forever for 5 monitors and 5 minute checks.",
+      "desc_zh": "从三个不同位置（ZH - NYC - SG）监控您的基础设施，每次故障都会从第 2 个位置进行检查，然后再发送警报。5 个监控和 5 分钟检查永久免费。",
+      "status": "active",
+      "first_seen": "2026-11-05",
+      "updated_at": "2026-11-05"
+    },
+    {
       "id": "b6a4bec6ce16",
       "kind": "entry",
       "name": "incidenthub.cloud",
@@ -8736,19 +8697,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "0ff4daacc335",
-      "kind": "entry",
-      "name": "supaguard.app",
-      "url": "https://supaguard.app/",
-      "category": "monitoring",
-      "parent": null,
-      "desc_en": "Synthetic monitoring from 20+ global regions. The free tier includes 1,000 browser checks/mo with AI-driven self-healing and automated test generation.",
-      "desc_zh": "来自20+全球区域的合成监控。免费层级包含每月1,000次浏览器检查，具有AI驱动的自愈和自动化测试生成。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "9ce7f8023013",
       "kind": "entry",
       "name": "superlog.sh",
@@ -9082,19 +9030,6 @@
       "parent": null,
       "desc_en": "Error tracking and product analytics in one tool, set up and queried by your coding agent over MCP. Free for 1M events and 50k errors per month, no card required.",
       "desc_zh": "一个工具同时提供错误追踪和产品分析，可由你的编码代理通过 MCP 进行设置和查询。每月 100 万事件和 5 万错误免费，无需银行卡。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "c4dce38c4f61",
-      "kind": "entry",
-      "name": "Whitespace",
-      "url": "https://whitespace.dev",
-      "category": "crash-and-exception-handling",
-      "parent": null,
-      "desc_en": "One-click bug reports straight in your browser. Free plan with unlimited recordings for personal use.",
-      "desc_zh": "直接在浏览器中一键提交 bug 报告。免费计划提供不限量录制，供个人使用。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -10634,19 +10569,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "32e4db8c2e45",
-      "kind": "entry",
-      "name": "Hypertune",
-      "url": "https://www.hypertune.com",
-      "category": "feature-toggles-management-platforms",
-      "parent": null,
-      "desc_en": "Type-safe feature flags, A/B testing, analytics and app configuration, with Git-style version control and synchronous, in-memory, local flag evaluation. Free for up to 5 team members with unlimited feature flags and A/B tests.",
-      "desc_zh": "类型安全的 feature flags、A/B 测试、分析和应用配置，具备 Git 风格的版本控制以及同步、内存中的本地 flag 求值。最多 5 名团队成员免费，feature flags 和 A/B 测试数量不限。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "82dfbab12024",
       "kind": "entry",
       "name": "Statsig",
@@ -11349,19 +11271,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "536306a88658",
-      "kind": "entry",
-      "name": "Audio Enhancer",
-      "url": "https://voice-clone.org/tools/audio-enhancer",
-      "category": "generative-ai",
-      "parent": null,
-      "desc_en": "AI-powered audio enhancer SaaS that removes noise and echo while preserving natural vocal clarity. totally Free: unlimited one-click enhancements, no login required, supports MP3/WAV/FLAC",
-      "desc_zh": "AI 驱动的音频增强 SaaS，可在保持自然人声清晰度的同时消除噪音与回声。完全免费：无限次一键增强，无需登录，支持 MP3/WAV/FLAC",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "adfd3e0868a8",
       "kind": "entry",
       "name": "Braintrust",
@@ -11399,6 +11308,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "197093363f5a",
+      "kind": "entry",
+      "name": "evalship",
+      "url": "https://evalship.com",
+      "category": "generative-ai",
+      "parent": null,
+      "desc_en": "find the flaws in your LLM evals. Reviews your evals suite for improvement opportunities, monitors your PRs for any eval regressions or unintended side effects and optimizes your prompts and models based on experiments in your product. Free for 1 private repo for 1 user, 100 PR analyses a month, 30 days of eval history. Free for public repos.",
+      "desc_zh": "发现您的 LLM 评估中的缺陷。审查您的评估套件以寻找改进机会，监控您的 PR 是否存在评估回退或意外副作用，并根据产品中的实验优化您的提示词和模型。1 个用户、1 个私有仓库免费，每月 100 次 PR 分析，30 天评估历史。公共仓库免费。",
+      "status": "active",
+      "first_seen": "2026-11-05",
+      "updated_at": "2026-11-05"
     },
     {
       "id": "d154c917e15f",
@@ -12280,19 +12202,6 @@
       "parent": null,
       "desc_en": "Reactive backend as a service, hosting your data (documents with relationships & serializable ACID transactions), serverless functions, and WebSockets to stream updates to various clients. Free for small projects - up to 1M records, 5M monthly function calls.",
       "desc_zh": "响应式后端即服务，托管你的数据（带关系的文档和可序列化的 ACID 事务）、无服务器函数，以及向各类客户端流式推送更新的 WebSocket。对小项目免费——最多 100 万条记录、每月 500 万次函数调用。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "f0cc0c8d2d3d",
-      "kind": "entry",
-      "name": "ETLR",
-      "url": "https://etlr.io",
-      "category": "baas",
-      "parent": null,
-      "desc_en": "Define, version, and deploy automation scripts using YAML. A developer-first alternative to drag-and-drop tools. Can be used for scheduled tasks, AI agents, and infrastructure monitoring. Free tier includes 100 credits/month.",
-      "desc_zh": "使用 YAML 定义、版本化并部署自动化脚本。以开发者为先的拖拽式工具替代方案。可用于定时任务、AI 智能体和基础设施监控。免费层包含每月 100 个 credits。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -14391,19 +14300,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "dccdab54dad3",
-      "kind": "entry",
-      "name": "MeuScrum",
-      "url": "https://www.meuscrum.com/en",
-      "category": "issue-tracking-and-project-management",
-      "parent": null,
-      "desc_en": "Free online scrum tool with kanban board",
-      "desc_zh": "带看板的免费在线 Scrum 工具",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "90c2a28e6a00",
       "kind": "entry",
       "name": "myspec.dev",
@@ -14555,19 +14451,6 @@
       "parent": null,
       "desc_en": "Real-time collaborative task lists and team outlines. The free plan has one workspace with unlimited tasks and projects; 1GB file storage; 1-week project history; and five attendees per video meeting.",
       "desc_zh": "实时协作任务列表和团队大纲。免费计划包含一个工作空间，具有无限任务和项目；1GB 文件存储；1周项目历史；每个视频会议五名参与者。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "0a392f2df48d",
-      "kind": "entry",
-      "name": "Teaminal",
-      "url": "https://www.teaminal.com",
-      "category": "issue-tracking-and-project-management",
-      "parent": null,
-      "desc_en": "Standup, retro, and sprint planning tool for remote teams. Free for up to 15 users.",
-      "desc_zh": "面向远程团队的站会、回顾和冲刺规划工具。最多 15 名用户免费。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -17940,19 +17823,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "e7a38ee46752",
-      "kind": "entry",
-      "name": "SnapAPI",
-      "url": "https://snapapi.pics",
-      "category": "screenshot-apis",
-      "parent": null,
-      "desc_en": "Screenshot, video recording, PDF generation, and web data extraction API. Free plan includes 200 screenshots/month.",
-      "desc_zh": "截图、视频录制、PDF 生成和网页数据提取 API。免费计划包含每月 200 张截图。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "a0f8a1eba62b",
       "kind": "entry",
       "name": "thumbnail.ws",
@@ -18187,19 +18057,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "7ddb2991aa3d",
-      "kind": "entry",
-      "name": "Hosting Checker",
-      "url": "https://hostingchecker.co",
-      "category": "miscellaneous",
-      "parent": null,
-      "desc_en": "Check hosting information such as ASN, ISP, location and more for any domain, website or IP address. Also includes multiple hosting and DNS-related tools.",
-      "desc_zh": "查询任何域名、网站或 IP 地址的托管信息，如 ASN、ISP、位置等。还包含多种托管和 DNS 相关工具。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "06569eb80121",
       "kind": "entry",
       "name": "newreleases.io",
@@ -18403,19 +18260,6 @@
       "parent": null,
       "desc_en": "Two-way Google Calendar sync. Free tier: 2 accounts, unlimited events.",
       "desc_zh": "Google Calendar 双向同步。免费层：2 个账户，事件数量不限。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "6037e5bd1165",
-      "kind": "entry",
-      "name": "UUID Generator",
-      "url": "https://newuuid.com/",
-      "category": "miscellaneous",
-      "parent": null,
-      "desc_en": "Generate UUID v1, UUID v4, UUID v7, GUID, Nil UUIDs, CUID v1/v2, NanoID, and ULID instantly with enterprise-grade",
-      "desc_zh": "即时生成 UUID v1、UUID v4、UUID v7、GUID、Nil UUIDs、CUID v1/v2、NanoID 和 ULID，企业级品质。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -18679,6 +18523,201 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "0b2c24932b22",
+      "kind": "entry",
+      "name": "ProxySentry",
+      "url": "https://proxysentry.io/",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "IP API that detects residential proxies and VPNs. ProxySentry.io offers a free tier with 10k requests per month on rapidapi.com.",
+      "desc_zh": "检测住宅代理和 VPN 的 IP API。ProxySentry.io 在 rapidapi.com 上提供每月 10k 次请求的免费层。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "358a7a94c2ca",
+      "kind": "entry",
+      "name": "HeySpace",
+      "url": "https://hey.space",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Task management tool with chat, calendar, timeline and video calls. Free for up to 5 users.",
+      "desc_zh": "带聊天、日历、时间线和视频通话的任务管理工具。最多 5 名用户免费。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "4b106e0fce61",
+      "kind": "entry",
+      "name": "Zeitio",
+      "url": "https://zeitio.com/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Time tracking and invoicing for freelancers and small teams. Free plan includes 1 user, 3 active projects and 3 invoices per month.",
+      "desc_zh": "面向自由职业者和小团队的时间跟踪与开票工具。免费计划包含 1 名用户、3 个活跃项目和每月 3 张发票。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "edbd89b09118",
+      "kind": "entry",
+      "name": "buddy.works",
+      "url": "https://buddy.works/",
+      "category": "ci-and-cd",
+      "parent": null,
+      "desc_en": "A CI/CD with five free projects and one concurrent run (120 executions/month)",
+      "desc_zh": "CI/CD 服务，包含五个免费项目和一次并发运行（每月 120 次执行）",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "099923f129e2",
+      "kind": "entry",
+      "name": "Datree",
+      "url": "https://www.datree.io/",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Open Source CLI tool to prevent Kubernetes misconfigurations by ensuring that manifests and Helm charts follow best practices as well as your organization’s policies",
+      "desc_zh": "一个开源的 CLI 工具，通过确保清单和 Helm 图表遵循最佳实践以及您组织的策略，来防止 Kubernetes 配置错误",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "0ff4daacc335",
+      "kind": "entry",
+      "name": "supaguard.app",
+      "url": "https://supaguard.app/",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Synthetic monitoring from 20+ global regions. The free tier includes 1,000 browser checks/mo with AI-driven self-healing and automated test generation.",
+      "desc_zh": "来自20+全球区域的合成监控。免费层级包含每月1,000次浏览器检查，具有AI驱动的自愈和自动化测试生成。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "c4dce38c4f61",
+      "kind": "entry",
+      "name": "Whitespace",
+      "url": "https://whitespace.dev",
+      "category": "crash-and-exception-handling",
+      "parent": null,
+      "desc_en": "One-click bug reports straight in your browser. Free plan with unlimited recordings for personal use.",
+      "desc_zh": "直接在浏览器中一键提交 bug 报告。免费计划提供不限量录制，供个人使用。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "32e4db8c2e45",
+      "kind": "entry",
+      "name": "Hypertune",
+      "url": "https://www.hypertune.com",
+      "category": "feature-toggles-management-platforms",
+      "parent": null,
+      "desc_en": "Type-safe feature flags, A/B testing, analytics and app configuration, with Git-style version control and synchronous, in-memory, local flag evaluation. Free for up to 5 team members with unlimited feature flags and A/B tests.",
+      "desc_zh": "类型安全的 feature flags、A/B 测试、分析和应用配置，具备 Git 风格的版本控制以及同步、内存中的本地 flag 求值。最多 5 名团队成员免费，feature flags 和 A/B 测试数量不限。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "536306a88658",
+      "kind": "entry",
+      "name": "Audio Enhancer",
+      "url": "https://voice-clone.org/tools/audio-enhancer",
+      "category": "generative-ai",
+      "parent": null,
+      "desc_en": "AI-powered audio enhancer SaaS that removes noise and echo while preserving natural vocal clarity. totally Free: unlimited one-click enhancements, no login required, supports MP3/WAV/FLAC",
+      "desc_zh": "AI 驱动的音频增强 SaaS，可在保持自然人声清晰度的同时消除噪音与回声。完全免费：无限次一键增强，无需登录，支持 MP3/WAV/FLAC",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "f0cc0c8d2d3d",
+      "kind": "entry",
+      "name": "ETLR",
+      "url": "https://etlr.io",
+      "category": "baas",
+      "parent": null,
+      "desc_en": "Define, version, and deploy automation scripts using YAML. A developer-first alternative to drag-and-drop tools. Can be used for scheduled tasks, AI agents, and infrastructure monitoring. Free tier includes 100 credits/month.",
+      "desc_zh": "使用 YAML 定义、版本化并部署自动化脚本。以开发者为先的拖拽式工具替代方案。可用于定时任务、AI 智能体和基础设施监控。免费层包含每月 100 个 credits。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "dccdab54dad3",
+      "kind": "entry",
+      "name": "MeuScrum",
+      "url": "https://www.meuscrum.com/en",
+      "category": "issue-tracking-and-project-management",
+      "parent": null,
+      "desc_en": "Free online scrum tool with kanban board",
+      "desc_zh": "带看板的免费在线 Scrum 工具",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "0a392f2df48d",
+      "kind": "entry",
+      "name": "Teaminal",
+      "url": "https://www.teaminal.com",
+      "category": "issue-tracking-and-project-management",
+      "parent": null,
+      "desc_en": "Standup, retro, and sprint planning tool for remote teams. Free for up to 15 users.",
+      "desc_zh": "面向远程团队的站会、回顾和冲刺规划工具。最多 15 名用户免费。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "e7a38ee46752",
+      "kind": "entry",
+      "name": "SnapAPI",
+      "url": "https://snapapi.pics",
+      "category": "screenshot-apis",
+      "parent": null,
+      "desc_en": "Screenshot, video recording, PDF generation, and web data extraction API. Free plan includes 200 screenshots/month.",
+      "desc_zh": "截图、视频录制、PDF 生成和网页数据提取 API。免费计划包含每月 200 张截图。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "7ddb2991aa3d",
+      "kind": "entry",
+      "name": "Hosting Checker",
+      "url": "https://hostingchecker.co",
+      "category": "miscellaneous",
+      "parent": null,
+      "desc_en": "Check hosting information such as ASN, ISP, location and more for any domain, website or IP address. Also includes multiple hosting and DNS-related tools.",
+      "desc_zh": "查询任何域名、网站或 IP 地址的托管信息，如 ASN、ISP、位置等。还包含多种托管和 DNS 相关工具。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
+    },
+    {
+      "id": "6037e5bd1165",
+      "kind": "entry",
+      "name": "UUID Generator",
+      "url": "https://newuuid.com/",
+      "category": "miscellaneous",
+      "parent": null,
+      "desc_en": "Generate UUID v1, UUID v4, UUID v7, GUID, Nil UUIDs, CUID v1/v2, NanoID, and ULID instantly with enterprise-grade",
+      "desc_zh": "即时生成 UUID v1、UUID v4、UUID v7、GUID、Nil UUIDs、CUID v1/v2、NanoID 和 ULID，企业级品质。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-05"
     },
     {
       "id": "06a50fba0e0e",
