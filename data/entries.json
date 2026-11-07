@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-05T01:30:26.593Z",
+    "synced_at": "2026-11-07T00:59:08.457Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "215e323e5f0c074d2fe8245d48012dcc60f0ab7c",
-      "commit_date": "2026-11-04T14:41:28Z"
+      "commit_sha": "ab5358664579b76b48692995058c932879a0d42f",
+      "commit_date": "2026-11-06T21:21:31Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1406,
+      "active": 1408,
       "removed": 16,
-      "entries": 1373,
+      "entries": 1375,
       "notes": 33,
-      "translated": 1400
+      "translated": 1402
     }
   },
   "categories": [
@@ -6771,6 +6771,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "f18fea1a6b48",
+      "kind": "entry",
+      "name": "Topscan.me",
+      "url": "https://topscan.me/free-plan",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "SaaS vulnerability scanning platform. Free: a full infrastructure scan of one host every week, Discovery and Attack Surface for everything around it, one repository, one user, findings with a fix and a Security Score.",
+      "desc_zh": "SaaS 漏洞扫描平台。免费版：每周对一个主机进行完整的基础设施扫描，发现其周围的所有攻击面，一个代码库，一个用户，带有修复建议的漏洞发现和安全评分。",
+      "status": "active",
+      "first_seen": "2026-11-07",
+      "updated_at": "2026-11-07"
     },
     {
       "id": "25470ac8d3c8",
@@ -17314,6 +17327,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "1d55db23a5ee",
+      "kind": "entry",
+      "name": "Canjean",
+      "url": "https://canjean.com/exchange-rate-api",
+      "category": "payment-and-billing-integration",
+      "parent": null,
+      "desc_en": "Free exchange rate API for 150+ currencies in JSON, CSV and plain text, no API key or sign-up.",
+      "desc_zh": "150+ 种货币的免费汇率 API，支持 JSON、CSV 和纯文本格式，无需 API 密钥或注册。",
+      "status": "active",
+      "first_seen": "2026-11-07",
+      "updated_at": "2026-11-07"
     },
     {
       "id": "a27a71ab7bc3",
