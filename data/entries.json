@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-07T00:59:08.457Z",
+    "synced_at": "2026-11-08T00:46:50.767Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "ab5358664579b76b48692995058c932879a0d42f",
-      "commit_date": "2026-11-06T21:21:31Z"
+      "commit_sha": "fc51a21b865276088a08c8fa14712062c5112b9b",
+      "commit_date": "2026-11-07T10:51:39Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1408,
+      "active": 1410,
       "removed": 16,
-      "entries": 1375,
+      "entries": 1377,
       "notes": 33,
-      "translated": 1402
+      "translated": 1404
     }
   },
   "categories": [
@@ -12103,6 +12103,19 @@
       "updated_at": "2026-10-17"
     },
     {
+      "id": "948eaf1e8098",
+      "kind": "entry",
+      "name": "Uppcoder",
+      "url": "https://portal.uppcoder.com/",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Full stack development environment hosted on own infrastructure with selectable framework, db engine behind https with ssh access, vscode + terminal in the editor. Free tier: always on, 2GB disk and 2GB ram. No card required.",
+      "desc_zh": "基于自有基础设施的全栈开发环境，可选择框架和数据库引擎，支持 HTTPS 和 SSH 访问，编辑器内集成 VS Code + 终端。免费套餐：始终在线，2GB 磁盘和 2GB 内存。无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-08",
+      "updated_at": "2026-11-08"
+    },
+    {
       "id": "00422436c4fb",
       "kind": "entry",
       "name": "Val Town",
@@ -17327,6 +17340,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "36e99167bed7",
+      "kind": "entry",
+      "name": "BillDog.io",
+      "url": "https://billdog.io/",
+      "category": "payment-and-billing-integration",
+      "parent": null,
+      "desc_en": "In-app subscription paywalls, A/B testing, product analytics, and messaging with SDKs for iOS, Android, React Native, Flutter, Unity, and web. Free up to $3k/mo in tracked revenue and 1M monthly analytics events.",
+      "desc_zh": "应用内订阅付费墙、A/B 测试、产品分析和消息推送，提供 iOS、Android、React Native、Flutter、Unity 和 Web 的 SDK。免费额度：追踪收入最高 $3k/月，月度分析事件 1M。",
+      "status": "active",
+      "first_seen": "2026-11-08",
+      "updated_at": "2026-11-08"
     },
     {
       "id": "1d55db23a5ee",
