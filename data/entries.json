@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-08T00:46:50.767Z",
+    "synced_at": "2026-11-09T01:00:16.210Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "fc51a21b865276088a08c8fa14712062c5112b9b",
-      "commit_date": "2026-11-07T10:51:39Z"
+      "commit_sha": "bb544b60b134ba7090b97c75bf163cc2345d0aef",
+      "commit_date": "2026-11-08T14:55:04Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1410,
-      "removed": 16,
-      "entries": 1377,
+      "active": 1412,
+      "removed": 17,
+      "entries": 1379,
       "notes": 33,
-      "translated": 1404
+      "translated": 1406
     }
   },
   "categories": [
@@ -3131,6 +3131,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "56fa7da198a3",
+      "kind": "entry",
+      "name": "nosocial Embed API",
+      "url": "https://nosocial.eu/api-docs",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "A free API for developers to embed public posts from X, Instagram, TikTok, YouTube, Bluesky, Threads, Facebook, Telegram, Reddit, and LinkedIn on their websites. It returns the embed HTML and any required scripts as JSON. No API key and no request limits.",
+      "desc_zh": "一款面向开发者的免费 API，可在其网站上嵌入来自 X、Instagram、TikTok、YouTube、Bluesky、Threads、Facebook、Telegram、Reddit 和 LinkedIn 的公开帖子。它返回嵌入 HTML 和任何必需的脚本，以 JSON 格式提供。无需 API 密钥，无请求限制。",
+      "status": "active",
+      "first_seen": "2026-11-09",
+      "updated_at": "2026-11-09"
     },
     {
       "id": "a005ae3ca1b8",
@@ -11141,17 +11154,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "8647ecd3bf59",
+      "id": "e960dfa749a4",
       "kind": "entry",
-      "name": "staticforms.xyz",
-      "url": "https://www.staticforms.xyz/",
+      "name": "staticforms.dev",
+      "url": "https://www.staticforms.dev/",
       "category": "forms",
       "parent": null,
       "desc_en": "Integrate HTML forms easily without any server-side code for free. After the user submits the form, an email with the form content will be sent to your registered address.",
-      "desc_zh": "免费轻松集成 HTML 表单，无需任何服务端代码。用户提交表单后，包含表单内容的邮件将发送至你注册的地址。",
+      "desc_zh": "轻松集成 HTML 表单，无需任何服务器端代码，且完全免费。用户提交表单后，表单内容将以电子邮件形式发送到您注册的地址。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-09",
+      "updated_at": "2026-11-09"
     },
     {
       "id": "e11d3035d936",
@@ -13284,6 +13297,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "ac3e041ef18a",
+      "kind": "entry",
+      "name": "InstaBox",
+      "url": "https://instabox.sh/",
+      "category": "iaas",
+      "parent": null,
+      "desc_en": "Cloud Linux machine for AI agents and developers, running on Firecracker microVMs with Docker and common toolchains preinstalled. Free plan: one 4 vCPU / 8 GiB machine, 20 GiB disk, 5 snapshots and 100 GiB egress per month, no credit card required. Not a persistent VPS: a free machine pauses after 30 minutes idle and runs at most 8 hours per session.",
+      "desc_zh": "面向 AI 代理和开发者的 Cloud Linux 机器，运行在 Firecracker microVM 上，并预装了 Docker 和常用工具链。免费计划：一台 4 vCPU / 8 GiB 的机器，20 GiB 磁盘，每月 5 个快照和 100 GiB 出站流量，无需信用卡。非持久化 VPS：免费机器在空闲 30 分钟后会暂停，且每次会话最多运行 8 小时。",
+      "status": "active",
+      "first_seen": "2026-11-09",
+      "updated_at": "2026-11-09"
     },
     {
       "id": "87a31874cce0",
@@ -18575,6 +18601,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "8647ecd3bf59",
+      "kind": "entry",
+      "name": "staticforms.xyz",
+      "url": "https://www.staticforms.xyz/",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Integrate HTML forms easily without any server-side code for free. After the user submits the form, an email with the form content will be sent to your registered address.",
+      "desc_zh": "免费轻松集成 HTML 表单，无需任何服务端代码。用户提交表单后，包含表单内容的邮件将发送至你注册的地址。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-09"
     },
     {
       "id": "0b2c24932b22",
