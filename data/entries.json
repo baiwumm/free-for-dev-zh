@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-09T01:00:16.210Z",
+    "synced_at": "2026-11-10T03:38:43.603Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "bb544b60b134ba7090b97c75bf163cc2345d0aef",
-      "commit_date": "2026-11-08T14:55:04Z"
+      "commit_sha": "ab7423134a879c1a96600f41b018486cd8b798fd",
+      "commit_date": "2026-11-09T20:12:10Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1412,
-      "removed": 17,
-      "entries": 1379,
+      "active": 1413,
+      "removed": 18,
+      "entries": 1380,
       "notes": 33,
-      "translated": 1406
+      "translated": 1407
     }
   },
   "categories": [
@@ -7514,6 +7514,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "dd9b1e860157",
+      "kind": "entry",
+      "name": "notifysphere.net",
+      "url": "https://notifysphere.net/",
+      "category": "messaging-and-streaming",
+      "parent": null,
+      "desc_en": "All-in-one Customer Engagement and Automation Tool ( push notifications, whatsapp messages, helpdesk, tracker link and events tracking) for SaaS. Free for up to 1,000 active users per month.",
+      "desc_zh": "全渠道客户参与与自动化工具（推送通知、WhatsApp 消息、帮助台、追踪链接和事件追踪），专为 SaaS 设计。每月免费支持最多 1,000 个活跃用户。",
+      "status": "active",
+      "first_seen": "2026-11-10",
+      "updated_at": "2026-11-10"
+    },
+    {
       "id": "a8e5daab6f59",
       "kind": "entry",
       "name": "Novu.co",
@@ -11817,19 +11830,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "0b678e75a796",
-      "kind": "entry",
-      "name": "Apply.build",
-      "url": "https://apply.build/",
-      "category": "paas",
-      "parent": null,
-      "desc_en": "Build and deploy your GitHub app for free with 0.5 vCPUs / 512 MiB RAM, European servers, automatic firewall, real-time performance metrics. Run Node.js, Python, Go, Java, static sites, microservices, and more.",
-      "desc_zh": "免费构建和部署你的 GitHub 应用，配备 0.5 vCPU / 512 MiB 内存、欧洲服务器、自动防火墙和实时性能指标。可运行 Node.js、Python、Go、Java、静态网站、微服务等。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "9ddca0526a60",
       "kind": "entry",
       "name": "appwrite",
@@ -12998,6 +12998,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "8249cc0241f2",
+      "kind": "entry",
+      "name": "DNSvivo",
+      "url": "https://dnsvivo.com/",
+      "category": "dns",
+      "parent": null,
+      "desc_en": "Free managed DNS with automatic failover, weighted load balancing, and Dynamic DNS (DDNS). Includes 2 domains, 5 IP addresses monitored from 5 locations, and 3 DDNS records.",
+      "desc_zh": "免费托管 DNS，支持自动故障转移、加权负载均衡和动态 DNS (DDNS)。包含 2 个域名、从 5 个位置监控的 5 个 IP 地址，以及 3 条 DDNS 记录。",
+      "status": "active",
+      "first_seen": "2026-11-10",
+      "updated_at": "2026-11-10"
     },
     {
       "id": "8452c4a421e1",
@@ -14904,11 +14917,11 @@
       "url": "https://hyperserve.io/",
       "category": "storage-and-media-processing",
       "parent": null,
-      "desc_en": "Video backend API for developers: accept any format your users upload, transcode to MP4, and deliver globally via CDN. The free tier includes 50 videos, 1 GB per file, and 250 GB bandwidth per month.",
-      "desc_zh": "面向开发者的视频后端 API：接受用户上传的任何格式，转码为 MP4，并通过 CDN 全球分发。免费层包含 50 个视频、每个文件 1 GB、每月 250 GB 带宽。",
+      "desc_en": "Video backend API for developers: accept any format your users upload, transcode to MP4, and deliver globally via CDN. The free tier includes 10 videos, 200 MB per file, and 50 GB bandwidth per month.",
+      "desc_zh": "面向开发者的视频后端 API：接受用户上传的任何格式，转码为 MP4，并通过 CDN 全球分发。免费套餐包含 10 个视频、每个文件 200 MB，以及每月 50 GB 带宽。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-10"
     },
     {
       "id": "4182c88db81f",
@@ -18601,6 +18614,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "0b678e75a796",
+      "kind": "entry",
+      "name": "Apply.build",
+      "url": "https://apply.build/",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Build and deploy your GitHub app for free with 0.5 vCPUs / 512 MiB RAM, European servers, automatic firewall, real-time performance metrics. Run Node.js, Python, Go, Java, static sites, microservices, and more.",
+      "desc_zh": "免费构建和部署你的 GitHub 应用，配备 0.5 vCPU / 512 MiB 内存、欧洲服务器、自动防火墙和实时性能指标。可运行 Node.js、Python、Go、Java、静态网站、微服务等。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-10"
     },
     {
       "id": "8647ecd3bf59",
