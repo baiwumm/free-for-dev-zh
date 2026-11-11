@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-10T03:38:43.603Z",
+    "synced_at": "2026-11-11T01:18:45.943Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "ab7423134a879c1a96600f41b018486cd8b798fd",
-      "commit_date": "2026-11-09T20:12:10Z"
+      "commit_sha": "1cb2ae59d0d3d1faa8ff6a8c3ac2d8fb92005831",
+      "commit_date": "2026-11-10T14:23:31Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1413,
+      "active": 1414,
       "removed": 18,
-      "entries": 1380,
+      "entries": 1381,
       "notes": 33,
-      "translated": 1407
+      "translated": 1408
     }
   },
   "categories": [
@@ -8994,6 +8994,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "8cd2db128787",
+      "kind": "entry",
+      "name": "measure.sh",
+      "url": "https://measure.sh/",
+      "category": "crash-and-exception-handling",
+      "parent": null,
+      "desc_en": "Mobile app monitoring with errors, performance tracking and session replays. 5 GB data per month free. No limits if self-hosted.",
+      "desc_zh": "Mobile app monitoring with errors, performance tracking and session replays. 5 GB data per month free. No limits if self-hosted.",
+      "status": "active",
+      "first_seen": "2026-11-11",
+      "updated_at": "2026-11-11"
     },
     {
       "id": "ee9300099482",
