@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-11T01:18:45.943Z",
+    "synced_at": "2026-11-12T02:19:02.205Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "1cb2ae59d0d3d1faa8ff6a8c3ac2d8fb92005831",
-      "commit_date": "2026-11-10T14:23:31Z"
+      "commit_sha": "72ad7e24c4f354f84eb02fddfa036f297ea9936f",
+      "commit_date": "2026-11-11T12:05:20Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1414,
+      "active": 1417,
       "removed": 18,
-      "entries": 1381,
+      "entries": 1384,
       "notes": 33,
-      "translated": 1408
+      "translated": 1411
     }
   },
   "categories": [
@@ -7475,6 +7475,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "2ea0dc40d0d6",
+      "kind": "entry",
+      "name": "GravEx Chat",
+      "url": "https://chat.gravex.app/en/",
+      "category": "messaging-and-streaming",
+      "parent": null,
+      "desc_en": "Free chat sdk that works for any client, like web, Android, iOS or whatever. Create API key and hand it over to your own Agent(Claude, Codex...) with [llms.txt](https://chat.gravex.app/en/llms.txt), then you get your messenger to your service. It's that simple.",
+      "desc_zh": "适用于任何客户端（如 Web、Android、iOS 或其他）的免费聊天 SDK。创建 API 密钥，并通过 [llms.txt](https://chat.gravex.app/en/llms.txt) 交给你的 Agent（Claude、Codex...），然后你就能将 messenger 接入你的服务。就是这么简单。",
+      "status": "active",
+      "first_seen": "2026-11-12",
+      "updated_at": "2026-11-12"
+    },
+    {
       "id": "e974b0702ed7",
       "kind": "entry",
       "name": "HiveMQ",
@@ -12818,6 +12831,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "25b5847b6814",
+      "kind": "entry",
+      "name": "Reliant",
+      "url": "https://reliantlabs.io",
+      "category": "web-hosting",
+      "parent": null,
+      "desc_en": "Host, monitor, and deploy your services with production best practices. Tracing, continuous profiling, metrics, and logs fully baked in and correlated with each release allow you to identify and auto rollback on demand. One free static site per organization, 1 GiB of storage, 10 GiB of traffic a month, CDN with HTTPS, custom domains, no card needed, deployed with the open-source forge CLI.",
+      "desc_zh": "使用生产最佳实践来托管、监控和部署你的服务。Tracing、continuous profiling、metrics 和 logs 全部内置并与每次发布相关联，让你能够按需识别并自动回滚。每个组织一个免费静态站点、1 GiB 存储空间、每月 10 GiB 流量、带 HTTPS 的 CDN、自定义域名、无需信用卡，使用开源 forge CLI 部署。",
+      "status": "active",
+      "first_seen": "2026-11-12",
+      "updated_at": "2026-11-12"
+    },
+    {
       "id": "dfd22150c9af",
       "kind": "entry",
       "name": "render.com",
@@ -17080,6 +17106,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "7ab2d7a9c2c6",
+      "kind": "entry",
+      "name": "RudderStack",
+      "url": "https://rudderstack.com/",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Event streaming to 200+ destinations and data warehouse, plus reverse ETL. Comes with MCP server and CLI for AI agents. Free forever for 250k events/month.",
+      "desc_zh": "向 200+ 个目的地和数据仓库进行事件流传输，以及反向 ETL。附带 MCP server 和 CLI 用于 AI agents。每月 250k 事件永久免费。",
+      "status": "active",
+      "first_seen": "2026-11-12",
+      "updated_at": "2026-11-12"
     },
     {
       "id": "8e8e7a753ab2",
