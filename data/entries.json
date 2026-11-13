@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-12T02:19:02.205Z",
+    "synced_at": "2026-11-13T01:57:26.508Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "72ad7e24c4f354f84eb02fddfa036f297ea9936f",
-      "commit_date": "2026-11-11T12:05:20Z"
+      "commit_sha": "714e069bcf873c314b838fc3a919663f859ebf8e",
+      "commit_date": "2026-11-12T17:04:22Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1417,
+      "active": 1419,
       "removed": 18,
-      "entries": 1384,
+      "entries": 1386,
       "notes": 33,
-      "translated": 1411
+      "translated": 1413
     }
   },
   "categories": [
@@ -3365,6 +3365,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "2a95bd7a74fa",
+      "kind": "entry",
+      "name": "Rizamo",
+      "url": "https://rizamo.com",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Social media publishing API: schedule and publish to Instagram, Facebook, TikTok, Threads, YouTube and more over REST, webhooks or an MCP server for AI agents, with comment inbox and analytics. Free forever for 2 connected accounts, unlimited posts, every feature included, no credit card.",
+      "desc_zh": "社交媒体发布 API：通过 REST、webhooks 或 AI 代理的 MCP 服务器在 Instagram、Facebook、TikTok、Threads、YouTube 等平台安排和发布，包含评论收件箱和分析功能。2 个连接账户永久免费，无限帖子，包含所有功能，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-13",
+      "updated_at": "2026-11-13"
     },
     {
       "id": "f74e31b3749d",
@@ -10926,11 +10939,11 @@
       "url": "https://formgong.com/",
       "category": "forms",
       "parent": null,
-      "desc_en": "Multilingual form backend for generated websites that need contact or other forms. Free tier: 300 submissions/month, email and Telegram notifications.",
-      "desc_zh": "面向需要联系表单或其他表单的生成网站的多语言表单后端。免费层：每月 300 次提交，支持邮件和 Telegram 通知。",
+      "desc_en": "Multilingual form backend for generated websites that need contact or other forms. Free tier: 250 submissions/month, email and Telegram notifications.",
+      "desc_zh": "为生成式网站提供多语言表单后端，用于联系或其他表单。免费层级：每月 250 次提交，支持邮件和 Telegram 通知。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-13"
     },
     {
       "id": "cc76b190ddfb",
@@ -17147,6 +17160,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "d249f40d7604",
+      "kind": "entry",
+      "name": "Spreelytics",
+      "url": "https://spreelytics.com",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Privacy first website and product analytics SaaS that can trace your revenue sources. Free plan: 1 million events per month, unlimited projects and team members with most of the needed features like dashboard, goal, funnel, ai crawler, revenue, and much more.",
+      "desc_zh": "隐私优先的网站和产品分析 SaaS，可追踪您的收入来源。免费计划：每月 100 万次事件，无限项目和团队成员，包含所需的大多数功能，如仪表板、目标、漏斗、ai 爬虫、收入等。",
+      "status": "active",
+      "first_seen": "2026-11-13",
+      "updated_at": "2026-11-13"
+    },
+    {
       "id": "4484d3cd405b",
       "kind": "entry",
       "name": "StatCounter",
@@ -18219,11 +18245,11 @@
       "url": "https://www.pdfmonkey.io/",
       "category": "miscellaneous",
       "parent": null,
-      "desc_en": "Manage PDF templates in a dashboard, call the API with dynamic data, and download your PDF. Offers 300 free documents per month.",
-      "desc_zh": "在仪表板中管理 PDF 模板，使用动态数据调用 API，然后下载你的 PDF。每月提供 300 份免费文档。",
+      "desc_en": "Manage PDF templates in a dashboard, call the API with dynamic data, and download your PDF. Offers 20 free documents per month.",
+      "desc_zh": "在仪表板中管理 PDF 模板，使用动态数据调用 API 并下载您的 PDF。每月提供 20 份免费文档。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-13"
     },
     {
       "id": "40ca4b4f0bd5",
