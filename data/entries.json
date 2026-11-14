@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-13T01:57:26.508Z",
+    "synced_at": "2026-11-14T01:29:44.135Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "714e069bcf873c314b838fc3a919663f859ebf8e",
-      "commit_date": "2026-11-12T17:04:22Z"
+      "commit_sha": "fa28e9c6677a2ef18fed40f9f34a4da73a5160e6",
+      "commit_date": "2026-11-13T16:50:30Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1419,
+      "active": 1421,
       "removed": 18,
-      "entries": 1386,
+      "entries": 1388,
       "notes": 33,
-      "translated": 1413
+      "translated": 1415
     }
   },
   "categories": [
@@ -1961,6 +1961,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "0ae802aad32f",
+      "kind": "entry",
+      "name": "Beliq",
+      "url": "https://beliq.eu",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "European REST API platform for e-invoicing, including generating, validating and delivering e-invoices. The free plan includes 20 live documents/month, plus 400 sandbox documents/month (no card required).",
+      "desc_zh": "面向电子发票的欧洲 REST API 平台，包括生成、验证和交付电子发票。免费计划包含每月 20 个实时文档，外加每月 400 个沙盒文档（无需信用卡）。",
+      "status": "active",
+      "first_seen": "2026-11-14",
+      "updated_at": "2026-11-14"
     },
     {
       "id": "63014cfa649e",
@@ -9891,6 +9904,19 @@
       "status": "active",
       "first_seen": "2026-10-28",
       "updated_at": "2026-10-28"
+    },
+    {
+      "id": "97da7f81b61c",
+      "kind": "entry",
+      "name": "Groundmail",
+      "url": "https://groundmail.dev",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Transactional email API and SMTP relay. 3,000 emails/month free (100/day), three domains, three agent mailboxes, inbound email included.",
+      "desc_zh": "事务性邮件 API 和 SMTP 中继。每月免费 3,000 封邮件（每天 100 封），支持三个域名、三个代理邮箱，包含收件邮件。",
+      "status": "active",
+      "first_seen": "2026-11-14",
+      "updated_at": "2026-11-14"
     },
     {
       "id": "892ebe1199ca",
