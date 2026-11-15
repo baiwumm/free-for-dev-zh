@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-14T01:29:44.135Z",
+    "synced_at": "2026-11-15T01:07:28.095Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "fa28e9c6677a2ef18fed40f9f34a4da73a5160e6",
-      "commit_date": "2026-11-13T16:50:30Z"
+      "commit_sha": "47b016a203f25ac68c950994150e07d8fb8512a4",
+      "commit_date": "2026-11-14T19:39:17Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1421,
-      "removed": 18,
-      "entries": 1388,
+      "active": 1419,
+      "removed": 28,
+      "entries": 1386,
       "notes": 33,
-      "translated": 1415
+      "translated": 1413
     }
   },
   "categories": [
@@ -721,11 +721,11 @@
       "url": "https://azure.microsoft.com/services/devops/pipelines/",
       "category": "major-cloud-providers",
       "parent": "dc1a76d6d699",
-      "desc_en": "10 free parallel jobs with unlimited minutes for open source for Linux, macOS, and Windows",
-      "desc_zh": "10 个免费并行作业，面向 Linux、macOS 和 Windows 的开源项目，使用时长不限",
+      "desc_en": "1 free job limited to 60 minutes per job, 1800 minutes per month for Linux, macOS, and Windows",
+      "desc_zh": "每月 1800 分钟，Linux、macOS 和 Windows 每个作业限 60 分钟，免费作业 1 个",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-15"
     },
     {
       "id": "d3ece6cdd241",
@@ -3640,6 +3640,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "df476d9f4d0c",
+      "kind": "entry",
+      "name": "VPNDetection",
+      "url": "https://vpndetection.io",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "VPN, proxy and hosting detection API for any IP address. The free plan answers the VPN, Tor and relay flags, country and ASN, with no API key, signup or monthly cap.",
+      "desc_zh": "适用于任何 IP 地址的 VPN、代理和托管检测 API。免费计划无需 API 密钥、注册或月度上限，即可回答 VPN、Tor 和中继标志、国家及 ASN 信息。",
+      "status": "active",
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
+    },
+    {
       "id": "b90d7968a959",
       "kind": "entry",
       "name": "WeatherXu",
@@ -4454,19 +4467,6 @@
       "parent": null,
       "desc_en": "Free team chat app. Unlimited users and message history, free forever.",
       "desc_zh": "免费团队聊天应用。用户数量和消息历史不限量，永久免费。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "a9a147c4ef47",
-      "kind": "entry",
-      "name": "Quidlo Timesheets",
-      "url": "https://www.quidlo.com/timesheets",
-      "category": "tools-for-teams-and-collaboration",
-      "parent": null,
-      "desc_en": "A simple timesheet and time tracking app for teams. The free plan has time tracking and generating reports features for up to 10 users.",
-      "desc_zh": "一款面向团队的简易工时表和时间跟踪应用。免费计划提供时间跟踪和报告生成功能，最多支持 10 名用户。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5811,17 +5811,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "5095c7f0fee9",
+      "id": "5e7aeaaec3d4",
       "kind": "entry",
-      "name": "Terrateam",
-      "url": "https://terrateam.io",
+      "name": "Stategraph",
+      "url": "https://stategraph.com",
       "category": "ci-and-cd",
       "parent": null,
       "desc_en": "GitOps-first Terraform automation with pull request-driven workflows, project isolation via self-hosted runners, and layered runs for ordered operations. Free for up to 3 users.",
-      "desc_zh": "GitOps 优先的 Terraform 自动化，提供由 pull request 驱动的工作流、通过自托管 runner 实现的项目隔离，以及用于有序操作的分层运行。最多 3 名用户免费。",
+      "desc_zh": "以 GitOps 为先的 Terraform 自动化，采用基于拉取请求的工作流，通过自托管运行器实现项目隔离，以及分层运行以进行有序操作。免费支持最多 3 个用户。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "80871570b0f5",
@@ -8021,6 +8021,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "80503b3955df",
+      "kind": "entry",
+      "name": "Pingzen",
+      "url": "https://pingzen.dev",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Free uptime and API monitoring with up to 55 monitors, 1-minute check intervals, and instant alerts.",
+      "desc_zh": "免费运行时间和 API 监控，最多 55 个监控器，1 分钟检查间隔，即时警报。",
+      "status": "active",
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
+    },
+    {
       "id": "522fa447052c",
       "kind": "entry",
       "name": "Pingzo",
@@ -9152,19 +9165,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "2c9e7e9abc24",
-      "kind": "entry",
-      "name": "CommandBar",
-      "url": "https://www.commandbar.com/",
-      "category": "search",
-      "parent": null,
-      "desc_en": "Unified Search Bar as-a-service, web-based UI widget/plugin that allows your users to search contents, navigations, features, etc. within your product, which helps discoverability. Free for up to 1,000 Monthly Active Users, unlimited commands.",
-      "desc_zh": "统一搜索栏即服务，基于 Web 的 UI 小组件/插件，让你的用户可以在产品内搜索内容、导航、功能等，提升可发现性。最多 1,000 名月活跃用户免费，命令不限量。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "3db595ecddcc",
       "kind": "entry",
       "name": "searchly.com",
@@ -9594,17 +9594,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "79062ede0b0f",
+      "id": "48c51e384bcd",
       "kind": "entry",
-      "name": "Bump",
-      "url": "https://bump.email/",
+      "name": "Alias Email",
+      "url": "https://alias.email",
       "category": "email",
       "parent": null,
       "desc_en": "Free 10 Bump email addresses, one custom domain",
-      "desc_zh": "免费获得 10 个 Bump 邮箱地址和一个自定义域名。",
+      "desc_zh": "免费 10 个 Bump 邮箱地址，一个自定义域名",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "adbea723cb74",
@@ -10049,17 +10049,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "e6aaf0719491",
+      "id": "b15f5c9b8cf3",
       "kind": "entry",
-      "name": "Mailcheck.ai",
-      "url": "https://www.mailcheck.ai/",
+      "name": "UserCheck",
+      "url": "https://www.usercheck.com",
       "category": "email",
       "parent": null,
       "desc_en": "Prevent users to sign up with temporary email addresses, 120 requests/hour (~86,400 per month)",
-      "desc_zh": "防止用户使用临时邮箱地址注册，120 次请求/小时（每月约 86,400 次）",
+      "desc_zh": "防止用户使用临时邮箱地址注册，120 次/小时（约 86,400 次/月）",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "89a2ddd6f5d5",
@@ -10751,19 +10751,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "fc39021969ee",
-      "kind": "entry",
-      "name": "Font of web",
-      "url": "https://fontofweb.com/",
-      "category": "font",
-      "parent": null,
-      "desc_en": "Identify all the fonts used on a website and how they are used.",
-      "desc_zh": "识别网站上使用的所有字体及其使用方式。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "4d979446ae74",
       "kind": "entry",
       "name": "Font Squirrel",
@@ -11297,17 +11284,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "dc3e1c01782f",
+      "id": "8600ac06d3c5",
       "kind": "entry",
-      "name": "WaiverStevie.com",
-      "url": "https://waiverstevie.com",
+      "name": "WaiverCat",
+      "url": "https://waivercat.com",
       "category": "forms",
       "parent": null,
       "desc_en": "Electronic Signature platform with a REST API. You can receive notifications with webhooks. Free plan watermarks signed documents but allow unlimited envelopes + signatures.",
-      "desc_zh": "提供 REST API 的电子签名平台。可通过 webhook 接收通知。免费计划会为已签署文档添加水印，但允许不限量的信封（envelope）和签名。",
+      "desc_zh": "带有 REST API 的电子签名平台。您可以通过 Webhooks 接收通知。免费计划会对签名的文档添加水印，但允许无限数量的信封 + 签名。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "0134684623c9",
@@ -13247,17 +13234,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "3607a9e9f9ee",
+      "id": "bda776c2f8de",
       "kind": "entry",
-      "name": "sslip.io",
-      "url": "https://sslip.io/",
+      "name": "nip.io",
+      "url": "https://nip.io/",
       "category": "dns",
       "parent": null,
       "desc_en": "Free DNS service that when queried with a hostname with an embedded IP address returns that IP address.",
-      "desc_zh": "免费 DNS 服务，当查询包含内嵌 IP 地址的主机名时会返回该 IP 地址。",
+      "desc_zh": "免费 DNS 服务，当查询的主机名中嵌入 IP 地址时，返回该 IP 地址。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "fae652760f20",
@@ -13414,6 +13401,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "5a5740b4062c",
+      "kind": "entry",
+      "name": "Out Plane",
+      "url": "https://outplane.com",
+      "category": "iaas",
+      "parent": null,
+      "desc_en": "Cloud sandboxes for coding agents (Hangars) plus app hosting in Germany. Free: Hangars, cloud machines where agents like Claude Code, Codex and Cursor run, with no credit card required; the agent uses your own plan or API key. App hosting is paid, from $9/month with a 14-day free trial.",
+      "desc_zh": "用于编码代理（Hangars）的云沙箱以及德国的应用托管。免费：Hangars，即 Claude Code、Codex 和 Cursor 等代理运行的云机器，无需信用卡；代理使用您自己的套餐或 API 密钥。应用托管为付费，每月 9 美元起，提供 14 天免费试用。",
+      "status": "active",
+      "first_seen": "2026-11-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "8a6fd549de29",
@@ -17056,19 +17056,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "24177852098b",
-      "kind": "entry",
-      "name": "LogSpot",
-      "url": "https://logspot.io",
-      "category": "analytics-events-and-statistics",
-      "parent": null,
-      "desc_en": "Full unified web and product analytics platform, including embeddable analytics widgets and automated robots (slack, telegram, and webhooks). Free plan includes 10,000 events per month.",
-      "desc_zh": "完整的统一网站和产品分析平台，包括可嵌入的分析组件和自动化机器人（slack、telegram 和 webhooks）。免费计划包含每月 1 万个事件。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "2da6247c5258",
       "kind": "entry",
       "name": "Mixpanel",
@@ -18213,19 +18200,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "d8cd5f5bdcd8",
-      "kind": "entry",
-      "name": "datelist.io",
-      "url": "https://datelist.io",
-      "category": "miscellaneous",
-      "parent": null,
-      "desc_en": "Online booking / appointment scheduling system. Free up to 5 bookings per month, includes 1 calendar",
-      "desc_zh": "在线预订/预约排期系统。每月最多 5 次预订免费，包含 1 个日历。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "48136b198a35",
       "kind": "entry",
       "name": "FOSSA",
@@ -18718,6 +18692,136 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "a9a147c4ef47",
+      "kind": "entry",
+      "name": "Quidlo Timesheets",
+      "url": "https://www.quidlo.com/timesheets",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "A simple timesheet and time tracking app for teams. The free plan has time tracking and generating reports features for up to 10 users.",
+      "desc_zh": "一款面向团队的简易工时表和时间跟踪应用。免费计划提供时间跟踪和报告生成功能，最多支持 10 名用户。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "5095c7f0fee9",
+      "kind": "entry",
+      "name": "Terrateam",
+      "url": "https://terrateam.io",
+      "category": "ci-and-cd",
+      "parent": null,
+      "desc_en": "GitOps-first Terraform automation with pull request-driven workflows, project isolation via self-hosted runners, and layered runs for ordered operations. Free for up to 3 users.",
+      "desc_zh": "GitOps 优先的 Terraform 自动化，提供由 pull request 驱动的工作流、通过自托管 runner 实现的项目隔离，以及用于有序操作的分层运行。最多 3 名用户免费。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "2c9e7e9abc24",
+      "kind": "entry",
+      "name": "CommandBar",
+      "url": "https://www.commandbar.com/",
+      "category": "search",
+      "parent": null,
+      "desc_en": "Unified Search Bar as-a-service, web-based UI widget/plugin that allows your users to search contents, navigations, features, etc. within your product, which helps discoverability. Free for up to 1,000 Monthly Active Users, unlimited commands.",
+      "desc_zh": "统一搜索栏即服务，基于 Web 的 UI 小组件/插件，让你的用户可以在产品内搜索内容、导航、功能等，提升可发现性。最多 1,000 名月活跃用户免费，命令不限量。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "79062ede0b0f",
+      "kind": "entry",
+      "name": "Bump",
+      "url": "https://bump.email/",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Free 10 Bump email addresses, one custom domain",
+      "desc_zh": "免费获得 10 个 Bump 邮箱地址和一个自定义域名。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "e6aaf0719491",
+      "kind": "entry",
+      "name": "Mailcheck.ai",
+      "url": "https://www.mailcheck.ai/",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Prevent users to sign up with temporary email addresses, 120 requests/hour (~86,400 per month)",
+      "desc_zh": "防止用户使用临时邮箱地址注册，120 次请求/小时（每月约 86,400 次）",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "fc39021969ee",
+      "kind": "entry",
+      "name": "Font of web",
+      "url": "https://fontofweb.com/",
+      "category": "font",
+      "parent": null,
+      "desc_en": "Identify all the fonts used on a website and how they are used.",
+      "desc_zh": "识别网站上使用的所有字体及其使用方式。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "dc3e1c01782f",
+      "kind": "entry",
+      "name": "WaiverStevie.com",
+      "url": "https://waiverstevie.com",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Electronic Signature platform with a REST API. You can receive notifications with webhooks. Free plan watermarks signed documents but allow unlimited envelopes + signatures.",
+      "desc_zh": "提供 REST API 的电子签名平台。可通过 webhook 接收通知。免费计划会为已签署文档添加水印，但允许不限量的信封（envelope）和签名。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "3607a9e9f9ee",
+      "kind": "entry",
+      "name": "sslip.io",
+      "url": "https://sslip.io/",
+      "category": "dns",
+      "parent": null,
+      "desc_en": "Free DNS service that when queried with a hostname with an embedded IP address returns that IP address.",
+      "desc_zh": "免费 DNS 服务，当查询包含内嵌 IP 地址的主机名时会返回该 IP 地址。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "24177852098b",
+      "kind": "entry",
+      "name": "LogSpot",
+      "url": "https://logspot.io",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Full unified web and product analytics platform, including embeddable analytics widgets and automated robots (slack, telegram, and webhooks). Free plan includes 10,000 events per month.",
+      "desc_zh": "完整的统一网站和产品分析平台，包括可嵌入的分析组件和自动化机器人（slack、telegram 和 webhooks）。免费计划包含每月 1 万个事件。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
+    },
+    {
+      "id": "d8cd5f5bdcd8",
+      "kind": "entry",
+      "name": "datelist.io",
+      "url": "https://datelist.io",
+      "category": "miscellaneous",
+      "parent": null,
+      "desc_en": "Online booking / appointment scheduling system. Free up to 5 bookings per month, includes 1 calendar",
+      "desc_zh": "在线预订/预约排期系统。每月最多 5 次预订免费，包含 1 个日历。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-15"
     },
     {
       "id": "0b678e75a796",
