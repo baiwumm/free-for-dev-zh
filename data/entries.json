@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-15T01:07:28.095Z",
+    "synced_at": "2026-11-16T01:08:40.525Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "47b016a203f25ac68c950994150e07d8fb8512a4",
-      "commit_date": "2026-11-14T19:39:17Z"
+      "commit_sha": "24225992924845c4d16f44629bbc543e778fb7fe",
+      "commit_date": "2026-11-15T17:37:28Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1419,
-      "removed": 28,
-      "entries": 1386,
+      "active": 1416,
+      "removed": 43,
+      "entries": 1383,
       "notes": 33,
-      "translated": 1413
+      "translated": 1410
     }
   },
   "categories": [
@@ -2212,28 +2212,28 @@
     {
       "id": "1d44a734efbf",
       "kind": "entry",
-      "name": "CurrencyScoop",
+      "name": "CurrencyBeacon",
       "url": "https://currencyscoop.com",
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "Realtime currency data API for fintech apps. The free plan includes 5,000 calls per month.",
-      "desc_zh": "面向金融科技应用的实时货币数据 API。免费计划包含每月 5,000 次调用。",
+      "desc_zh": "面向金融科技应用的实时货币数据 API。免费计划每月包含 5,000 次调用。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-16"
     },
     {
-      "id": "01323a9befef",
+      "id": "7e7c92e00a57",
       "kind": "entry",
       "name": "CustomJS",
-      "url": "https://www.customjs.io",
+      "url": "https://www.customjs.space",
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 calls a month.",
-      "desc_zh": "HTML 转 PDF、PDF 转 PNG/文本，以及 PDF 合并/提取/合并 API。免费层每月 600 次调用。",
+      "desc_zh": "HTML 转 PDF 或 PDF 转 PNG/文本以及 PDF 合并/提取/合并 API。免费层级每月有 600 次调用。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "af4b31c8de16",
@@ -2322,19 +2322,6 @@
       "parent": null,
       "desc_en": "A new data science notebook. Jupyter is compatible with real-time collaboration and running in the cloud. The free tier includes unlimited personal projects, unlimited basic machines with 5GB RAM and 2vCPU, and teams with up to 3 editors.",
       "desc_zh": "全新的数据科学笔记本。兼容 Jupyter，支持实时协作和云端运行。免费层包含无限个人项目、配备 5GB 内存和 2vCPU 的无限基础机器，以及最多 3 名编辑者的团队。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "ff23c5f76e59",
-      "kind": "entry",
-      "name": "Compare JSON",
-      "url": "https://comparejson.com",
-      "category": "apis-data-and-ml",
-      "parent": null,
-      "desc_en": "An online tool for comparing differences between two JSON data structures, helping you quickly locate the differences in JSON data.",
-      "desc_zh": "一款在线比较两个 JSON 数据结构差异的工具，帮助你快速定位 JSON 数据中的差异。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -4498,17 +4485,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "dbb5c5d6a74d",
+      "id": "6efbfee3f377",
       "kind": "entry",
-      "name": "Revolt.chat",
-      "url": "https://revolt.chat/",
+      "name": "Stoat",
+      "url": "https://stoat.chat/",
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
-      "desc_en": "An OpenSource alternative for[Discord](https://discord.com/), that respects your privacy. It also have most proprietary features from discord for free. Revolt is a all in one application that is secure and fast, while being 100% free. every features are free. They also have (official & unofficial) plugins support unlike most main-stream chatting applications.",
-      "desc_zh": "一个尊重你隐私的 [Discord](https://discord.com/) OpenSource 替代品。它还免费提供 Discord 的大多数专有功能。Revolt 是一款安全且快速的一体化应用，同时 100% 免费，每项功能都免费。与大多数主流聊天应用不同，它们还提供（官方与非官方）插件支持。",
+      "desc_en": "An OpenSource alternative for[Discord](https://discord.com/), that respects your privacy. It also have most proprietary features from discord for free. Stoat is a all in one application that is secure and fast, while being 100% free. every features are free. They also have (official & unofficial) plugins support unlike most main-stream chatting applications.",
+      "desc_zh": "一个尊重您隐私的 [Discord](https://discord.com/) 开源替代品。它还免费提供了 Discord 的大多数专有功能。Stoat 是一款安全、快速且 100% 免费的一体化应用程序。所有功能都是免费的。与大多数主流聊天应用程序不同，它们还支持（官方和非官方）插件。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "8cbb6d28fb33",
@@ -5512,17 +5499,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "c7b6ad0ed715",
+      "id": "274a02e71ff9",
       "kind": "entry",
-      "name": "sonarcloud.io",
-      "url": "https://sonarcloud.io",
+      "name": "SonarQube Cloud",
+      "url": "https://sonarsouce.com",
       "category": "code-quality",
       "parent": null,
       "desc_en": "Automated source code analysis for Java, JavaScript, C/C++, C#, VB.NET, PHP, Objective-C, Swift, Python, Groovy and even more languages, free for Open Source",
-      "desc_zh": "自动源代码分析，支持 Java、JavaScript、C/C++、C#、VB.NET、PHP、Objective-C、Swift、Python、Groovy 及更多语言，开源免费",
+      "desc_zh": "针对 Java、JavaScript、C/C++、C#、VB.NET、PHP、Objective-C、Swift、Python、Groovy 以及更多语言的自动化源代码分析，开源免费。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "61c2cb9cbf21",
@@ -6435,19 +6422,6 @@
       "updated_at": "2026-11-05"
     },
     {
-      "id": "d22a9df09521",
-      "kind": "entry",
-      "name": "Dependabot",
-      "url": "https://dependabot.com/",
-      "category": "security-and-pki",
-      "parent": null,
-      "desc_en": "Automated dependency updates for Ruby, JavaScript, Python, PHP, Elixir,",
-      "desc_zh": "Ruby、JavaScript、Python、PHP、Elixir 的自动化依赖更新",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "40cf9f2c4b7f",
       "kind": "entry",
       "name": "DJ Checkup",
@@ -7165,15 +7139,15 @@
     {
       "id": "c387de98c6a7",
       "kind": "entry",
-      "name": "Stack Auth",
+      "name": "Hexclave",
       "url": "https://stack-auth.com",
       "category": "authentication-authorization-and-user-management",
       "parent": null,
       "desc_en": "Open-source authentication that doesn't suck. The most developer-friendly solution, getting you started in just five minutes. Self-hostable for free, or offers a managed SaaS version with 10k free Monthly Active Users.",
-      "desc_zh": "不烂的开源身份验证。最开发者友好的解决方案，只需五分钟即可开始。可免费自托管，或提供托管 SaaS 版本，包含 10k 免费月活跃用户。",
+      "desc_zh": "不糟糕的开源身份验证。最开发者友好的解决方案，只需五分钟即可上手。可免费自托管，或提供托管 SaaS 版本，包含 10,000 免费月活跃用户。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-16"
     },
     {
       "id": "7a2e44cb2779",
@@ -9191,17 +9165,17 @@
       "updated_at": "2026-10-23"
     },
     {
-      "id": "11af3344cdd4",
+      "id": "a3e226432248",
       "kind": "entry",
-      "name": "Cisco Networking Academy, Skills for All",
-      "url": "https://skillsforall.com/",
+      "name": "Cisco Networking Academy",
+      "url": "https://netacad.com/",
       "category": "education-and-career-development",
       "parent": null,
       "desc_en": "Offers free certification-aligned courses in topics like cybersecurity, networking, and Python.",
-      "desc_zh": "提供与认证对齐的免费课程，主题涵盖网络安全、计算机网络和 Python 等。",
+      "desc_zh": "提供网络安全、网络和 Python 等主题的免费认证课程。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "aed482ab08fe",
@@ -10127,6 +10101,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "05ee64b9775a",
+      "kind": "entry",
+      "name": "Mailkube",
+      "url": "https://mailkube.com/",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Email infrastructure for developers, 4,000 emails/month free, unlimited domains included",
+      "desc_zh": "面向开发者的电子邮件基础设施，每月免费发送 4,000 封邮件，包含无限域名。",
+      "status": "active",
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
+    },
+    {
       "id": "4cc941d1a68b",
       "kind": "entry",
       "name": "mailsac.com",
@@ -10478,19 +10465,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "070d15d5597c",
-      "kind": "entry",
-      "name": "trashmail.com",
-      "url": "https://www.trashmail.com",
-      "category": "email",
-      "parent": null,
-      "desc_en": "Free disposable email addresses with forwarding and automatic address expiration",
-      "desc_zh": "免费的一次性邮箱地址，支持转发和地址自动过期",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "ec9ef1739e3b",
       "kind": "entry",
       "name": "Tuta",
@@ -10827,6 +10801,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "85a11b382290",
+      "kind": "entry",
+      "name": "Backforms",
+      "url": "https://backforms.com",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Multi-channel headless form backend offering 300 submissions per month, spam protection, and instant alerts via WhatsApp (BYOK), Telegram, Discord, and email on the free plan.",
+      "desc_zh": "多渠道无头表单后端，免费计划每月提供 300 次提交，包含垃圾邮件防护，并通过 WhatsApp (BYOK)、Telegram、Discord 和电子邮件即时发送警报。",
+      "status": "active",
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "1de4014c1a25",
@@ -11960,19 +11947,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "8743f5f7bc93",
-      "kind": "entry",
-      "name": "Deno Deploy",
-      "url": "https://deno.com/deploy",
-      "category": "paas",
-      "parent": null,
-      "desc_en": "Distributed system that runs JavaScript, TypeScript, and WebAssembly at the edge worldwide. The free tier includes 100,000 requests per day and 100 GiB data transfers per month.",
-      "desc_zh": "在全球边缘运行 JavaScript、TypeScript 和 WebAssembly 的分布式系统。免费层包含每天 100,000 次请求和每月 100 GiB 数据传输。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "237499dfe81e",
       "kind": "entry",
       "name": "Deplexo",
@@ -12179,19 +12153,6 @@
       "status": "active",
       "first_seen": "2026-11-08",
       "updated_at": "2026-11-08"
-    },
-    {
-      "id": "00422436c4fb",
-      "kind": "entry",
-      "name": "Val Town",
-      "url": "https://www.val.town",
-      "category": "paas",
-      "parent": null,
-      "desc_en": "Collaborative TypeScript/JavaScript serverless platform for scripts, HTTP endpoints, and cron jobs. Free plan includes unlimited public vals, 15-minute cron intervals, 1-minute wall-clock time per run, and 3-day log retention. No custom domains on free.",
-      "desc_zh": "面向脚本、HTTP 端点和 cron 任务的协作式 TypeScript/JavaScript 无服务器平台。免费计划包含不限量的公开 vals、15 分钟的 cron 间隔、每次运行 1 分钟的墙钟时间以及 3 天的日志保留。免费版不支持自定义域名。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
     },
     {
       "id": "a63ae881fd9b",
@@ -12844,17 +12805,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "70568a0b69bd",
+      "id": "204340eece0d",
       "kind": "entry",
-      "name": "readthedocs.org",
-      "url": "https://readthedocs.org/",
+      "name": "readthedocs.com",
+      "url": "https://readthedocs.com/",
       "category": "web-hosting",
       "parent": null,
       "desc_en": "Free documentation hosting with versioning, PDF generation, and more",
-      "desc_zh": "免费文档托管，支持版本管理、PDF 生成等更多功能。",
+      "desc_zh": "免费文档托管，支持版本控制、PDF 生成等功能。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "25b5847b6814",
@@ -13676,17 +13637,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "97b46ed364d4",
+      "id": "ae2ff3ccd1dc",
       "kind": "entry",
       "name": "SeaTable",
-      "url": "https://seatable.io/",
+      "url": "https://seatable.com/",
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "Flexible, Spreadsheet-like Database built by the Seafile team. unlimited tables, 2,000 lines, 1-month versioning, up to 25 team members.",
-      "desc_zh": "由 Seafile 团队打造的灵活的类电子表格数据库。不限表数、2,000 行、1 个月版本历史、最多 25 名团队成员。",
+      "desc_zh": "由 Seafile 团队构建的灵活、类电子表格数据库。无限表，2,000 行，1 个月版本控制，最多 25 名团队成员。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "ff0cf9b629ea",
@@ -15210,17 +15171,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "83a2aedd5f16",
+      "id": "a81fea0bcf23",
       "kind": "entry",
-      "name": "otixo.com",
-      "url": "https://www.otixo.com/",
+      "name": "We.Team",
+      "url": "https://www.we.team/en",
       "category": "storage-and-media-processing",
       "parent": null,
       "desc_en": "Encrypt, share, copy, and move all your cloud storage files from one place. The basic plan provides unlimited file transfer with 250 MB max. file size and allows five encrypted files",
-      "desc_zh": "在一个地方加密、共享、复制和移动您所有的云存储文件。基础套餐提供无限文件传输，最大文件大小为 250 MB，并允许加密五个文件",
+      "desc_zh": "从一处加密、共享、复制和移动所有云存储文件。基础计划提供无限文件传输，最大文件大小为 250 MB，并允许五个加密文件。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "e8ccc83a3319",
@@ -15743,17 +15704,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "16cbbff2f4a3",
+      "id": "d12617aa5379",
       "kind": "entry",
-      "name": "smartmockups.com",
-      "url": "https://smartmockups.com/",
+      "name": "Canva",
+      "url": "https://www.canva.com/mockups/",
       "category": "design-and-ui",
       "parent": null,
       "desc_en": "Create product mockups, 200 free mockups.",
-      "desc_zh": "创建产品样机，提供 200 个免费样机。",
+      "desc_zh": "创建产品模型图，200 个免费模型图。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "a6b4110b2db5",
@@ -16354,17 +16315,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "8d5a2f4ba5ac",
+      "id": "1baa9e76efe2",
       "kind": "entry",
-      "name": "cocalc.com",
-      "url": "https://cocalc.com/",
+      "name": "cocalc.ai",
+      "url": "https://cocalc.ai/",
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collaboration and lots of free software for mathematics, science, data science, preinstalled: Python, LaTeX, Jupyter Notebooks, SageMath, scikitlearn, etc.",
-      "desc_zh": "云端协同计算。通过浏览器访问完整的 Ubuntu，内置协作功能，并预装了大量用于数学、科学和数据科学的免费软件：Python、LaTeX、Jupyter Notebooks、SageMath、scikitlearn 等。",
+      "desc_zh": "云端协作计算。通过浏览器访问完整的 Ubuntu，内置协作功能，并预装了大量用于数学、科学、数据科学的免费软件：Python、LaTeX、Jupyter Notebooks、SageMath、scikitlearn 等。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "2add0354438f",
@@ -16850,15 +16811,15 @@
     {
       "id": "5964282f40fe",
       "kind": "entry",
-      "name": "Census",
+      "name": "FiveTran",
       "url": "https://www.getcensus.com/",
       "category": "analytics-events-and-statistics",
       "parent": null,
       "desc_en": "Reverse ETL & Operational Analytics Platform. Sync 10 fields from your data warehouse to 60+ SaaS like Salesforce, Zendesk, or Amplitude.",
-      "desc_zh": "Reverse ETL 与运营分析平台。将 10 个字段从数据仓库同步到 Salesforce、Zendesk 或 Amplitude 等 60 多个 SaaS。",
+      "desc_zh": "反向 ETL 与运营分析平台。将您的数据仓库中的 10 个字段同步到 Salesforce、Zendesk 或 Amplitude 等 60 多个 SaaS。",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-16"
     },
     {
       "id": "ae5346d51d23",
@@ -17121,17 +17082,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "91be8065ee27",
+      "id": "aafb1230c451",
       "kind": "entry",
       "name": "Row Zero",
-      "url": "https://rowzero.io",
+      "url": "https://rowzero.com",
       "category": "analytics-events-and-statistics",
       "parent": null,
       "desc_en": "Blazingly fast, connected spreadsheet. Connect directly to data databases, S3, and APIs. Import, analyze, graph, and share millions of rows instantly. Three free (forever) workbooks.",
-      "desc_zh": "极速连接电子表格。直接连接到数据数据库、S3 和 API。即时导入、分析、图表化和分享数百万行数据。三个免费（永久）工作簿。",
+      "desc_zh": "极速连接的电子表格。直接连接到数据数据库、S3 和 API。即时导入、分析、绘图和共享数百万行数据。三个免费（永久）工作簿。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-16",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "7ab2d7a9c2c6",
@@ -18692,6 +18653,201 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "01323a9befef",
+      "kind": "entry",
+      "name": "CustomJS",
+      "url": "https://www.customjs.io",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "HTML to PDF or PDF to PNG/Text & PDF merging/extraction/merging APIs. Free tier has 600 calls a month.",
+      "desc_zh": "HTML 转 PDF、PDF 转 PNG/文本，以及 PDF 合并/提取/合并 API。免费层每月 600 次调用。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "ff23c5f76e59",
+      "kind": "entry",
+      "name": "Compare JSON",
+      "url": "https://comparejson.com",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "An online tool for comparing differences between two JSON data structures, helping you quickly locate the differences in JSON data.",
+      "desc_zh": "一款在线比较两个 JSON 数据结构差异的工具，帮助你快速定位 JSON 数据中的差异。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "dbb5c5d6a74d",
+      "kind": "entry",
+      "name": "Revolt.chat",
+      "url": "https://revolt.chat/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "An OpenSource alternative for[Discord](https://discord.com/), that respects your privacy. It also have most proprietary features from discord for free. Revolt is a all in one application that is secure and fast, while being 100% free. every features are free. They also have (official & unofficial) plugins support unlike most main-stream chatting applications.",
+      "desc_zh": "一个尊重你隐私的 [Discord](https://discord.com/) OpenSource 替代品。它还免费提供 Discord 的大多数专有功能。Revolt 是一款安全且快速的一体化应用，同时 100% 免费，每项功能都免费。与大多数主流聊天应用不同，它们还提供（官方与非官方）插件支持。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "c7b6ad0ed715",
+      "kind": "entry",
+      "name": "sonarcloud.io",
+      "url": "https://sonarcloud.io",
+      "category": "code-quality",
+      "parent": null,
+      "desc_en": "Automated source code analysis for Java, JavaScript, C/C++, C#, VB.NET, PHP, Objective-C, Swift, Python, Groovy and even more languages, free for Open Source",
+      "desc_zh": "自动源代码分析，支持 Java、JavaScript、C/C++、C#、VB.NET、PHP、Objective-C、Swift、Python、Groovy 及更多语言，开源免费",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "d22a9df09521",
+      "kind": "entry",
+      "name": "Dependabot",
+      "url": "https://dependabot.com/",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Automated dependency updates for Ruby, JavaScript, Python, PHP, Elixir,",
+      "desc_zh": "Ruby、JavaScript、Python、PHP、Elixir 的自动化依赖更新",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "11af3344cdd4",
+      "kind": "entry",
+      "name": "Cisco Networking Academy, Skills for All",
+      "url": "https://skillsforall.com/",
+      "category": "education-and-career-development",
+      "parent": null,
+      "desc_en": "Offers free certification-aligned courses in topics like cybersecurity, networking, and Python.",
+      "desc_zh": "提供与认证对齐的免费课程，主题涵盖网络安全、计算机网络和 Python 等。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "070d15d5597c",
+      "kind": "entry",
+      "name": "trashmail.com",
+      "url": "https://www.trashmail.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Free disposable email addresses with forwarding and automatic address expiration",
+      "desc_zh": "免费的一次性邮箱地址，支持转发和地址自动过期",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "8743f5f7bc93",
+      "kind": "entry",
+      "name": "Deno Deploy",
+      "url": "https://deno.com/deploy",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Distributed system that runs JavaScript, TypeScript, and WebAssembly at the edge worldwide. The free tier includes 100,000 requests per day and 100 GiB data transfers per month.",
+      "desc_zh": "在全球边缘运行 JavaScript、TypeScript 和 WebAssembly 的分布式系统。免费层包含每天 100,000 次请求和每月 100 GiB 数据传输。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "00422436c4fb",
+      "kind": "entry",
+      "name": "Val Town",
+      "url": "https://www.val.town",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Collaborative TypeScript/JavaScript serverless platform for scripts, HTTP endpoints, and cron jobs. Free plan includes unlimited public vals, 15-minute cron intervals, 1-minute wall-clock time per run, and 3-day log retention. No custom domains on free.",
+      "desc_zh": "面向脚本、HTTP 端点和 cron 任务的协作式 TypeScript/JavaScript 无服务器平台。免费计划包含不限量的公开 vals、15 分钟的 cron 间隔、每次运行 1 分钟的墙钟时间以及 3 天的日志保留。免费版不支持自定义域名。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "70568a0b69bd",
+      "kind": "entry",
+      "name": "readthedocs.org",
+      "url": "https://readthedocs.org/",
+      "category": "web-hosting",
+      "parent": null,
+      "desc_en": "Free documentation hosting with versioning, PDF generation, and more",
+      "desc_zh": "免费文档托管，支持版本管理、PDF 生成等更多功能。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "97b46ed364d4",
+      "kind": "entry",
+      "name": "SeaTable",
+      "url": "https://seatable.io/",
+      "category": "managed-data-services",
+      "parent": null,
+      "desc_en": "Flexible, Spreadsheet-like Database built by the Seafile team. unlimited tables, 2,000 lines, 1-month versioning, up to 25 team members.",
+      "desc_zh": "由 Seafile 团队打造的灵活的类电子表格数据库。不限表数、2,000 行、1 个月版本历史、最多 25 名团队成员。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "83a2aedd5f16",
+      "kind": "entry",
+      "name": "otixo.com",
+      "url": "https://www.otixo.com/",
+      "category": "storage-and-media-processing",
+      "parent": null,
+      "desc_en": "Encrypt, share, copy, and move all your cloud storage files from one place. The basic plan provides unlimited file transfer with 250 MB max. file size and allows five encrypted files",
+      "desc_zh": "在一个地方加密、共享、复制和移动您所有的云存储文件。基础套餐提供无限文件传输，最大文件大小为 250 MB，并允许加密五个文件",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "16cbbff2f4a3",
+      "kind": "entry",
+      "name": "smartmockups.com",
+      "url": "https://smartmockups.com/",
+      "category": "design-and-ui",
+      "parent": null,
+      "desc_en": "Create product mockups, 200 free mockups.",
+      "desc_zh": "创建产品样机，提供 200 个免费样机。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "8d5a2f4ba5ac",
+      "kind": "entry",
+      "name": "cocalc.com",
+      "url": "https://cocalc.com/",
+      "category": "ide-and-code-editing",
+      "parent": null,
+      "desc_en": "Collaborative calculation in the cloud. Browser access to full Ubuntu with built-in collaboration and lots of free software for mathematics, science, data science, preinstalled: Python, LaTeX, Jupyter Notebooks, SageMath, scikitlearn, etc.",
+      "desc_zh": "云端协同计算。通过浏览器访问完整的 Ubuntu，内置协作功能，并预装了大量用于数学、科学和数据科学的免费软件：Python、LaTeX、Jupyter Notebooks、SageMath、scikitlearn 等。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
+    },
+    {
+      "id": "91be8065ee27",
+      "kind": "entry",
+      "name": "Row Zero",
+      "url": "https://rowzero.io",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Blazingly fast, connected spreadsheet. Connect directly to data databases, S3, and APIs. Import, analyze, graph, and share millions of rows instantly. Three free (forever) workbooks.",
+      "desc_zh": "极速连接电子表格。直接连接到数据数据库、S3 和 API。即时导入、分析、图表化和分享数百万行数据。三个免费（永久）工作簿。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-16"
     },
     {
       "id": "a9a147c4ef47",
