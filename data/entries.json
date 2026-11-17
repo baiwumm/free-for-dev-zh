@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-16T01:08:40.525Z",
+    "synced_at": "2026-11-17T03:59:49.078Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "24225992924845c4d16f44629bbc543e778fb7fe",
-      "commit_date": "2026-11-15T17:37:28Z"
+      "commit_sha": "a4aa34bff8c6da1ff18a58f3192cd7fa8e195604",
+      "commit_date": "2026-11-16T20:28:54Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1416,
-      "removed": 43,
-      "entries": 1383,
+      "active": 1415,
+      "removed": 51,
+      "entries": 1382,
       "notes": 33,
-      "translated": 1410
+      "translated": 1409
     }
   },
   "categories": [
@@ -4329,17 +4329,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "ae88d206a5f6",
+      "id": "767259211588",
       "kind": "entry",
       "name": "Notion",
-      "url": "https://www.notion.so/",
+      "url": "https://www.notion.com/",
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Notion is a note-taking and collaboration application with markdown support that integrates tasks, wikis, and databases. The company describes the app as an all-in-one workspace for note-taking, project management and task management. In addition to cross-platform apps, it can be accessed via most web browsers.",
-      "desc_zh": "Notion 是一款支持 markdown 的笔记与协作应用，集任务、wiki 和数据库于一体。该公司将这款应用描述为用于笔记、项目管理和任务管理的一体化工作区。除了跨平台应用外，它还可以通过大多数网页浏览器访问。",
+      "desc_zh": "Notion 是一款支持 markdown 的笔记和协作应用，集成了任务、维基和数据库。该公司将这款应用描述为笔记、项目管理和任务管理的全能工作空间。除了跨平台应用外，它还可以通过大多数网络浏览器访问。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "3aaa8515be7f",
@@ -4771,19 +4771,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "a6474f6e4877",
-      "kind": "entry",
-      "name": "Tugboat",
-      "url": "https://tugboat.qa",
-      "category": "tools-for-teams-and-collaboration",
-      "parent": null,
-      "desc_en": "Preview every pull request, automated and on-demand. Free for all, complimentary Nano tier for non-profits.",
-      "desc_zh": "预览每个 pull request，支持自动化和按需预览。对所有人免费，非营利组织可免费获赠 Nano 套餐。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "e9a1ebf86dc6",
       "kind": "entry",
       "name": "twist.com",
@@ -4927,17 +4914,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "83d8b1e7c949",
+      "id": "c52c2e12dfd8",
       "kind": "entry",
-      "name": "zoom.us",
-      "url": "https://zoom.us/",
+      "name": "zoom",
+      "url": "https://zoom.com/",
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Secure Video and Web conferencing add-ons available. The free plan is limited to 40 minutes.",
-      "desc_zh": "提供安全的视频和 Web 会议附加组件。免费计划限 40 分钟。",
+      "desc_zh": "提供安全的视频和网络会议附加组件。免费计划限制为 40 分钟。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "066cb014091f",
@@ -9490,17 +9477,17 @@
       "updated_at": "2026-10-28"
     },
     {
-      "id": "acee1c8dfe68",
+      "id": "c16ef638f5b9",
       "kind": "entry",
-      "name": "AnonAddy",
-      "url": "https://anonaddy.com",
+      "name": "addy.io",
+      "url": "https://addy.io",
       "category": "email",
       "parent": null,
       "desc_en": "Open-source anonymous email forwarding, create unlimited email aliases for free",
-      "desc_zh": "开源的匿名邮件转发服务，可免费创建无限数量的邮箱别名。",
+      "desc_zh": "开源匿名邮件转发，免费创建无限个电子邮件别名。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "af777cf6a493",
@@ -11726,17 +11713,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "85d1dd54e958",
+      "id": "35065492dd85",
       "kind": "entry",
-      "name": "ovh.ie",
-      "url": "https://www.ovh.ie/ssl-gateway/",
+      "name": "ovh",
+      "url": "https://www.ovhcloud.com/en-ie/security/ssl-gateway/",
       "category": "cdn-and-protection",
       "parent": null,
       "desc_en": "Free DDoS protection and SSL certificate",
-      "desc_zh": "免费 DDoS 防护和 SSL 证书",
+      "desc_zh": "免费 DDoS 保护和 SSL 证书。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "cdec74f6b5b9",
@@ -13117,19 +13104,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "87ad7368b5c1",
-      "kind": "entry",
-      "name": "LocalCert",
-      "url": "https://localcert.net",
-      "category": "dns",
-      "parent": null,
-      "desc_en": "Free `.localcert.net` subdomains compatible with public CAs for use with-in private networks",
-      "desc_zh": "免费 `.localcert.net` 子域名，与公共 CA 兼容，适用于私有网络内部使用。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "d7b10b922b20",
       "kind": "entry",
       "name": "luadns.com",
@@ -13609,6 +13583,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "d46edfd796b7",
+      "kind": "entry",
+      "name": "Raff",
+      "url": "https://rafftechnologies.com/products/managed-databases",
+      "category": "managed-data-services",
+      "parent": null,
+      "desc_en": "Managed PostgreSQL, MySQL and Valkey, 1 free database per account with no expiry, 1 vCPU, 1 GB RAM and 2 GB storage (Valkey: 512 MB memory), 20 direct and 200 pooled connections on PostgreSQL, TLS on every database, pauses after 7 days without connections and resumes in about a minute. No egress fees.",
+      "desc_zh": "托管 PostgreSQL、MySQL 和 Valkey，每个账户 1 个免费数据库且无过期限制，1 vCPU、1 GB RAM 和 2 GB 存储（Valkey：512 MB 内存），PostgreSQL 上有 20 个直连和 200 个池化连接，每个数据库都启用 TLS，在 7 天无连接后暂停，并在约 1 分钟内恢复。无出站费用。",
+      "status": "active",
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "329a3ae5731e",
@@ -16380,17 +16367,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "ce26e9f8d2f3",
+      "id": "cd79388f1f4a",
       "kind": "entry",
       "name": "Eclipse Che",
-      "url": "https://www.eclipse.org/che/",
+      "url": "https://www.eclipse.dev/che/",
       "category": "ide-and-code-editing",
       "parent": null,
       "desc_en": "Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open Source and community-driven. An online instance hosted by Red Hat is available at [workspaces.openshift.com](https://workspaces.openshift.com/).",
-      "desc_zh": "面向开发者团队、支持多语言的基于 Web 的 Kubernetes 原生 IDE。开源且由社区驱动。Red Hat 托管的在线实例可访问 [workspaces.openshift.com](https://workspaces.openshift.com/)。",
+      "desc_zh": "面向开发团队的多语言支持 Web 基础和 Kubernetes 原生 IDE。开源且由社区驱动。Red Hat 托管了一个在线实例，位于 [workspaces.openshift.com](https://workspaces.openshift.com/)。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "ffa905024e35",
@@ -16547,6 +16534,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "1b67a54ae3d5",
+      "kind": "entry",
+      "name": "OnlineCompiler.io",
+      "url": "https://onlinecompiler.io/",
+      "category": "ide-and-code-editing",
+      "parent": null,
+      "desc_en": "Online compiler and code execution API for 46 languages. The editor is free with no sign-in, and the free API plan includes 100,000 runs a month.",
+      "desc_zh": "46 种语言的在线编译器和代码执行 API。编辑器免费且无需登录，免费 API 计划包含每月 100,000 次运行。",
+      "status": "active",
+      "first_seen": "2026-11-17",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "d2e04ad013d0",
@@ -18044,19 +18044,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "45ea4c1830f7",
-      "kind": "entry",
-      "name": "Bearer",
-      "url": "https://www.bearer.sh/",
-      "category": "privacy-management",
-      "parent": null,
-      "desc_en": "Helps implement privacy by design via audits and continuous workflows so that organizations comply with GDPR and other regulations. The free tier is limited to smaller teams and the SaaS version only.",
-      "desc_zh": "通过审计和持续的工作流帮助落实 privacy by design，使组织符合 GDPR 及其他法规。免费层仅限较小的团队，且仅限 SaaS 版本。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "b900ed2811ab",
       "kind": "entry",
       "name": "Concord",
@@ -18653,6 +18640,110 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "ae88d206a5f6",
+      "kind": "entry",
+      "name": "Notion",
+      "url": "https://www.notion.so/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Notion is a note-taking and collaboration application with markdown support that integrates tasks, wikis, and databases. The company describes the app as an all-in-one workspace for note-taking, project management and task management. In addition to cross-platform apps, it can be accessed via most web browsers.",
+      "desc_zh": "Notion 是一款支持 markdown 的笔记与协作应用，集任务、wiki 和数据库于一体。该公司将这款应用描述为用于笔记、项目管理和任务管理的一体化工作区。除了跨平台应用外，它还可以通过大多数网页浏览器访问。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "a6474f6e4877",
+      "kind": "entry",
+      "name": "Tugboat",
+      "url": "https://tugboat.qa",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Preview every pull request, automated and on-demand. Free for all, complimentary Nano tier for non-profits.",
+      "desc_zh": "预览每个 pull request，支持自动化和按需预览。对所有人免费，非营利组织可免费获赠 Nano 套餐。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "83d8b1e7c949",
+      "kind": "entry",
+      "name": "zoom.us",
+      "url": "https://zoom.us/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Secure Video and Web conferencing add-ons available. The free plan is limited to 40 minutes.",
+      "desc_zh": "提供安全的视频和 Web 会议附加组件。免费计划限 40 分钟。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "acee1c8dfe68",
+      "kind": "entry",
+      "name": "AnonAddy",
+      "url": "https://anonaddy.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "Open-source anonymous email forwarding, create unlimited email aliases for free",
+      "desc_zh": "开源的匿名邮件转发服务，可免费创建无限数量的邮箱别名。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "85d1dd54e958",
+      "kind": "entry",
+      "name": "ovh.ie",
+      "url": "https://www.ovh.ie/ssl-gateway/",
+      "category": "cdn-and-protection",
+      "parent": null,
+      "desc_en": "Free DDoS protection and SSL certificate",
+      "desc_zh": "免费 DDoS 防护和 SSL 证书",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "87ad7368b5c1",
+      "kind": "entry",
+      "name": "LocalCert",
+      "url": "https://localcert.net",
+      "category": "dns",
+      "parent": null,
+      "desc_en": "Free `.localcert.net` subdomains compatible with public CAs for use with-in private networks",
+      "desc_zh": "免费 `.localcert.net` 子域名，与公共 CA 兼容，适用于私有网络内部使用。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "ce26e9f8d2f3",
+      "kind": "entry",
+      "name": "Eclipse Che",
+      "url": "https://www.eclipse.org/che/",
+      "category": "ide-and-code-editing",
+      "parent": null,
+      "desc_en": "Web-based and Kubernetes-Native IDE for Developer Teams with multi-language support. Open Source and community-driven. An online instance hosted by Red Hat is available at [workspaces.openshift.com](https://workspaces.openshift.com/).",
+      "desc_zh": "面向开发者团队、支持多语言的基于 Web 的 Kubernetes 原生 IDE。开源且由社区驱动。Red Hat 托管的在线实例可访问 [workspaces.openshift.com](https://workspaces.openshift.com/)。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
+    },
+    {
+      "id": "45ea4c1830f7",
+      "kind": "entry",
+      "name": "Bearer",
+      "url": "https://www.bearer.sh/",
+      "category": "privacy-management",
+      "parent": null,
+      "desc_en": "Helps implement privacy by design via audits and continuous workflows so that organizations comply with GDPR and other regulations. The free tier is limited to smaller teams and the SaaS version only.",
+      "desc_zh": "通过审计和持续的工作流帮助落实 privacy by design，使组织符合 GDPR 及其他法规。免费层仅限较小的团队，且仅限 SaaS 版本。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-17"
     },
     {
       "id": "01323a9befef",
