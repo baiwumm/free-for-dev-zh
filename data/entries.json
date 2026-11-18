@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-17T03:59:49.078Z",
+    "synced_at": "2026-11-18T02:58:00.515Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "a4aa34bff8c6da1ff18a58f3192cd7fa8e195604",
-      "commit_date": "2026-11-16T20:28:54Z"
+      "commit_sha": "fab20b2c87e128d3cbb0e2b33f1e9a2a0aa8f253",
+      "commit_date": "2026-11-17T16:36:29Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1415,
+      "active": 1416,
       "removed": 51,
-      "entries": 1382,
+      "entries": 1383,
       "notes": 33,
-      "translated": 1409
+      "translated": 1410
     }
   },
   "categories": [
@@ -5406,6 +5406,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "9c8aa47f0a6f",
+      "kind": "entry",
+      "name": "proofline.sh",
+      "url": "https://proofline.sh/",
+      "category": "code-quality",
+      "parent": null,
+      "desc_en": "AI code review for GitHub pull requests, with infrastructure-aware checks when connected to a deployment environment. Free forever for open repos, and no subscription required if you BYOK on any private repo.",
+      "desc_zh": "针对 GitHub 拉取请求的 AI 代码审查，在连接到部署环境时具有基础设施感知检查。开源仓库永久免费，且在任何私有仓库上 BYOK 无需订阅。",
+      "status": "active",
+      "first_seen": "2026-11-18",
+      "updated_at": "2026-11-18"
     },
     {
       "id": "aec947140ecc",
