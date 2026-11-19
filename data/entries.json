@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-18T02:58:00.515Z",
+    "synced_at": "2026-11-19T02:39:59.466Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "fab20b2c87e128d3cbb0e2b33f1e9a2a0aa8f253",
-      "commit_date": "2026-11-17T16:36:29Z"
+      "commit_sha": "0b7464dc3a7fb1e7fc6c4ba92380a86a55f06fc4",
+      "commit_date": "2026-11-18T13:14:20Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1416,
-      "removed": 51,
-      "entries": 1383,
+      "active": 1420,
+      "removed": 62,
+      "entries": 1387,
       "notes": 33,
-      "translated": 1410
+      "translated": 1414
     }
   },
   "categories": [
@@ -2938,6 +2938,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "cceb6d03407a",
+      "kind": "entry",
+      "name": "Kardinal",
+      "url": "https://kardinal.ai/",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Route optimization API for delivery and field service fleets: multi-vehicle routing with time windows, vehicle capacities and other real-world constraints, also usable by AI agents. Free tier includes 1,000 stops that never expire, no credit card required.",
+      "desc_zh": "用于配送和现场服务车队路线优化的 API：多车辆路径规划，包含时间窗、车辆容量及其他现实约束，也可供 AI 代理使用。免费套餐包含 1,000 个永不过期的停靠点，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
+    },
+    {
       "id": "34c17837aa1c",
       "kind": "entry",
       "name": "Labelixa",
@@ -3354,19 +3367,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "825975d50e63",
-      "kind": "entry",
-      "name": "RequestBin.com",
-      "url": "https://requestbin.com",
-      "category": "apis-data-and-ml",
-      "parent": null,
-      "desc_en": "Create a free endpoint to which you can send HTTP requests. Any HTTP requests sent to that endpoint will be recorded with the associated payload and headers so you can observe recommendations from webhooks and other services.",
-      "desc_zh": "创建一个免费的端点，你可以向其发送 HTTP 请求。发送到该端点的任何 HTTP 请求都会连同相关的 payload 和 headers 一起被记录下来，以便你查看来自 webhooks 和其他服务的建议。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "2a95bd7a74fa",
       "kind": "entry",
       "name": "Rizamo",
@@ -3674,19 +3674,6 @@
       "parent": null,
       "desc_en": "Simple Web Scraping API with built-in parsing, Chrome rendering, and proxies. Two thousand free API calls per month.",
       "desc_zh": "简单的网页抓取 API，内置解析功能、Chrome 渲染和代理。每月提供两千次免费 API 调用。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "ce35f778228f",
-      "kind": "entry",
-      "name": "Weights & Biases",
-      "url": "https://wandb.ai",
-      "category": "apis-data-and-ml",
-      "parent": null,
-      "desc_en": "The developer-first MLOps platform. Build better models faster with experiment tracking, dataset versioning, and model management. Free tier for personal projects only, with 100 GB of storage included.",
-      "desc_zh": "开发者优先的 MLOps 平台。通过实验跟踪、数据集版本管理和模型管理更快地构建更好的模型。免费层仅限个人项目，包含 100 GB 存储空间。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -5161,17 +5148,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "15b393fc5388",
+      "id": "5a26de395747",
       "kind": "entry",
-      "name": "v0.dev",
-      "url": "https://v0.dev/",
+      "name": "v0",
+      "url": "https://v0.app/",
       "category": "code-generation",
       "parent": null,
-      "desc_en": "Created by Vercel, v0 generates copy-and-paste friendly React code using shadcn/ui and Tailwind CSS. It uses a credit system, providing 1,200 starting credits and 200 free credits monthly.",
-      "desc_zh": "由 Vercel 打造的 v0 使用 shadcn/ui 和 Tailwind CSS 生成便于复制粘贴的 React 代码。它采用积分系统，提供 1,200 个初始积分和每月 200 个免费积分。",
+      "desc_en": "Created by Vercel, v0 generates copy-and-paste friendly React code using shadcn/ui and Tailwind CSS. The free plan includes 7 messages per day, Design Mode and GitHub sync.",
+      "desc_zh": "由 Vercel 创建，v0 使用 shadcn/ui 和 Tailwind CSS 生成可复制粘贴的 React 代码。免费套餐包含每天 7 条消息、Design Mode 和 GitHub 同步。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "de42cdff1916",
@@ -6370,6 +6357,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "e75d16696512",
+      "kind": "entry",
+      "name": "Chainguard",
+      "url": "https://www.chainguard.dev/",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Hardened, minimal container images and a software supply chain security platform. The Starter plan is free with no credit card: five users, five container images, 50,000 dependency pulls and 100 GB of artifact storage per month.",
+      "desc_zh": "加固的、精简的容器镜像和软件供应链安全平台。Starter 套餐免费且无需信用卡：5 个用户、5 个容器镜像、每月 50,000 次依赖拉取和 100 GB 的制品存储。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
+    },
+    {
       "id": "baa57ff96fdf",
       "kind": "entry",
       "name": "Corgea",
@@ -6669,17 +6669,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "c107c89d82e2",
+      "id": "efbd677b1d08",
       "kind": "entry",
-      "name": "pyup.io",
-      "url": "https://pyup.io",
+      "name": "Safety",
+      "url": "https://www.getsafety.com/",
       "category": "security-and-pki",
       "parent": null,
-      "desc_en": "Monitor Python dependencies for security vulnerabilities and update them automatically. Free for one private project, unlimited projects for open source.",
-      "desc_zh": "监控 Python 依赖的安全漏洞并自动更新。一个私有项目免费，开源项目不限数量。",
+      "desc_en": "Software supply chain security for Python, JavaScript and Docker dependencies. The free plan covers one codebase and 100 scans per month for a single user, for non-commercial use.",
+      "desc_zh": "针对 Python、JavaScript 和 Docker 依赖项的软件供应链安全。免费套餐涵盖单个用户、非商业用途的一个代码库和每月 100 次扫描。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "1a646bb7abd1",
@@ -6797,6 +6797,19 @@
       "status": "active",
       "first_seen": "2026-11-07",
       "updated_at": "2026-11-07"
+    },
+    {
+      "id": "2bc02b148549",
+      "kind": "entry",
+      "name": "tridentstack.com",
+      "url": "https://tridentstack.com",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Patch, vulnerability and compliance management for Windows, macOS and Linux endpoints. Free forever for up to 200 endpoints with every feature included, no credit card required.",
+      "desc_zh": "针对 Windows、macOS 和 Linux 端点的补丁、漏洞和合规性管理。永久免费，最多 200 个端点，包含所有功能，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "25470ac8d3c8",
@@ -7735,17 +7748,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "1c9f8834f4d8",
+      "id": "11729000fa0e",
       "kind": "entry",
-      "name": "logtail.com",
-      "url": "https://logtail.com/",
+      "name": "Better Stack Logs",
+      "url": "https://betterstack.com/log-management",
       "category": "log-management",
       "parent": null,
-      "desc_en": "ClickHouse-based SQL-compatible log management. Free up to 1 GB per month, three days retention.",
-      "desc_zh": "基于 ClickHouse 的兼容 SQL 的日志管理。每月最多 1 GB 免费，保留三天。",
+      "desc_en": "ClickHouse-based SQL-compatible log management. The free plan includes 3 GB of logs retained for three days.",
+      "desc_zh": "基于 ClickHouse 的 SQL 兼容日志管理。免费套餐包含保留 3 天的 3 GB 日志。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "02d1e2431a26",
@@ -7993,6 +8006,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "6fb0ed601735",
+      "kind": "entry",
+      "name": "Uptimeify",
+      "url": "https://uptimeify.io/status-pages",
+      "category": "monitoring",
+      "parent": null,
+      "desc_en": "Permament free status pages including custom domain, subscribers (mail, slack, teams, webhook and rss) and maintenance with postmortems. Fully hosted inside the EU.",
+      "desc_zh": "永久免费的状态页，包含自定义域名、订阅者（邮件、Slack、Teams、Webhook 和 RSS）以及附带事后分析报告的维护功能。完全托管在欧盟境内。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "80503b3955df",
@@ -11394,11 +11420,11 @@
       "url": "https://evalship.com",
       "category": "generative-ai",
       "parent": null,
-      "desc_en": "find the flaws in your LLM evals. Reviews your evals suite for improvement opportunities, monitors your PRs for any eval regressions or unintended side effects and optimizes your prompts and models based on experiments in your product. Free for 1 private repo for 1 user, 100 PR analyses a month, 30 days of eval history. Free for public repos.",
-      "desc_zh": "发现您的 LLM 评估中的缺陷。审查您的评估套件以寻找改进机会，监控您的 PR 是否存在评估回退或意外副作用，并根据产品中的实验优化您的提示词和模型。1 个用户、1 个私有仓库免费，每月 100 次 PR 分析，30 天评估历史。公共仓库免费。",
+      "desc_en": "Tests, monitors and optimizes every AI call your product makes, and notifies you when one fails. Free for 1 private repo for 2 users, 5,000 events a month, 30 days of history. Free for public repos.",
+      "desc_zh": "测试、监控并优化您的产品发出的每一次 AI 调用，并在调用失败时通知您。免费套餐包含 2 个用户、1 个私有仓库、每月 5,000 个事件和 30 天的历史记录。公共仓库免费。",
       "status": "active",
       "first_seen": "2026-11-05",
-      "updated_at": "2026-11-05"
+      "updated_at": "2026-11-19"
     },
     {
       "id": "d154c917e15f",
@@ -11422,19 +11448,6 @@
       "parent": null,
       "desc_en": "OpenAI-compatible API for open-source models served over the decentralized Gonka.ai GPU network. 1M+ free tokens monthly. Easy integration with many AI tools.",
       "desc_zh": "通过去中心化的 Gonka.ai GPU 网络为开源模型提供 OpenAI 兼容 API。每月 100 万+ 免费 token。可轻松与众多 AI 工具集成。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "bcf3109eade1",
-      "kind": "entry",
-      "name": "Keywords AI",
-      "url": "https://keywordsai.co",
-      "category": "generative-ai",
-      "parent": null,
-      "desc_en": "The best LLM monitoring platform. One format to call 200+ LLMs with 2 lines of code. 10,000 free requests every month and $0 for platform features!",
-      "desc_zh": "最佳的 LLM 监控平台。用 2 行代码以统一格式调用 200 多个 LLM。每月 10,000 次免费请求，平台功能费用为 $0！",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -11581,6 +11594,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "08098bf27ffe",
+      "kind": "entry",
+      "name": "Respan",
+      "url": "https://www.respan.ai/",
+      "category": "generative-ai",
+      "parent": null,
+      "desc_en": "LLM observability and gateway with one format for 200+ models. The free plan includes 100,000 logs, 1,000 scores, five datasets, two evaluators and ten prompts per month, with no credit card required.",
+      "desc_zh": "LLM 可观测性和网关，支持 200 多种模型使用一种格式。免费套餐包含每月 100,000 条日志、1,000 个评分、5 个数据集、2 个评估器和 10 个提示词，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "c9991dd14733",
@@ -12012,19 +12038,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "a95a67e6d1ec",
-      "kind": "entry",
-      "name": "flightcontrol.dev",
-      "url": "https://flightcontrol.dev/",
-      "category": "paas",
-      "parent": null,
-      "desc_en": "Deploy web services, databases, and more on your own AWS account with a Git push style workflow. Free tier for users with 1 developer on personal GitHub repos. AWS costs are billed through AWS, but you can use credits and the AWS free tier.",
-      "desc_zh": "通过 Git push 风格的工作流，在你自己的 AWS 账户上部署 Web 服务、数据库等。免费层面向个人 GitHub 仓库上只有 1 名开发者的用户。AWS 费用通过 AWS 计费，但你可以使用 credits 和 AWS 免费层。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "1aec0da8f60d",
       "kind": "entry",
       "name": "gigalixir.com",
@@ -12088,6 +12101,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "178bf7559f8a",
+      "kind": "entry",
+      "name": "Ravion",
+      "url": "https://www.ravion.com/",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Deploy web services, databases, and more on your own AWS account with a Git push style workflow. The Individuals plan is free for one user with up to 50 modules, 2,000 pipeline minutes and $20 of AI tokens per month. AWS costs are billed through AWS, but you can use credits and the AWS free tier.",
+      "desc_zh": "通过 Git 推送式工作流，在您自己的 AWS 账户上部署 Web 服务、数据库等。Individuals 套餐免费，包含 1 个用户、最多 50 个模块、2,000 分钟流水线时间和每月 20 美元的 AI 代币。AWS 费用通过 AWS 计费，但您可以使用积分和 AWS 免费套餐。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "507d926e54a1",
@@ -15262,6 +15288,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "286ab41ec8a4",
+      "kind": "entry",
+      "name": "QRdx",
+      "url": "https://qrdx.dev",
+      "category": "storage-and-media-processing",
+      "parent": null,
+      "desc_en": "Free Open-source QR code generator, plus an image API that needs no key (SVG, PNG, WebP or EPS). Free: unlimited static QR codes with no account, the image API up to 300 requests a minute, and 10 dynamic QR codes with scan analytics on a free account.",
+      "desc_zh": "免费开源二维码生成器，以及无需密钥的图像 API（支持 SVG、PNG、WebP 或 EPS）。免费：无限静态二维码无需账户，图像 API 每分钟最多 300 次请求，免费账户包含 10 个带扫描分析功能的动态二维码。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
+    },
+    {
       "id": "04bdeb445000",
       "kind": "entry",
       "name": "QRtracer",
@@ -15351,6 +15390,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "0182db7d9d72",
+      "kind": "entry",
+      "name": "Tigris",
+      "url": "https://www.tigrisdata.com/",
+      "category": "storage-and-media-processing",
+      "parent": null,
+      "desc_en": "S3-compatible object storage with no egress fees. The free tier includes 5 GB of storage, 10,000 write requests and 100,000 read requests per month, with no card required.",
+      "desc_zh": "无出站费用的 S3 兼容对象存储。免费套餐包含每月 5 GB 存储、10,000 次写入请求和 100,000 次读取请求，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "3e68d0a880da",
@@ -15548,19 +15600,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "71868ac8b06c",
-      "kind": "entry",
-      "name": "landen.co",
-      "url": "https://www.landen.co",
-      "category": "design-and-ui",
-      "parent": null,
-      "desc_en": "Generate, edit, and publish beautiful websites and landing pages for your startup. All without code. The free tier allows you to have one website, fully customizable and published on the web.",
-      "desc_zh": "为你的初创公司生成、编辑和发布精美的网站和落地页。全程无需代码。免费套餐允许你拥有一个网站，完全可自定义并发布到网络上。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "b6f6e6a10ec9",
       "kind": "entry",
       "name": "lensdump.com",
@@ -15741,6 +15780,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "9506541b89ee",
+      "kind": "entry",
+      "name": "Umso",
+      "url": "https://www.umso.com/",
+      "category": "design-and-ui",
+      "parent": null,
+      "desc_en": "Generate, edit, and publish beautiful websites and landing pages for your startup, all without code. The free plan covers one site with a homepage, blog and free subdomain, with Umso branding.",
+      "desc_zh": "为您的初创公司生成、编辑和发布美观的网站和落地页，无需编写代码。免费套餐包含一个带有主页、博客和免费子域名的网站，带有 Umso 品牌。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "9c99fe9f8576",
@@ -16822,19 +16874,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "5964282f40fe",
-      "kind": "entry",
-      "name": "FiveTran",
-      "url": "https://www.getcensus.com/",
-      "category": "analytics-events-and-statistics",
-      "parent": null,
-      "desc_en": "Reverse ETL & Operational Analytics Platform. Sync 10 fields from your data warehouse to 60+ SaaS like Salesforce, Zendesk, or Amplitude.",
-      "desc_zh": "反向 ETL 与运营分析平台。将您的数据仓库中的 10 个字段同步到 Salesforce、Zendesk 或 Amplitude 等 60 多个 SaaS。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-11-16"
-    },
-    {
       "id": "ae5346d51d23",
       "kind": "entry",
       "name": "Clicky",
@@ -16924,6 +16963,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "a6c4c31b042d",
+      "kind": "entry",
+      "name": "Fivetran",
+      "url": "https://www.fivetran.com/",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Reverse ETL & Operational Analytics Platform. Sync 10 fields from your data warehouse to 60+ SaaS like Salesforce, Zendesk, or Amplitude.",
+      "desc_zh": "反向 ETL 和运营分析平台。将您的数据仓库中的 10 个字段同步到 Salesforce、Zendesk 或 Amplitude 等 60 多个 SaaS。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "f9ece97249ec",
@@ -17028,6 +17080,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "5310f1d66a63",
+      "kind": "entry",
+      "name": "Lyssna",
+      "url": "https://www.lyssna.com/",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Test designs and mockups on real people and track visitors. The free plan includes unlimited quick studies, three seats and 15 self-recruited test or survey responses.",
+      "desc_zh": "在真实用户身上测试设计和原型，并跟踪访客。免费套餐包含无限快速研究、3 个席位和 15 个自招募的测试或调查回复。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "2da6247c5258",
@@ -17251,19 +17316,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "e9246b5bea03",
-      "kind": "entry",
-      "name": "usabilityhub.com",
-      "url": "https://usabilityhub.com/",
-      "category": "analytics-events-and-statistics",
-      "parent": null,
-      "desc_en": "Test designs and mockups on real people and track visitors. Free for one user, unlimited tests",
-      "desc_zh": "在真实用户身上测试设计和模型，并跟踪访客。一个用户免费，无限测试",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
       "id": "01099606c244",
       "kind": "entry",
       "name": "FullStory.com",
@@ -17446,6 +17498,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "d2ffa3f74757",
+      "kind": "entry",
+      "name": "Autumn",
+      "url": "https://useautumn.com/",
+      "category": "payment-and-billing-integration",
+      "parent": null,
+      "desc_en": "Billing infrastructure for SaaS: pricing models, entitlements, usage tracking and checkout. The free plan includes 25,000 in monthly billing volume, 10,000 customers and 10 million API requests.",
+      "desc_zh": "SaaS 计费基础设施：定价模式、权限、使用情况跟踪和结账。免费套餐包含每月 25,000 的计费量、10,000 个客户和 1000 万次 API 请求。",
+      "status": "active",
+      "first_seen": "2026-11-19",
+      "updated_at": "2026-11-19"
+    },
+    {
       "id": "36e99167bed7",
       "kind": "entry",
       "name": "BillDog.io",
@@ -17545,19 +17610,6 @@
       "parent": null,
       "desc_en": "An easy-to-use currency conversion JSON API. The free tier updates once per day with a limit of 1,500 requests/month.",
       "desc_zh": "易于使用的货币兑换 JSON API。免费层每天更新一次，限额为每月 1,500 次请求。",
-      "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
-    },
-    {
-      "id": "8ebc3e679f8b",
-      "kind": "entry",
-      "name": "Exchange Rate API",
-      "url": "https://exchange-rateapi.com",
-      "category": "payment-and-billing-integration",
-      "parent": null,
-      "desc_en": "Real-time currency rates for 160+ currencies with 60-second updates and official SDKs. Free tier includes 300 requests/month.",
-      "desc_zh": "为 160+ 种货币提供实时汇率，60 秒更新，附带官方 SDK。免费层包含每月 300 次请求。",
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
@@ -18653,6 +18705,149 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "825975d50e63",
+      "kind": "entry",
+      "name": "RequestBin.com",
+      "url": "https://requestbin.com",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Create a free endpoint to which you can send HTTP requests. Any HTTP requests sent to that endpoint will be recorded with the associated payload and headers so you can observe recommendations from webhooks and other services.",
+      "desc_zh": "创建一个免费的端点，你可以向其发送 HTTP 请求。发送到该端点的任何 HTTP 请求都会连同相关的 payload 和 headers 一起被记录下来，以便你查看来自 webhooks 和其他服务的建议。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "ce35f778228f",
+      "kind": "entry",
+      "name": "Weights & Biases",
+      "url": "https://wandb.ai",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "The developer-first MLOps platform. Build better models faster with experiment tracking, dataset versioning, and model management. Free tier for personal projects only, with 100 GB of storage included.",
+      "desc_zh": "开发者优先的 MLOps 平台。通过实验跟踪、数据集版本管理和模型管理更快地构建更好的模型。免费层仅限个人项目，包含 100 GB 存储空间。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "15b393fc5388",
+      "kind": "entry",
+      "name": "v0.dev",
+      "url": "https://v0.dev/",
+      "category": "code-generation",
+      "parent": null,
+      "desc_en": "Created by Vercel, v0 generates copy-and-paste friendly React code using shadcn/ui and Tailwind CSS. It uses a credit system, providing 1,200 starting credits and 200 free credits monthly.",
+      "desc_zh": "由 Vercel 打造的 v0 使用 shadcn/ui 和 Tailwind CSS 生成便于复制粘贴的 React 代码。它采用积分系统，提供 1,200 个初始积分和每月 200 个免费积分。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "c107c89d82e2",
+      "kind": "entry",
+      "name": "pyup.io",
+      "url": "https://pyup.io",
+      "category": "security-and-pki",
+      "parent": null,
+      "desc_en": "Monitor Python dependencies for security vulnerabilities and update them automatically. Free for one private project, unlimited projects for open source.",
+      "desc_zh": "监控 Python 依赖的安全漏洞并自动更新。一个私有项目免费，开源项目不限数量。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "1c9f8834f4d8",
+      "kind": "entry",
+      "name": "logtail.com",
+      "url": "https://logtail.com/",
+      "category": "log-management",
+      "parent": null,
+      "desc_en": "ClickHouse-based SQL-compatible log management. Free up to 1 GB per month, three days retention.",
+      "desc_zh": "基于 ClickHouse 的兼容 SQL 的日志管理。每月最多 1 GB 免费，保留三天。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "bcf3109eade1",
+      "kind": "entry",
+      "name": "Keywords AI",
+      "url": "https://keywordsai.co",
+      "category": "generative-ai",
+      "parent": null,
+      "desc_en": "The best LLM monitoring platform. One format to call 200+ LLMs with 2 lines of code. 10,000 free requests every month and $0 for platform features!",
+      "desc_zh": "最佳的 LLM 监控平台。用 2 行代码以统一格式调用 200 多个 LLM。每月 10,000 次免费请求，平台功能费用为 $0！",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "a95a67e6d1ec",
+      "kind": "entry",
+      "name": "flightcontrol.dev",
+      "url": "https://flightcontrol.dev/",
+      "category": "paas",
+      "parent": null,
+      "desc_en": "Deploy web services, databases, and more on your own AWS account with a Git push style workflow. Free tier for users with 1 developer on personal GitHub repos. AWS costs are billed through AWS, but you can use credits and the AWS free tier.",
+      "desc_zh": "通过 Git push 风格的工作流，在你自己的 AWS 账户上部署 Web 服务、数据库等。免费层面向个人 GitHub 仓库上只有 1 名开发者的用户。AWS 费用通过 AWS 计费，但你可以使用 credits 和 AWS 免费层。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "71868ac8b06c",
+      "kind": "entry",
+      "name": "landen.co",
+      "url": "https://www.landen.co",
+      "category": "design-and-ui",
+      "parent": null,
+      "desc_en": "Generate, edit, and publish beautiful websites and landing pages for your startup. All without code. The free tier allows you to have one website, fully customizable and published on the web.",
+      "desc_zh": "为你的初创公司生成、编辑和发布精美的网站和落地页。全程无需代码。免费套餐允许你拥有一个网站，完全可自定义并发布到网络上。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "5964282f40fe",
+      "kind": "entry",
+      "name": "FiveTran",
+      "url": "https://www.getcensus.com/",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Reverse ETL & Operational Analytics Platform. Sync 10 fields from your data warehouse to 60+ SaaS like Salesforce, Zendesk, or Amplitude.",
+      "desc_zh": "反向 ETL 与运营分析平台。将您的数据仓库中的 10 个字段同步到 Salesforce、Zendesk 或 Amplitude 等 60 多个 SaaS。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "e9246b5bea03",
+      "kind": "entry",
+      "name": "usabilityhub.com",
+      "url": "https://usabilityhub.com/",
+      "category": "analytics-events-and-statistics",
+      "parent": null,
+      "desc_en": "Test designs and mockups on real people and track visitors. Free for one user, unlimited tests",
+      "desc_zh": "在真实用户身上测试设计和模型，并跟踪访客。一个用户免费，无限测试",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
+    },
+    {
+      "id": "8ebc3e679f8b",
+      "kind": "entry",
+      "name": "Exchange Rate API",
+      "url": "https://exchange-rateapi.com",
+      "category": "payment-and-billing-integration",
+      "parent": null,
+      "desc_en": "Real-time currency rates for 160+ currencies with 60-second updates and official SDKs. Free tier includes 300 requests/month.",
+      "desc_zh": "为 160+ 种货币提供实时汇率，60 秒更新，附带官方 SDK。免费层包含每月 300 次请求。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-19"
     },
     {
       "id": "ae88d206a5f6",
