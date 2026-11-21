@@ -1,18 +1,18 @@
 {
   "meta": {
-    "synced_at": "2026-11-19T02:39:59.466Z",
+    "synced_at": "2026-11-21T02:31:31.575Z",
     "upstream": {
       "url": "https://raw.githubusercontent.com/ripienaar/free-for-dev/master/README.md",
-      "commit_sha": "0b7464dc3a7fb1e7fc6c4ba92380a86a55f06fc4",
-      "commit_date": "2026-11-18T13:14:20Z"
+      "commit_sha": "68e9a089e228663254662ee91b0dae33f7d96b14",
+      "commit_date": "2026-11-20T17:11:36Z"
     },
     "counts": {
       "categories": 57,
-      "active": 1420,
-      "removed": 62,
-      "entries": 1387,
+      "active": 1423,
+      "removed": 69,
+      "entries": 1390,
       "notes": 33,
-      "translated": 1414
+      "translated": 1417
     }
   },
   "categories": [
@@ -1859,6 +1859,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "7c7a80ce8cbc",
+      "kind": "entry",
+      "name": "Upstream",
+      "url": "https://upstream.codes/",
+      "category": "source-code-repos",
+      "parent": null,
+      "desc_en": "Over 10,000 pushes/sec, the fastest Git host. 100 free repos, public or private, with LFS, merge checks, semantic code search, and AI",
+      "desc_zh": "每秒推送超过 10,000 次，最快的 Git 托管服务。100 个免费仓库（公开或私有），包含 LFS、合并检查、语义代码搜索和 AI。",
+      "status": "active",
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
+    },
+    {
       "id": "8754b1449000",
       "kind": "entry",
       "name": "Abstract API",
@@ -2119,6 +2132,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "a0c612c18c9d",
+      "kind": "entry",
+      "name": "Context.dev",
+      "url": "https://www.context.dev/",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Web scraping API with 1,000 API credits per month (1,000 standard scrapes) plus 10,000 one-time Logo Link requests, no credit card required.",
+      "desc_zh": "网络抓取 API，每月 1,000 个 API 积分（1,000 次标准抓取）外加 10,000 次一次性 Logo 链接请求，无需信用卡。",
+      "status": "active",
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
+    },
+    {
       "id": "95ba002ba5ec",
       "kind": "entry",
       "name": "Conversion Tools",
@@ -2210,17 +2236,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "1d44a734efbf",
+      "id": "78849504b6d1",
       "kind": "entry",
       "name": "CurrencyBeacon",
-      "url": "https://currencyscoop.com",
+      "url": "https://currencybeacon.com/",
       "category": "apis-data-and-ml",
       "parent": null,
       "desc_en": "Realtime currency data API for fintech apps. The free plan includes 5,000 calls per month.",
-      "desc_zh": "面向金融科技应用的实时货币数据 API。免费计划每月包含 5,000 次调用。",
+      "desc_zh": "面向金融科技应用的实时货币数据 API。免费套餐包含每月 5,000 次调用。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-11-16"
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "7e7c92e00a57",
@@ -4069,17 +4095,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "c5c0cddc085a",
+      "id": "e1721e64e632",
       "kind": "entry",
       "name": "Fibery",
-      "url": "https://fibery.io/",
+      "url": "https://fibery.com/",
       "category": "tools-for-teams-and-collaboration",
       "parent": null,
       "desc_en": "Connected workspace platform. Free for single users, up to 2 GB disk space.",
-      "desc_zh": "互联式工作区平台。单用户免费，最多 2 GB 磁盘空间。",
+      "desc_zh": "连接式工作区平台。个人用户免费，最多 2 GB 磁盘空间。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "e62154fbaee1",
@@ -5278,17 +5304,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "f82667869f61",
+      "id": "d90a17cce9b0",
       "kind": "entry",
       "name": "DeepSource",
-      "url": "https://deepsource.io/",
+      "url": "https://deepsource.com/",
       "category": "code-quality",
       "parent": null,
       "desc_en": "DeepSource continuously analyzes source code changes, finding and fixing issues categorized under security, performance, anti-patterns, bug-risks, documentation, and style. Native integration with GitHub, GitLab, and Bitbucket.",
-      "desc_zh": "DeepSource 持续分析源代码变更，发现并修复安全、性能、反模式、Bug 风险、文档和风格等类别的问题。与 GitHub、GitLab 和 Bitbucket 原生集成。",
+      "desc_zh": "DeepSource 持续分析源代码更改，发现并修复归类于安全、性能、反模式、Bug 风险、文档和风格的漏洞。与 GitHub、GitLab 和 Bitbucket 原生集成。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "d887f9b9423d",
@@ -10374,19 +10400,6 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "5d645141b902",
-      "kind": "entry",
-      "name": "SignupVet",
-      "url": "https://www.signupvet.com",
-      "category": "email",
-      "parent": null,
-      "desc_en": "An API that checks email, phone and IP of new signups. 250 free checks per month, no credit card.",
-      "desc_zh": "一个用于检查新注册用户邮箱、电话和 IP 的 API。每月 250 次免费检查，无需信用卡。",
-      "status": "active",
-      "first_seen": "2026-10-23",
-      "updated_at": "2026-10-23"
-    },
-    {
       "id": "40d09cc411a2",
       "kind": "entry",
       "name": "SimpleLogin",
@@ -10489,6 +10502,19 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "3f8608ebb4f5",
+      "kind": "entry",
+      "name": "turboSMTP",
+      "url": "https://serversmtp.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "SMTP relay service, free for 200 emails per day or 6000 emails per month, free forever, no time limit, no expiry. Web API, SPF/DKIM authentication, suppression management, 1 sending domain, 2 API keys, 2FA, ticket and chat support, GDPR compliant.",
+      "desc_zh": "SMTP 中继服务，每天免费 200 封邮件或每月 6,000 封邮件，永久免费，无时间限制，无过期日。Web API、SPF/DKIM 认证、屏蔽管理、1 个发送域名、2 个 API 密钥、2FA、工单和聊天支持、符合 GDPR。",
+      "status": "active",
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "ec9ef1739e3b",
@@ -11089,6 +11115,19 @@
       "updated_at": "2026-10-15"
     },
     {
+      "id": "3e83ee8e46e9",
+      "kind": "entry",
+      "name": "FormTango",
+      "url": "https://formtango.com",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Form backend for static sites and AI-built apps. Free plan: 100 submissions a month, unlimited forms, spam filtering and email notifications. Endpoints can be created from the API with no account.",
+      "desc_zh": "静态网站和 AI 构建应用的表单后端。免费套餐：每月 100 次提交，无限表单，垃圾邮件过滤和邮件通知。无需账户即可通过 API 创建端点。",
+      "status": "active",
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
+    },
+    {
       "id": "1cec559c97cc",
       "kind": "entry",
       "name": "Formware.io",
@@ -11141,17 +11180,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "9afc45223a5d",
+      "id": "c0442ca840fd",
       "kind": "entry",
       "name": "Kwes.io",
-      "url": "https://kwes.io/",
+      "url": "https://kwesforms.com/",
       "category": "forms",
       "parent": null,
       "desc_en": "Feature rich form endpoint. Works great with static sites. The free plan includes up to 1 website with up to 50 monthly submissions.",
-      "desc_zh": "功能丰富的表单端点。与静态网站配合使用效果极佳。免费计划包含最多 1 个网站，每月最多 50 次提交。",
+      "desc_zh": "功能丰富的表单端点。与静态网站配合效果极佳。免费套餐包含最多 1 个网站，每月最多 50 次提交。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "8276bc98ed37",
@@ -12311,17 +12350,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "1b03f963de17",
+      "id": "18b426cb0530",
       "kind": "entry",
       "name": "IFTTT",
-      "url": "https://ifttt.com",
+      "url": "https://ifttt.ai/",
       "category": "baas",
       "parent": null,
       "desc_en": "Automate your favorite apps and devices. Free 2 Applets",
-      "desc_zh": "自动化你喜爱的应用和设备。免费 2 个 Applet。",
+      "desc_zh": "自动化您喜爱的应用和设备。免费 2 个 Applets。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "a8a377566a6e",
@@ -13448,11 +13487,11 @@
       "url": "https://www.cockroachlabs.com/pricing/",
       "category": "managed-data-services",
       "parent": null,
-      "desc_en": "Free tier offers 50 million RUs and 10 GiB of storage (same as 15$ worth) free per month. ([What's the Request Units](https://www.cockroachlabs.com/docs/cockroachcloud/metrics-request-units.html))",
-      "desc_zh": "免费层每月免费提供 5000 万 RUs 和 10 GiB 存储空间（价值相当于 $15）。([What's the Request Units](https://www.cockroachlabs.com/docs/cockroachcloud/metrics-request-units.html))",
+      "desc_en": "Free tier offers 50 million RUs and 10 GiB of storage (same as 15$ worth) free per month. ([What's the Request Units](https://docs.cockroachlabs.com/docs/cockroachcloud/metrics-request-units))",
+      "desc_zh": "免费层级每月提供 5000 万 RU 和 10 GiB 存储（价值 15$）。([What's the Request Units](https://docs.cockroachlabs.com/docs/cockroachcloud/metrics-request-units))",
       "status": "active",
       "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "updated_at": "2026-11-21"
     },
     {
       "id": "934fed650da2",
@@ -13481,17 +13520,17 @@
       "updated_at": "2026-10-15"
     },
     {
-      "id": "a78bf75f2096",
+      "id": "fe871ea370b1",
       "kind": "entry",
       "name": "CrateDB",
-      "url": "https://crate.io/",
+      "url": "https://cratedb.com/",
       "category": "managed-data-services",
       "parent": null,
       "desc_en": "Distributed Open Source SQL database for real-time analytics. [Free Tier CRFREE](https://crate.io/lp-crfree): One-node with 2 CPUs, 2 GiB of memory, 8 GiB of storage. One cluster per organization, no payment method needed.",
-      "desc_zh": "用于实时分析的开源分布式 SQL 数据库。[Free Tier CRFREE](https://crate.io/lp-crfree)：单节点，2 个 CPU，2 GiB 内存，8 GiB 存储。每个组织一个集群，无需提供支付方式。",
+      "desc_zh": "用于实时分析的分布式开源 SQL 数据库。[免费层级 CRFREE](https://crate.io/lp-crfree)：单节点，2 个 CPU，2 GiB 内存，8 GiB 存储。每个组织一个集群，无需支付方式。",
       "status": "active",
-      "first_seen": "2026-10-15",
-      "updated_at": "2026-10-15"
+      "first_seen": "2026-11-21",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "af3675896985",
@@ -18705,6 +18744,97 @@
       "status": "active",
       "first_seen": "2026-10-15",
       "updated_at": "2026-10-15"
+    },
+    {
+      "id": "1d44a734efbf",
+      "kind": "entry",
+      "name": "CurrencyBeacon",
+      "url": "https://currencyscoop.com",
+      "category": "apis-data-and-ml",
+      "parent": null,
+      "desc_en": "Realtime currency data API for fintech apps. The free plan includes 5,000 calls per month.",
+      "desc_zh": "面向金融科技应用的实时货币数据 API。免费计划每月包含 5,000 次调用。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-21"
+    },
+    {
+      "id": "c5c0cddc085a",
+      "kind": "entry",
+      "name": "Fibery",
+      "url": "https://fibery.io/",
+      "category": "tools-for-teams-and-collaboration",
+      "parent": null,
+      "desc_en": "Connected workspace platform. Free for single users, up to 2 GB disk space.",
+      "desc_zh": "互联式工作区平台。单用户免费，最多 2 GB 磁盘空间。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-21"
+    },
+    {
+      "id": "f82667869f61",
+      "kind": "entry",
+      "name": "DeepSource",
+      "url": "https://deepsource.io/",
+      "category": "code-quality",
+      "parent": null,
+      "desc_en": "DeepSource continuously analyzes source code changes, finding and fixing issues categorized under security, performance, anti-patterns, bug-risks, documentation, and style. Native integration with GitHub, GitLab, and Bitbucket.",
+      "desc_zh": "DeepSource 持续分析源代码变更，发现并修复安全、性能、反模式、Bug 风险、文档和风格等类别的问题。与 GitHub、GitLab 和 Bitbucket 原生集成。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-21"
+    },
+    {
+      "id": "5d645141b902",
+      "kind": "entry",
+      "name": "SignupVet",
+      "url": "https://www.signupvet.com",
+      "category": "email",
+      "parent": null,
+      "desc_en": "An API that checks email, phone and IP of new signups. 250 free checks per month, no credit card.",
+      "desc_zh": "一个用于检查新注册用户邮箱、电话和 IP 的 API。每月 250 次免费检查，无需信用卡。",
+      "status": "removed",
+      "first_seen": "2026-10-23",
+      "updated_at": "2026-11-21"
+    },
+    {
+      "id": "9afc45223a5d",
+      "kind": "entry",
+      "name": "Kwes.io",
+      "url": "https://kwes.io/",
+      "category": "forms",
+      "parent": null,
+      "desc_en": "Feature rich form endpoint. Works great with static sites. The free plan includes up to 1 website with up to 50 monthly submissions.",
+      "desc_zh": "功能丰富的表单端点。与静态网站配合使用效果极佳。免费计划包含最多 1 个网站，每月最多 50 次提交。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-21"
+    },
+    {
+      "id": "1b03f963de17",
+      "kind": "entry",
+      "name": "IFTTT",
+      "url": "https://ifttt.com",
+      "category": "baas",
+      "parent": null,
+      "desc_en": "Automate your favorite apps and devices. Free 2 Applets",
+      "desc_zh": "自动化你喜爱的应用和设备。免费 2 个 Applet。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-21"
+    },
+    {
+      "id": "a78bf75f2096",
+      "kind": "entry",
+      "name": "CrateDB",
+      "url": "https://crate.io/",
+      "category": "managed-data-services",
+      "parent": null,
+      "desc_en": "Distributed Open Source SQL database for real-time analytics. [Free Tier CRFREE](https://crate.io/lp-crfree): One-node with 2 CPUs, 2 GiB of memory, 8 GiB of storage. One cluster per organization, no payment method needed.",
+      "desc_zh": "用于实时分析的开源分布式 SQL 数据库。[Free Tier CRFREE](https://crate.io/lp-crfree)：单节点，2 个 CPU，2 GiB 内存，8 GiB 存储。每个组织一个集群，无需提供支付方式。",
+      "status": "removed",
+      "first_seen": "2026-10-15",
+      "updated_at": "2026-11-21"
     },
     {
       "id": "825975d50e63",
