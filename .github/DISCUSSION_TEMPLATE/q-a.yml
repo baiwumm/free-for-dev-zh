@@ -1,0 +1,49 @@
+title: "[Q&A] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提问前请先搜索已有的 [Discussions](https://github.com/baiwumm/free-for-dev-zh/discussions) 与[站点文档](https://ffd.baiwumm.com/about)。
+
+        **不要粘贴任何密钥或令牌**；日志与截图请先脱敏。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型 / Area
+      options:
+        - 站点使用（浏览 / 搜索 / 订阅）
+        - 数据勘误（条目错误 / 缺失 / 与上游不一致）
+        - 翻译质量
+        - 本地开发 / 自托管
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 想做什么？遇到了什么？
+      description: 期望的结果、实际发生了什么；涉及条目时附上 URL 或条目 ID。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤（如适用）
+      placeholder: |
+        1. …
+        2. …
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志或截图
+      description: 只贴关键几行，先删除密钥与绝对路径。
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 发帖前确认
+      options:
+        - label: 我已搜索过现有讨论与文档。
+          required: true
+        - label: 我已删除帖中的密钥、令牌与敏感信息。
+          required: true

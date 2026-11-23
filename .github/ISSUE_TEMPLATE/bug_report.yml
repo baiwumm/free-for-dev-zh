@@ -1,0 +1,66 @@
+name: 🐞 问题反馈 / Bug report
+description: 报告站点功能、数据或同步流水线中可复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。本表单用于**可复现的问题**。
+
+        使用提问、条目勘误讨论请到 [Discussions Q&A](https://github.com/baiwumm/free-for-dev-zh/discussions/categories/q-a)；安全问题必须走[私密报告](https://github.com/baiwumm/free-for-dev-zh/security/advisories/new)，不要在公开 issue 中披露。
+
+        **不要粘贴任何密钥或令牌**（如翻译 API Key），日志与截图请先脱敏。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题类型 / Area
+      options:
+        - 站点功能（页面 / 搜索 / 订阅 / 暗黑模式）
+        - 数据与翻译（条目勘误 / 缺漏 / 译文错误）
+        - 同步流水线（Daily Sync）
+        - 文档（README / docs/）
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本 / 同步日期
+      description: 首页标注的「同步于」日期，或出现问题的 commit SHA。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 https://ffd.baiwumm.com/…
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为与实际行为
+      description: 你期望的结果、实际发生了什么；数据问题请附上条目 URL 或条目 ID。
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志或截图
+      description: 只贴关键几行，先删除密钥与绝对路径。
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过现有 issue 与 Discussions。
+          required: true
+        - label: 数据问题已附上条目 URL 或 ID，以及与上游 README 的差异说明。
+          required: true
+        - label: 我已删除报告中的密钥、令牌与敏感信息。
+          required: true

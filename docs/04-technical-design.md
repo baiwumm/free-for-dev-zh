@@ -104,7 +104,7 @@ export default nextConfig
 
 | 工作流 | 触发 | 动作 |
 |---|---|---|
-| `ci.yml` | PR / push main | Biome 检查 + `node --test` + `pnpm build` + `out/` 产物断言（首页/404/搜索索引条数） |
+| `ci.yml` | PR / push main | Biome 检查 + `node --test` + `pnpm audit:data --strict` 数据质量门禁 + `pnpm build` + `out/` 产物断言（首页 / 404 / llms.txt / llms-full.txt / 搜索索引条数） |
 | `daily-sync.yml` | cron UTC 21:23（北京 05:23）+ 手动 | `node --test` → `node scripts/sync.mjs`（含增量翻译）→ 有变更才 commit `data/` 并 push；无变更自动跳过提交 |
 
 发布不在 GitHub Actions 里：EdgeOne Pages 的 Git 集成监听仓库，push 到 Production Branch（`main`）即重新构建 `out/` 并上线。迁移后只剩上面两个工作流（原 `deploy.yml` 已删除）。
@@ -114,6 +114,20 @@ export default nextConfig
 **触发链注意**：默认 `GITHUB_TOKEN` 的提交不会触发其他 GitHub Actions workflow（GitHub 平台防递归），但 **会** 触发 Pages 这类外部 GitHub App 的仓库事件——2026-11-02 实测：daily-sync 于 00:53 UTC 提交并 push，Pages 于 02:37 UTC 产出新构建（构建队列有排队延迟，每日同步内容上线通常滞后 1–2 小时，不是故障）。因此原先为绕开防递归而设计的 `workflow_call` 直调部署已无必要，daily-sync 只负责提交数据；`permissions: contents: write` 仍需保留才能 push。Pages 侧构建参数（Node / pnpm 版本、构建命令、输出目录）以控制台为准，仓库不再维护部署 job。
 
 Secrets：只剩 `LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_MODEL_FALLBACK`/`LLM_BATCH`/`LLM_THINKING` 在 workflow env 中可调，默认智谱 GLM-4.7-Flash 主模型 + GLM-4.5-Flash 免费备份、关闭思考模式；首翻补量可经 workflow_dispatch 传 `model` 临时覆盖为付费 GLM-5.3-Flash），存于仓库 Actions secrets。迁移后 `CLOUDFLARE_API_TOKEN`（及可选的 `CLOUDFLARE_ACCOUNT_ID`）已无用途，应在仓库 Settings 里删除并在 Cloudflare 侧吊销。上游数据无凭据依赖。未配置 `LLM_API_KEY` 时同步照常运行，仅跳过翻译（`desc_zh` 置 `null`，站点降级展示英文原文并标注「未翻译」）。
+
+## 仓库配置与社区健康
+
+| 项 | 状态 | 说明 |
+|---|---|---|
+| `main` 规则集 | 已启用 | 禁删除 / 禁 force-push；required status checks 为 CI 的 `check`（PR 合入门禁；daily-sync 的 bot 直推 main 不受状态检查约束，平台惯例如此）；owner 账号 `always` 绕过 |
+| Dependabot（依赖版本） | 已启用 | `.github/dependabot.yml`：npm 与 github-actions 两个 ecosystem，每周一 09:00（Asia/Shanghai）；minor/patch 分组、major 单独成 PR（静态导出对大版本敏感，逐个评估） |
+| Dependabot auto-merge | 已启用 | `.github/dependabot-auto-merge.yml`：只打开 GitHub 原生 auto-merge（squash），合并时机仍由规则集的 required checks 决定，CI 不过不会合 |
+| 依赖漏洞告警 + 自动修复 | 已启用 | 仓库 Settings → Code security；依赖漏洞会开 PR |
+| Secret scanning + push protection | 已启用 | 公开仓库默认开启扫描；push protection 防密钥入库（唯一 secret 为 `LLM_API_KEY`） |
+| Discussions | 已启用 | Q&A（可采纳答案）与 Ideas 两个分类；ISSUE_TEMPLATE/config.yml 把使用提问导向 Discussions，blank issues 关闭 |
+| Wiki | 已关闭 | 文档以 `docs/` 与 README 为唯一事实源，不另起 wiki |
+| 社区健康文件 | 已补齐 | `CODE_OF_CONDUCT.md`（Contributor Covenant 2.1）、`CONTRIBUTING.md`、`SECURITY.md`（私密报告）、issue / PR / discussion 模板，健康度 42% → 100% |
+| 行尾统一 | 已启用 | `.gitattributes`：`* text=auto eol=lf` + 图片 / 字体 binary 标记；覆盖 Windows 上 `core.autocrlf=true` 的 CRLF 签出，本地 `pnpm lint` 与 CI 行为一致 |
 
 ## 本地开发
 

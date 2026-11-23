@@ -1,0 +1,18 @@
+# Normalize line endings (2026-11-23)：仓库与工作区统一 LF。
+# core.autocrlf 在 Windows 上默认 true，签出会把 LF 转成 CRLF，导致 Biome
+# 行尾检查在本地失败、工作区长期挂着"幽灵改动"；eol=lf 覆盖该行为。
+# 显式 binary 标记保证图片 / 字体不做任何行尾转换。
+* text=auto eol=lf
+
+# Binary assets must never be line-ending translated or diffed as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary

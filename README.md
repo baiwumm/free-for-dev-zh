@@ -52,7 +52,7 @@ src/                站点（首页索引 / docs 概览 / 分类页 / 条目详�
 assets/fonts/       Maple Mono CN GB2312 源字（仅用于再子集化，SIL OFL 1.1）
 public/fonts/       站点字体子集（由 pnpm fonts 生成后提交）
 .agents/skills/     项目级 AI 技能（frontend-design / vercel-react-best-practices，版本锁定于 skills-lock.json）
-.github/workflows/  ci.yml · daily-sync.yml（发布由 EdgeOne Pages 的 Git 集成完成）
+.github/             issue / PR / discussion 模板 · dependabot · workflows（ci.yml · daily-sync.yml，发布由 EdgeOne Pages 的 Git 集成完成）
 AGENTS.md           AI 与开发协作约定（包管理 / 命令 / 硬性约束）
 ```
 
@@ -93,6 +93,13 @@ pnpm preview        # 本地预览 out/ 静态产物（需先 pnpm build）
 3. GitHub 仓库 Settings → Secrets and variables → Actions 只需保留 `LLM_API_KEY`（翻译用，智谱开放平台或任意 OpenAI 兼容服务的 API Key，缺省时同步照常运行、仅跳过翻译）。原 `CLOUDFLARE_API_TOKEN` 已无用途，建议在仓库删除并在 Cloudflare 侧吊销。
 4. 每日 UTC 21:23（北京时间次日 05:23）`Daily Sync` 自动运行；首次全量翻译可在 Actions 页手动触发该 workflow（workflow_dispatch）。
 5. 缓存与安全头在 EdgeOne 控制台配置（`/_next/static/*`、`/fonts/*` 强缓存 `max-age=31536000, immutable`，全站 `X-Content-Type-Options: nosniff` / `Referrer-Policy: strict-origin-when-cross-origin`）：原 `public/_headers` 是 Workers Static Assets 专属机制，Pages 不识别，已随迁移删除。
+
+## 🤝 贡献与反馈
+
+- 贡献指南见 [CONTRIBUTING.md](./CONTRIBUTING.md)：短小聚焦的 PR、中文 Conventional Commits、AI 参与的提交按 AGENTS.md 规范带 trailer。
+- 条目勘误、翻译纠错与使用提问欢迎到 [Discussions Q&A](https://github.com/baiwumm/free-for-dev-zh/discussions/categories/q-a)；功能想法去 [Ideas](https://github.com/baiwumm/free-for-dev-zh/discussions/categories/ideas)。
+- 安全问题请按 [SECURITY.md](./SECURITY.md) 走私密报告，不要开公开 issue。
+- 行为准则见 [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)。
 
 ## ⚖️ 数据与许可
 

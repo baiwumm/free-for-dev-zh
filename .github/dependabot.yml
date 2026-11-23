@@ -1,0 +1,41 @@
+version: 2
+
+updates:
+  # 站点与流水线依赖（Next / React / Fumadocs / Biome 等）；pnpm-lock.yaml 在仓库根，
+  # 且 pnpm-workspace.yaml 固定 minimumReleaseAge: 0，不受依赖释放冷静期影响。
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Shanghai
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      npm-minor-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
+    # major 升级（Next / React / Fumadocs 等）不分组、单独成 PR：本站为
+    # output: export 纯静态导出，框架大版本可能影响静态导出行为，需逐个评估。
+
+  # 工作流里 pin 的 actions 版本（checkout / setup-node / pnpm/action-setup）。
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Shanghai
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci(deps)"
+    groups:
+      actions-minor-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch

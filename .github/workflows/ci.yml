@@ -34,16 +34,21 @@ jobs:
       - name: 单元测试（解析边界 / 守卫 / 翻译校验）
         run: node --test
 
+      - name: 数据质量门禁（audit:data --strict：数字 / 链接 / 拒答硬问题非零退出）
+        run: pnpm audit:data --strict
+
       - name: 构建站点（静态导出）
         run: pnpm build
 
-      - name: 产物断言（页面数与搜索索引）
+      - name: 产物断言（页面数 / 搜索索引 / AI 可读层）
         run: |
           node -e "
             const fs = require('fs');
             const idx = JSON.parse(fs.readFileSync('out/search-index.json', 'utf8'));
             if (!fs.existsSync('out/index.html')) throw new Error('缺少 out/index.html');
             if (!fs.existsSync('out/404.html')) throw new Error('缺少 out/404.html');
+            if (!fs.existsSync('out/llms.txt')) throw new Error('缺少 out/llms.txt');
+            if (!fs.existsSync('out/llms-full.txt')) throw new Error('缺少 out/llms-full.txt');
             if (idx.length < 1200) throw new Error('搜索索引条目过少: ' + idx.length);
             console.log('out/ 校验通过：搜索索引', idx.length, '条');
           "
