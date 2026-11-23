@@ -13,7 +13,7 @@
  * 当天日期——/fonts/* 走强缓存 immutable（EdgeOne Pages 控制台配置），靠该版本号让旧访客换新。
  */
 import { spawnSync } from 'node:child_process'
-import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { extname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -43,10 +43,13 @@ for (const file of ['entries.json', 'categories.json', 'overrides.json']) {
 }
 
 const walk = (dir) => {
-  for (const name of readdirSync(dir)) {
-    const path = join(dir, name)
-    if (statSync(path).isDirectory()) walk(path)
-    else if (['.ts', '.tsx', '.css'].includes(extname(name))) addText(readFileSync(path, 'utf8'))
+  // withFileTypes 让目录/文件判定与一次 readdir 同源，避免 statSync 的 TOCTOU
+  // （CodeQL js/file-system-race）
+  for (const dirent of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, dirent.name)
+    if (dirent.isDirectory()) walk(path)
+    else if (['.ts', '.tsx', '.css'].includes(extname(dirent.name)))
+      addText(readFileSync(path, 'utf8'))
   }
 }
 walk(join(root, 'src'))
@@ -72,8 +75,13 @@ const unicodes = [
     .map((cp) => `U+${cp.toString(16).toUpperCase().padStart(4, '0')}`),
 ].join(',')
 
-const unicodesFile = join(tmpdir(), `ffd-font-unicodes-${process.pid}.txt`)
-const outTemp = join(tmpdir(), `ffd-font-${process.pid}.woff2`)
+// 私有临时目录：mkdtemp 生成不可预测名且权限 0700，避免共享 tmpdir 下
+// 可预测文件名被抢占或符号链接劫持（CodeQL js/insecure-temporary-file）
+const tmpDir = mkdtempSync(join(tmpdir(), 'ffd-font-'))
+// 退出即清理（含 process.exit 与未捕获异常；finally 不覆盖 process.exit）
+process.on('exit', () => rmSync(tmpDir, { recursive: true, force: true }))
+const unicodesFile = join(tmpDir, 'unicodes.txt')
+const outTemp = join(tmpDir, 'subset.woff2')
 writeFileSync(unicodesFile, `${unicodes}\n`)
 
 // —— 2. 调 fonttools 子集化 ——
@@ -98,8 +106,18 @@ if (result.error || result.status !== 0) {
 
 // —— 3. 有变化才落盘，并刷新 CSS 版本号 ——
 const fmt = (n) => `${(n / 1024).toFixed(0)}KB`
+// 读已存在产物不预检：ENOENT 即「无旧版」，规避 existsSync + readFileSync 的
+// TOCTOU（CodeQL js/file-system-race）
+const readIfExists = (file) => {
+  try {
+    return readFileSync(file)
+  } catch (err) {
+    if (err.code === 'ENOENT') return null
+    throw err
+  }
+}
 const next = readFileSync(outTemp)
-const prev = existsSync(outputFont) ? readFileSync(outputFont) : null
+const prev = readIfExists(outputFont)
 if (prev?.equals(next)) {
   console.log(`字体无变化（${fmt(next.length)}，${chars.size} 个非 ASCII 用字），跳过写入`)
   process.exit(0)

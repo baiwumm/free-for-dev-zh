@@ -19,6 +19,12 @@ updates:
         update-types:
           - minor
           - patch
+    ignore:
+      # TS 7（2026-11，原生 Go 移植版）未被本站构建链完整验证：类型检查走
+      # next build 内置 tsc，大版本需单独人工验证，不跟随分组自动升。
+      - dependency-name: "typescript"
+        update-types:
+          - version-update:semver-major
     # major 升级（Next / React / Fumadocs 等）不分组、单独成 PR：本站为
     # output: export 纯静态导出，框架大版本可能影响静态导出行为，需逐个评估。
 
