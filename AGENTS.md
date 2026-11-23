@@ -31,7 +31,12 @@
 - `desc_zh` 可能为 `null`（未翻译）：所有 UI 必须降级展示英文原文并标注「未翻译」。
 - 改 React / Next.js 组件、数据获取或性能相关代码前，先读 `.agents/skills/vercel-react-best-practices/SKILL.md`。
 - 改视觉前先读 `docs/03-site-requirements.md` 的视觉要求与 `.agents/skills/frontend-design/SKILL.md`；设计令牌在 `src/app/globals.css`。
+
+## 提交规范
+
 - 提交信息使用中文 Conventional Commits（如 `fix(sync): …`）。
+- **AI 参与**的提交必须带 trailer：正文后空一行，追加连续的 trailer 块。具体写法（`Co-authored-by` 只写产品名与 registry 邮箱，模型名只进 `Assisted-by` 的 `host:model`）、身份表与校验流程以 `ai-commit-trailer` skill 为唯一规范，本文不重复其定义；身份按实际运行本次会话的产品匹配其 `references/agents.json`，不得照抄其它产品；纯人工改动不加 trailer。写法可参考同工作区 `token-usage` 项目 AGENTS.md 的「闸门、分支与提交」一节。
+- 提交前用该 skill 的 `normalize.mjs check --message <文件>` 自检（`fix --message <文件> --write` 可自动归位 trailer），exit 0 才算通过；不回头改写已推送的历史提交。
 
 ## 外部参考
 
