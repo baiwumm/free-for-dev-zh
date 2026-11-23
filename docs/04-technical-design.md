@@ -105,6 +105,7 @@ export default nextConfig
 | 工作流 | 触发 | 动作 |
 |---|---|---|
 | `ci.yml` | PR / push main | Biome 检查 + `node --test` + `pnpm audit:data --strict` 数据质量门禁 + `pnpm build` + `out/` 产物断言（首页 / 404 / llms.txt / llms-full.txt / 搜索索引条数） |
+| `codeql.yml` | PR / push main（限 src、scripts、workflows、依赖清单）+ 每周一 | CodeQL 静态分析（`actions` + `javascript-typescript`，security-extended，`build-mode: none`），结果进 Security → Code scanning alerts；**不**设为 required check（告警不阻塞合并） |
 | `daily-sync.yml` | cron UTC 21:23（北京 05:23）+ 手动 | `node --test` → `node scripts/sync.mjs`（含增量翻译）→ 有变更才 commit `data/` 并 push；无变更自动跳过提交 |
 
 发布不在 GitHub Actions 里：EdgeOne Pages 的 Git 集成监听仓库，push 到 Production Branch（`main`）即重新构建 `out/` 并上线。迁移后只剩上面两个工作流（原 `deploy.yml` 已删除）。
@@ -124,6 +125,8 @@ Secrets：只剩 `LLM_API_KEY`（翻译；`LLM_BASE_URL`/`LLM_MODEL`/`LLM_MODEL_
 | Dependabot auto-merge | 已启用 | `.github/dependabot-auto-merge.yml`：只打开 GitHub 原生 auto-merge（squash），合并时机仍由规则集的 required checks 决定，CI 不过不会合 |
 | 依赖漏洞告警 + 自动修复 | 已启用 | 仓库 Settings → Code security；依赖漏洞会开 PR |
 | Secret scanning + push protection | 已启用 | 公开仓库默认开启扫描；push protection 防密钥入库（唯一 secret 为 `LLM_API_KEY`） |
+| Code scanning（CodeQL） | 已启用 | `.github/workflows/codeql.yml`：`actions`（工作流注入面）+ `javascript-typescript`（XSS / 危险 API），security-extended 查询集、无构建模式；公开仓库免费；告警仅 advisory，不进规则集 required checks |
+| Security policy | 已发布 | 根目录 `SECURITY.md`（私密报告渠道 + 范围 + 支持版本），推送后 GitHub 在 Settings → Code security 识别为已发布 |
 | Discussions | 已启用 | Q&A（可采纳答案）与 Ideas 两个分类；ISSUE_TEMPLATE/config.yml 把使用提问导向 Discussions，blank issues 关闭 |
 | Wiki | 已关闭 | 文档以 `docs/` 与 README 为唯一事实源，不另起 wiki |
 | 社区健康文件 | 已补齐 | `CODE_OF_CONDUCT.md`（Contributor Covenant 2.1）、`CONTRIBUTING.md`、`SECURITY.md`（私密报告）、issue / PR / discussion 模板，健康度 42% → 100% |

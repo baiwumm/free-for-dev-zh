@@ -1,0 +1,64 @@
+name: CodeQL
+
+# 安全静态分析：JavaScript/TypeScript 源码 + GitHub Actions 工作流
+# （工作流注入面见 SECURITY.md 的 Scope）。公开仓库免费，结果进
+# Security → Code scanning alerts。
+#
+# 两点说明：
+# 1. build-mode: none——本站为纯静态站点、无服务端数据流，完整构建由 ci.yml
+#    负责，这里不重复跑几分钟的 next build；security-extended 查询集在无构建
+#    信息时仍覆盖 XSS / 注入 / 危险 API 等模式。
+# 2. codeql 不设为 main 规则集的 required check——安全告警是 advisory，不应
+#    阻塞 PR 合并；规则集只要求 ci.yml 的 check。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+  schedule:
+    # 每周一 03:37 UTC（避开整点高峰；与 Dependabot 的周一 09:00 Asia/Shanghai 错开）
+    - cron: '37 3 * * 1'
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [actions, javascript-typescript]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: 初始化 CodeQL（${{ matrix.language }}）
+        uses: github/codeql-action/init@v4
+        with:
+          language: ${{ matrix.language }}
+          queries: security-extended
+          build-mode: none
+
+      - name: 执行分析（${{ matrix.language }}）
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: '/language:${{ matrix.language }}'
