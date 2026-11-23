@@ -180,6 +180,70 @@ export function getEntryContext(id: string): {
   return { entry, category, parent }
 }
 
+/** 父条目下的 note 子项：上游用缩进备注给出的免费额度明细。 */
+export function getEntryNotes(parentId: string): SiteEntry[] {
+  return entries.filter((e) => e.kind === 'note' && e.parent === parentId)
+}
+
+/** 同分类相关条目：优先同父兄弟，其次同分类顶级条目，数量固定以保证构建稳定。 */
+export function getRelatedEntries(id: string, limit = 4): SiteEntry[] {
+  const entry = entryById.get(id)
+  if (!entry) return []
+  const pool = [...entryById.values()].filter((e) => e.category === entry.category && e.id !== id)
+  const siblings = pool.filter((e) => entry.parent !== null && e.parent === entry.parent)
+  const rest = pool.filter((e) => !siblings.includes(e))
+  const ordered = [
+    ...siblings,
+    ...rest.filter((e) => e.parent === null),
+    ...rest.filter((e) => e.parent !== null),
+  ]
+  return ordered.slice(0, limit)
+}
+
+/** 元描述用：去掉 markdown 行内语法（链接、代码、加粗）并压缩空白。 */
+export function plainText(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\([^)\s]+\)/g, '$1')
+    .replace(/[*`]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+/** 按字符截断，尽量不把英文单词或收尾标点留在断口。 */
+export function truncate(text: string, max: number): string {
+  if (text.length <= max) return text
+  return `${text.slice(0, max - 1).replace(/[\s(（,，、;；:：—–-]+$/, '')}…`
+}
+
+/**
+ * 条目 meta description：英文/中文原文先转纯文本；过短或无描述时用
+ * 「名称 + 分类 + 同步说明」补足，控制在 80–158 字符。
+ */
+export function entryDescription(entry: SiteEntry, category: SiteCategory, noteCount = 0): string {
+  const rawText = plainText(entry.descZh ?? entry.descEn)
+  const raw = rawText && !/[。.!！?？]$/.test(rawText) ? `${rawText}。` : rawText
+  if (raw.length >= 80) return truncate(raw, 150)
+  const notes = noteCount > 0 ? `，附 ${noteCount} 项免费额度明细` : ''
+  const tail = `${entry.name ?? '该服务'} 是免费资源清单「${category.nameZh}（${category.nameEn}）」分类收录的开发者免费资源${notes}，中文说明每日自动同步自 free-for-dev 上游清单。`
+  return truncate(`${raw}${tail}`, 150)
+}
+
+/** 分类页 meta description。 */
+export function categoryDescription(category: SiteCategory): string {
+  return `free-for-dev 中文版「${category.nameZh}」分类：收录 ${category.count} 个 ${category.nameEn} 方向的免费开发服务与资源，附中文说明与上游免费额度，支持页内筛选与站内搜索，每日自动同步上游清单。`
+}
+
+/** 标题保持唯一且为模板后缀留余量（` | 免费开发资源` 共 9 字符）。 */
+export function entryTitle(entry: SiteEntry, category: SiteCategory): string {
+  const combined = `${entry.name} —— ${category.nameZh}`
+  return combined.length <= 48 ? combined : (entry.name ?? '')
+}
+
+export function categoryTitle(category: SiteCategory): string {
+  const combined = `${category.nameZh} · ${category.nameEn}`
+  return combined.length <= 48 ? combined : category.nameZh
+}
+
 /** 搜索索引（构建期生成，/search-index.json 静态输出）。 */
 export interface SearchRecord {
   id: string

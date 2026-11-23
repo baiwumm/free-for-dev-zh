@@ -22,6 +22,7 @@ const root = fileURLToPath(new URL('..', import.meta.url))
 const sourceFont = join(root, 'assets', 'fonts', 'maple-mono-cn-gb2312.woff2')
 const outputFont = join(root, 'public', 'fonts', 'maple-mono-cn-regular.woff2')
 const cssFile = join(root, 'src', 'app', 'globals.css')
+const fontTsFile = join(root, 'src', 'lib', 'font.ts')
 
 if (!existsSync(sourceFont)) {
   console.error(`缺少源字文件：${relative(root, sourceFont)}`)
@@ -113,8 +114,11 @@ if (!versionRe.test(css)) {
 } else {
   writeFileSync(cssFile, css.replace(versionRe, `$1${stamp}`))
 }
+// 根布局用 font.ts 的 FONT_URL 做 preload，版本号必须与 @font-face 一致
+const fontTs = readFileSync(fontTsFile, 'utf8')
+writeFileSync(fontTsFile, fontTs.replace(versionRe, `$1${stamp}`))
 
 console.log(
   `✓ 字体子集已更新：${prev ? fmt(prev.length) : '—'} → ${fmt(next.length)}（${chars.size} 个非 ASCII 用字）`,
 )
-console.log(`✓ globals.css 版本号 → ?v=${stamp}`)
+console.log(`✓ globals.css / src/lib/font.ts 版本号 → ?v=${stamp}`)

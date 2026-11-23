@@ -1,39 +1,41 @@
 import { RootProvider } from 'fumadocs-ui/provider/next'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
+import { JsonLd } from '@/components/json-ld'
+import { stats } from '@/lib/entries'
+import { FONT_URL } from '@/lib/font'
+import { SITE_URL, siteGraph } from '@/lib/schema'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ffd.baiwumm.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: '开发者的免费资源清单 · Free for Dev 中文版',
+    default: '免费开发资源 · Free for Dev 中文版',
     template: '%s | 免费开发资源',
   },
-  description:
-    'ripienaar/free-for-dev 中文版：57 个分类、1,300+ 个面向开发者的免费服务（云厂商免费额度、CI/CD、监控、数据库、邮件、DNS 等），每日自动同步上游清单并增量翻译。',
-  keywords: ['free for dev', '免费开发资源', '开发者免费服务', '免费云服务', '免费 API'],
+  description: `ripienaar/free-for-dev 中文版：${stats.categories} 个分类、${stats.services.toLocaleString('zh-CN')} 项面向开发者的免费服务（云厂商免费额度、CI/CD、监控、数据库、邮件、DNS 等），每日自动同步上游清单并增量翻译。`,
   icons: { icon: '/favicon.svg' },
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
-    siteName: '开发者的免费资源清单',
+    siteName: '免费开发资源',
   },
   twitter: {
     card: 'summary_large_image',
   },
 }
 
-const ldJson = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: '免费开发资源',
-  url: 'https://ffd.baiwumm.com',
-  description: 'ripienaar/free-for-dev 的中文版，每日自动同步与增量翻译。',
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FCFCFD' },
+    { media: '(prefers-color-scheme: dark)', color: '#0D1013' },
+  ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body className="flex min-h-screen flex-col bg-fd-background font-sans text-fd-foreground antialiased">
+        <link rel="preload" as="font" type="font/woff2" href={FONT_URL} crossOrigin="anonymous" />
         <RootProvider theme={{ defaultTheme: 'system' }} search={{ enabled: false }}>
           {children}
         </RootProvider>
@@ -43,11 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           title="免费开发资源（RSS）"
           href="/feed.xml"
         />
-        <script
-          type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD 结构化数据，内容为构建期常量且无用户输入
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }}
-        />
+        <JsonLd data={siteGraph()} />
       </body>
     </html>
   )

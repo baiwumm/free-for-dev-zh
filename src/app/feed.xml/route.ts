@@ -1,4 +1,4 @@
-import { categoryById, entryById, siteMeta, stats } from '@/lib/entries'
+import { categoryById, entryById, plainText, siteMeta, stats, truncate } from '@/lib/entries'
 
 export const dynamic = 'force-static'
 
@@ -32,7 +32,7 @@ export function GET() {
       const name = e.name ?? e.id
       const category = categoryById.get(e.category)?.nameZh ?? e.category
       const link = `${BASE}/entry/${e.id}`
-      const desc = e.descZh ?? e.descEn
+      const desc = truncate(plainText(e.descZh ?? e.descEn), 300)
       return `    <item>
       <title>${escapeXml(`${name} —— ${category}`)}</title>
       <link>${link}</link>
@@ -46,7 +46,7 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>开发者的免费资源清单 · Free for Dev 中文版</title>
+    <title>免费开发资源 · Free for Dev 中文版</title>
     <link>${BASE}/</link>
     <description>ripienaar/free-for-dev 的中文版：${stats.categories} 个分类、${stats.services} 项免费开发者资源，每日自动同步与增量翻译。</description>
     <language>zh-cn</language>

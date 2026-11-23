@@ -6,8 +6,10 @@ import { siteMeta, stats } from '@/lib/entries'
 
 export const metadata: Metadata = {
   title: '关于本站',
-  description: '数据来源、同步机制、翻译方式与免责声明。',
+  description:
+    '关于免费开发资源（Free for Dev 中文版）：数据来源与每日同步机制、中文翻译方式、收录与下线规则、免责声明与项目署名，以及反馈渠道。',
   alternates: { canonical: '/about' },
+  openGraph: { url: '/about' },
 }
 
 export default function AboutPage() {

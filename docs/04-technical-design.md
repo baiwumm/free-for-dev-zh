@@ -95,8 +95,10 @@ export default nextConfig
 - 需要 `app/not-found.tsx` 提供 404 页；导出产物里的 `out/404.html` 由 Pages 承接未知路径（2026-11-02 线上实测：未知路径返回 404 状态 + 自定义 404 页内容）。
 - `out/` 实测约 7,300 个文件 / 108MB（2026-11-02 本地构建，随条目数缓增），Pages 构建与托管实测通过；托管侧文件数与体积配额以 Pages 控制台为准。
 - 静态资源缓存与安全头：原 `public/_headers` 是 Workers Static Assets 的专属机制，EdgeOne Pages 不识别（且该文件会被当普通资源公开访问，实测 `/_headers` 返回 200），已删除。等价策略改在 EdgeOne 控制台落地：`/_next/static/*` 与 `/fonts/*` 强缓存 `max-age=31536000, immutable`，全站补 `X-Content-Type-Options: nosniff` / `Referrer-Policy: strict-origin-when-cross-origin`（2026-11-02 迁移时线上新产物默认仅 `max-age=0, must-revalidate`，控制台规则待确认）。字体 URL 仍以 `?v=YYYYMMDD` 版本化（`pnpm fonts` 自动维护），缓存按 URL 区分，改字体不依赖响应头。
-- RSS 与 OG 卡片：`/feed.xml` 为 `force-static` route handler（与 `/search-index.json` 同模式），OG 卡片走 `app/opengraph-image.png` 静态文件约定，均构建期产出、不引入动态服务。
-- **URL 规范差异（迁移遗留项）**：Workers 的 `auto-trailing-slash` 会把 `/docs/` 307 到 `/docs`；EdgeOne Pages 实测 `/docs` 200、`/docs/` 404。站内链接一律无尾斜杠，故站内不受影响；风险仅在外部手输或历史外链带尾斜杠。2026-11-02 决定暂不改动 URL 规范（开 `trailingSlash` 会影响 sitemap 与既有链接），先记录观察。
+- RSS 与 OG 卡片：`/feed.xml`、`/llms.txt`、`/llms-full.txt` 均为 `force-static` route handler（与 `/search-index.json` 同模式），OG 卡片走 `app/opengraph-image.png` 静态文件约定，均构建期产出、不引入动态服务。`/search-index.json` 在静态导出下无法带响应头，改由 `robots.txt` 的 `Disallow` 兜底。
+- **URL 规范差异（迁移遗留项）**：Workers 的 `auto-trailing-slash` 会把 `/docs/` 307 到 `/docs`；EdgeOne Pages 实测 `/docs` 200、`/docs/` 404。站内链接一律无尾斜杠，故站内不受影响；风险仅在外部手输或历史外链带尾斜杠。2026-11-02 决定暂不改动 URL 规范（开 `trailingSlash` 会影响 sitemap 与既有链接），先记录观察。2026-11-23 SEO 审计后补充两条控制台 301 规则（`/<path>/` → `/<path>`、`/<path>.html` → `/<path>`），静态导出无法在产物内表达重定向，仓库侧不改 URL。
+- **HTTPS 与安全头（控制台项）**：`http://` 目前直接 200 返回内容、未跳转 HTTPS，且全站缺 `Strict-Transport-Security` / `X-Content-Type-Options` / `Referrer-Policy`。在 EdgeOne 控制台开启「强制 HTTPS」并补上述响应头；`edgeone.json` 虽支持 `redirects` / `headers`，但按“仓库不放部署配置”的约束仍走控制台，避免推送配置失误阻断发布。
+- **详情页 URL 形态（决策：暂不改）**：当前 `/entry/<12 位 hex>` 不含关键词。改为 `/entry/<slug>` 需要为 1,373 条既有 URL 配置 301（控制台批量导入或 `edgeone.json`），否则会直接丢外链与已收录页面。收益（URL 关键词信号）低于风险，列为观察项；如后续做，先批量导出重定向规则，再一次性切换 `generateStaticParams`、sitemap、内链与 feed。
 
 ## CI/CD
 

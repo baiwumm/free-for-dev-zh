@@ -23,6 +23,9 @@
 - **FR-6 条目降级**：翻译失败/被跳过的条目展示英文原文并标注「未翻译」，不留空白。
 - **FR-7 分享与订阅**：站点级 OG / Twitter 分享卡片（`app/opengraph-image.png` 1200×630 静态图 + 根布局元数据，各页 `og:title` / `og:description` 取本页元信息）；RSS 订阅：静态 `/feed.xml`（RSS 2.0，最近更新的 50 条），页脚入口 + 全站 `<head>` 自动发现 link。
 - **FR-8 更新可见**：首页索引区显示近 7 天新增 / 更新计数（以 `synced_at` 为基准）与最多 3 条条目链接（按更新时间降序）；窗口内无变化时整行不渲染。
+- **FR-9 条目页内容完整**：父条目的 note 子项（各服务的免费额度明细）在详情页一并列出；条目无任何描述时用「名称 + 分类 + 每日同步」兜底生成 meta description，且不显示误导性的「未翻译」标注（仅在确有英文原文时标注）。
+- **FR-10 相关推荐**：详情页底部列出同分类 3–5 条相关资源，补足内链，避免 1,400 个详情页各自只有分类页一个入链。
+- **FR-11 AI 可读层**：构建期输出 `/llms.txt`（站点定位 + 分类索引 + 关键页面）与 `/llms-full.txt`（全量条目纯文本），供 AI 引擎与 Agent 直接读取；首页补「这是什么 / 多久更新 / 翻译可靠性」问答段，`/docs` 概览补使用说明与统计，与首页形成内容分工。
 
 ## 视觉要求（核心验收项）
 
@@ -38,8 +41,8 @@
 
 ## 非功能需求
 
-- **NFR-1 性能**：首屏 LCP < 2.5s（4G 模拟）；字体子集 ≈0.3MB 走 `font-display: swap`，不阻塞首屏；`_next/static` 与 `/fonts/*` 强缓存（见 04）；搜索索引懒加载一次、gzip ≈110KB（随条目数缓增），分类页页内筛选零请求。
-- **NFR-2 SEO**：全部页面静态生成；`sitemap.xml`（含 `lastModified`）；分类页与详情页独立元信息；站点级 OG 卡片与 RSS（FR-7）为静态产物，不做逐页动态 OG 服务。
+- **NFR-1 性能**：首屏 LCP < 2.5s（4G 模拟）；字体子集 ≈0.3MB 走 `font-display: swap` 不阻塞首屏，并以 `<link rel="preload" as="font">` 预载（URL 版本号与 `@font-face` 一致，由 `pnpm fonts` 同步维护），减少字体切换；`_next/static` 与 `/fonts/*` 强缓存（见 04）；搜索索引懒加载一次、gzip ≈110KB（随条目数缓增），分类页页内筛选零请求。
+- **NFR-2 SEO**：全部页面静态生成；`sitemap.xml`（含 `lastModified`，`/about` 同样带）；每页 title 唯一且含模板后缀 ≤ 60 字符，description 非空、80–160 字符（英文原文先转纯文本再截断，无描述条目用「名称 + 分类 + 同步说明」兜底）；每页自引用 canonical（首页不例外），`og:url` 逐页输出；结构化数据：根布局 `Organization + WebSite`（全站各一次，`@graph`），分类页 `CollectionPage + ItemList`，详情页 `BreadcrumbList`；分类页与详情页独立元信息；站点级 OG 卡片与 RSS（FR-7）为静态产物，不做逐页动态 OG 服务；`/search-index.json` 带 `X-Robots-Tag: noindex`（允许抓取、不进索引）；`/llms.txt`、`/llms-full.txt` 为构建期文本产物（AI 引用层）。
 - **NFR-3 可访问性**：语义化标签、键盘可达、全局 `focus-visible` 焦点环、对比度 WCAG AA。
 - **NFR-4 构建时间**：全量静态生成（1,400+ 页）控制在 5 分钟内（纯静态约束不变，超时先排查构建缓存与并发）。
 
@@ -53,3 +56,7 @@
 - [ ] 深浅色模式下均无纯黑纯白大色块，文字对比度达标。
 - [ ] 分享链接在支持 OG 的平台展示站点卡片（标题 + 描述 + 图片）。
 - [ ] `/feed.xml` 通过 XML 解析校验，条目含 `title` / `link` / `guid` / `pubDate`。
+- [ ] 首页与每个分类页、详情页都有自引用 canonical 与 `og:url`；title ≤ 60 字符（含「| 免费开发资源」后缀），description 非空且 80–160 字符。
+- [ ] 六个头部云厂商（Google Cloud / AWS / Azure / Oracle / IBM / Cloudflare）详情页展示免费额度明细，且不再出现「暂未翻译」与「上游没有文字说明」同时出现的矛盾文案。
+- [ ] BreadcrumbList 与 ItemList 通过 Schema.org Validator / Rich Results Test 校验。
+- [ ] `/llms.txt` 与 `/llms-full.txt` 返回 200 `text/plain`，内容随同步日期更新。
