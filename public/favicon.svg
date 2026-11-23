@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#1d4aa3"/>
-  <rect x="18" y="14" width="9" height="36" rx="3.5" fill="#fcfcfd"/>
-  <rect x="18" y="14" width="27" height="9" rx="3.5" fill="#fcfcfd"/>
-  <rect x="18" y="29" width="20" height="9" rx="3.5" fill="#90b0ea"/>
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">免费开发资源 · Free for Dev 中文版</title>
+  <desc id="desc">索引光标 F —— favicon：浅色标志 light 的完整样式，等比缩放至 64px</desc>
+  <rect width="360" height="360" rx="80" fill="#0D1013"/>
+  <g fill="#E3E5E7">
+    <rect x="112" y="100" width="44" height="160" rx="13"/>
+    <rect x="112" y="100" width="136" height="44" rx="13"/>
+    <rect x="112" y="162" width="84" height="44" rx="13"/>
+  </g>
+  <rect x="212" y="166" width="36" height="36" rx="9" fill="#90B0EA"/>
 </svg>

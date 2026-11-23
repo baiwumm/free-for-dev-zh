@@ -30,6 +30,7 @@
 
 - **字体**：全站 **Maple Mono CN** 自托管（SIL OFL 1.1）——站点子集 `public/fonts/maple-mono-cn-regular.woff2` 按实际用字生成（≈280KB，`pnpm fonts` 重新生成）；`unicode-range` 之外的字符回退系统栈；`--font-sans` 与 `--font-mono` 首位均为该字体；不做字体切换、不引外链字体。
 - **配色**：纸墨（paper & ink）深浅两套，色值以 oklch 定义于 `src/app/globals.css` 并同步覆盖 fumadocs `--color-fd-*`；强调色仅钴蓝一色（浅色 ≈ `#1d4aa3`，深色 ≈ `#90b0ea`）。不使用渐变光斑、彩色底块、阴影堆叠与纯黑纯白大色块。
+- **字标**：顶栏品牌标识为「索引光标 F」——浅色主题用 `public/logo.svg`（深墨底 + 浅墨 F），深色主题用 `public/logo-dark.svg`（纸面底 + 深墨 F）；组件内联同形 SVG 并按 `.dark` 切换配色，不额外发起图片请求，主题切换不闪。
 - **索引排版**：分类索引 = 序号 + 中文名 + 引导点线 + 条目数 + 英文名，桌面双栏流式排布；条目列表为细线分隔的行（无卡片），favicon / letter avatar + 名称 + 一句话描述 + 可选「未翻译」标。
 - **图标兜底**：Google favicon 服务国内不可达，用「域名首字母 + 名称哈希取色（纸墨色板）」的 letter avatar 兜底，真实图标 `onerror` 自动降级，国内外访问均不破版。
 - **微交互**：颜色 / 透明度过渡（hover 强调色、行底色），不做位移动画；`prefers-reduced-motion` 时关闭平滑滚动。

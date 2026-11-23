@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">免费开发资源 · Free for Dev 中文版</title>
+  <desc id="desc">索引光标 F —— 浅色主题标志：深墨底、浅墨几何 F、浅钴蓝光标标记</desc>
+  <rect width="360" height="360" rx="80" fill="#0D1013"/>
+  <g fill="#E3E5E7">
+    <rect x="112" y="100" width="44" height="160" rx="13"/>
+    <rect x="112" y="100" width="136" height="44" rx="13"/>
+    <rect x="112" y="162" width="84" height="44" rx="13"/>
+  </g>
+  <rect x="212" y="166" width="36" height="36" rx="9" fill="#90B0EA"/>
+</svg>
